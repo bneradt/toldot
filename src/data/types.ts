@@ -30,10 +30,11 @@ export interface Person {
   primaryVerseId: string;
   note?: string;
   notable?: boolean;
+  birthOrder?: number;
   passages: PassageSelection[];
 }
 
-export type RelationshipKind = "parent" | "spouse" | "genealogical" | "as-supposed";
+export type RelationshipKind = "parent" | "spouse" | "concubine" | "genealogical" | "as-supposed";
 export type SourceLayer = "Genesis" | "Ruth" | "Matthew" | "Luke" | "Narrative";
 
 export interface Relationship {

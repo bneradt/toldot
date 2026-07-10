@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { GenealogyGraph } from "./components/GenealogyGraph";
 import { PersonPanel } from "./components/PersonPanel";
-import { firstViewForPerson, people, peopleById, viewById, views } from "./data/genealogy";
+import { firstViewForPerson, people, peopleById, relationships, viewById, views } from "./data/genealogy";
 import { scripture } from "./data/scripture.generated";
 import type { GenealogyView, Person, Translation } from "./data/types";
 
@@ -32,6 +32,39 @@ export function App() {
   const searchRef = useRef<HTMLInputElement>(null);
   const activeView = viewById.get(activeViewId) ?? views[0];
   const selected = selectedId ? peopleById.get(selectedId) ?? null : null;
+  const graphLegend = useMemo(() => {
+    const personIds = new Set(activeView.personIds);
+    const visibleRelationships = relationships.filter((relationship) =>
+      personIds.has(relationship.from)
+      && personIds.has(relationship.to)
+      && relationship.sourceLayers.some((layer) => activeView.sourceLayers.includes(layer)),
+    );
+    const hasLayer = (layer: "Genesis" | "Ruth" | "Matthew" | "Luke" | "Narrative") =>
+      activeView.sourceLayers.includes(layer)
+      && visibleRelationships.some((relationship) => relationship.sourceLayers.includes(layer));
+    const sources = [
+      hasLayer("Genesis") ? { id: "genesis", label: "Genesis" } : null,
+      hasLayer("Ruth") ? { id: "ruth", label: "Ruth" } : null,
+      hasLayer("Matthew") ? { id: "matthew", label: "Matthew" } : null,
+      hasLayer("Luke") ? { id: "luke", label: "Luke" } : null,
+      activeView.sourceLayers.includes("Matthew")
+        && activeView.sourceLayers.includes("Luke")
+        && visibleRelationships.some((relationship) =>
+          relationship.sourceLayers.includes("Matthew") && relationship.sourceLayers.includes("Luke"),
+        )
+        ? { id: "shared", label: "Matthew + Luke" }
+        : null,
+      hasLayer("Narrative") ? { id: "narrative", label: "Other biblical text" } : null,
+    ].filter((item): item is { id: string; label: string } => Boolean(item));
+
+    return {
+      sources,
+      hasWomen: activeView.personIds.some((personId) => peopleById.get(personId)?.sex === "female"),
+      hasPartners: visibleRelationships.some((relationship) =>
+        relationship.kind === "spouse" || relationship.kind === "concubine"),
+      hasNotable: activeView.personIds.some((personId) => peopleById.get(personId)?.notable),
+    };
+  }, [activeView]);
 
   const results = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase();
@@ -176,9 +209,12 @@ export function App() {
             <p>{activeView.description}</p>
           </div>
           <div className="legend" aria-label="Graph legend">
-            <span><i className="legend-line matthew" />Matthew</span>
-            <span><i className="legend-line luke" />Luke</span>
-            <span><i className="legend-node notable" />Richer story</span>
+            {graphLegend.sources.map((source) => (
+              <span key={source.id}><i className={`legend-line ${source.id}`} />{source.label}</span>
+            ))}
+            {graphLegend.hasWomen && <span><i className="legend-node woman" />Women</span>}
+            {graphLegend.hasPartners && <span><i className="legend-line partner" />Marriage / concubinage</span>}
+            {graphLegend.hasNotable && <span><i className="legend-node notable" />Richer story</span>}
           </div>
         </section>
 

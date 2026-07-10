@@ -13,14 +13,15 @@ interface GenealogyGraphProps {
   onHover: (person: Person | null) => void;
 }
 
-function edgeClass(sourceLayers: string[], kind: string) {
-  const layer = sourceLayers.includes("Matthew") && sourceLayers.includes("Luke")
+function edgeClass(sourceLayers: string[], kind: string, activeLayers: string[]) {
+  const visibleLayers = sourceLayers.filter((layer) => activeLayers.includes(layer));
+  const layer = visibleLayers.includes("Matthew") && visibleLayers.includes("Luke")
     ? "shared"
-    : sourceLayers.includes("Matthew")
+    : visibleLayers.includes("Matthew")
       ? "matthew"
-      : sourceLayers.includes("Luke")
+      : visibleLayers.includes("Luke")
         ? "luke"
-        : sourceLayers.includes("Ruth")
+        : visibleLayers.includes("Ruth")
           ? "ruth"
           : "genesis";
   return `${layer} ${kind}`;
@@ -31,6 +32,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
   const graphRef = useRef<Core | null>(null);
   const onSelectRef = useRef(onSelect);
   const onHoverRef = useRef(onHover);
+  const branchButtonRefs = useRef(new Map<string, HTMLButtonElement>());
   const [expandedByView, setExpandedByView] = useState<Record<string, string[]>>({});
 
   const expandedBranchIds = useMemo(
@@ -65,7 +67,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
     if (!container) return;
 
     const visible = new Set(visiblePersonIds);
-    const nodes: ElementDefinition[] = visiblePersonIds.flatMap((id) => {
+    const nodes: ElementDefinition[] = visiblePersonIds.flatMap((id, layoutOrder) => {
       const person = peopleById.get(id);
       if (!person) return [];
       return [{
@@ -73,6 +75,8 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
           id: person.id,
           label: person.name,
           descriptor: person.descriptor ?? "",
+          layoutOrder,
+          birthOrder: person.birthOrder ?? null,
         },
         classes: [person.notable ? "notable" : "", person.sex === "female" ? "woman" : ""]
           .filter(Boolean)
@@ -80,25 +84,32 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
       }];
     });
 
-    const edges: ElementDefinition[] = relationships
+    const visibleRelationships = relationships
       .filter((relationship) =>
         visible.has(relationship.from)
         && visible.has(relationship.to)
         && relationship.sourceLayers.some((layer) => view.sourceLayers.includes(layer)),
-      )
-      .map((relationship) => ({
-        data: {
-          id: relationship.id,
-          source: relationship.from,
-          target: relationship.to,
-          kind: relationship.kind,
-        },
-        classes: edgeClass(relationship.sourceLayers, relationship.kind),
-      }));
+      );
+    const toEdge = (relationship: (typeof relationships)[number]): ElementDefinition => ({
+      data: {
+        id: relationship.id,
+        source: relationship.from,
+        target: relationship.to,
+        kind: relationship.kind,
+      },
+      classes: edgeClass(relationship.sourceLayers, relationship.kind, view.sourceLayers),
+    });
+    const partnerRelationships = visibleRelationships.filter(
+      (relationship) => relationship.kind === "spouse" || relationship.kind === "concubine",
+    );
+    const lineageEdges = visibleRelationships
+      .filter((relationship) => relationship.kind !== "spouse" && relationship.kind !== "concubine")
+      .map(toEdge);
+    const partnerEdges = partnerRelationships.map(toEdge);
 
     const graph = cytoscape({
       container,
-      elements: [...nodes, ...edges],
+      elements: [...nodes, ...lineageEdges],
       minZoom: 0.18,
       maxZoom: 2.2,
       wheelSensitivity: 0.22,
@@ -188,7 +199,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
           style: { "line-color": "#8b6652", "target-arrow-color": "#8b6652" },
         },
         {
-          selector: "edge.spouse",
+          selector: "edge.spouse, edge.concubine",
           style: {
             "line-style": "dashed",
             "target-arrow-shape": "none",
@@ -212,6 +223,20 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
     graph.on("mouseover", "node", (event) => onHoverRef.current(peopleById.get(event.target.id()) ?? null));
     graph.on("mouseout", "node", () => onHoverRef.current(null));
 
+    const positionBranchButtons = () => {
+      view.branches?.forEach((branch) => {
+        const button = branchButtonRefs.current.get(branch.id);
+        const node = graph.getElementById(branch.rootPersonId);
+        if (!button || !node.length) return;
+        const position = node.renderedPosition();
+        const left = position.x + node.renderedWidth() / 2 - 10;
+        const top = position.y - node.renderedHeight() / 2 - 10;
+        button.style.transform = `translate3d(${left}px, ${top}px, 0)`;
+        button.style.visibility = "visible";
+      });
+    };
+    graph.on("render", positionBranchButtons);
+
     const layout = graph.layout({
       name: "dagre",
       rankDir: "TB",
@@ -220,9 +245,24 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
       edgeSep: 14,
       padding: 36,
       animate: false,
+      sort: (a: cytoscape.SingularElementArgument, b: cytoscape.SingularElementArgument) => {
+        const aBirthOrder = a.data("birthOrder") as number | null;
+        const bBirthOrder = b.data("birthOrder") as number | null;
+        if (aBirthOrder !== null && bBirthOrder !== null) return bBirthOrder - aBirthOrder;
+        return Number(b.data("layoutOrder")) - Number(a.data("layoutOrder"));
+      },
     } as cytoscape.LayoutOptions);
 
     layout.one("layoutstop", () => {
+      graph.startBatch();
+      partnerRelationships.forEach((relationship) => {
+        const partner = graph.getElementById(relationship.to);
+        const anchor = graph.getElementById(relationship.from);
+        if (partner.length && anchor.length) partner.position("y", anchor.position("y"));
+      });
+      graph.add(partnerEdges);
+      graph.endBatch();
+
       const ordered = [...graph.nodes()].sort((a, b) => a.position("y") - b.position("y"));
       let opening = graph.collection();
       ordered.slice(0, Math.min(12, ordered.length)).forEach((node) => {
@@ -230,6 +270,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
       });
       graph.fit(opening, 54);
       if (graph.zoom() > 0.95) graph.zoom(0.95);
+      positionBranchButtons();
     });
     layout.run();
 
@@ -247,6 +288,11 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
     return () => {
       container.removeEventListener("wheel", panWithWheel, { capture: true });
       observer.disconnect();
+      graph.off("render", positionBranchButtons);
+      view.branches?.forEach((branch) => {
+        const button = branchButtonRefs.current.get(branch.id);
+        if (button) button.style.visibility = "hidden";
+      });
       graph.destroy();
       graphRef.current = null;
     };
@@ -290,26 +336,28 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
         aria-label={`${view.title} interactive family graph. Use search or the browse-names list for keyboard navigation.`}
       />
       {view.branches && view.branches.length > 0 && (
-        <div className="branch-controls" aria-label="Family tree branches">
-          <span>Family branches</span>
-          <div>
-            {view.branches.map((branch) => {
-              const expanded = expandedBranchIds.has(branch.id);
-              return (
-                <button
-                  type="button"
-                  key={branch.id}
-                  className={expanded ? "expanded" : ""}
-                  aria-expanded={expanded}
-                  onClick={() => toggleBranch(branch.id)}
-                >
-                  <i aria-hidden="true">{expanded ? "−" : "+"}</i>
-                  {branch.title}
-                  <small>{branch.personIds.length}</small>
-                </button>
-              );
-            })}
-          </div>
+        <div className="node-branch-controls" aria-label="Expandable family branches">
+          {view.branches.map((branch) => {
+            const expanded = expandedBranchIds.has(branch.id);
+            const label = `${expanded ? "Collapse" : "Expand"} ${branch.title}`;
+            return (
+              <button
+                type="button"
+                key={branch.id}
+                ref={(button) => {
+                  if (button) branchButtonRefs.current.set(branch.id, button);
+                  else branchButtonRefs.current.delete(branch.id);
+                }}
+                className={expanded ? "expanded" : ""}
+                aria-label={label}
+                aria-expanded={expanded}
+                title={label}
+                onClick={() => toggleBranch(branch.id)}
+              >
+                <span aria-hidden="true">{expanded ? "−" : "+"}</span>
+              </button>
+            );
+          })}
         </div>
       )}
       <div className="graph-controls" aria-label="Graph controls">

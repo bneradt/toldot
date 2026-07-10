@@ -111,6 +111,39 @@ describe("Toldot genealogy dataset", () => {
     expect(views.find((view) => view.id === "patriarchs")?.personIds).not.toContain("david");
   });
 
+  it("uses the Davidic view to bridge Judah's family to David", () => {
+    const davidic = views.find((view) => view.id === "davidic")!;
+
+    expect(davidic.rootIds).toEqual(["judah", "tamar"]);
+    expect(davidic.personIds).toContain("perez");
+    expect(davidic.personIds).toContain("boaz");
+    expect(davidic.personIds).toContain("david");
+    expect(davidic.personIds).not.toContain("solomon");
+    expect(davidic.personIds).not.toContain("jesus");
+  });
+
+  it("records partners accurately and numbers Jacob's sons in birth order", () => {
+    expect(relationships.some((relationship) =>
+      relationship.from === "abraham"
+      && relationship.to === "hagar"
+      && relationship.kind === "concubine",
+    )).toBe(true);
+    for (const personId of ["bilhah", "zilpah"]) {
+      expect(relationships.some((relationship) =>
+        relationship.from === "jacob"
+        && relationship.to === personId
+        && relationship.kind === "concubine",
+      ), personId).toBe(true);
+    }
+
+    const expectedBirthOrder = [
+      "reuben", "simeon", "levi", "judah", "dan", "naphtali",
+      "gad", "asher", "issachar", "zebulun", "joseph-patriarch", "benjamin",
+    ];
+    expect(expectedBirthOrder.map((personId) => peopleById.get(personId)?.birthOrder))
+      .toEqual(expectedBirthOrder.map((_, index) => index + 1));
+  });
+
   it("includes Cain's Genesis 4 line and defaults to Seth's line", () => {
     const origins = views.find((view) => view.id === "origins")!;
     const visible = visiblePersonIdsForView(origins, origins.defaultExpandedBranchIds ?? []);

@@ -31,6 +31,7 @@ function ensurePerson(entry: ChainEntry, source: SourceLayer): Person {
     if (!alreadyPresent) existing.passages.push(genealogyPassage(verseIds, source));
     if (entry.note && !existing.note) existing.note = entry.note;
     if (entry.aliases) existing.aliases = [...new Set([...(existing.aliases ?? []), ...entry.aliases])];
+    if (entry.birthOrder) existing.birthOrder = entry.birthOrder;
     return existing;
   }
 
@@ -172,6 +173,7 @@ sharedToDavid.slice(2, 11).forEach((person) => originsSethBranch.add(person.id))
 sharedToDavid.slice(9, 20).forEach((person) => noahToAbraham.add(person.id));
 sharedToDavid.slice(11, 20).forEach((person) => shemBranch.add(person.id));
 sharedToDavid.slice(18, 24).forEach((person) => patriarchs.add(person.id));
+sharedToDavid.slice(22).forEach((person) => davidic.add(person.id));
 
 const matthewLine: ChainEntry[] = [
   { ...sharedToDavid[19], primaryVerseId: "matt-1-2" },
@@ -231,7 +233,6 @@ const matthewLine: ChainEntry[] = [
 
 addChain(matthewLine, "Matthew", matthew);
 matthewLine.forEach((person) => promise.add(person.id));
-matthewLine.slice(13).forEach((person) => davidic.add(person.id));
 
 const lukeSharedEntries: ChainEntry[] = [
   { ...sharedToDavid[0], primaryVerseId: "luke-3-38" },
@@ -328,7 +329,6 @@ const lukeAfterDavid: ChainEntry[] = [
 addChain(lukeAfterDavid, "Luke", luke);
 lukeAfterDavid.forEach((person) => {
   promise.add(person.id);
-  davidic.add(person.id);
 });
 
 // Immediate families and the women named or alluded to in Matthew's genealogy.
@@ -499,6 +499,7 @@ addPerson({ id: "ishmael", name: "Ishmael", primaryVerseId: "gen-16-15", notable
 addPerson({ id: "rebekah", name: "Rebekah", aliases: ["Rebecca"], primaryVerseId: "gen-25-20", sex: "female", notable: true }, "Genesis", [patriarchs, promise]);
 addPerson({ id: "esau", name: "Esau", aliases: ["Edom"], primaryVerseId: "gen-25-25", notable: true }, "Genesis", [patriarchs]);
 connect("abraham", "sarah", "spouse", "Genesis", ["gen-11-29"]);
+connect("abraham", "hagar", "concubine", "Genesis", ["gen-16-3"]);
 connect("sarah", "isaac", "parent", "Genesis", ["gen-21-2"]);
 connect("abraham", "ishmael", "parent", "Genesis", ["gen-16-15"]);
 connect("hagar", "ishmael", "parent", "Genesis", ["gen-16-15"]);
@@ -508,14 +509,14 @@ connect("rebekah", "esau", "parent", "Genesis", ["gen-25-24", "gen-25-25"]);
 connect("rebekah", "jacob", "parent", "Genesis", ["gen-25-24", "gen-25-26"]);
 
 const mothers = [
-  { id: "leah", name: "Leah", ref: "gen-29-16" },
-  { id: "rachel", name: "Rachel", ref: "gen-29-16" },
-  { id: "bilhah", name: "Bilhah", ref: "gen-29-29" },
-  { id: "zilpah", name: "Zilpah", ref: "gen-29-24" },
-];
+  { id: "leah", name: "Leah", ref: "gen-29-16", relationship: "spouse" },
+  { id: "rachel", name: "Rachel", ref: "gen-29-16", relationship: "spouse" },
+  { id: "bilhah", name: "Bilhah", ref: "gen-29-29", relationship: "concubine" },
+  { id: "zilpah", name: "Zilpah", ref: "gen-29-24", relationship: "concubine" },
+] satisfies Array<{ id: string; name: string; ref: string; relationship: "spouse" | "concubine" }>;
 mothers.forEach((mother) => {
   addPerson({ id: mother.id, name: mother.name, primaryVerseId: mother.ref, sex: "female", notable: mother.id === "leah" || mother.id === "rachel" }, "Genesis", [patriarchs]);
-  connect("jacob", mother.id, "spouse", "Genesis", [mother.ref]);
+  connect("jacob", mother.id, mother.relationship, "Genesis", [mother.ref]);
 });
 
 const sons = [
@@ -527,15 +528,14 @@ const sons = [
   ["joseph-patriarch", "Joseph", "rachel", "gen-30-24"], ["benjamin", "Benjamin", "rachel", "gen-35-18"],
 ] as const;
 
-sons.forEach(([id, name, motherId, ref]) => {
-  if (!personMap.has(id)) addPerson({ id, name, primaryVerseId: ref, notable: id === "joseph-patriarch" }, "Genesis", [patriarchs]);
-  else patriarchs.add(id);
+sons.forEach(([id, name, motherId, ref], birthIndex) => {
+  addPerson({ id, name, primaryVerseId: ref, notable: id === "joseph-patriarch", birthOrder: birthIndex + 1 }, "Genesis", [patriarchs]);
   if (id !== "judah") connect("jacob", id, "parent", "Genesis", [ref]);
   connect(motherId, id, "parent", "Genesis", [ref]);
 });
 
-addPerson({ id: "tamar", name: "Tamar", descriptor: "mother of Perez and Zerah", primaryVerseId: "gen-38-6", sex: "female", notable: true }, "Genesis", [patriarchs, promise, matthew]);
-addPerson({ id: "zerah", name: "Zerah", aliases: ["Zara"], primaryVerseId: "gen-38-30" }, "Genesis", [patriarchs, matthew]);
+addPerson({ id: "tamar", name: "Tamar", descriptor: "mother of Perez and Zerah", primaryVerseId: "gen-38-6", sex: "female", notable: true }, "Genesis", [patriarchs, davidic, promise, matthew]);
+addPerson({ id: "zerah", name: "Zerah", aliases: ["Zara"], primaryVerseId: "gen-38-30" }, "Genesis", [patriarchs, davidic, matthew]);
 connect("tamar", "perez", "parent", "Genesis", ["gen-38-29"]);
 connect("tamar", "perez", "parent", "Matthew", ["matt-1-3"]);
 connect("judah", "zerah", "parent", "Genesis", ["gen-38-30"]);
@@ -543,10 +543,11 @@ connect("judah", "zerah", "parent", "Matthew", ["matt-1-3"]);
 connect("tamar", "zerah", "parent", "Genesis", ["gen-38-30"]);
 connect("tamar", "zerah", "parent", "Matthew", ["matt-1-3"]);
 
-addPerson({ id: "rahab", name: "Rahab", primaryVerseId: "matt-1-5", sex: "female", notable: true }, "Matthew", [promise, matthew]);
-addPerson({ id: "ruth", name: "Ruth", descriptor: "the Moabitess", primaryVerseId: "matt-1-5", sex: "female", notable: true }, "Matthew", [promise, matthew]);
-addPerson({ id: "bathsheba", name: "Bathsheba", descriptor: "the wife of Uriah", primaryVerseId: "matt-1-6", sex: "female", notable: true }, "Matthew", [promise, matthew, davidic]);
-addPerson({ id: "mary", name: "Mary", descriptor: "mother of Jesus", primaryVerseId: "matt-1-16", sex: "female", notable: true }, "Matthew", [promise, matthew, davidic]);
+addPerson({ id: "rahab", name: "Rahab", primaryVerseId: "matt-1-5", sex: "female", notable: true }, "Matthew", [davidic, promise, matthew]);
+addPerson({ id: "ruth", name: "Ruth", descriptor: "the Moabitess", primaryVerseId: "matt-1-5", sex: "female", notable: true }, "Matthew", [davidic, promise, matthew]);
+addPerson({ id: "bathsheba", name: "Bathsheba", descriptor: "the wife of Uriah", primaryVerseId: "matt-1-6", sex: "female", notable: true }, "Matthew", [promise, matthew]);
+addPerson({ id: "mary", name: "Mary", descriptor: "mother of Jesus", primaryVerseId: "matt-1-16", sex: "female", notable: true }, "Matthew", [promise, matthew]);
+connect("salmon", "rahab", "spouse", "Matthew", ["matt-1-5"]);
 connect("rahab", "boaz", "parent", "Matthew", ["matt-1-5"]);
 connect("boaz", "ruth", "spouse", "Ruth", ["ruth-4-13"]);
 connect("ruth", "obed", "parent", "Ruth", ["ruth-4-13", "ruth-4-17"]);
@@ -621,12 +622,12 @@ export const views: GenealogyView[] = [
   {
     id: "davidic",
     title: "The Davidic Line",
-    eyebrow: "David to Jesus",
-    description: "Matthew’s line through Solomon and Luke’s line through Nathan, held side by side.",
+    eyebrow: "Judah to David",
+    description: "The family line from the patriarch Judah through Perez, Boaz, and Jesse to David.",
     personIds: [...davidic],
-    rootIds: ["david"],
-    sourceLayers: ["Matthew", "Luke", "Narrative"],
-    accent: "shared",
+    rootIds: ["judah", "tamar"],
+    sourceLayers: ["Genesis", "Ruth", "Matthew"],
+    accent: "family",
   },
   {
     id: "matthew",

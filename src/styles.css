@@ -265,9 +265,14 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
 .legend { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 13px; padding-bottom: 3px; color: #737b77; font-size: 10px; white-space: nowrap; }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
 .legend-line { display: inline-block; width: 20px; height: 2px; background: #999; }
+.legend-line.genesis, .legend-line.narrative { background: #8a9a95; }
+.legend-line.ruth { background: #8b6652; }
 .legend-line.matthew { background: var(--gold); }
 .legend-line.luke { background: var(--luke); }
+.legend-line.shared { height: 3px; background: #6d5f82; }
+.legend-line.partner { height: 0; border-top: 2px dashed #8a9a95; background: transparent; }
 .legend-node { display: inline-block; width: 15px; height: 11px; border: 2px solid var(--gold); border-radius: 3px; background: #f8efd8; }
+.legend-node.woman { border-color: #a96851; background: #f6ece5; }
 
 .graph-shell {
   position: relative;
@@ -284,56 +289,35 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
   box-shadow: inset 0 0 70px rgb(56 70 62 / 4%);
 }
 .graph-canvas { width: 100%; height: 100%; min-height: 430px; }
-.branch-controls {
+.node-branch-controls {
   position: absolute;
-  z-index: 2;
-  top: 13px;
-  left: 13px;
-  max-width: calc(100% - 190px);
-  padding: 8px;
-  border: 1px solid #d5cbb9;
-  border-radius: 11px;
-  background: rgb(255 253 248 / 92%);
-  box-shadow: 0 4px 14px rgb(24 47 41 / 8%);
-  backdrop-filter: blur(8px);
+  z-index: 3;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
-.branch-controls > span {
-  display: block;
-  margin: 0 4px 6px;
-  color: #7b817d;
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
-.branch-controls > div { display: flex; flex-wrap: wrap; gap: 5px; }
-.branch-controls button {
-  display: inline-flex;
-  height: 30px;
-  align-items: center;
-  gap: 6px;
-  padding: 0 8px 0 6px;
-  border: 1px solid #ddd3c1;
-  border-radius: 7px;
-  color: #4f5f5a;
-  font-size: 10px;
-  font-weight: 700;
-  background: #faf6ed;
-  cursor: pointer;
-}
-.branch-controls button:hover { border-color: #bda986; background: #f4ead8; }
-.branch-controls button.expanded { border-color: #b9c9c2; color: #244a42; background: #edf3ef; }
-.branch-controls button i {
+.node-branch-controls button {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: grid;
-  width: 17px;
-  height: 17px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
   place-items: center;
+  border: 2px solid #fbf8f1;
   border-radius: 50%;
-  font: normal 700 13px/1 Inter, sans-serif;
-  background: #e9deca;
+  color: #3f5d56;
+  background: #e7dcc8;
+  box-shadow: 0 2px 7px rgb(31 50 44 / 20%);
+  cursor: pointer;
+  pointer-events: auto;
+  visibility: hidden;
+  transition: color 120ms ease, background 120ms ease, box-shadow 120ms ease;
 }
-.branch-controls button.expanded i { color: white; background: #477168; }
-.branch-controls button small { color: #8b918d; font-size: 8px; font-weight: 700; }
+.node-branch-controls button:hover { color: white; background: #315f55; box-shadow: 0 3px 10px rgb(31 50 44 / 28%); }
+.node-branch-controls button.expanded { color: white; background: #477168; }
+.node-branch-controls button span { font: 800 15px/1 Inter, sans-serif; transform: translateY(-.5px); }
 .graph-controls {
   position: absolute;
   top: 13px;
@@ -526,8 +510,6 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
   .view-heading p { font-size: 12px; }
   .legend { justify-content: flex-start; margin-top: 11px; }
   .graph-shell, .graph-canvas { min-height: 56dvh; height: 56dvh; }
-  .branch-controls { max-width: calc(100% - 112px); }
-  .branch-controls button { height: 28px; }
   .graph-scroll-hint { display: none; }
   .hover-preview { display: none; }
   .person-panel { top: auto; right: 0; bottom: 0; left: 0; width: auto; max-height: 84dvh; border-top: 1px solid #cfc4b1; border-left: 0; border-radius: 18px 18px 0 0; box-shadow: 0 -20px 50px rgb(26 44 39 / 18%); }

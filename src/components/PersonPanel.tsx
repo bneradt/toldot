@@ -13,6 +13,7 @@ interface PersonPanelProps {
 
 function relationshipLabel(relationship: Relationship, personId: string) {
   if (relationship.kind === "spouse") return "Spouse";
+  if (relationship.kind === "concubine") return "Concubine";
   if (relationship.kind === "as-supposed") return relationship.from === personId ? "Genealogical link" : "As supposed";
   if (relationship.from === personId) return relationship.kind === "parent" ? "Child" : "Descendant in this record";
   return relationship.kind === "parent" ? "Parent" : "Ancestor in this record";
