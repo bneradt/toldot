@@ -102,12 +102,32 @@ function addStory(personId: string, title: string, verseIds: string[]) {
   person.notable = true;
 }
 
+function addDescendants(
+  parentId: string,
+  entries: ChainEntry[],
+  viewSet: Set<string>,
+  branchSet: Set<string>,
+  kind: RelationshipKind = "genealogical",
+) {
+  entries.forEach((entry) => {
+    addPerson(entry, "Genesis", [viewSet]);
+    branchSet.add(entry.id);
+    connect(parentId, entry.id, kind, "Genesis", entry.sourceVerseIds ?? [entry.primaryVerseId]);
+  });
+}
+
 const origins = new Set<string>();
+const noahToAbraham = new Set<string>();
 const patriarchs = new Set<string>();
 const promise = new Set<string>();
 const matthew = new Set<string>();
 const luke = new Set<string>();
 const davidic = new Set<string>();
+const originsSethBranch = new Set<string>();
+const originsCainBranch = new Set<string>();
+const shemBranch = new Set<string>();
+const hamBranch = new Set<string>();
+const japhethBranch = new Set<string>();
 
 const sharedToDavid: ChainEntry[] = [
   { id: "adam", name: "Adam", primaryVerseId: "gen-5-1", notable: true },
@@ -148,7 +168,10 @@ const sharedToDavid: ChainEntry[] = [
 addChain(sharedToDavid.slice(0, 24), "Genesis", promise);
 addChain(sharedToDavid.slice(23), "Ruth", promise);
 sharedToDavid.slice(0, 10).forEach((person) => origins.add(person.id));
-sharedToDavid.slice(18).forEach((person) => patriarchs.add(person.id));
+sharedToDavid.slice(2, 11).forEach((person) => originsSethBranch.add(person.id));
+sharedToDavid.slice(9, 20).forEach((person) => noahToAbraham.add(person.id));
+sharedToDavid.slice(11, 20).forEach((person) => shemBranch.add(person.id));
+sharedToDavid.slice(18, 24).forEach((person) => patriarchs.add(person.id));
 
 const matthewLine: ChainEntry[] = [
   { ...sharedToDavid[19], primaryVerseId: "matt-1-2" },
@@ -312,8 +335,12 @@ lukeAfterDavid.forEach((person) => {
 addPerson({ id: "eve", name: "Eve", primaryVerseId: "gen-4-1", sex: "female", notable: true }, "Genesis", [origins, promise]);
 addPerson({ id: "cain", name: "Cain", primaryVerseId: "gen-4-1", notable: true }, "Genesis", [origins]);
 addPerson({ id: "abel", name: "Abel", primaryVerseId: "gen-4-2", notable: true }, "Genesis", [origins]);
-addPerson({ id: "ham", name: "Ham", primaryVerseId: "gen-5-32" }, "Genesis", [origins]);
-addPerson({ id: "japheth", name: "Japheth", primaryVerseId: "gen-5-32" }, "Genesis", [origins]);
+addPerson({ id: "ham", name: "Ham", primaryVerseId: "gen-5-32" }, "Genesis", [origins, noahToAbraham]);
+addPerson({ id: "japheth", name: "Japheth", primaryVerseId: "gen-5-32" }, "Genesis", [origins, noahToAbraham]);
+origins.add("shem");
+noahToAbraham.add("shem");
+originsSethBranch.add("ham");
+originsSethBranch.add("japheth");
 connect("adam", "eve", "spouse", "Genesis", ["gen-2-24"]);
 connect("eve", "cain", "parent", "Genesis", ["gen-4-1"]);
 connect("adam", "cain", "parent", "Genesis", ["gen-4-1"]);
@@ -322,6 +349,149 @@ connect("adam", "abel", "parent", "Genesis", ["gen-4-2"]);
 connect("eve", "seth", "parent", "Genesis", ["gen-4-25"]);
 connect("noah", "ham", "parent", "Genesis", ["gen-5-32"]);
 connect("noah", "japheth", "parent", "Genesis", ["gen-5-32"]);
+
+addDescendants("cain", [
+  { id: "enoch-cain", name: "Enoch", descriptor: "son of Cain", primaryVerseId: "gen-4-17" },
+], origins, originsCainBranch, "parent");
+addDescendants("enoch-cain", [
+  { id: "irad", name: "Irad", primaryVerseId: "gen-4-18" },
+], origins, originsCainBranch, "parent");
+addDescendants("irad", [
+  { id: "mehujael", name: "Mehujael", primaryVerseId: "gen-4-18" },
+], origins, originsCainBranch, "parent");
+addDescendants("mehujael", [
+  { id: "methushael", name: "Methushael", primaryVerseId: "gen-4-18" },
+], origins, originsCainBranch, "parent");
+addDescendants("methushael", [
+  { id: "lamech-cain", name: "Lamech", descriptor: "descendant of Cain", primaryVerseId: "gen-4-18" },
+], origins, originsCainBranch, "parent");
+
+addPerson({ id: "adah", name: "Adah", descriptor: "wife of Lamech", primaryVerseId: "gen-4-19", sex: "female" }, "Genesis", [origins]);
+addPerson({ id: "zillah", name: "Zillah", descriptor: "wife of Lamech", primaryVerseId: "gen-4-19", sex: "female" }, "Genesis", [origins]);
+originsCainBranch.add("adah");
+originsCainBranch.add("zillah");
+connect("lamech-cain", "adah", "spouse", "Genesis", ["gen-4-19"]);
+connect("lamech-cain", "zillah", "spouse", "Genesis", ["gen-4-19"]);
+addDescendants("lamech-cain", [
+  { id: "jabal", name: "Jabal", primaryVerseId: "gen-4-20" },
+  { id: "jubal", name: "Jubal", descriptor: "brother of Jabal", primaryVerseId: "gen-4-21" },
+  { id: "tubal-cain", name: "Tubal Cain", primaryVerseId: "gen-4-22" },
+  { id: "naamah", name: "Naamah", descriptor: "sister of Tubal Cain", primaryVerseId: "gen-4-22", sex: "female" },
+], origins, originsCainBranch, "parent");
+connect("adah", "jabal", "parent", "Genesis", ["gen-4-20"]);
+connect("adah", "jubal", "parent", "Genesis", ["gen-4-21"]);
+connect("zillah", "tubal-cain", "parent", "Genesis", ["gen-4-22"]);
+connect("zillah", "naamah", "parent", "Genesis", ["gen-4-22"]);
+
+// The table of nations: all three of Noah's sons remain visible while each
+// descendant tree can be opened independently.
+addDescendants("japheth", [
+  { id: "gomer", name: "Gomer", primaryVerseId: "gen-10-2" },
+  { id: "magog", name: "Magog", primaryVerseId: "gen-10-2" },
+  { id: "madai", name: "Madai", primaryVerseId: "gen-10-2" },
+  { id: "javan", name: "Javan", primaryVerseId: "gen-10-2" },
+  { id: "tubal", name: "Tubal", descriptor: "son of Japheth", primaryVerseId: "gen-10-2" },
+  { id: "meshech", name: "Meshech", primaryVerseId: "gen-10-2" },
+  { id: "tiras", name: "Tiras", primaryVerseId: "gen-10-2" },
+], noahToAbraham, japhethBranch);
+addDescendants("gomer", [
+  { id: "ashkenaz", name: "Ashkenaz", primaryVerseId: "gen-10-3" },
+  { id: "riphath", name: "Riphath", primaryVerseId: "gen-10-3" },
+  { id: "togarmah", name: "Togarmah", primaryVerseId: "gen-10-3" },
+], noahToAbraham, japhethBranch);
+addDescendants("javan", [
+  { id: "elishah", name: "Elishah", primaryVerseId: "gen-10-4" },
+  { id: "tarshish", name: "Tarshish", primaryVerseId: "gen-10-4" },
+  { id: "kittim", name: "Kittim", primaryVerseId: "gen-10-4" },
+  { id: "dodanim", name: "Dodanim", primaryVerseId: "gen-10-4" },
+], noahToAbraham, japhethBranch);
+
+addDescendants("ham", [
+  { id: "cush", name: "Cush", primaryVerseId: "gen-10-6" },
+  { id: "mizraim", name: "Mizraim", primaryVerseId: "gen-10-6" },
+  { id: "put", name: "Put", primaryVerseId: "gen-10-6" },
+  { id: "canaan", name: "Canaan", primaryVerseId: "gen-10-6" },
+], noahToAbraham, hamBranch);
+addDescendants("cush", [
+  { id: "seba", name: "Seba", primaryVerseId: "gen-10-7" },
+  { id: "havilah-cush", name: "Havilah", descriptor: "son of Cush", primaryVerseId: "gen-10-7" },
+  { id: "sabtah", name: "Sabtah", primaryVerseId: "gen-10-7" },
+  { id: "raamah", name: "Raamah", primaryVerseId: "gen-10-7" },
+  { id: "sabteca", name: "Sabteca", primaryVerseId: "gen-10-7" },
+  { id: "nimrod", name: "Nimrod", primaryVerseId: "gen-10-8", notable: true },
+], noahToAbraham, hamBranch);
+addDescendants("raamah", [
+  { id: "sheba-raamah", name: "Sheba", descriptor: "son of Raamah", primaryVerseId: "gen-10-7" },
+  { id: "dedan", name: "Dedan", primaryVerseId: "gen-10-7" },
+], noahToAbraham, hamBranch);
+addDescendants("mizraim", [
+  { id: "ludim", name: "Ludim", descriptor: "a people descended from Mizraim", primaryVerseId: "gen-10-13" },
+  { id: "anamim", name: "Anamim", descriptor: "a people descended from Mizraim", primaryVerseId: "gen-10-13" },
+  { id: "lehabim", name: "Lehabim", descriptor: "a people descended from Mizraim", primaryVerseId: "gen-10-13" },
+  { id: "naphtuhim", name: "Naphtuhim", descriptor: "a people descended from Mizraim", primaryVerseId: "gen-10-13" },
+  { id: "pathrusim", name: "Pathrusim", descriptor: "a people descended from Mizraim", primaryVerseId: "gen-10-14" },
+  { id: "casluhim", name: "Casluhim", descriptor: "a people descended from Mizraim", primaryVerseId: "gen-10-14" },
+  { id: "caphtorim", name: "Caphtorim", descriptor: "a people descended from Mizraim", primaryVerseId: "gen-10-14" },
+], noahToAbraham, hamBranch);
+addDescendants("canaan", [
+  { id: "sidon", name: "Sidon", primaryVerseId: "gen-10-15" },
+  { id: "heth", name: "Heth", primaryVerseId: "gen-10-15" },
+  { id: "jebusites", name: "Jebusites", descriptor: "a people descended from Canaan", primaryVerseId: "gen-10-16" },
+  { id: "amorites", name: "Amorites", descriptor: "a people descended from Canaan", primaryVerseId: "gen-10-16" },
+  { id: "girgashites", name: "Girgashites", descriptor: "a people descended from Canaan", primaryVerseId: "gen-10-16" },
+  { id: "hivites", name: "Hivites", descriptor: "a people descended from Canaan", primaryVerseId: "gen-10-17" },
+  { id: "arkites", name: "Arkites", descriptor: "a people descended from Canaan", primaryVerseId: "gen-10-17" },
+  { id: "sinites", name: "Sinites", descriptor: "a people descended from Canaan", primaryVerseId: "gen-10-17" },
+  { id: "arvadites", name: "Arvadites", descriptor: "a people descended from Canaan", primaryVerseId: "gen-10-18" },
+  { id: "zemarites", name: "Zemarites", descriptor: "a people descended from Canaan", primaryVerseId: "gen-10-18" },
+  { id: "hamathites", name: "Hamathites", descriptor: "a people descended from Canaan", primaryVerseId: "gen-10-18" },
+], noahToAbraham, hamBranch);
+
+addDescendants("shem", [
+  { id: "elam", name: "Elam", primaryVerseId: "gen-10-22" },
+  { id: "asshur", name: "Asshur", primaryVerseId: "gen-10-22" },
+  { id: "arpachshad", name: "Arpachshad", aliases: ["Arphaxad"], primaryVerseId: "gen-10-22" },
+  { id: "lud", name: "Lud", primaryVerseId: "gen-10-22" },
+  { id: "aram-shem", name: "Aram", descriptor: "son of Shem", primaryVerseId: "gen-10-22" },
+], noahToAbraham, shemBranch);
+addDescendants("aram-shem", [
+  { id: "uz", name: "Uz", primaryVerseId: "gen-10-23" },
+  { id: "hul", name: "Hul", primaryVerseId: "gen-10-23" },
+  { id: "gether", name: "Gether", primaryVerseId: "gen-10-23" },
+  { id: "mash", name: "Mash", primaryVerseId: "gen-10-23" },
+], noahToAbraham, shemBranch);
+addDescendants("arpachshad", [
+  { id: "shelah", name: "Shelah", aliases: ["Salah", "Sala"], primaryVerseId: "gen-10-24" },
+], noahToAbraham, shemBranch);
+addDescendants("shelah", [
+  { id: "eber", name: "Eber", primaryVerseId: "gen-10-24" },
+], noahToAbraham, shemBranch);
+addDescendants("eber", [
+  { id: "peleg", name: "Peleg", primaryVerseId: "gen-10-25" },
+  { id: "joktan", name: "Joktan", primaryVerseId: "gen-10-25" },
+], noahToAbraham, shemBranch);
+addDescendants("joktan", [
+  { id: "almodad", name: "Almodad", primaryVerseId: "gen-10-26" },
+  { id: "sheleph", name: "Sheleph", primaryVerseId: "gen-10-26" },
+  { id: "hazarmaveth", name: "Hazarmaveth", primaryVerseId: "gen-10-26" },
+  { id: "jerah", name: "Jerah", primaryVerseId: "gen-10-26" },
+  { id: "hadoram", name: "Hadoram", primaryVerseId: "gen-10-27" },
+  { id: "uzal", name: "Uzal", primaryVerseId: "gen-10-27" },
+  { id: "diklah", name: "Diklah", primaryVerseId: "gen-10-27" },
+  { id: "obal", name: "Obal", primaryVerseId: "gen-10-28" },
+  { id: "abimael", name: "Abimael", primaryVerseId: "gen-10-28" },
+  { id: "sheba-joktan", name: "Sheba", descriptor: "son of Joktan", primaryVerseId: "gen-10-28" },
+  { id: "ophir", name: "Ophir", primaryVerseId: "gen-10-29" },
+  { id: "havilah-joktan", name: "Havilah", descriptor: "son of Joktan", primaryVerseId: "gen-10-29" },
+  { id: "jobab", name: "Jobab", descriptor: "son of Joktan", primaryVerseId: "gen-10-29" },
+], noahToAbraham, shemBranch);
+addDescendants("terah", [
+  { id: "nahor-brother", name: "Nahor", descriptor: "brother of Abraham", primaryVerseId: "gen-11-26" },
+  { id: "haran", name: "Haran", descriptor: "brother of Abraham", primaryVerseId: "gen-11-26" },
+], noahToAbraham, shemBranch, "parent");
+addDescendants("haran", [
+  { id: "lot", name: "Lot", primaryVerseId: "gen-11-27", notable: true },
+], noahToAbraham, shemBranch, "parent");
 
 addPerson({ id: "sarah", name: "Sarah", aliases: ["Sarai"], primaryVerseId: "gen-21-2", sex: "female", notable: true }, "Genesis", [patriarchs, promise]);
 addPerson({ id: "hagar", name: "Hagar", primaryVerseId: "gen-16-15", sex: "female", notable: true }, "Genesis", [patriarchs]);
@@ -387,6 +557,7 @@ connect("mary", "jesus", "parent", "Matthew", ["matt-1-16", "matt-1-18"]);
 
 addStory("adam", "The first human family", ["gen-2-22", "gen-2-23", "gen-2-24", "gen-4-1", "gen-4-2"]);
 addStory("eve", "The first human family", ["gen-2-22", "gen-2-23", "gen-2-24", "gen-4-1", "gen-4-2"]);
+addStory("cain", "Cain and his family", ["gen-4-1", "gen-4-2", "gen-4-8", "gen-4-9", "gen-4-10", "gen-4-11", "gen-4-12", "gen-4-13", "gen-4-14", "gen-4-15", "gen-4-16", "gen-4-17"]);
 addStory("enoch", "Enoch walked with God", ["gen-5-21", "gen-5-22", "gen-5-23", "gen-5-24", "heb-11-5"]);
 addStory("noah", "Noah found favor", ["gen-6-8", "gen-6-9", "heb-11-7"]);
 addStory("abraham", "The call and the promise", ["gen-12-1", "gen-12-2", "gen-12-3", "gen-15-5", "gen-15-6", "heb-11-8"]);
@@ -407,13 +578,54 @@ export const relationships = [...relationshipMap.values()];
 
 export const views: GenealogyView[] = [
   {
-    id: "promise",
-    title: "Adam to Jesus",
-    eyebrow: "The connected line",
-    description: "Trace the shared backbone and see where Matthew and Luke preserve distinct lines.",
-    personIds: [...promise],
-    rootIds: ["adam"],
-    sourceLayers: ["Genesis", "Ruth", "Matthew", "Luke", "Narrative"],
+    id: "origins",
+    title: "Origins",
+    eyebrow: "Adam to Noah",
+    description: "The lines of Cain and Seth from Genesis 4–5, ending with Noah and his three sons.",
+    personIds: [...origins],
+    rootIds: ["adam", "eve"],
+    sourceLayers: ["Genesis"],
+    accent: "family",
+    branches: [
+      { id: "seth", title: "Seth’s family", rootPersonId: "seth", personIds: [...originsSethBranch] },
+      { id: "cain", title: "Cain’s family", rootPersonId: "cain", personIds: [...originsCainBranch] },
+    ],
+    defaultExpandedBranchIds: ["seth"],
+  },
+  {
+    id: "noah-to-abraham",
+    title: "Noah to Abraham",
+    eyebrow: "After the flood",
+    description: "The families of Shem, Ham, and Japheth, with Shem’s line through Abram open by default.",
+    personIds: [...noahToAbraham],
+    rootIds: ["noah"],
+    sourceLayers: ["Genesis"],
+    accent: "family",
+    branches: [
+      { id: "shem", title: "Shem’s family", rootPersonId: "shem", personIds: [...shemBranch] },
+      { id: "ham", title: "Ham’s family", rootPersonId: "ham", personIds: [...hamBranch] },
+      { id: "japheth", title: "Japheth’s family", rootPersonId: "japheth", personIds: [...japhethBranch] },
+    ],
+    defaultExpandedBranchIds: ["shem"],
+  },
+  {
+    id: "patriarchs",
+    title: "The Patriarchs",
+    eyebrow: "Abraham to Israel’s sons",
+    description: "The immediate families of Abraham, Isaac, and Jacob, ending with Judah’s sons Perez and Zerah.",
+    personIds: [...patriarchs],
+    rootIds: ["terah"],
+    sourceLayers: ["Genesis", "Ruth"],
+    accent: "family",
+  },
+  {
+    id: "davidic",
+    title: "The Davidic Line",
+    eyebrow: "David to Jesus",
+    description: "Matthew’s line through Solomon and Luke’s line through Nathan, held side by side.",
+    personIds: [...davidic],
+    rootIds: ["david"],
+    sourceLayers: ["Matthew", "Luke", "Narrative"],
     accent: "shared",
   },
   {
@@ -437,33 +649,13 @@ export const views: GenealogyView[] = [
     accent: "luke",
   },
   {
-    id: "origins",
-    title: "Origins",
-    eyebrow: "Adam to Noah",
-    description: "The earliest generations, including Adam and Eve’s named children and Noah’s sons.",
-    personIds: [...origins],
-    rootIds: ["adam", "eve"],
-    sourceLayers: ["Genesis"],
-    accent: "family",
-  },
-  {
-    id: "patriarchs",
-    title: "The patriarchs",
-    eyebrow: "Abraham to Israel’s sons",
-    description: "The immediate families of Abraham, Isaac, and Jacob, with the line through Judah.",
-    personIds: [...patriarchs],
-    rootIds: ["terah"],
-    sourceLayers: ["Genesis", "Ruth"],
-    accent: "family",
-  },
-  {
-    id: "davidic",
-    title: "The Davidic lines",
-    eyebrow: "David to Jesus",
-    description: "Matthew’s line through Solomon and Luke’s line through Nathan, held side by side.",
-    personIds: [...davidic],
-    rootIds: ["david"],
-    sourceLayers: ["Matthew", "Luke", "Narrative"],
+    id: "promise",
+    title: "Combined Matthew 1 and Luke 3",
+    eyebrow: "The connected line",
+    description: "Trace the shared backbone and see where Matthew and Luke preserve distinct lines.",
+    personIds: [...promise],
+    rootIds: ["adam"],
+    sourceLayers: ["Genesis", "Ruth", "Matthew", "Luke", "Narrative"],
     accent: "shared",
   },
 ];
@@ -476,4 +668,16 @@ export function relationshipsForPerson(personId: string) {
 
 export function firstViewForPerson(personId: string) {
   return views.find((view) => view.personIds.includes(personId));
+}
+
+export function visiblePersonIdsForView(view: GenealogyView, expandedBranchIds: Iterable<string>) {
+  if (!view.branches?.length) return view.personIds;
+
+  const expanded = new Set(expandedBranchIds);
+  const branchPeople = new Set(view.branches.flatMap((branch) => branch.personIds));
+  const visible = new Set(view.personIds.filter((personId) => !branchPeople.has(personId)));
+  view.branches.forEach((branch) => {
+    if (expanded.has(branch.id)) branch.personIds.forEach((personId) => visible.add(personId));
+  });
+  return view.personIds.filter((personId) => visible.has(personId));
 }

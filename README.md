@@ -2,8 +2,9 @@
 
 Toldot is an interactive, source-linked explorer of biblical genealogies. The
 first edition connects Adam to Jesus, preserves Matthew and Luke as distinct
-source layers, adds the immediate families of the patriarchs, and includes
-curated story passages for notable people.
+source layers, includes the lines of Cain and Noah's three sons, adds the
+immediate families of the patriarchs, and includes curated story passages for
+notable people.
 
 The site is a static React SPA. All graph data and WEB/KJV excerpts are bundled
 at build time; once the initial application has loaded, navigation and person

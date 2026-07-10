@@ -46,6 +46,13 @@ export interface Relationship {
   note?: string;
 }
 
+export interface GenealogyBranch {
+  id: string;
+  title: string;
+  rootPersonId: string;
+  personIds: string[];
+}
+
 export interface GenealogyView {
   id: string;
   title: string;
@@ -55,4 +62,6 @@ export interface GenealogyView {
   rootIds: string[];
   sourceLayers: SourceLayer[];
   accent: "shared" | "matthew" | "luke" | "family";
+  branches?: GenealogyBranch[];
+  defaultExpandedBranchIds?: string[];
 }

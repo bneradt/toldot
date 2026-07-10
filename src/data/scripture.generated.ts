@@ -807,6 +807,198 @@ export const scripture: Record<string, Verse> = {
     "web": "All the days of Noah were nine hundred fifty years, and then he died.",
     "kjv": "And all the days of Noah were nine hundred and fifty years: and he died."
   },
+  "gen-10-1": {
+    "id": "gen-10-1",
+    "reference": "Genesis 10:1",
+    "web": "Now this is the history of the generations of the sons of Noah and of Shem, Ham, and Japheth. Sons were born to them after the flood.",
+    "kjv": "Now these are the generations of the sons of Noah, Shem, Ham, and Japheth: and unto them were sons born after the flood."
+  },
+  "gen-10-2": {
+    "id": "gen-10-2",
+    "reference": "Genesis 10:2",
+    "web": "The sons of Japheth were: Gomer, Magog, Madai, Javan, Tubal, Meshech, and Tiras.",
+    "kjv": "The sons of Japheth; Gomer, and Magog, and Madai, and Javan, and Tubal, and Meshech, and Tiras."
+  },
+  "gen-10-3": {
+    "id": "gen-10-3",
+    "reference": "Genesis 10:3",
+    "web": "The sons of Gomer were: Ashkenaz, Riphath, and Togarmah.",
+    "kjv": "And the sons of Gomer; Ashkenaz, and Riphath, and Togarmah."
+  },
+  "gen-10-4": {
+    "id": "gen-10-4",
+    "reference": "Genesis 10:4",
+    "web": "The sons of Javan were: Elishah, Tarshish, Kittim, and Dodanim.",
+    "kjv": "And the sons of Javan; Elishah, and Tarshish, Kittim, and Dodanim."
+  },
+  "gen-10-5": {
+    "id": "gen-10-5",
+    "reference": "Genesis 10:5",
+    "web": "Of these were the islands of the nations divided in their lands, everyone after his language, after their families, in their nations.",
+    "kjv": "By these were the isles of the Gentiles divided in their lands; every one after his tongue, after their families, in their nations."
+  },
+  "gen-10-6": {
+    "id": "gen-10-6",
+    "reference": "Genesis 10:6",
+    "web": "The sons of Ham were: Cush, Mizraim, Put, and Canaan.",
+    "kjv": "And the sons of Ham; Cush, and Mizraim, and Phut, and Canaan."
+  },
+  "gen-10-7": {
+    "id": "gen-10-7",
+    "reference": "Genesis 10:7",
+    "web": "The sons of Cush were: Seba, Havilah, Sabtah, Raamah, and Sabteca. The sons of Raamah were: Sheba and Dedan.",
+    "kjv": "And the sons of Cush; Seba, and Havilah, and Sabtah, and Raamah, and Sabtecha: and the sons of Raamah; Sheba, and Dedan."
+  },
+  "gen-10-8": {
+    "id": "gen-10-8",
+    "reference": "Genesis 10:8",
+    "web": "Cush became the father of Nimrod. He began to be a mighty one in the earth.",
+    "kjv": "And Cush begat Nimrod: he began to be a mighty one in the earth."
+  },
+  "gen-10-9": {
+    "id": "gen-10-9",
+    "reference": "Genesis 10:9",
+    "web": "He was a mighty hunter before the LORD. Therefore it is said, “like Nimrod, a mighty hunter before the LORD”.",
+    "kjv": "He was a mighty hunter before the LORD: wherefore it is said, Even as Nimrod the mighty hunter before the LORD."
+  },
+  "gen-10-10": {
+    "id": "gen-10-10",
+    "reference": "Genesis 10:10",
+    "web": "The beginning of his kingdom was Babel, Erech, Accad, and Calneh, in the land of Shinar.",
+    "kjv": "And the beginning of his kingdom was Babel, and Erech, and Accad, and Calneh, in the land of Shinar."
+  },
+  "gen-10-11": {
+    "id": "gen-10-11",
+    "reference": "Genesis 10:11",
+    "web": "Out of that land he went into Assyria, and built Nineveh, Rehoboth Ir, Calah,",
+    "kjv": "Out of that land went forth Asshur, and builded Nineveh, and the city Rehoboth, and Calah,"
+  },
+  "gen-10-12": {
+    "id": "gen-10-12",
+    "reference": "Genesis 10:12",
+    "web": "and Resen between Nineveh and the great city Calah.",
+    "kjv": "And Resen between Nineveh and Calah: the same is a great city."
+  },
+  "gen-10-13": {
+    "id": "gen-10-13",
+    "reference": "Genesis 10:13",
+    "web": "Mizraim became the father of Ludim, Anamim, Lehabim, Naphtuhim,",
+    "kjv": "And Mizraim begat Ludim, and Anamim, and Lehabim, and Naphtuhim,"
+  },
+  "gen-10-14": {
+    "id": "gen-10-14",
+    "reference": "Genesis 10:14",
+    "web": "Pathrusim, Casluhim (which the Philistines descended from), and Caphtorim.",
+    "kjv": "And Pathrusim, and Casluhim, (out of whom came Philistim,) and Caphtorim."
+  },
+  "gen-10-15": {
+    "id": "gen-10-15",
+    "reference": "Genesis 10:15",
+    "web": "Canaan became the father of Sidon (his firstborn), Heth,",
+    "kjv": "And Canaan begat Sidon his firstborn, and Heth,"
+  },
+  "gen-10-16": {
+    "id": "gen-10-16",
+    "reference": "Genesis 10:16",
+    "web": "the Jebusites, the Amorites, the Girgashites,",
+    "kjv": "And the Jebusite, and the Amorite, and the Girgasite,"
+  },
+  "gen-10-17": {
+    "id": "gen-10-17",
+    "reference": "Genesis 10:17",
+    "web": "the Hivites, the Arkites, the Sinites,",
+    "kjv": "And the Hivite, and the Arkite, and the Sinite,"
+  },
+  "gen-10-18": {
+    "id": "gen-10-18",
+    "reference": "Genesis 10:18",
+    "web": "the Arvadites, the Zemarites, and the Hamathites. Afterward the families of the Canaanites were spread abroad.",
+    "kjv": "And the Arvadite, and the Zemarite, and the Hamathite: and afterward were the families of the Canaanites spread abroad."
+  },
+  "gen-10-19": {
+    "id": "gen-10-19",
+    "reference": "Genesis 10:19",
+    "web": "The border of the Canaanites was from Sidon—as you go toward Gerar—to Gaza—as you go toward Sodom, Gomorrah, Admah, and Zeboiim—to Lasha.",
+    "kjv": "And the border of the Canaanites was from Sidon, as thou comest to Gerar, unto Gaza; as thou goest, unto Sodom, and Gomorrah, and Admah, and Zeboim, even unto Lasha."
+  },
+  "gen-10-20": {
+    "id": "gen-10-20",
+    "reference": "Genesis 10:20",
+    "web": "These are the sons of Ham, after their families, according to their languages, in their lands and their nations.",
+    "kjv": "These are the sons of Ham, after their families, after their tongues, in their countries, and in their nations."
+  },
+  "gen-10-21": {
+    "id": "gen-10-21",
+    "reference": "Genesis 10:21",
+    "web": "Children were also born to Shem (the elder brother of Japheth), the father of all the children of Eber.",
+    "kjv": "Unto Shem also, the father of all the children of Eber, the brother of Japheth the elder, even to him were children born."
+  },
+  "gen-10-22": {
+    "id": "gen-10-22",
+    "reference": "Genesis 10:22",
+    "web": "The sons of Shem were: Elam, Asshur, Arpachshad, Lud, and Aram.",
+    "kjv": "The children of Shem; Elam, and Asshur, and Arphaxad, and Lud, and Aram."
+  },
+  "gen-10-23": {
+    "id": "gen-10-23",
+    "reference": "Genesis 10:23",
+    "web": "The sons of Aram were: Uz, Hul, Gether, and Mash.",
+    "kjv": "And the children of Aram; Uz, and Hul, and Gether, and Mash."
+  },
+  "gen-10-24": {
+    "id": "gen-10-24",
+    "reference": "Genesis 10:24",
+    "web": "Arpachshad became the father of Shelah. Shelah became the father of Eber.",
+    "kjv": "And Arphaxad begat Salah; and Salah begat Eber."
+  },
+  "gen-10-25": {
+    "id": "gen-10-25",
+    "reference": "Genesis 10:25",
+    "web": "To Eber were born two sons. The name of the one was Peleg, for in his days the earth was divided. His brother’s name was Joktan.",
+    "kjv": "And unto Eber were born two sons: the name of one was Peleg; for in his days was the earth divided; and his brother’s name was Joktan."
+  },
+  "gen-10-26": {
+    "id": "gen-10-26",
+    "reference": "Genesis 10:26",
+    "web": "Joktan became the father of Almodad, Sheleph, Hazarmaveth, Jerah,",
+    "kjv": "And Joktan begat Almodad, and Sheleph, and Hazarmaveth, and Jerah,"
+  },
+  "gen-10-27": {
+    "id": "gen-10-27",
+    "reference": "Genesis 10:27",
+    "web": "Hadoram, Uzal, Diklah,",
+    "kjv": "And Hadoram, and Uzal, and Diklah,"
+  },
+  "gen-10-28": {
+    "id": "gen-10-28",
+    "reference": "Genesis 10:28",
+    "web": "Obal, Abimael, Sheba,",
+    "kjv": "And Obal, and Abimael, and Sheba,"
+  },
+  "gen-10-29": {
+    "id": "gen-10-29",
+    "reference": "Genesis 10:29",
+    "web": "Ophir, Havilah, and Jobab. All these were the sons of Joktan.",
+    "kjv": "And Ophir, and Havilah, and Jobab: all these were the sons of Joktan."
+  },
+  "gen-10-30": {
+    "id": "gen-10-30",
+    "reference": "Genesis 10:30",
+    "web": "Their dwelling extended from Mesha, as you go toward Sephar, the mountain of the east.",
+    "kjv": "And their dwelling was from Mesha, as thou goest unto Sephar a mount of the east."
+  },
+  "gen-10-31": {
+    "id": "gen-10-31",
+    "reference": "Genesis 10:31",
+    "web": "These are the sons of Shem, by their families, according to their languages, lands, and nations.",
+    "kjv": "These are the sons of Shem, after their families, after their tongues, in their lands, after their nations."
+  },
+  "gen-10-32": {
+    "id": "gen-10-32",
+    "reference": "Genesis 10:32",
+    "web": "These are the families of the sons of Noah, by their generations, according to their nations. The nations divided from these in the earth after the flood.",
+    "kjv": "These are the families of the sons of Noah, after their generations, in their nations: and by these were the nations divided in the earth after the flood."
+  },
   "gen-11-1": {
     "id": "gen-11-1",
     "reference": "Genesis 11:1",
@@ -5196,6 +5388,44 @@ export const chapters: Record<string, import("./types").BibleChapter> = {
       "gen-9-27",
       "gen-9-28",
       "gen-9-29"
+    ]
+  },
+  "gen-10": {
+    "id": "gen-10",
+    "reference": "Genesis 10",
+    "verseIds": [
+      "gen-10-1",
+      "gen-10-2",
+      "gen-10-3",
+      "gen-10-4",
+      "gen-10-5",
+      "gen-10-6",
+      "gen-10-7",
+      "gen-10-8",
+      "gen-10-9",
+      "gen-10-10",
+      "gen-10-11",
+      "gen-10-12",
+      "gen-10-13",
+      "gen-10-14",
+      "gen-10-15",
+      "gen-10-16",
+      "gen-10-17",
+      "gen-10-18",
+      "gen-10-19",
+      "gen-10-20",
+      "gen-10-21",
+      "gen-10-22",
+      "gen-10-23",
+      "gen-10-24",
+      "gen-10-25",
+      "gen-10-26",
+      "gen-10-27",
+      "gen-10-28",
+      "gen-10-29",
+      "gen-10-30",
+      "gen-10-31",
+      "gen-10-32"
     ]
   },
   "gen-11": {

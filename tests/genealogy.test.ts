@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { people, peopleById, relationships, views } from "../src/data/genealogy";
+import {
+  people,
+  peopleById,
+  relationships,
+  views,
+  visiblePersonIdsForView,
+} from "../src/data/genealogy";
 import { chapters, scripture } from "../src/data/scripture.generated";
 
 describe("Toldot genealogy dataset", () => {
@@ -35,6 +41,13 @@ describe("Toldot genealogy dataset", () => {
       expect(view.personIds.length).toBeGreaterThan(0);
       view.personIds.forEach((personId) => expect(peopleById.has(personId), `${view.id}: ${personId}`).toBe(true));
       view.rootIds.forEach((personId) => expect(view.personIds, `${view.id}: root ${personId}`).toContain(personId));
+      view.branches?.forEach((branch) => {
+        expect(view.personIds, `${view.id}: branch root ${branch.rootPersonId}`).toContain(branch.rootPersonId);
+        branch.personIds.forEach((personId) => expect(view.personIds, `${view.id}/${branch.id}: ${personId}`).toContain(personId));
+      });
+      view.defaultExpandedBranchIds?.forEach((branchId) => {
+        expect(view.branches?.some((branch) => branch.id === branchId), `${view.id}: default branch ${branchId}`).toBe(true);
+      });
     }
   });
 
@@ -83,5 +96,47 @@ describe("Toldot genealogy dataset", () => {
         ), `${parentId} -> ${childId}`).toBe(true);
       }
     }
+  });
+
+  it("orders the genealogy views chronologically", () => {
+    expect(views.map((view) => view.id)).toEqual([
+      "origins",
+      "noah-to-abraham",
+      "patriarchs",
+      "davidic",
+      "matthew",
+      "luke",
+      "promise",
+    ]);
+    expect(views.find((view) => view.id === "patriarchs")?.personIds).not.toContain("david");
+  });
+
+  it("includes Cain's Genesis 4 line and defaults to Seth's line", () => {
+    const origins = views.find((view) => view.id === "origins")!;
+    const visible = visiblePersonIdsForView(origins, origins.defaultExpandedBranchIds ?? []);
+
+    expect(origins.branches?.map((branch) => branch.id)).toEqual(["seth", "cain"]);
+    expect(visible).toContain("noah");
+    expect(visible).not.toContain("enoch-cain");
+    expect(relationships.some((relationship) => relationship.from === "cain" && relationship.to === "enoch-cain")).toBe(true);
+    expect(relationships.some((relationship) => relationship.from === "methushael" && relationship.to === "lamech-cain")).toBe(true);
+    expect(relationships.some((relationship) => relationship.from === "zillah" && relationship.to === "tubal-cain")).toBe(true);
+  });
+
+  it("shows Noah's three sons and expands only Shem's line by default", () => {
+    const origins = views.find((view) => view.id === "origins")!;
+    const noahView = views.find((view) => view.id === "noah-to-abraham")!;
+    const noahChildren = relationships
+      .filter((relationship) => relationship.from === "noah" && origins.personIds.includes(relationship.to))
+      .map((relationship) => relationship.to)
+      .sort();
+    const visible = visiblePersonIdsForView(noahView, noahView.defaultExpandedBranchIds ?? []);
+
+    expect(noahChildren).toEqual(["ham", "japheth", "shem"]);
+    expect(noahView.branches?.map((branch) => branch.id)).toEqual(["shem", "ham", "japheth"]);
+    expect(visible).toContain("abraham");
+    expect(visible).not.toContain("cush");
+    expect(visible).not.toContain("gomer");
+    expect(chapters["gen-10"].verseIds).toHaveLength(32);
   });
 });

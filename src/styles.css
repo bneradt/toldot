@@ -284,6 +284,56 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
   box-shadow: inset 0 0 70px rgb(56 70 62 / 4%);
 }
 .graph-canvas { width: 100%; height: 100%; min-height: 430px; }
+.branch-controls {
+  position: absolute;
+  z-index: 2;
+  top: 13px;
+  left: 13px;
+  max-width: calc(100% - 190px);
+  padding: 8px;
+  border: 1px solid #d5cbb9;
+  border-radius: 11px;
+  background: rgb(255 253 248 / 92%);
+  box-shadow: 0 4px 14px rgb(24 47 41 / 8%);
+  backdrop-filter: blur(8px);
+}
+.branch-controls > span {
+  display: block;
+  margin: 0 4px 6px;
+  color: #7b817d;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.branch-controls > div { display: flex; flex-wrap: wrap; gap: 5px; }
+.branch-controls button {
+  display: inline-flex;
+  height: 30px;
+  align-items: center;
+  gap: 6px;
+  padding: 0 8px 0 6px;
+  border: 1px solid #ddd3c1;
+  border-radius: 7px;
+  color: #4f5f5a;
+  font-size: 10px;
+  font-weight: 700;
+  background: #faf6ed;
+  cursor: pointer;
+}
+.branch-controls button:hover { border-color: #bda986; background: #f4ead8; }
+.branch-controls button.expanded { border-color: #b9c9c2; color: #244a42; background: #edf3ef; }
+.branch-controls button i {
+  display: grid;
+  width: 17px;
+  height: 17px;
+  place-items: center;
+  border-radius: 50%;
+  font: normal 700 13px/1 Inter, sans-serif;
+  background: #e9deca;
+}
+.branch-controls button.expanded i { color: white; background: #477168; }
+.branch-controls button small { color: #8b918d; font-size: 8px; font-weight: 700; }
 .graph-controls {
   position: absolute;
   top: 13px;
@@ -476,6 +526,8 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
   .view-heading p { font-size: 12px; }
   .legend { justify-content: flex-start; margin-top: 11px; }
   .graph-shell, .graph-canvas { min-height: 56dvh; height: 56dvh; }
+  .branch-controls { max-width: calc(100% - 112px); }
+  .branch-controls button { height: 28px; }
   .graph-scroll-hint { display: none; }
   .hover-preview { display: none; }
   .person-panel { top: auto; right: 0; bottom: 0; left: 0; width: auto; max-height: 84dvh; border-top: 1px solid #cfc4b1; border-left: 0; border-radius: 18px 18px 0 0; box-shadow: 0 -20px 50px rgb(26 44 39 / 18%); }

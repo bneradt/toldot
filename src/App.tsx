@@ -11,7 +11,7 @@ function readLocation() {
   const requestedView = new URLSearchParams(window.location.search).get("view");
   const person = requestedPerson && peopleById.has(requestedPerson) ? requestedPerson : null;
   const fallbackView = person ? firstViewForPerson(person)?.id : null;
-  const view = requestedView && viewById.has(requestedView) ? requestedView : fallbackView ?? "promise";
+  const view = requestedView && viewById.has(requestedView) ? requestedView : fallbackView ?? "origins";
   return { person, view };
 }
 
@@ -164,7 +164,7 @@ export function App() {
         </div>
         <div className="edition-note">
           <span>First edition</span>
-          <p>Messianic lines and their immediate families. More biblical genealogies will follow.</p>
+          <p>From Genesis’s earliest families through the Gospel genealogies. More biblical lines will follow.</p>
         </div>
       </nav>
 

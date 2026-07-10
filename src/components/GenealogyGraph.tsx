@@ -1,7 +1,7 @@
 import cytoscape, { type Core, type ElementDefinition } from "cytoscape";
 import dagre from "cytoscape-dagre";
-import { useEffect, useRef } from "react";
-import { peopleById, relationships } from "../data/genealogy";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { peopleById, relationships, visiblePersonIdsForView } from "../data/genealogy";
 import type { GenealogyView, Person } from "../data/types";
 
 cytoscape.use(dagre);
@@ -31,6 +31,16 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
   const graphRef = useRef<Core | null>(null);
   const onSelectRef = useRef(onSelect);
   const onHoverRef = useRef(onHover);
+  const [expandedByView, setExpandedByView] = useState<Record<string, string[]>>({});
+
+  const expandedBranchIds = useMemo(
+    () => new Set(expandedByView[view.id] ?? view.defaultExpandedBranchIds ?? []),
+    [expandedByView, view],
+  );
+  const visiblePersonIds = useMemo(
+    () => visiblePersonIdsForView(view, expandedBranchIds),
+    [expandedBranchIds, view],
+  );
 
   useEffect(() => {
     onSelectRef.current = onSelect;
@@ -38,11 +48,24 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
   }, [onHover, onSelect]);
 
   useEffect(() => {
+    if (!selectedId) return;
+    const containingBranch = view.branches?.find((branch) => branch.personIds.includes(selectedId));
+    if (!containingBranch) return;
+
+    setExpandedByView((current) => {
+      const expanded = new Set(current[view.id] ?? view.defaultExpandedBranchIds ?? []);
+      if (expanded.has(containingBranch.id)) return current;
+      expanded.add(containingBranch.id);
+      return { ...current, [view.id]: [...expanded] };
+    });
+  }, [selectedId, view]);
+
+  useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
-    const visible = new Set(view.personIds);
-    const nodes: ElementDefinition[] = view.personIds.flatMap((id) => {
+    const visible = new Set(visiblePersonIds);
+    const nodes: ElementDefinition[] = visiblePersonIds.flatMap((id) => {
       const person = peopleById.get(id);
       if (!person) return [];
       return [{
@@ -227,7 +250,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
       graph.destroy();
       graphRef.current = null;
     };
-  }, [view]);
+  }, [view, visiblePersonIds]);
 
   useEffect(() => {
     const graph = graphRef.current;
@@ -239,7 +262,16 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
     selected.addClass("selected");
     selected.neighborhood().addClass("neighbor");
     graph.animate({ center: { eles: selected }, duration: 220 });
-  }, [selectedId]);
+  }, [selectedId, visiblePersonIds]);
+
+  const toggleBranch = (branchId: string) => {
+    setExpandedByView((current) => {
+      const expanded = new Set(current[view.id] ?? view.defaultExpandedBranchIds ?? []);
+      if (expanded.has(branchId)) expanded.delete(branchId);
+      else expanded.add(branchId);
+      return { ...current, [view.id]: [...expanded] };
+    });
+  };
 
   const zoom = (factor: number) => {
     const graph = graphRef.current;
@@ -257,6 +289,29 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
         role="img"
         aria-label={`${view.title} interactive family graph. Use search or the browse-names list for keyboard navigation.`}
       />
+      {view.branches && view.branches.length > 0 && (
+        <div className="branch-controls" aria-label="Family tree branches">
+          <span>Family branches</span>
+          <div>
+            {view.branches.map((branch) => {
+              const expanded = expandedBranchIds.has(branch.id);
+              return (
+                <button
+                  type="button"
+                  key={branch.id}
+                  className={expanded ? "expanded" : ""}
+                  aria-expanded={expanded}
+                  onClick={() => toggleBranch(branch.id)}
+                >
+                  <i aria-hidden="true">{expanded ? "−" : "+"}</i>
+                  {branch.title}
+                  <small>{branch.personIds.length}</small>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
       <div className="graph-controls" aria-label="Graph controls">
         <button type="button" onClick={() => zoom(1.24)} aria-label="Zoom in">+</button>
         <button type="button" onClick={() => zoom(0.8)} aria-label="Zoom out">−</button>
