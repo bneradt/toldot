@@ -9,6 +9,6 @@ export default defineConfig({
     sourcemap: true,
     // This is intentionally one startup bundle: interactions never trigger a
     // lazy chunk or data request after the application is ready.
-    chunkSizeWarningLimit: 900,
+    chunkSizeWarningLimit: 1100,
   },
 });

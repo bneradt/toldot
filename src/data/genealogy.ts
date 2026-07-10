@@ -369,7 +369,9 @@ addPerson({ id: "zerah", name: "Zerah", aliases: ["Zara"], primaryVerseId: "gen-
 connect("tamar", "perez", "parent", "Genesis", ["gen-38-29"]);
 connect("tamar", "perez", "parent", "Matthew", ["matt-1-3"]);
 connect("judah", "zerah", "parent", "Genesis", ["gen-38-30"]);
+connect("judah", "zerah", "parent", "Matthew", ["matt-1-3"]);
 connect("tamar", "zerah", "parent", "Genesis", ["gen-38-30"]);
+connect("tamar", "zerah", "parent", "Matthew", ["matt-1-3"]);
 
 addPerson({ id: "rahab", name: "Rahab", primaryVerseId: "matt-1-5", sex: "female", notable: true }, "Matthew", [promise, matthew]);
 addPerson({ id: "ruth", name: "Ruth", descriptor: "the Moabitess", primaryVerseId: "matt-1-5", sex: "female", notable: true }, "Matthew", [promise, matthew]);

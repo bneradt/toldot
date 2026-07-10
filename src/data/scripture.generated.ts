@@ -3,6 +3,132 @@
 import type { Verse } from "./types";
 
 export const scripture: Record<string, Verse> = {
+  "gen-2-1": {
+    "id": "gen-2-1",
+    "reference": "Genesis 2:1",
+    "web": "The heavens, the earth, and all their vast array were finished.",
+    "kjv": "Thus the heavens and the earth were finished, and all the host of them."
+  },
+  "gen-2-2": {
+    "id": "gen-2-2",
+    "reference": "Genesis 2:2",
+    "web": "On the seventh day God finished his work which he had done; and he rested on the seventh day from all his work which he had done.",
+    "kjv": "And on the seventh day God ended his work which he had made; and he rested on the seventh day from all his work which he had made."
+  },
+  "gen-2-3": {
+    "id": "gen-2-3",
+    "reference": "Genesis 2:3",
+    "web": "God blessed the seventh day, and made it holy, because he rested in it from all his work of creation which he had done.",
+    "kjv": "And God blessed the seventh day, and sanctified it: because that in it he had rested from all his work which God created and made."
+  },
+  "gen-2-4": {
+    "id": "gen-2-4",
+    "reference": "Genesis 2:4",
+    "web": "This is the history of the generations of the heavens and of the earth when they were created, in the day that the LORD God made the earth and the heavens.",
+    "kjv": "These are the generations of the heavens and of the earth when they were created, in the day that the LORD God made the earth and the heavens,"
+  },
+  "gen-2-5": {
+    "id": "gen-2-5",
+    "reference": "Genesis 2:5",
+    "web": "No plant of the field was yet in the earth, and no herb of the field had yet sprung up; for the LORD God had not caused it to rain on the earth. There was not a man to till the ground,",
+    "kjv": "And every plant of the field before it was in the earth, and every herb of the field before it grew: for the LORD God had not caused it to rain upon the earth, and there was not a man to till the ground."
+  },
+  "gen-2-6": {
+    "id": "gen-2-6",
+    "reference": "Genesis 2:6",
+    "web": "but a mist went up from the earth, and watered the whole surface of the ground.",
+    "kjv": "But there went up a mist from the earth, and watered the whole face of the ground."
+  },
+  "gen-2-7": {
+    "id": "gen-2-7",
+    "reference": "Genesis 2:7",
+    "web": "The LORD God formed man from the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.",
+    "kjv": "And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul."
+  },
+  "gen-2-8": {
+    "id": "gen-2-8",
+    "reference": "Genesis 2:8",
+    "web": "The LORD God planted a garden eastward, in Eden, and there he put the man whom he had formed.",
+    "kjv": "And the LORD God planted a garden eastward in Eden; and there he put the man whom he had formed."
+  },
+  "gen-2-9": {
+    "id": "gen-2-9",
+    "reference": "Genesis 2:9",
+    "web": "Out of the ground the LORD God made every tree to grow that is pleasant to the sight, and good for food, including the tree of life in the middle of the garden and the tree of the knowledge of good and evil.",
+    "kjv": "And out of the ground made the LORD God to grow every tree that is pleasant to the sight, and good for food; the tree of life also in the midst of the garden, and the tree of knowledge of good and evil."
+  },
+  "gen-2-10": {
+    "id": "gen-2-10",
+    "reference": "Genesis 2:10",
+    "web": "A river went out of Eden to water the garden; and from there it was parted, and became the source of four rivers.",
+    "kjv": "And a river went out of Eden to water the garden; and from thence it was parted, and became into four heads."
+  },
+  "gen-2-11": {
+    "id": "gen-2-11",
+    "reference": "Genesis 2:11",
+    "web": "The name of the first is Pishon: it flows through the whole land of Havilah, where there is gold;",
+    "kjv": "The name of the first is Pison: that is it which compasseth the whole land of Havilah, where there is gold;"
+  },
+  "gen-2-12": {
+    "id": "gen-2-12",
+    "reference": "Genesis 2:12",
+    "web": "and the gold of that land is good. Bdellium and onyx stone are also there.",
+    "kjv": "And the gold of that land is good: there is bdellium and the onyx stone."
+  },
+  "gen-2-13": {
+    "id": "gen-2-13",
+    "reference": "Genesis 2:13",
+    "web": "The name of the second river is Gihon. It is the same river that flows through the whole land of Cush.",
+    "kjv": "And the name of the second river is Gihon: the same is it that compasseth the whole land of Ethiopia."
+  },
+  "gen-2-14": {
+    "id": "gen-2-14",
+    "reference": "Genesis 2:14",
+    "web": "The name of the third river is Hiddekel. This is the one which flows in front of Assyria. The fourth river is the Euphrates.",
+    "kjv": "And the name of the third river is Hiddekel: that is it which goeth toward the east of Assyria. And the fourth river is Euphrates."
+  },
+  "gen-2-15": {
+    "id": "gen-2-15",
+    "reference": "Genesis 2:15",
+    "web": "The LORD God took the man, and put him into the garden of Eden to cultivate and keep it.",
+    "kjv": "And the LORD God took the man, and put him into the garden of Eden to dress it and to keep it."
+  },
+  "gen-2-16": {
+    "id": "gen-2-16",
+    "reference": "Genesis 2:16",
+    "web": "The LORD God commanded the man, saying, “You may freely eat of every tree of the garden;",
+    "kjv": "And the LORD God commanded the man, saying, Of every tree of the garden thou mayest freely eat:"
+  },
+  "gen-2-17": {
+    "id": "gen-2-17",
+    "reference": "Genesis 2:17",
+    "web": "but you shall not eat of the tree of the knowledge of good and evil; for in the day that you eat of it, you will surely die.”",
+    "kjv": "But of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die."
+  },
+  "gen-2-18": {
+    "id": "gen-2-18",
+    "reference": "Genesis 2:18",
+    "web": "The LORD God said, “It is not good for the man to be alone. I will make him a helper comparable to him.”",
+    "kjv": "And the LORD God said, It is not good that the man should be alone; I will make him an help meet for him."
+  },
+  "gen-2-19": {
+    "id": "gen-2-19",
+    "reference": "Genesis 2:19",
+    "web": "Out of the ground the LORD God formed every animal of the field, and every bird of the sky, and brought them to the man to see what he would call them. Whatever the man called every living creature became its name.",
+    "kjv": "And out of the ground the LORD God formed every beast of the field, and every fowl of the air; and brought them unto Adam to see what he would call them: and whatsoever Adam called every living creature, that was the name thereof."
+  },
+  "gen-2-20": {
+    "id": "gen-2-20",
+    "reference": "Genesis 2:20",
+    "web": "The man gave names to all livestock, and to the birds of the sky, and to every animal of the field; but for man there was not found a helper comparable to him.",
+    "kjv": "And Adam gave names to all cattle, and to the fowl of the air, and to every beast of the field; but for Adam there was not found an help meet for him."
+  },
+  "gen-2-21": {
+    "id": "gen-2-21",
+    "reference": "Genesis 2:21",
+    "web": "The LORD God caused the man to fall into a deep sleep. As the man slept, he took one of his ribs, and closed up the flesh in its place.",
+    "kjv": "And the LORD God caused a deep sleep to fall upon Adam, and he slept: and he took one of his ribs, and closed up the flesh instead thereof;"
+  },
   "gen-2-22": {
     "id": "gen-2-22",
     "reference": "Genesis 2:22",
@@ -21,6 +147,12 @@ export const scripture: Record<string, Verse> = {
     "web": "Therefore a man will leave his father and his mother, and will join with his wife, and they will be one flesh.",
     "kjv": "Therefore shall a man leave his father and his mother, and shall cleave unto his wife: and they shall be one flesh."
   },
+  "gen-2-25": {
+    "id": "gen-2-25",
+    "reference": "Genesis 2:25",
+    "web": "The man and his wife were both naked, and they were not ashamed.",
+    "kjv": "And they were both naked, the man and his wife, and were not ashamed."
+  },
   "gen-4-1": {
     "id": "gen-4-1",
     "reference": "Genesis 4:1",
@@ -32,6 +164,138 @@ export const scripture: Record<string, Verse> = {
     "reference": "Genesis 4:2",
     "web": "Again she gave birth, to Cain’s brother Abel. Abel was a keeper of sheep, but Cain was a tiller of the ground.",
     "kjv": "And she again bare his brother Abel. And Abel was a keeper of sheep, but Cain was a tiller of the ground."
+  },
+  "gen-4-3": {
+    "id": "gen-4-3",
+    "reference": "Genesis 4:3",
+    "web": "As time passed, Cain brought an offering to the LORD from the fruit of the ground.",
+    "kjv": "And in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD."
+  },
+  "gen-4-4": {
+    "id": "gen-4-4",
+    "reference": "Genesis 4:4",
+    "web": "Abel also brought some of the firstborn of his flock and of its fat. The LORD respected Abel and his offering,",
+    "kjv": "And Abel, he also brought of the firstlings of his flock and of the fat thereof. And the LORD had respect unto Abel and to his offering:"
+  },
+  "gen-4-5": {
+    "id": "gen-4-5",
+    "reference": "Genesis 4:5",
+    "web": "but he didn’t respect Cain and his offering. Cain was very angry, and the expression on his face fell.",
+    "kjv": "But unto Cain and to his offering he had not respect. And Cain was very wroth, and his countenance fell."
+  },
+  "gen-4-6": {
+    "id": "gen-4-6",
+    "reference": "Genesis 4:6",
+    "web": "The LORD said to Cain, “Why are you angry? Why has the expression of your face fallen?",
+    "kjv": "And the LORD said unto Cain, Why art thou wroth? and why is thy countenance fallen?"
+  },
+  "gen-4-7": {
+    "id": "gen-4-7",
+    "reference": "Genesis 4:7",
+    "web": "If you do well, won’t it be lifted up? If you don’t do well, sin crouches at the door. Its desire is for you, but you are to rule over it.”",
+    "kjv": "If thou doest well, shalt thou not be accepted? and if thou doest not well, sin lieth at the door. And unto thee shall be his desire, and thou shalt rule over him."
+  },
+  "gen-4-8": {
+    "id": "gen-4-8",
+    "reference": "Genesis 4:8",
+    "web": "Cain said to Abel, his brother, “Let’s go into the field.” While they were in the field, Cain rose up against Abel, his brother, and killed him.",
+    "kjv": "And Cain talked with Abel his brother: and it came to pass, when they were in the field, that Cain rose up against Abel his brother, and slew him."
+  },
+  "gen-4-9": {
+    "id": "gen-4-9",
+    "reference": "Genesis 4:9",
+    "web": "The LORD said to Cain, “Where is Abel, your brother?”\n\nHe said, “I don’t know. Am I my brother’s keeper?”",
+    "kjv": "And the LORD said unto Cain, Where is Abel thy brother? And he said, I know not: Am I my brother’s keeper?"
+  },
+  "gen-4-10": {
+    "id": "gen-4-10",
+    "reference": "Genesis 4:10",
+    "web": "The LORD said, “What have you done? The voice of your brother’s blood cries to me from the ground.",
+    "kjv": "And he said, What hast thou done? the voice of thy brother’s blood crieth unto me from the ground."
+  },
+  "gen-4-11": {
+    "id": "gen-4-11",
+    "reference": "Genesis 4:11",
+    "web": "Now you are cursed because of the ground, which has opened its mouth to receive your brother’s blood from your hand.",
+    "kjv": "And now art thou cursed from the earth, which hath opened her mouth to receive thy brother’s blood from thy hand;"
+  },
+  "gen-4-12": {
+    "id": "gen-4-12",
+    "reference": "Genesis 4:12",
+    "web": "From now on, when you till the ground, it won’t yield its strength to you. You will be a fugitive and a wanderer in the earth.”",
+    "kjv": "When thou tillest the ground, it shall not henceforth yield unto thee her strength; a fugitive and a vagabond shalt thou be in the earth."
+  },
+  "gen-4-13": {
+    "id": "gen-4-13",
+    "reference": "Genesis 4:13",
+    "web": "Cain said to the LORD, “My punishment is greater than I can bear.",
+    "kjv": "And Cain said unto the LORD, My punishment is greater than I can bear."
+  },
+  "gen-4-14": {
+    "id": "gen-4-14",
+    "reference": "Genesis 4:14",
+    "web": "Behold, you have driven me out today from the surface of the ground. I will be hidden from your face, and I will be a fugitive and a wanderer in the earth. Whoever finds me will kill me.”",
+    "kjv": "Behold, thou hast driven me out this day from the face of the earth; and from thy face shall I be hid; and I shall be a fugitive and a vagabond in the earth; and it shall come to pass, that every one that findeth me shall slay me."
+  },
+  "gen-4-15": {
+    "id": "gen-4-15",
+    "reference": "Genesis 4:15",
+    "web": "The LORD said to him, “Therefore whoever slays Cain, vengeance will be taken on him sevenfold.” The LORD appointed a sign for Cain, so that anyone finding him would not strike him.",
+    "kjv": "And the LORD said unto him, Therefore whosoever slayeth Cain, vengeance shall be taken on him sevenfold. And the LORD set a mark upon Cain, lest any finding him should kill him."
+  },
+  "gen-4-16": {
+    "id": "gen-4-16",
+    "reference": "Genesis 4:16",
+    "web": "Cain left the LORD’s presence, and lived in the land of Nod, east of Eden.",
+    "kjv": "And Cain went out from the presence of the LORD, and dwelt in the land of Nod, on the east of Eden."
+  },
+  "gen-4-17": {
+    "id": "gen-4-17",
+    "reference": "Genesis 4:17",
+    "web": "Cain knew his wife. She conceived, and gave birth to Enoch. He built a city, and named the city after the name of his son, Enoch.",
+    "kjv": "And Cain knew his wife; and she conceived, and bare Enoch: and he builded a city, and called the name of the city, after the name of his son, Enoch."
+  },
+  "gen-4-18": {
+    "id": "gen-4-18",
+    "reference": "Genesis 4:18",
+    "web": "Irad was born to Enoch. Irad became the father of Mehujael. Mehujael became the father of Methushael. Methushael became the father of Lamech.",
+    "kjv": "And unto Enoch was born Irad: and Irad begat Mehujael: and Mehujael begat Methusael: and Methusael begat Lamech."
+  },
+  "gen-4-19": {
+    "id": "gen-4-19",
+    "reference": "Genesis 4:19",
+    "web": "Lamech took two wives: the name of the first one was Adah, and the name of the second one was Zillah.",
+    "kjv": "And Lamech took unto him two wives: the name of the one was Adah, and the name of the other Zillah."
+  },
+  "gen-4-20": {
+    "id": "gen-4-20",
+    "reference": "Genesis 4:20",
+    "web": "Adah gave birth to Jabal, who was the father of those who dwell in tents and have livestock.",
+    "kjv": "And Adah bare Jabal: he was the father of such as dwell in tents, and of such as have cattle."
+  },
+  "gen-4-21": {
+    "id": "gen-4-21",
+    "reference": "Genesis 4:21",
+    "web": "His brother’s name was Jubal, who was the father of all who handle the harp and pipe.",
+    "kjv": "And his brother’s name was Jubal: he was the father of all such as handle the harp and organ."
+  },
+  "gen-4-22": {
+    "id": "gen-4-22",
+    "reference": "Genesis 4:22",
+    "web": "Zillah also gave birth to Tubal Cain, the forger of every cutting instrument of bronze and iron. Tubal Cain’s sister was Naamah.",
+    "kjv": "And Zillah, she also bare Tubal-cain, an instructer of every artificer in brass and iron: and the sister of Tubal-cain was Naamah."
+  },
+  "gen-4-23": {
+    "id": "gen-4-23",
+    "reference": "Genesis 4:23",
+    "web": "Lamech said to his wives, “Adah and Zillah, hear my voice. You wives of Lamech, listen to my speech, for I have slain a man for wounding me, a young man for bruising me.",
+    "kjv": "And Lamech said unto his wives, Adah and Zillah, Hear my voice; ye wives of Lamech, hearken unto my speech: for I have slain a man to my wounding, and a young man to my hurt."
+  },
+  "gen-4-24": {
+    "id": "gen-4-24",
+    "reference": "Genesis 4:24",
+    "web": "If Cain will be avenged seven times, truly Lamech seventy-seven times.”",
+    "kjv": "If Cain shall be avenged sevenfold, truly Lamech seventy and sevenfold."
   },
   "gen-4-25": {
     "id": "gen-4-25",
@@ -237,6 +501,48 @@ export const scripture: Record<string, Verse> = {
     "web": "Noah was five hundred years old, then Noah became the father of Shem, Ham, and Japheth.",
     "kjv": "And Noah was five hundred years old: and Noah begat Shem, Ham, and Japheth."
   },
+  "gen-6-1": {
+    "id": "gen-6-1",
+    "reference": "Genesis 6:1",
+    "web": "When men began to multiply on the surface of the ground, and daughters were born to them,",
+    "kjv": "And it came to pass, when men began to multiply on the face of the earth, and daughters were born unto them,"
+  },
+  "gen-6-2": {
+    "id": "gen-6-2",
+    "reference": "Genesis 6:2",
+    "web": "God’s sons saw that men’s daughters were beautiful, and they took any that they wanted for themselves as wives.",
+    "kjv": "That the sons of God saw the daughters of men that they were fair; and they took them wives of all which they chose."
+  },
+  "gen-6-3": {
+    "id": "gen-6-3",
+    "reference": "Genesis 6:3",
+    "web": "The LORD said, “My Spirit will not strive with man forever, because he also is flesh; so his days will be one hundred twenty years.”",
+    "kjv": "And the LORD said, My spirit shall not always strive with man, for that he also is flesh: yet his days shall be an hundred and twenty years."
+  },
+  "gen-6-4": {
+    "id": "gen-6-4",
+    "reference": "Genesis 6:4",
+    "web": "The Nephilim were in the earth in those days, and also after that, when God’s sons came in to men’s daughters and had children with them. Those were the mighty men who were of old, men of renown.",
+    "kjv": "There were giants in the earth in those days; and also after that, when the sons of God came in unto the daughters of men, and they bare children to them, the same became mighty men which were of old, men of renown."
+  },
+  "gen-6-5": {
+    "id": "gen-6-5",
+    "reference": "Genesis 6:5",
+    "web": "The LORD saw that the wickedness of man was great in the earth, and that every imagination of the thoughts of man’s heart was continually only evil.",
+    "kjv": "And GOD saw that the wickedness of man was great in the earth, and that every imagination of the thoughts of his heart was only evil continually."
+  },
+  "gen-6-6": {
+    "id": "gen-6-6",
+    "reference": "Genesis 6:6",
+    "web": "The LORD was sorry that he had made man on the earth, and it grieved him in his heart.",
+    "kjv": "And it repented the LORD that he had made man on the earth, and it grieved him at his heart."
+  },
+  "gen-6-7": {
+    "id": "gen-6-7",
+    "reference": "Genesis 6:7",
+    "web": "The LORD said, “I will destroy man whom I have created from the surface of the ground—man, along with animals, creeping things, and birds of the sky—for I am sorry that I have made them.”",
+    "kjv": "And the LORD said, I will destroy man whom I have created from the face of the earth; both man, and beast, and the creeping thing, and the fowls of the air; for it repenteth me that I have made them."
+  },
   "gen-6-8": {
     "id": "gen-6-8",
     "reference": "Genesis 6:8",
@@ -249,6 +555,186 @@ export const scripture: Record<string, Verse> = {
     "web": "This is the history of the generations of Noah: Noah was a righteous man, blameless among the people of his time. Noah walked with God.",
     "kjv": "These are the generations of Noah: Noah was a just man and perfect in his generations, and Noah walked with God."
   },
+  "gen-6-10": {
+    "id": "gen-6-10",
+    "reference": "Genesis 6:10",
+    "web": "Noah became the father of three sons: Shem, Ham, and Japheth.",
+    "kjv": "And Noah begat three sons, Shem, Ham, and Japheth."
+  },
+  "gen-6-11": {
+    "id": "gen-6-11",
+    "reference": "Genesis 6:11",
+    "web": "The earth was corrupt before God, and the earth was filled with violence.",
+    "kjv": "The earth also was corrupt before God, and the earth was filled with violence."
+  },
+  "gen-6-12": {
+    "id": "gen-6-12",
+    "reference": "Genesis 6:12",
+    "web": "God saw the earth, and saw that it was corrupt, for all flesh had corrupted their way on the earth.",
+    "kjv": "And God looked upon the earth, and, behold, it was corrupt; for all flesh had corrupted his way upon the earth."
+  },
+  "gen-6-13": {
+    "id": "gen-6-13",
+    "reference": "Genesis 6:13",
+    "web": "God said to Noah, “I will bring an end to all flesh, for the earth is filled with violence through them. Behold, I will destroy them and the earth.",
+    "kjv": "And God said unto Noah, The end of all flesh is come before me; for the earth is filled with violence through them; and, behold, I will destroy them with the earth."
+  },
+  "gen-6-14": {
+    "id": "gen-6-14",
+    "reference": "Genesis 6:14",
+    "web": "Make a ship of gopher wood. You shall make rooms in the ship, and shall seal it inside and outside with pitch.",
+    "kjv": "Make thee an ark of gopher wood; rooms shalt thou make in the ark, and shalt pitch it within and without with pitch."
+  },
+  "gen-6-15": {
+    "id": "gen-6-15",
+    "reference": "Genesis 6:15",
+    "web": "This is how you shall make it. The length of the ship shall be three hundred cubits, its width fifty cubits, and its height thirty cubits.",
+    "kjv": "And this is the fashion which thou shalt make it of: The length of the ark shall be three hundred cubits, the breadth of it fifty cubits, and the height of it thirty cubits."
+  },
+  "gen-6-16": {
+    "id": "gen-6-16",
+    "reference": "Genesis 6:16",
+    "web": "You shall make a roof in the ship, and you shall finish it to a cubit upward. You shall set the door of the ship in its side. You shall make it with lower, second, and third levels.",
+    "kjv": "A window shalt thou make to the ark, and in a cubit shalt thou finish it above; and the door of the ark shalt thou set in the side thereof; with lower, second, and third stories shalt thou make it."
+  },
+  "gen-6-17": {
+    "id": "gen-6-17",
+    "reference": "Genesis 6:17",
+    "web": "I, even I, will bring the flood of waters on this earth, to destroy all flesh having the breath of life from under the sky. Everything that is in the earth will die.",
+    "kjv": "And, behold, I, even I, do bring a flood of waters upon the earth, to destroy all flesh, wherein is the breath of life, from under heaven; and every thing that is in the earth shall die."
+  },
+  "gen-6-18": {
+    "id": "gen-6-18",
+    "reference": "Genesis 6:18",
+    "web": "But I will establish my covenant with you. You shall come into the ship, you, your sons, your wife, and your sons’ wives with you.",
+    "kjv": "But with thee will I establish my covenant; and thou shalt come into the ark, thou, and thy sons, and thy wife, and thy sons’ wives with thee."
+  },
+  "gen-6-19": {
+    "id": "gen-6-19",
+    "reference": "Genesis 6:19",
+    "web": "Of every living thing of all flesh, you shall bring two of every sort into the ship, to keep them alive with you. They shall be male and female.",
+    "kjv": "And of every living thing of all flesh, two of every sort shalt thou bring into the ark, to keep them alive with thee; they shall be male and female."
+  },
+  "gen-6-20": {
+    "id": "gen-6-20",
+    "reference": "Genesis 6:20",
+    "web": "Of the birds after their kind, of the livestock after their kind, of every creeping thing of the ground after its kind, two of every sort will come to you, to keep them alive.",
+    "kjv": "Of fowls after their kind, and of cattle after their kind, of every creeping thing of the earth after his kind, two of every sort shall come unto thee, to keep them alive."
+  },
+  "gen-6-21": {
+    "id": "gen-6-21",
+    "reference": "Genesis 6:21",
+    "web": "Take with you some of all food that is eaten, and gather it to yourself; and it will be for food for you, and for them.”",
+    "kjv": "And take thou unto thee of all food that is eaten, and thou shalt gather it to thee; and it shall be for food for thee, and for them."
+  },
+  "gen-6-22": {
+    "id": "gen-6-22",
+    "reference": "Genesis 6:22",
+    "web": "Thus Noah did. He did all that God commanded him.",
+    "kjv": "Thus did Noah; according to all that God commanded him, so did he."
+  },
+  "gen-9-1": {
+    "id": "gen-9-1",
+    "reference": "Genesis 9:1",
+    "web": "God blessed Noah and his sons, and said to them, “Be fruitful, multiply, and replenish the earth.",
+    "kjv": "And God blessed Noah and his sons, and said unto them, Be fruitful, and multiply, and replenish the earth."
+  },
+  "gen-9-2": {
+    "id": "gen-9-2",
+    "reference": "Genesis 9:2",
+    "web": "The fear of you and the dread of you will be on every animal of the earth, and on every bird of the sky. Everything that moves along the ground, and all the fish of the sea, are delivered into your hand.",
+    "kjv": "And the fear of you and the dread of you shall be upon every beast of the earth, and upon every fowl of the air, upon all that moveth upon the earth, and upon all the fishes of the sea; into your hand are they delivered."
+  },
+  "gen-9-3": {
+    "id": "gen-9-3",
+    "reference": "Genesis 9:3",
+    "web": "Every moving thing that lives will be food for you. As I gave you the green herb, I have given everything to you.",
+    "kjv": "Every moving thing that liveth shall be meat for you; even as the green herb have I given you all things."
+  },
+  "gen-9-4": {
+    "id": "gen-9-4",
+    "reference": "Genesis 9:4",
+    "web": "But flesh with its life, that is, its blood, you shall not eat.",
+    "kjv": "But flesh with the life thereof, which is the blood thereof, shall ye not eat."
+  },
+  "gen-9-5": {
+    "id": "gen-9-5",
+    "reference": "Genesis 9:5",
+    "web": "I will surely require accounting for your life’s blood. At the hand of every animal I will require it. At the hand of man, even at the hand of every man’s brother, I will require the life of man.",
+    "kjv": "And surely your blood of your lives will I require; at the hand of every beast will I require it, and at the hand of man; at the hand of every man’s brother will I require the life of man."
+  },
+  "gen-9-6": {
+    "id": "gen-9-6",
+    "reference": "Genesis 9:6",
+    "web": "Whoever sheds man’s blood, his blood will be shed by man, for God made man in his own image.",
+    "kjv": "Whoso sheddeth man’s blood, by man shall his blood be shed: for in the image of God made he man."
+  },
+  "gen-9-7": {
+    "id": "gen-9-7",
+    "reference": "Genesis 9:7",
+    "web": "Be fruitful and multiply. Increase abundantly in the earth, and multiply in it.”",
+    "kjv": "And you, be ye fruitful, and multiply; bring forth abundantly in the earth, and multiply therein."
+  },
+  "gen-9-8": {
+    "id": "gen-9-8",
+    "reference": "Genesis 9:8",
+    "web": "God spoke to Noah and to his sons with him, saying,",
+    "kjv": "And God spake unto Noah, and to his sons with him, saying,"
+  },
+  "gen-9-9": {
+    "id": "gen-9-9",
+    "reference": "Genesis 9:9",
+    "web": "“As for me, behold, I establish my covenant with you, and with your offspring after you,",
+    "kjv": "And I, behold, I establish my covenant with you, and with your seed after you;"
+  },
+  "gen-9-10": {
+    "id": "gen-9-10",
+    "reference": "Genesis 9:10",
+    "web": "and with every living creature that is with you: the birds, the livestock, and every animal of the earth with you, of all that go out of the ship, even every animal of the earth.",
+    "kjv": "And with every living creature that is with you, of the fowl, of the cattle, and of every beast of the earth with you; from all that go out of the ark, to every beast of the earth."
+  },
+  "gen-9-11": {
+    "id": "gen-9-11",
+    "reference": "Genesis 9:11",
+    "web": "I will establish my covenant with you: All flesh will not be cut off any more by the waters of the flood. There will never again be a flood to destroy the earth.”",
+    "kjv": "And I will establish my covenant with you; neither shall all flesh be cut off any more by the waters of a flood; neither shall there any more be a flood to destroy the earth."
+  },
+  "gen-9-12": {
+    "id": "gen-9-12",
+    "reference": "Genesis 9:12",
+    "web": "God said, “This is the token of the covenant which I make between me and you and every living creature that is with you, for perpetual generations:",
+    "kjv": "And God said, This is the token of the covenant which I make between me and you and every living creature that is with you, for perpetual generations:"
+  },
+  "gen-9-13": {
+    "id": "gen-9-13",
+    "reference": "Genesis 9:13",
+    "web": "I set my rainbow in the cloud, and it will be a sign of a covenant between me and the earth.",
+    "kjv": "I do set my bow in the cloud, and it shall be for a token of a covenant between me and the earth."
+  },
+  "gen-9-14": {
+    "id": "gen-9-14",
+    "reference": "Genesis 9:14",
+    "web": "When I bring a cloud over the earth, that the rainbow will be seen in the cloud,",
+    "kjv": "And it shall come to pass, when I bring a cloud over the earth, that the bow shall be seen in the cloud:"
+  },
+  "gen-9-15": {
+    "id": "gen-9-15",
+    "reference": "Genesis 9:15",
+    "web": "I will remember my covenant, which is between me and you and every living creature of all flesh, and the waters will no more become a flood to destroy all flesh.",
+    "kjv": "And I will remember my covenant, which is between me and you and every living creature of all flesh; and the waters shall no more become a flood to destroy all flesh."
+  },
+  "gen-9-16": {
+    "id": "gen-9-16",
+    "reference": "Genesis 9:16",
+    "web": "The rainbow will be in the cloud. I will look at it, that I may remember the everlasting covenant between God and every living creature of all flesh that is on the earth.”",
+    "kjv": "And the bow shall be in the cloud; and I will look upon it, that I may remember the everlasting covenant between God and every living creature of all flesh that is upon the earth."
+  },
+  "gen-9-17": {
+    "id": "gen-9-17",
+    "reference": "Genesis 9:17",
+    "web": "God said to Noah, “This is the token of the covenant which I have established between me and all flesh that is on the earth.”",
+    "kjv": "And God said unto Noah, This is the token of the covenant, which I have established between me and all flesh that is upon the earth."
+  },
   "gen-9-18": {
     "id": "gen-9-18",
     "reference": "Genesis 9:18",
@@ -260,6 +746,120 @@ export const scripture: Record<string, Verse> = {
     "reference": "Genesis 9:19",
     "web": "These three were the sons of Noah, and from these the whole earth was populated.",
     "kjv": "These are the three sons of Noah: and of them was the whole earth overspread."
+  },
+  "gen-9-20": {
+    "id": "gen-9-20",
+    "reference": "Genesis 9:20",
+    "web": "Noah began to be a farmer, and planted a vineyard.",
+    "kjv": "And Noah began to be an husbandman, and he planted a vineyard:"
+  },
+  "gen-9-21": {
+    "id": "gen-9-21",
+    "reference": "Genesis 9:21",
+    "web": "He drank of the wine and got drunk. He was uncovered within his tent.",
+    "kjv": "And he drank of the wine, and was drunken; and he was uncovered within his tent."
+  },
+  "gen-9-22": {
+    "id": "gen-9-22",
+    "reference": "Genesis 9:22",
+    "web": "Ham, the father of Canaan, saw the nakedness of his father, and told his two brothers outside.",
+    "kjv": "And Ham, the father of Canaan, saw the nakedness of his father, and told his two brethren without."
+  },
+  "gen-9-23": {
+    "id": "gen-9-23",
+    "reference": "Genesis 9:23",
+    "web": "Shem and Japheth took a garment, and laid it on both their shoulders, went in backwards, and covered the nakedness of their father. Their faces were backwards, and they didn’t see their father’s nakedness.",
+    "kjv": "And Shem and Japheth took a garment, and laid it upon both their shoulders, and went backward, and covered the nakedness of their father; and their faces were backward, and they saw not their father’s nakedness."
+  },
+  "gen-9-24": {
+    "id": "gen-9-24",
+    "reference": "Genesis 9:24",
+    "web": "Noah awoke from his wine, and knew what his youngest son had done to him.",
+    "kjv": "And Noah awoke from his wine, and knew what his younger son had done unto him."
+  },
+  "gen-9-25": {
+    "id": "gen-9-25",
+    "reference": "Genesis 9:25",
+    "web": "He said, “Canaan is cursed. He will be a servant of servants to his brothers.”",
+    "kjv": "And he said, Cursed be Canaan; a servant of servants shall he be unto his brethren."
+  },
+  "gen-9-26": {
+    "id": "gen-9-26",
+    "reference": "Genesis 9:26",
+    "web": "He said, “Blessed be the LORD, the God of Shem. Let Canaan be his servant.",
+    "kjv": "And he said, Blessed be the LORD God of Shem; and Canaan shall be his servant."
+  },
+  "gen-9-27": {
+    "id": "gen-9-27",
+    "reference": "Genesis 9:27",
+    "web": "May God enlarge Japheth. Let him dwell in the tents of Shem. Let Canaan be his servant.”",
+    "kjv": "God shall enlarge Japheth, and he shall dwell in the tents of Shem; and Canaan shall be his servant."
+  },
+  "gen-9-28": {
+    "id": "gen-9-28",
+    "reference": "Genesis 9:28",
+    "web": "Noah lived three hundred fifty years after the flood.",
+    "kjv": "And Noah lived after the flood three hundred and fifty years."
+  },
+  "gen-9-29": {
+    "id": "gen-9-29",
+    "reference": "Genesis 9:29",
+    "web": "All the days of Noah were nine hundred fifty years, and then he died.",
+    "kjv": "And all the days of Noah were nine hundred and fifty years: and he died."
+  },
+  "gen-11-1": {
+    "id": "gen-11-1",
+    "reference": "Genesis 11:1",
+    "web": "The whole earth was of one language and of one speech.",
+    "kjv": "And the whole earth was of one language, and of one speech."
+  },
+  "gen-11-2": {
+    "id": "gen-11-2",
+    "reference": "Genesis 11:2",
+    "web": "As they traveled east, they found a plain in the land of Shinar, and they lived there.",
+    "kjv": "And it came to pass, as they journeyed from the east, that they found a plain in the land of Shinar; and they dwelt there."
+  },
+  "gen-11-3": {
+    "id": "gen-11-3",
+    "reference": "Genesis 11:3",
+    "web": "They said to one another, “Come, let’s make bricks, and burn them thoroughly.” They had brick for stone, and they used tar for mortar.",
+    "kjv": "And they said one to another, Go to, let us make brick, and burn them throughly. And they had brick for stone, and slime had they for morter."
+  },
+  "gen-11-4": {
+    "id": "gen-11-4",
+    "reference": "Genesis 11:4",
+    "web": "They said, “Come, let’s build ourselves a city, and a tower whose top reaches to the sky, and let’s make a name for ourselves, lest we be scattered abroad on the surface of the whole earth.”",
+    "kjv": "And they said, Go to, let us build us a city and a tower, whose top may reach unto heaven; and let us make us a name, lest we be scattered abroad upon the face of the whole earth."
+  },
+  "gen-11-5": {
+    "id": "gen-11-5",
+    "reference": "Genesis 11:5",
+    "web": "The LORD came down to see the city and the tower, which the children of men built.",
+    "kjv": "And the LORD came down to see the city and the tower, which the children of men builded."
+  },
+  "gen-11-6": {
+    "id": "gen-11-6",
+    "reference": "Genesis 11:6",
+    "web": "The LORD said, “Behold, they are one people, and they all have one language, and this is what they begin to do. Now nothing will be withheld from them, which they intend to do.",
+    "kjv": "And the LORD said, Behold, the people is one, and they have all one language; and this they begin to do: and now nothing will be restrained from them, which they have imagined to do."
+  },
+  "gen-11-7": {
+    "id": "gen-11-7",
+    "reference": "Genesis 11:7",
+    "web": "Come, let’s go down, and there confuse their language, that they may not understand one another’s speech.”",
+    "kjv": "Go to, let us go down, and there confound their language, that they may not understand one another’s speech."
+  },
+  "gen-11-8": {
+    "id": "gen-11-8",
+    "reference": "Genesis 11:8",
+    "web": "So the LORD scattered them abroad from there on the surface of all the earth. They stopped building the city.",
+    "kjv": "So the LORD scattered them abroad from thence upon the face of all the earth: and they left off to build the city."
+  },
+  "gen-11-9": {
+    "id": "gen-11-9",
+    "reference": "Genesis 11:9",
+    "web": "Therefore its name was called Babel, because there the LORD confused the language of all the earth. From there, the LORD scattered them abroad on the surface of all the earth.",
+    "kjv": "Therefore is the name of it called Babel; because the LORD did there confound the language of all the earth: and from thence did the LORD scatter them abroad upon the face of all the earth."
   },
   "gen-11-10": {
     "id": "gen-11-10",
@@ -417,6 +1017,132 @@ export const scripture: Record<string, Verse> = {
     "web": "I will bless those who bless you, and I will curse him who treats you with contempt. All the families of the earth will be blessed through you.”",
     "kjv": "And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed."
   },
+  "gen-12-4": {
+    "id": "gen-12-4",
+    "reference": "Genesis 12:4",
+    "web": "So Abram went, as the LORD had told him. Lot went with him. Abram was seventy-five years old when he departed from Haran.",
+    "kjv": "So Abram departed, as the LORD had spoken unto him; and Lot went with him: and Abram was seventy and five years old when he departed out of Haran."
+  },
+  "gen-12-5": {
+    "id": "gen-12-5",
+    "reference": "Genesis 12:5",
+    "web": "Abram took Sarai his wife, Lot his brother’s son, all their possessions that they had gathered, and the people whom they had acquired in Haran, and they went to go into the land of Canaan. They entered into the land of Canaan.",
+    "kjv": "And Abram took Sarai his wife, and Lot his brother’s son, and all their substance that they had gathered, and the souls that they had gotten in Haran; and they went forth to go into the land of Canaan; and into the land of Canaan they came."
+  },
+  "gen-12-6": {
+    "id": "gen-12-6",
+    "reference": "Genesis 12:6",
+    "web": "Abram passed through the land to the place of Shechem, to the oak of Moreh. At that time, Canaanites were in the land.",
+    "kjv": "And Abram passed through the land unto the place of Sichem, unto the plain of Moreh. And the Canaanite was then in the land."
+  },
+  "gen-12-7": {
+    "id": "gen-12-7",
+    "reference": "Genesis 12:7",
+    "web": "The LORD appeared to Abram and said, “I will give this land to your offspring.”\n\nHe built an altar there to the LORD, who had appeared to him.",
+    "kjv": "And the LORD appeared unto Abram, and said, Unto thy seed will I give this land: and there builded he an altar unto the LORD, who appeared unto him."
+  },
+  "gen-12-8": {
+    "id": "gen-12-8",
+    "reference": "Genesis 12:8",
+    "web": "He left from there to go to the mountain on the east of Bethel and pitched his tent, having Bethel on the west, and Ai on the east. There he built an altar to the LORD and called on the LORD’s name.",
+    "kjv": "And he removed from thence unto a mountain on the east of Beth-el, and pitched his tent, having Beth-el on the west, and Hai on the east: and there he builded an altar unto the LORD, and called upon the name of the LORD."
+  },
+  "gen-12-9": {
+    "id": "gen-12-9",
+    "reference": "Genesis 12:9",
+    "web": "Abram traveled, still going on toward the South.",
+    "kjv": "And Abram journeyed, going on still toward the south."
+  },
+  "gen-12-10": {
+    "id": "gen-12-10",
+    "reference": "Genesis 12:10",
+    "web": "There was a famine in the land. Abram went down into Egypt to live as a foreigner there, for the famine was severe in the land.",
+    "kjv": "And there was a famine in the land: and Abram went down into Egypt to sojourn there; for the famine was grievous in the land."
+  },
+  "gen-12-11": {
+    "id": "gen-12-11",
+    "reference": "Genesis 12:11",
+    "web": "When he had come near to enter Egypt, he said to Sarai his wife, “See now, I know that you are a beautiful woman to look at.",
+    "kjv": "And it came to pass, when he was come near to enter into Egypt, that he said unto Sarai his wife, Behold now, I know that thou art a fair woman to look upon:"
+  },
+  "gen-12-12": {
+    "id": "gen-12-12",
+    "reference": "Genesis 12:12",
+    "web": "It will happen that when the Egyptians see you, they will say, ‘This is his wife.’ They will kill me, but they will save you alive.",
+    "kjv": "Therefore it shall come to pass, when the Egyptians shall see thee, that they shall say, This is his wife: and they will kill me, but they will save thee alive."
+  },
+  "gen-12-13": {
+    "id": "gen-12-13",
+    "reference": "Genesis 12:13",
+    "web": "Please say that you are my sister, that it may be well with me for your sake, and that my soul may live because of you.”",
+    "kjv": "Say, I pray thee, thou art my sister: that it may be well with me for thy sake; and my soul shall live because of thee."
+  },
+  "gen-12-14": {
+    "id": "gen-12-14",
+    "reference": "Genesis 12:14",
+    "web": "When Abram had come into Egypt, some Egyptians saw that the woman was very beautiful.",
+    "kjv": "And it came to pass, that, when Abram was come into Egypt, the Egyptians beheld the woman that she was very fair."
+  },
+  "gen-12-15": {
+    "id": "gen-12-15",
+    "reference": "Genesis 12:15",
+    "web": "The princes of Pharaoh saw her, and praised her to Pharaoh; and the woman was taken into Pharaoh’s house.",
+    "kjv": "The princes also of Pharaoh saw her, and commended her before Pharaoh: and the woman was taken into Pharaoh’s house."
+  },
+  "gen-12-16": {
+    "id": "gen-12-16",
+    "reference": "Genesis 12:16",
+    "web": "He dealt well with Abram for her sake. He had sheep, cattle, male donkeys, male servants, female servants, female donkeys, and camels.",
+    "kjv": "And he entreated Abram well for her sake: and he had sheep, and oxen, and he asses, and menservants, and maidservants, and she asses, and camels."
+  },
+  "gen-12-17": {
+    "id": "gen-12-17",
+    "reference": "Genesis 12:17",
+    "web": "The LORD afflicted Pharaoh and his house with great plagues because of Sarai, Abram’s wife.",
+    "kjv": "And the LORD plagued Pharaoh and his house with great plagues because of Sarai Abram’s wife."
+  },
+  "gen-12-18": {
+    "id": "gen-12-18",
+    "reference": "Genesis 12:18",
+    "web": "Pharaoh called Abram and said, “What is this that you have done to me? Why didn’t you tell me that she was your wife?",
+    "kjv": "And Pharaoh called Abram, and said, What is this that thou hast done unto me? why didst thou not tell me that she was thy wife?"
+  },
+  "gen-12-19": {
+    "id": "gen-12-19",
+    "reference": "Genesis 12:19",
+    "web": "Why did you say, ‘She is my sister,’ so that I took her to be my wife? Now therefore, see your wife, take her, and go your way.”",
+    "kjv": "Why saidst thou, She is my sister? so I might have taken her to me to wife: now therefore behold thy wife, take her, and go thy way."
+  },
+  "gen-12-20": {
+    "id": "gen-12-20",
+    "reference": "Genesis 12:20",
+    "web": "Pharaoh commanded men concerning him, and they escorted him away with his wife and all that he had.",
+    "kjv": "And Pharaoh commanded his men concerning him: and they sent him away, and his wife, and all that he had."
+  },
+  "gen-15-1": {
+    "id": "gen-15-1",
+    "reference": "Genesis 15:1",
+    "web": "After these things the LORD’s word came to Abram in a vision, saying, “Don’t be afraid, Abram. I am your shield, your exceedingly great reward.”",
+    "kjv": "After these things the word of the LORD came unto Abram in a vision, saying, Fear not, Abram: I am thy shield, and thy exceeding great reward."
+  },
+  "gen-15-2": {
+    "id": "gen-15-2",
+    "reference": "Genesis 15:2",
+    "web": "Abram said, “Lord GOD, what will you give me, since I go childless, and he who will inherit my estate is Eliezer of Damascus?”",
+    "kjv": "And Abram said, Lord GOD, what wilt thou give me, seeing I go childless, and the steward of my house is this Eliezer of Damascus?"
+  },
+  "gen-15-3": {
+    "id": "gen-15-3",
+    "reference": "Genesis 15:3",
+    "web": "Abram said, “Behold, you have given no children to me: and, behold, one born in my house is my heir.”",
+    "kjv": "And Abram said, Behold, to me thou hast given no seed: and, lo, one born in my house is mine heir."
+  },
+  "gen-15-4": {
+    "id": "gen-15-4",
+    "reference": "Genesis 15:4",
+    "web": "Behold, the LORD’s word came to him, saying, “This man will not be your heir, but he who will come out of your own body will be your heir.”",
+    "kjv": "And, behold, the word of the LORD came unto him, saying, This shall not be thine heir; but he that shall come forth out of thine own bowels shall be thine heir."
+  },
   "gen-15-5": {
     "id": "gen-15-5",
     "reference": "Genesis 15:5",
@@ -429,11 +1155,191 @@ export const scripture: Record<string, Verse> = {
     "web": "He believed in the LORD, who credited it to him for righteousness.",
     "kjv": "And he believed in the LORD; and he counted it to him for righteousness."
   },
+  "gen-15-7": {
+    "id": "gen-15-7",
+    "reference": "Genesis 15:7",
+    "web": "He said to Abram, “I am the LORD who brought you out of Ur of the Chaldees, to give you this land to inherit it.”",
+    "kjv": "And he said unto him, I am the LORD that brought thee out of Ur of the Chaldees, to give thee this land to inherit it."
+  },
+  "gen-15-8": {
+    "id": "gen-15-8",
+    "reference": "Genesis 15:8",
+    "web": "He said, “Lord GOD, how will I know that I will inherit it?”",
+    "kjv": "And he said, Lord GOD, whereby shall I know that I shall inherit it?"
+  },
+  "gen-15-9": {
+    "id": "gen-15-9",
+    "reference": "Genesis 15:9",
+    "web": "He said to him, “Bring me a heifer three years old, a female goat three years old, a ram three years old, a turtledove, and a young pigeon.”",
+    "kjv": "And he said unto him, Take me an heifer of three years old, and a she goat of three years old, and a ram of three years old, and a turtledove, and a young pigeon."
+  },
+  "gen-15-10": {
+    "id": "gen-15-10",
+    "reference": "Genesis 15:10",
+    "web": "He brought him all these, and divided them in the middle, and laid each half opposite the other; but he didn’t divide the birds.",
+    "kjv": "And he took unto him all these, and divided them in the midst, and laid each piece one against another: but the birds divided he not."
+  },
+  "gen-15-11": {
+    "id": "gen-15-11",
+    "reference": "Genesis 15:11",
+    "web": "The birds of prey came down on the carcasses, and Abram drove them away.",
+    "kjv": "And when the fowls came down upon the carcases, Abram drove them away."
+  },
+  "gen-15-12": {
+    "id": "gen-15-12",
+    "reference": "Genesis 15:12",
+    "web": "When the sun was going down, a deep sleep fell on Abram. Now terror and great darkness fell on him.",
+    "kjv": "And when the sun was going down, a deep sleep fell upon Abram; and, lo, an horror of great darkness fell upon him."
+  },
+  "gen-15-13": {
+    "id": "gen-15-13",
+    "reference": "Genesis 15:13",
+    "web": "He said to Abram, “Know for sure that your offspring will live as foreigners in a land that is not theirs, and will serve them. They will afflict them four hundred years.",
+    "kjv": "And he said unto Abram, Know of a surety that thy seed shall be a stranger in a land that is not theirs, and shall serve them; and they shall afflict them four hundred years;"
+  },
+  "gen-15-14": {
+    "id": "gen-15-14",
+    "reference": "Genesis 15:14",
+    "web": "I will also judge that nation, whom they will serve. Afterward they will come out with great wealth;",
+    "kjv": "And also that nation, whom they shall serve, will I judge: and afterward shall they come out with great substance."
+  },
+  "gen-15-15": {
+    "id": "gen-15-15",
+    "reference": "Genesis 15:15",
+    "web": "but you will go to your fathers in peace. You will be buried at a good old age.",
+    "kjv": "And thou shalt go to thy fathers in peace; thou shalt be buried in a good old age."
+  },
+  "gen-15-16": {
+    "id": "gen-15-16",
+    "reference": "Genesis 15:16",
+    "web": "In the fourth generation they will come here again, for the iniquity of the Amorite is not yet full.”",
+    "kjv": "But in the fourth generation they shall come hither again: for the iniquity of the Amorites is not yet full."
+  },
+  "gen-15-17": {
+    "id": "gen-15-17",
+    "reference": "Genesis 15:17",
+    "web": "It came to pass that, when the sun went down, and it was dark, behold, a smoking furnace and a flaming torch passed between these pieces.",
+    "kjv": "And it came to pass, that, when the sun went down, and it was dark, behold a smoking furnace, and a burning lamp that passed between those pieces."
+  },
+  "gen-15-18": {
+    "id": "gen-15-18",
+    "reference": "Genesis 15:18",
+    "web": "In that day the LORD made a covenant with Abram, saying, “I have given this land to your offspring, from the river of Egypt to the great river, the river Euphrates:",
+    "kjv": "In the same day the LORD made a covenant with Abram, saying, Unto thy seed have I given this land, from the river of Egypt unto the great river, the river Euphrates:"
+  },
+  "gen-15-19": {
+    "id": "gen-15-19",
+    "reference": "Genesis 15:19",
+    "web": "the land of the Kenites, the Kenizzites, the Kadmonites,",
+    "kjv": "The Kenites, and the Kenizzites, and the Kadmonites,"
+  },
+  "gen-15-20": {
+    "id": "gen-15-20",
+    "reference": "Genesis 15:20",
+    "web": "the Hittites, the Perizzites, the Rephaim,",
+    "kjv": "And the Hittites, and the Perizzites, and the Rephaims,"
+  },
+  "gen-15-21": {
+    "id": "gen-15-21",
+    "reference": "Genesis 15:21",
+    "web": "the Amorites, the Canaanites, the Girgashites, and the Jebusites.”",
+    "kjv": "And the Amorites, and the Canaanites, and the Girgashites, and the Jebusites."
+  },
+  "gen-16-1": {
+    "id": "gen-16-1",
+    "reference": "Genesis 16:1",
+    "web": "Now Sarai, Abram’s wife, bore him no children. She had a servant, an Egyptian, whose name was Hagar.",
+    "kjv": "Now Sarai Abram’s wife bare him no children: and she had an handmaid, an Egyptian, whose name was Hagar."
+  },
+  "gen-16-2": {
+    "id": "gen-16-2",
+    "reference": "Genesis 16:2",
+    "web": "Sarai said to Abram, “See now, the LORD has restrained me from bearing. Please go in to my servant. It may be that I will obtain children by her.” Abram listened to the voice of Sarai.",
+    "kjv": "And Sarai said unto Abram, Behold now, the LORD hath restrained me from bearing: I pray thee, go in unto my maid; it may be that I may obtain children by her. And Abram hearkened to the voice of Sarai."
+  },
+  "gen-16-3": {
+    "id": "gen-16-3",
+    "reference": "Genesis 16:3",
+    "web": "Sarai, Abram’s wife, took Hagar the Egyptian, her servant, after Abram had lived ten years in the land of Canaan, and gave her to Abram her husband to be his wife.",
+    "kjv": "And Sarai Abram’s wife took Hagar her maid the Egyptian, after Abram had dwelt ten years in the land of Canaan, and gave her to her husband Abram to be his wife."
+  },
+  "gen-16-4": {
+    "id": "gen-16-4",
+    "reference": "Genesis 16:4",
+    "web": "He went in to Hagar, and she conceived. When she saw that she had conceived, her mistress was despised in her eyes.",
+    "kjv": "And he went in unto Hagar, and she conceived: and when she saw that she had conceived, her mistress was despised in her eyes."
+  },
+  "gen-16-5": {
+    "id": "gen-16-5",
+    "reference": "Genesis 16:5",
+    "web": "Sarai said to Abram, “This wrong is your fault. I gave my servant into your bosom, and when she saw that she had conceived, she despised me. May the LORD judge between me and you.”",
+    "kjv": "And Sarai said unto Abram, My wrong be upon thee: I have given my maid into thy bosom; and when she saw that she had conceived, I was despised in her eyes: the LORD judge between me and thee."
+  },
+  "gen-16-6": {
+    "id": "gen-16-6",
+    "reference": "Genesis 16:6",
+    "web": "But Abram said to Sarai, “Behold, your maid is in your hand. Do to her whatever is good in your eyes.” Sarai dealt harshly with her, and she fled from her face.",
+    "kjv": "But Abram said unto Sarai, Behold, thy maid is in thy hand; do to her as it pleaseth thee. And when Sarai dealt hardly with her, she fled from her face."
+  },
+  "gen-16-7": {
+    "id": "gen-16-7",
+    "reference": "Genesis 16:7",
+    "web": "The LORD’s angel found her by a fountain of water in the wilderness, by the fountain on the way to Shur.",
+    "kjv": "And the angel of the LORD found her by a fountain of water in the wilderness, by the fountain in the way to Shur."
+  },
+  "gen-16-8": {
+    "id": "gen-16-8",
+    "reference": "Genesis 16:8",
+    "web": "He said, “Hagar, Sarai’s servant, where did you come from? Where are you going?”\n\nShe said, “I am fleeing from the face of my mistress Sarai.”",
+    "kjv": "And he said, Hagar, Sarai’s maid, whence camest thou? and whither wilt thou go? And she said, I flee from the face of my mistress Sarai."
+  },
+  "gen-16-9": {
+    "id": "gen-16-9",
+    "reference": "Genesis 16:9",
+    "web": "The LORD’s angel said to her, “Return to your mistress, and submit yourself under her hands.”",
+    "kjv": "And the angel of the LORD said unto her, Return to thy mistress, and submit thyself under her hands."
+  },
+  "gen-16-10": {
+    "id": "gen-16-10",
+    "reference": "Genesis 16:10",
+    "web": "The LORD’s angel said to her, “I will greatly multiply your offspring, that they will not be counted for multitude.”",
+    "kjv": "And the angel of the LORD said unto her, I will multiply thy seed exceedingly, that it shall not be numbered for multitude."
+  },
+  "gen-16-11": {
+    "id": "gen-16-11",
+    "reference": "Genesis 16:11",
+    "web": "The LORD’s angel said to her, “Behold, you are with child, and will bear a son. You shall call his name Ishmael, because the LORD has heard your affliction.",
+    "kjv": "And the angel of the LORD said unto her, Behold, thou art with child, and shalt bear a son, and shalt call his name Ishmael; because the LORD hath heard thy affliction."
+  },
+  "gen-16-12": {
+    "id": "gen-16-12",
+    "reference": "Genesis 16:12",
+    "web": "He will be like a wild donkey among men. His hand will be against every man, and every man’s hand against him. He will live opposed to all of his brothers.”",
+    "kjv": "And he will be a wild man; his hand will be against every man, and every man’s hand against him; and he shall dwell in the presence of all his brethren."
+  },
+  "gen-16-13": {
+    "id": "gen-16-13",
+    "reference": "Genesis 16:13",
+    "web": "She called the name of the LORD who spoke to her, “You are a God who sees,” for she said, “Have I even stayed alive after seeing him?”",
+    "kjv": "And she called the name of the LORD that spake unto her, Thou God seest me: for she said, Have I also here looked after him that seeth me?"
+  },
+  "gen-16-14": {
+    "id": "gen-16-14",
+    "reference": "Genesis 16:14",
+    "web": "Therefore the well was called Beer Lahai Roi. Behold, it is between Kadesh and Bered.",
+    "kjv": "Wherefore the well was called Beer-lahai-roi; behold, it is between Kadesh and Bered."
+  },
   "gen-16-15": {
     "id": "gen-16-15",
     "reference": "Genesis 16:15",
     "web": "Hagar bore a son for Abram. Abram called the name of his son, whom Hagar bore, Ishmael.",
     "kjv": "And Hagar bare Abram a son: and Abram called his son’s name, which Hagar bare, Ishmael."
+  },
+  "gen-16-16": {
+    "id": "gen-16-16",
+    "reference": "Genesis 16:16",
+    "web": "Abram was eighty-six years old when Hagar bore Ishmael to Abram.",
+    "kjv": "And Abram was fourscore and six years old, when Hagar bare Ishmael to Abram."
   },
   "gen-21-1": {
     "id": "gen-21-1",
@@ -452,6 +1358,300 @@ export const scripture: Record<string, Verse> = {
     "reference": "Genesis 21:3",
     "web": "Abraham called his son who was born to him, whom Sarah bore to him, Isaac.",
     "kjv": "And Abraham called the name of his son that was born unto him, whom Sarah bare to him, Isaac."
+  },
+  "gen-21-4": {
+    "id": "gen-21-4",
+    "reference": "Genesis 21:4",
+    "web": "Abraham circumcised his son, Isaac, when he was eight days old, as God had commanded him.",
+    "kjv": "And Abraham circumcised his son Isaac being eight days old, as God had commanded him."
+  },
+  "gen-21-5": {
+    "id": "gen-21-5",
+    "reference": "Genesis 21:5",
+    "web": "Abraham was one hundred years old when his son, Isaac, was born to him.",
+    "kjv": "And Abraham was an hundred years old, when his son Isaac was born unto him."
+  },
+  "gen-21-6": {
+    "id": "gen-21-6",
+    "reference": "Genesis 21:6",
+    "web": "Sarah said, “God has made me laugh. Everyone who hears will laugh with me.”",
+    "kjv": "And Sarah said, God hath made me to laugh, so that all that hear will laugh with me."
+  },
+  "gen-21-7": {
+    "id": "gen-21-7",
+    "reference": "Genesis 21:7",
+    "web": "She said, “Who would have said to Abraham that Sarah would nurse children? For I have borne him a son in his old age.”",
+    "kjv": "And she said, Who would have said unto Abraham, that Sarah should have given children suck? for I have born him a son in his old age."
+  },
+  "gen-21-8": {
+    "id": "gen-21-8",
+    "reference": "Genesis 21:8",
+    "web": "The child grew and was weaned. Abraham made a great feast on the day that Isaac was weaned.",
+    "kjv": "And the child grew, and was weaned: and Abraham made a great feast the same day that Isaac was weaned."
+  },
+  "gen-21-9": {
+    "id": "gen-21-9",
+    "reference": "Genesis 21:9",
+    "web": "Sarah saw the son of Hagar the Egyptian, whom she had borne to Abraham, mocking.",
+    "kjv": "And Sarah saw the son of Hagar the Egyptian, which she had born unto Abraham, mocking."
+  },
+  "gen-21-10": {
+    "id": "gen-21-10",
+    "reference": "Genesis 21:10",
+    "web": "Therefore she said to Abraham, “Cast out this servant and her son! For the son of this servant will not be heir with my son, Isaac.”",
+    "kjv": "Wherefore she said unto Abraham, Cast out this bondwoman and her son: for the son of this bondwoman shall not be heir with my son, even with Isaac."
+  },
+  "gen-21-11": {
+    "id": "gen-21-11",
+    "reference": "Genesis 21:11",
+    "web": "The thing was very grievous in Abraham’s sight on account of his son.",
+    "kjv": "And the thing was very grievous in Abraham’s sight because of his son."
+  },
+  "gen-21-12": {
+    "id": "gen-21-12",
+    "reference": "Genesis 21:12",
+    "web": "God said to Abraham, “Don’t let it be grievous in your sight because of the boy, and because of your servant. In all that Sarah says to you, listen to her voice. For your offspring will be named through Isaac.",
+    "kjv": "And God said unto Abraham, Let it not be grievous in thy sight because of the lad, and because of thy bondwoman; in all that Sarah hath said unto thee, hearken unto her voice; for in Isaac shall thy seed be called."
+  },
+  "gen-21-13": {
+    "id": "gen-21-13",
+    "reference": "Genesis 21:13",
+    "web": "I will also make a nation of the son of the servant, because he is your child.”",
+    "kjv": "And also of the son of the bondwoman will I make a nation, because he is thy seed."
+  },
+  "gen-21-14": {
+    "id": "gen-21-14",
+    "reference": "Genesis 21:14",
+    "web": "Abraham rose up early in the morning, and took bread and a container of water, and gave it to Hagar, putting it on her shoulder; and gave her the child, and sent her away. She departed, and wandered in the wilderness of Beersheba.",
+    "kjv": "And Abraham rose up early in the morning, and took bread, and a bottle of water, and gave it unto Hagar, putting it on her shoulder, and the child, and sent her away: and she departed, and wandered in the wilderness of Beer-sheba."
+  },
+  "gen-21-15": {
+    "id": "gen-21-15",
+    "reference": "Genesis 21:15",
+    "web": "The water in the container was spent, and she put the child under one of the shrubs.",
+    "kjv": "And the water was spent in the bottle, and she cast the child under one of the shrubs."
+  },
+  "gen-21-16": {
+    "id": "gen-21-16",
+    "reference": "Genesis 21:16",
+    "web": "She went and sat down opposite him, a good way off, about a bow shot away. For she said, “Don’t let me see the death of the child.” She sat opposite him, and lifted up her voice, and wept.",
+    "kjv": "And she went, and sat her down over against him a good way off, as it were a bowshot: for she said, Let me not see the death of the child. And she sat over against him, and lift up her voice, and wept."
+  },
+  "gen-21-17": {
+    "id": "gen-21-17",
+    "reference": "Genesis 21:17",
+    "web": "God heard the voice of the boy.\n\nThe angel of God called to Hagar out of the sky, and said to her, “What troubles you, Hagar? Don’t be afraid. For God has heard the voice of the boy where he is.",
+    "kjv": "And God heard the voice of the lad; and the angel of God called to Hagar out of heaven, and said unto her, What aileth thee, Hagar? fear not; for God hath heard the voice of the lad where he is."
+  },
+  "gen-21-18": {
+    "id": "gen-21-18",
+    "reference": "Genesis 21:18",
+    "web": "Get up, lift up the boy, and hold him with your hand. For I will make him a great nation.”",
+    "kjv": "Arise, lift up the lad, and hold him in thine hand; for I will make him a great nation."
+  },
+  "gen-21-19": {
+    "id": "gen-21-19",
+    "reference": "Genesis 21:19",
+    "web": "God opened her eyes, and she saw a well of water. She went, filled the container with water, and gave the boy a drink.",
+    "kjv": "And God opened her eyes, and she saw a well of water; and she went, and filled the bottle with water, and gave the lad drink."
+  },
+  "gen-21-20": {
+    "id": "gen-21-20",
+    "reference": "Genesis 21:20",
+    "web": "God was with the boy, and he grew. He lived in the wilderness, and as he grew up, he became an archer.",
+    "kjv": "And God was with the lad; and he grew, and dwelt in the wilderness, and became an archer."
+  },
+  "gen-21-21": {
+    "id": "gen-21-21",
+    "reference": "Genesis 21:21",
+    "web": "He lived in the wilderness of Paran. His mother got a wife for him out of the land of Egypt.",
+    "kjv": "And he dwelt in the wilderness of Paran: and his mother took him a wife out of the land of Egypt."
+  },
+  "gen-21-22": {
+    "id": "gen-21-22",
+    "reference": "Genesis 21:22",
+    "web": "At that time, Abimelech and Phicol the captain of his army spoke to Abraham, saying, “God is with you in all that you do.",
+    "kjv": "And it came to pass at that time, that Abimelech and Phichol the chief captain of his host spake unto Abraham, saying, God is with thee in all that thou doest:"
+  },
+  "gen-21-23": {
+    "id": "gen-21-23",
+    "reference": "Genesis 21:23",
+    "web": "Now, therefore, swear to me here by God that you will not deal falsely with me, nor with my son, nor with my son’s son. But according to the kindness that I have done to you, you shall do to me, and to the land in which you have lived as a foreigner.”",
+    "kjv": "Now therefore swear unto me here by God that thou wilt not deal falsely with me, nor with my son, nor with my son’s son: but according to the kindness that I have done unto thee, thou shalt do unto me, and to the land wherein thou hast sojourned."
+  },
+  "gen-21-24": {
+    "id": "gen-21-24",
+    "reference": "Genesis 21:24",
+    "web": "Abraham said, “I will swear.”",
+    "kjv": "And Abraham said, I will swear."
+  },
+  "gen-21-25": {
+    "id": "gen-21-25",
+    "reference": "Genesis 21:25",
+    "web": "Abraham complained to Abimelech because of a water well, which Abimelech’s servants had violently taken away.",
+    "kjv": "And Abraham reproved Abimelech because of a well of water, which Abimelech’s servants had violently taken away."
+  },
+  "gen-21-26": {
+    "id": "gen-21-26",
+    "reference": "Genesis 21:26",
+    "web": "Abimelech said, “I don’t know who has done this thing. You didn’t tell me, and I didn’t hear of it until today.”",
+    "kjv": "And Abimelech said, I wot not who hath done this thing: neither didst thou tell me, neither yet heard I of it, but to day."
+  },
+  "gen-21-27": {
+    "id": "gen-21-27",
+    "reference": "Genesis 21:27",
+    "web": "Abraham took sheep and cattle, and gave them to Abimelech. Those two made a covenant.",
+    "kjv": "And Abraham took sheep and oxen, and gave them unto Abimelech; and both of them made a covenant."
+  },
+  "gen-21-28": {
+    "id": "gen-21-28",
+    "reference": "Genesis 21:28",
+    "web": "Abraham set seven ewe lambs of the flock by themselves.",
+    "kjv": "And Abraham set seven ewe lambs of the flock by themselves."
+  },
+  "gen-21-29": {
+    "id": "gen-21-29",
+    "reference": "Genesis 21:29",
+    "web": "Abimelech said to Abraham, “What do these seven ewe lambs, which you have set by themselves, mean?”",
+    "kjv": "And Abimelech said unto Abraham, What mean these seven ewe lambs which thou hast set by themselves?"
+  },
+  "gen-21-30": {
+    "id": "gen-21-30",
+    "reference": "Genesis 21:30",
+    "web": "He said, “You shall take these seven ewe lambs from my hand, that it may be a witness to me, that I have dug this well.”",
+    "kjv": "And he said, For these seven ewe lambs shalt thou take of my hand, that they may be a witness unto me, that I have digged this well."
+  },
+  "gen-21-31": {
+    "id": "gen-21-31",
+    "reference": "Genesis 21:31",
+    "web": "Therefore he called that place Beersheba, because they both swore an oath there.",
+    "kjv": "Wherefore he called that place Beer-sheba; because there they sware both of them."
+  },
+  "gen-21-32": {
+    "id": "gen-21-32",
+    "reference": "Genesis 21:32",
+    "web": "So they made a covenant at Beersheba. Abimelech rose up with Phicol, the captain of his army, and they returned into the land of the Philistines.",
+    "kjv": "Thus they made a covenant at Beer-sheba: then Abimelech rose up, and Phichol the chief captain of his host, and they returned into the land of the Philistines."
+  },
+  "gen-21-33": {
+    "id": "gen-21-33",
+    "reference": "Genesis 21:33",
+    "web": "Abraham planted a tamarisk tree in Beersheba, and there he called on the name of the LORD, the Everlasting God.",
+    "kjv": "And Abraham planted a grove in Beer-sheba, and called there on the name of the LORD, the everlasting God."
+  },
+  "gen-21-34": {
+    "id": "gen-21-34",
+    "reference": "Genesis 21:34",
+    "web": "Abraham lived as a foreigner in the land of the Philistines many days.",
+    "kjv": "And Abraham sojourned in the Philistines’ land many days."
+  },
+  "gen-25-1": {
+    "id": "gen-25-1",
+    "reference": "Genesis 25:1",
+    "web": "Abraham took another wife, and her name was Keturah.",
+    "kjv": "Then again Abraham took a wife, and her name was Keturah."
+  },
+  "gen-25-2": {
+    "id": "gen-25-2",
+    "reference": "Genesis 25:2",
+    "web": "She bore him Zimran, Jokshan, Medan, Midian, Ishbak, and Shuah.",
+    "kjv": "And she bare him Zimran, and Jokshan, and Medan, and Midian, and Ishbak, and Shuah."
+  },
+  "gen-25-3": {
+    "id": "gen-25-3",
+    "reference": "Genesis 25:3",
+    "web": "Jokshan became the father of Sheba, and Dedan. The sons of Dedan were Asshurim, Letushim, and Leummim.",
+    "kjv": "And Jokshan begat Sheba, and Dedan. And the sons of Dedan were Asshurim, and Letushim, and Leummim."
+  },
+  "gen-25-4": {
+    "id": "gen-25-4",
+    "reference": "Genesis 25:4",
+    "web": "The sons of Midian were Ephah, Epher, Hanoch, Abida, and Eldaah. All these were the children of Keturah.",
+    "kjv": "And the sons of Midian; Ephah, and Epher, and Hanoch, and Abidah, and Eldaah. All these were the children of Keturah."
+  },
+  "gen-25-5": {
+    "id": "gen-25-5",
+    "reference": "Genesis 25:5",
+    "web": "Abraham gave all that he had to Isaac,",
+    "kjv": "And Abraham gave all that he had unto Isaac."
+  },
+  "gen-25-6": {
+    "id": "gen-25-6",
+    "reference": "Genesis 25:6",
+    "web": "but Abraham gave gifts to the sons of Abraham’s concubines. While he still lived, he sent them away from Isaac his son, eastward, to the east country.",
+    "kjv": "But unto the sons of the concubines, which Abraham had, Abraham gave gifts, and sent them away from Isaac his son, while he yet lived, eastward, unto the east country."
+  },
+  "gen-25-7": {
+    "id": "gen-25-7",
+    "reference": "Genesis 25:7",
+    "web": "These are the days of the years of Abraham’s life which he lived: one hundred seventy-five years.",
+    "kjv": "And these are the days of the years of Abraham’s life which he lived, an hundred threescore and fifteen years."
+  },
+  "gen-25-8": {
+    "id": "gen-25-8",
+    "reference": "Genesis 25:8",
+    "web": "Abraham gave up his spirit, and died at a good old age, an old man, and full of years, and was gathered to his people.",
+    "kjv": "Then Abraham gave up the ghost, and died in a good old age, an old man, and full of years; and was gathered to his people."
+  },
+  "gen-25-9": {
+    "id": "gen-25-9",
+    "reference": "Genesis 25:9",
+    "web": "Isaac and Ishmael, his sons, buried him in the cave of Machpelah, in the field of Ephron, the son of Zohar the Hittite, which is near Mamre,",
+    "kjv": "And his sons Isaac and Ishmael buried him in the cave of Machpelah, in the field of Ephron the son of Zohar the Hittite, which is before Mamre;"
+  },
+  "gen-25-10": {
+    "id": "gen-25-10",
+    "reference": "Genesis 25:10",
+    "web": "the field which Abraham purchased from the children of Heth. Abraham was buried there with Sarah, his wife.",
+    "kjv": "The field which Abraham purchased of the sons of Heth: there was Abraham buried, and Sarah his wife."
+  },
+  "gen-25-11": {
+    "id": "gen-25-11",
+    "reference": "Genesis 25:11",
+    "web": "After the death of Abraham, God blessed Isaac, his son. Isaac lived by Beer Lahai Roi.",
+    "kjv": "And it came to pass after the death of Abraham, that God blessed his son Isaac; and Isaac dwelt by the well Lahai-roi."
+  },
+  "gen-25-12": {
+    "id": "gen-25-12",
+    "reference": "Genesis 25:12",
+    "web": "Now this is the history of the generations of Ishmael, Abraham’s son, whom Hagar the Egyptian, Sarah’s servant, bore to Abraham.",
+    "kjv": "Now these are the generations of Ishmael, Abraham’s son, whom Hagar the Egyptian, Sarah’s handmaid, bare unto Abraham:"
+  },
+  "gen-25-13": {
+    "id": "gen-25-13",
+    "reference": "Genesis 25:13",
+    "web": "These are the names of the sons of Ishmael, by their names, according to the order of their birth: the firstborn of Ishmael, Nebaioth, then Kedar, Adbeel, Mibsam,",
+    "kjv": "And these are the names of the sons of Ishmael, by their names, according to their generations: the firstborn of Ishmael, Nebajoth; and Kedar, and Adbeel, and Mibsam,"
+  },
+  "gen-25-14": {
+    "id": "gen-25-14",
+    "reference": "Genesis 25:14",
+    "web": "Mishma, Dumah, Massa,",
+    "kjv": "And Mishma, and Dumah, and Massa,"
+  },
+  "gen-25-15": {
+    "id": "gen-25-15",
+    "reference": "Genesis 25:15",
+    "web": "Hadad, Tema, Jetur, Naphish, and Kedemah.",
+    "kjv": "Hadar, and Tema, Jetur, Naphish, and Kedemah:"
+  },
+  "gen-25-16": {
+    "id": "gen-25-16",
+    "reference": "Genesis 25:16",
+    "web": "These are the sons of Ishmael, and these are their names, by their villages, and by their encampments: twelve princes, according to their nations.",
+    "kjv": "These are the sons of Ishmael, and these are their names, by their towns, and by their castles; twelve princes according to their nations."
+  },
+  "gen-25-17": {
+    "id": "gen-25-17",
+    "reference": "Genesis 25:17",
+    "web": "These are the years of the life of Ishmael: one hundred thirty-seven years. He gave up his spirit and died, and was gathered to his people.",
+    "kjv": "And these are the years of the life of Ishmael, an hundred and thirty and seven years: and he gave up the ghost and died; and was gathered unto his people."
+  },
+  "gen-25-18": {
+    "id": "gen-25-18",
+    "reference": "Genesis 25:18",
+    "web": "They lived from Havilah to Shur that is before Egypt, as you go toward Assyria. He lived opposite all his relatives.",
+    "kjv": "And they dwelt from Havilah unto Shur, that is before Egypt, as thou goest toward Assyria: and he died in the presence of all his brethren."
   },
   "gen-25-19": {
     "id": "gen-25-19",
@@ -500,6 +1700,144 @@ export const scripture: Record<string, Verse> = {
     "reference": "Genesis 25:26",
     "web": "After that, his brother came out, and his hand had hold on Esau’s heel. He was named Jacob. Isaac was sixty years old when she bore them.",
     "kjv": "And after that came his brother out, and his hand took hold on Esau’s heel; and his name was called Jacob: and Isaac was threescore years old when she bare them."
+  },
+  "gen-25-27": {
+    "id": "gen-25-27",
+    "reference": "Genesis 25:27",
+    "web": "The boys grew. Esau was a skillful hunter, a man of the field. Jacob was a quiet man, living in tents.",
+    "kjv": "And the boys grew: and Esau was a cunning hunter, a man of the field; and Jacob was a plain man, dwelling in tents."
+  },
+  "gen-25-28": {
+    "id": "gen-25-28",
+    "reference": "Genesis 25:28",
+    "web": "Now Isaac loved Esau, because he ate his venison. Rebekah loved Jacob.",
+    "kjv": "And Isaac loved Esau, because he did eat of his venison: but Rebekah loved Jacob."
+  },
+  "gen-25-29": {
+    "id": "gen-25-29",
+    "reference": "Genesis 25:29",
+    "web": "Jacob boiled stew. Esau came in from the field, and he was famished.",
+    "kjv": "And Jacob sod pottage: and Esau came from the field, and he was faint:"
+  },
+  "gen-25-30": {
+    "id": "gen-25-30",
+    "reference": "Genesis 25:30",
+    "web": "Esau said to Jacob, “Please feed me with some of that red stew, for I am famished.” Therefore his name was called Edom.",
+    "kjv": "And Esau said to Jacob, Feed me, I pray thee, with that same red pottage; for I am faint: therefore was his name called Edom."
+  },
+  "gen-25-31": {
+    "id": "gen-25-31",
+    "reference": "Genesis 25:31",
+    "web": "Jacob said, “First, sell me your birthright.”",
+    "kjv": "And Jacob said, Sell me this day thy birthright."
+  },
+  "gen-25-32": {
+    "id": "gen-25-32",
+    "reference": "Genesis 25:32",
+    "web": "Esau said, “Behold, I am about to die. What good is the birthright to me?”",
+    "kjv": "And Esau said, Behold, I am at the point to die: and what profit shall this birthright do to me?"
+  },
+  "gen-25-33": {
+    "id": "gen-25-33",
+    "reference": "Genesis 25:33",
+    "web": "Jacob said, “Swear to me first.”\n\nHe swore to him. He sold his birthright to Jacob.",
+    "kjv": "And Jacob said, Swear to me this day; and he sware unto him: and he sold his birthright unto Jacob."
+  },
+  "gen-25-34": {
+    "id": "gen-25-34",
+    "reference": "Genesis 25:34",
+    "web": "Jacob gave Esau bread and lentil stew. He ate and drank, rose up, and went his way. So Esau despised his birthright.",
+    "kjv": "Then Jacob gave Esau bread and pottage of lentiles; and he did eat and drink, and rose up, and went his way: thus Esau despised his birthright."
+  },
+  "gen-29-1": {
+    "id": "gen-29-1",
+    "reference": "Genesis 29:1",
+    "web": "Then Jacob went on his journey, and came to the land of the children of the east.",
+    "kjv": "Then Jacob went on his journey, and came into the land of the people of the east."
+  },
+  "gen-29-2": {
+    "id": "gen-29-2",
+    "reference": "Genesis 29:2",
+    "web": "He looked, and saw a well in the field, and saw three flocks of sheep lying there by it. For out of that well they watered the flocks. The stone on the well’s mouth was large.",
+    "kjv": "And he looked, and behold a well in the field, and, lo, there were three flocks of sheep lying by it; for out of that well they watered the flocks: and a great stone was upon the well’s mouth."
+  },
+  "gen-29-3": {
+    "id": "gen-29-3",
+    "reference": "Genesis 29:3",
+    "web": "There all the flocks were gathered. They rolled the stone from the well’s mouth, and watered the sheep, and put the stone back on the well’s mouth in its place.",
+    "kjv": "And thither were all the flocks gathered: and they rolled the stone from the well’s mouth, and watered the sheep, and put the stone again upon the well’s mouth in his place."
+  },
+  "gen-29-4": {
+    "id": "gen-29-4",
+    "reference": "Genesis 29:4",
+    "web": "Jacob said to them, “My relatives, where are you from?”\n\nThey said, “We are from Haran.”",
+    "kjv": "And Jacob said unto them, My brethren, whence be ye? And they said, Of Haran are we."
+  },
+  "gen-29-5": {
+    "id": "gen-29-5",
+    "reference": "Genesis 29:5",
+    "web": "He said to them, “Do you know Laban, the son of Nahor?”\n\nThey said, “We know him.”",
+    "kjv": "And he said unto them, Know ye Laban the son of Nahor? And they said, We know him."
+  },
+  "gen-29-6": {
+    "id": "gen-29-6",
+    "reference": "Genesis 29:6",
+    "web": "He said to them, “Is it well with him?”\n\nThey said, “It is well. See, Rachel, his daughter, is coming with the sheep.”",
+    "kjv": "And he said unto them, Is he well? And they said, He is well: and, behold, Rachel his daughter cometh with the sheep."
+  },
+  "gen-29-7": {
+    "id": "gen-29-7",
+    "reference": "Genesis 29:7",
+    "web": "He said, “Behold, it is still the middle of the day, not time to gather the livestock together. Water the sheep, and go and feed them.”",
+    "kjv": "And he said, Lo, it is yet high day, neither is it time that the cattle should be gathered together: water ye the sheep, and go and feed them."
+  },
+  "gen-29-8": {
+    "id": "gen-29-8",
+    "reference": "Genesis 29:8",
+    "web": "They said, “We can’t, until all the flocks are gathered together, and they roll the stone from the well’s mouth. Then we will water the sheep.”",
+    "kjv": "And they said, We cannot, until all the flocks be gathered together, and till they roll the stone from the well’s mouth; then we water the sheep."
+  },
+  "gen-29-9": {
+    "id": "gen-29-9",
+    "reference": "Genesis 29:9",
+    "web": "While he was yet speaking with them, Rachel came with her father’s sheep, for she kept them.",
+    "kjv": "And while he yet spake with them, Rachel came with her father’s sheep: for she kept them."
+  },
+  "gen-29-10": {
+    "id": "gen-29-10",
+    "reference": "Genesis 29:10",
+    "web": "When Jacob saw Rachel the daughter of Laban, his mother’s brother, and the sheep of Laban, his mother’s brother, Jacob went near, and rolled the stone from the well’s mouth, and watered the flock of Laban his mother’s brother.",
+    "kjv": "And it came to pass, when Jacob saw Rachel the daughter of Laban his mother’s brother, and the sheep of Laban his mother’s brother, that Jacob went near, and rolled the stone from the well’s mouth, and watered the flock of Laban his mother’s brother."
+  },
+  "gen-29-11": {
+    "id": "gen-29-11",
+    "reference": "Genesis 29:11",
+    "web": "Jacob kissed Rachel, and lifted up his voice, and wept.",
+    "kjv": "And Jacob kissed Rachel, and lifted up his voice, and wept."
+  },
+  "gen-29-12": {
+    "id": "gen-29-12",
+    "reference": "Genesis 29:12",
+    "web": "Jacob told Rachel that he was her father’s relative, and that he was Rebekah’s son. She ran and told her father.",
+    "kjv": "And Jacob told Rachel that he was her father’s brother, and that he was Rebekah’s son: and she ran and told her father."
+  },
+  "gen-29-13": {
+    "id": "gen-29-13",
+    "reference": "Genesis 29:13",
+    "web": "When Laban heard the news of Jacob, his sister’s son, he ran to meet Jacob, and embraced him, and kissed him, and brought him to his house. Jacob told Laban all these things.",
+    "kjv": "And it came to pass, when Laban heard the tidings of Jacob his sister’s son, that he ran to meet him, and embraced him, and kissed him, and brought him to his house. And he told Laban all these things."
+  },
+  "gen-29-14": {
+    "id": "gen-29-14",
+    "reference": "Genesis 29:14",
+    "web": "Laban said to him, “Surely you are my bone and my flesh.” Jacob stayed with him for a month.",
+    "kjv": "And Laban said to him, Surely thou art my bone and my flesh. And he abode with him the space of a month."
+  },
+  "gen-29-15": {
+    "id": "gen-29-15",
+    "reference": "Genesis 29:15",
+    "web": "Laban said to Jacob, “Because you are my relative, should you therefore serve me for nothing? Tell me, what will your wages be?”",
+    "kjv": "And Laban said unto Jacob, Because thou art my brother, shouldest thou therefore serve me for nought? tell me, what shall thy wages be?"
   },
   "gen-29-16": {
     "id": "gen-29-16",
@@ -765,6 +2103,222 @@ export const scripture: Record<string, Verse> = {
     "web": "She named him Joseph, saying, “May the LORD add another son to me.”",
     "kjv": "And she called his name Joseph; and said, The LORD shall add to me another son."
   },
+  "gen-30-25": {
+    "id": "gen-30-25",
+    "reference": "Genesis 30:25",
+    "web": "When Rachel had borne Joseph, Jacob said to Laban, “Send me away, that I may go to my own place, and to my country.",
+    "kjv": "And it came to pass, when Rachel had born Joseph, that Jacob said unto Laban, Send me away, that I may go unto mine own place, and to my country."
+  },
+  "gen-30-26": {
+    "id": "gen-30-26",
+    "reference": "Genesis 30:26",
+    "web": "Give me my wives and my children for whom I have served you, and let me go; for you know my service with which I have served you.”",
+    "kjv": "Give me my wives and my children, for whom I have served thee, and let me go: for thou knowest my service which I have done thee."
+  },
+  "gen-30-27": {
+    "id": "gen-30-27",
+    "reference": "Genesis 30:27",
+    "web": "Laban said to him, “If now I have found favor in your eyes, stay here, for I have divined that the LORD has blessed me for your sake.”",
+    "kjv": "And Laban said unto him, I pray thee, if I have found favour in thine eyes, tarry: for I have learned by experience that the LORD hath blessed me for thy sake."
+  },
+  "gen-30-28": {
+    "id": "gen-30-28",
+    "reference": "Genesis 30:28",
+    "web": "He said, “Appoint me your wages, and I will give it.”",
+    "kjv": "And he said, Appoint me thy wages, and I will give it."
+  },
+  "gen-30-29": {
+    "id": "gen-30-29",
+    "reference": "Genesis 30:29",
+    "web": "Jacob said to him, “You know how I have served you, and how your livestock have fared with me.",
+    "kjv": "And he said unto him, Thou knowest how I have served thee, and how thy cattle was with me."
+  },
+  "gen-30-30": {
+    "id": "gen-30-30",
+    "reference": "Genesis 30:30",
+    "web": "For it was little which you had before I came, and it has increased to a multitude. The LORD has blessed you wherever I turned. Now when will I provide for my own house also?”",
+    "kjv": "For it was little which thou hadst before I came, and it is now increased unto a multitude; and the LORD hath blessed thee since my coming: and now when shall I provide for mine own house also?"
+  },
+  "gen-30-31": {
+    "id": "gen-30-31",
+    "reference": "Genesis 30:31",
+    "web": "Laban said, “What shall I give you?”\n\nJacob said, “You shall not give me anything. If you will do this thing for me, I will again feed your flock and keep it.",
+    "kjv": "And he said, What shall I give thee? And Jacob said, Thou shalt not give me any thing: if thou wilt do this thing for me, I will again feed and keep thy flock:"
+  },
+  "gen-30-32": {
+    "id": "gen-30-32",
+    "reference": "Genesis 30:32",
+    "web": "I will pass through all your flock today, removing from there every speckled and spotted one, and every black one among the sheep, and the spotted and speckled among the goats. This will be my hire.",
+    "kjv": "I will pass through all thy flock to day, removing from thence all the speckled and spotted cattle, and all the brown cattle among the sheep, and the spotted and speckled among the goats: and of such shall be my hire."
+  },
+  "gen-30-33": {
+    "id": "gen-30-33",
+    "reference": "Genesis 30:33",
+    "web": "So my righteousness will answer for me hereafter, when you come concerning my hire that is before you. Every one that is not speckled and spotted among the goats, and black among the sheep, that might be with me, will be considered stolen.”",
+    "kjv": "So shall my righteousness answer for me in time to come, when it shall come for my hire before thy face: every one that is not speckled and spotted among the goats, and brown among the sheep, that shall be counted stolen with me."
+  },
+  "gen-30-34": {
+    "id": "gen-30-34",
+    "reference": "Genesis 30:34",
+    "web": "Laban said, “Behold, let it be according to your word.”",
+    "kjv": "And Laban said, Behold, I would it might be according to thy word."
+  },
+  "gen-30-35": {
+    "id": "gen-30-35",
+    "reference": "Genesis 30:35",
+    "web": "That day, he removed the male goats that were streaked and spotted, and all the female goats that were speckled and spotted, every one that had white in it, and all the black ones among the sheep, and gave them into the hand of his sons.",
+    "kjv": "And he removed that day the he goats that were ringstraked and spotted, and all the she goats that were speckled and spotted, and every one that had some white in it, and all the brown among the sheep, and gave them into the hand of his sons."
+  },
+  "gen-30-36": {
+    "id": "gen-30-36",
+    "reference": "Genesis 30:36",
+    "web": "He set three days’ journey between himself and Jacob, and Jacob fed the rest of Laban’s flocks.",
+    "kjv": "And he set three days’ journey betwixt himself and Jacob: and Jacob fed the rest of Laban’s flocks."
+  },
+  "gen-30-37": {
+    "id": "gen-30-37",
+    "reference": "Genesis 30:37",
+    "web": "Jacob took to himself rods of fresh poplar, almond, and plane tree, peeled white streaks in them, and made the white appear which was in the rods.",
+    "kjv": "And Jacob took him rods of green poplar, and of the hazel and chesnut tree; and pilled white strakes in them, and made the white appear which was in the rods."
+  },
+  "gen-30-38": {
+    "id": "gen-30-38",
+    "reference": "Genesis 30:38",
+    "web": "He set the rods which he had peeled opposite the flocks in the watering troughs where the flocks came to drink. They conceived when they came to drink.",
+    "kjv": "And he set the rods which he had pilled before the flocks in the gutters in the watering troughs when the flocks came to drink, that they should conceive when they came to drink."
+  },
+  "gen-30-39": {
+    "id": "gen-30-39",
+    "reference": "Genesis 30:39",
+    "web": "The flocks conceived before the rods, and the flocks produced streaked, speckled, and spotted.",
+    "kjv": "And the flocks conceived before the rods, and brought forth cattle ringstraked, speckled, and spotted."
+  },
+  "gen-30-40": {
+    "id": "gen-30-40",
+    "reference": "Genesis 30:40",
+    "web": "Jacob separated the lambs, and set the faces of the flocks toward the streaked and all the black in Laban’s flock. He put his own droves apart, and didn’t put them into Laban’s flock.",
+    "kjv": "And Jacob did separate the lambs, and set the faces of the flocks toward the ringstraked, and all the brown in the flock of Laban; and he put his own flocks by themselves, and put them not unto Laban’s cattle."
+  },
+  "gen-30-41": {
+    "id": "gen-30-41",
+    "reference": "Genesis 30:41",
+    "web": "Whenever the stronger of the flock conceived, Jacob laid the rods in front of the eyes of the flock in the watering troughs, that they might conceive among the rods;",
+    "kjv": "And it came to pass, whensoever the stronger cattle did conceive, that Jacob laid the rods before the eyes of the cattle in the gutters, that they might conceive among the rods."
+  },
+  "gen-30-42": {
+    "id": "gen-30-42",
+    "reference": "Genesis 30:42",
+    "web": "but when the flock were feeble, he didn’t put them in. So the feebler were Laban’s, and the stronger Jacob’s.",
+    "kjv": "But when the cattle were feeble, he put them not in: so the feebler were Laban’s, and the stronger Jacob’s."
+  },
+  "gen-30-43": {
+    "id": "gen-30-43",
+    "reference": "Genesis 30:43",
+    "web": "The man increased exceedingly, and had large flocks, female servants and male servants, and camels and donkeys.",
+    "kjv": "And the man increased exceedingly, and had much cattle, and maidservants, and menservants, and camels, and asses."
+  },
+  "gen-35-1": {
+    "id": "gen-35-1",
+    "reference": "Genesis 35:1",
+    "web": "God said to Jacob, “Arise, go up to Bethel, and live there. Make there an altar to God, who appeared to you when you fled from the face of Esau your brother.”",
+    "kjv": "And God said unto Jacob, Arise, go up to Beth-el, and dwell there: and make there an altar unto God, that appeared unto thee when thou fleddest from the face of Esau thy brother."
+  },
+  "gen-35-2": {
+    "id": "gen-35-2",
+    "reference": "Genesis 35:2",
+    "web": "Then Jacob said to his household, and to all who were with him, “Put away the foreign gods that are among you, purify yourselves, and change your garments.",
+    "kjv": "Then Jacob said unto his household, and to all that were with him, Put away the strange gods that are among you, and be clean, and change your garments:"
+  },
+  "gen-35-3": {
+    "id": "gen-35-3",
+    "reference": "Genesis 35:3",
+    "web": "Let’s arise, and go up to Bethel. I will make there an altar to God, who answered me in the day of my distress, and was with me on the way which I went.”",
+    "kjv": "And let us arise, and go up to Beth-el; and I will make there an altar unto God, who answered me in the day of my distress, and was with me in the way which I went."
+  },
+  "gen-35-4": {
+    "id": "gen-35-4",
+    "reference": "Genesis 35:4",
+    "web": "They gave to Jacob all the foreign gods which were in their hands, and the rings which were in their ears; and Jacob hid them under the oak which was by Shechem.",
+    "kjv": "And they gave unto Jacob all the strange gods which were in their hand, and all their earrings which were in their ears; and Jacob hid them under the oak which was by Shechem."
+  },
+  "gen-35-5": {
+    "id": "gen-35-5",
+    "reference": "Genesis 35:5",
+    "web": "They traveled, and a terror of God was on the cities that were around them, and they didn’t pursue the sons of Jacob.",
+    "kjv": "And they journeyed: and the terror of God was upon the cities that were round about them, and they did not pursue after the sons of Jacob."
+  },
+  "gen-35-6": {
+    "id": "gen-35-6",
+    "reference": "Genesis 35:6",
+    "web": "So Jacob came to Luz (that is, Bethel), which is in the land of Canaan, he and all the people who were with him.",
+    "kjv": "So Jacob came to Luz, which is in the land of Canaan, that is, Beth-el, he and all the people that were with him."
+  },
+  "gen-35-7": {
+    "id": "gen-35-7",
+    "reference": "Genesis 35:7",
+    "web": "He built an altar there, and called the place El Beth El; because there God was revealed to him, when he fled from the face of his brother.",
+    "kjv": "And he built there an altar, and called the place El-beth-el: because there God appeared unto him, when he fled from the face of his brother."
+  },
+  "gen-35-8": {
+    "id": "gen-35-8",
+    "reference": "Genesis 35:8",
+    "web": "Deborah, Rebekah’s nurse, died, and she was buried below Bethel under the oak; and its name was called Allon Bacuth.",
+    "kjv": "But Deborah Rebekah’s nurse died, and she was buried beneath Beth-el under an oak: and the name of it was called Allon-bachuth."
+  },
+  "gen-35-9": {
+    "id": "gen-35-9",
+    "reference": "Genesis 35:9",
+    "web": "God appeared to Jacob again, when he came from Paddan Aram, and blessed him.",
+    "kjv": "And God appeared unto Jacob again, when he came out of Padan-aram, and blessed him."
+  },
+  "gen-35-10": {
+    "id": "gen-35-10",
+    "reference": "Genesis 35:10",
+    "web": "God said to him, “Your name is Jacob. Your name shall not be Jacob any more, but your name will be Israel.” He named him Israel.",
+    "kjv": "And God said unto him, Thy name is Jacob: thy name shall not be called any more Jacob, but Israel shall be thy name: and he called his name Israel."
+  },
+  "gen-35-11": {
+    "id": "gen-35-11",
+    "reference": "Genesis 35:11",
+    "web": "God said to him, “I am God Almighty. Be fruitful and multiply. A nation and a company of nations will be from you, and kings will come out of your body.",
+    "kjv": "And God said unto him, I am God Almighty: be fruitful and multiply; a nation and a company of nations shall be of thee, and kings shall come out of thy loins;"
+  },
+  "gen-35-12": {
+    "id": "gen-35-12",
+    "reference": "Genesis 35:12",
+    "web": "The land which I gave to Abraham and Isaac, I will give it to you, and to your offspring after you I will give the land.”",
+    "kjv": "And the land which I gave Abraham and Isaac, to thee I will give it, and to thy seed after thee will I give the land."
+  },
+  "gen-35-13": {
+    "id": "gen-35-13",
+    "reference": "Genesis 35:13",
+    "web": "God went up from him in the place where he spoke with him.",
+    "kjv": "And God went up from him in the place where he talked with him."
+  },
+  "gen-35-14": {
+    "id": "gen-35-14",
+    "reference": "Genesis 35:14",
+    "web": "Jacob set up a pillar in the place where he spoke with him, a pillar of stone. He poured out a drink offering on it, and poured oil on it.",
+    "kjv": "And Jacob set up a pillar in the place where he talked with him, even a pillar of stone: and he poured a drink offering thereon, and he poured oil thereon."
+  },
+  "gen-35-15": {
+    "id": "gen-35-15",
+    "reference": "Genesis 35:15",
+    "web": "Jacob called the name of the place where God spoke with him “Bethel”.",
+    "kjv": "And Jacob called the name of the place where God spake with him, Beth-el."
+  },
+  "gen-35-16": {
+    "id": "gen-35-16",
+    "reference": "Genesis 35:16",
+    "web": "They traveled from Bethel. There was still some distance to come to Ephrath, and Rachel travailed. She had hard labor.",
+    "kjv": "And they journeyed from Beth-el; and there was but a little way to come to Ephrath: and Rachel travailed, and she had hard labour."
+  },
+  "gen-35-17": {
+    "id": "gen-35-17",
+    "reference": "Genesis 35:17",
+    "web": "When she was in hard labor, the midwife said to her, “Don’t be afraid, for now you will have another son.”",
+    "kjv": "And it came to pass, when she was in hard labour, that the midwife said unto her, Fear not; thou shalt have this son also."
+  },
   "gen-35-18": {
     "id": "gen-35-18",
     "reference": "Genesis 35:18",
@@ -818,6 +2372,54 @@ export const scripture: Record<string, Verse> = {
     "reference": "Genesis 35:26",
     "web": "The sons of Zilpah (Leah’s servant): Gad and Asher. These are the sons of Jacob, who were born to him in Paddan Aram.",
     "kjv": "And the sons of Zilpah, Leah’s handmaid; Gad, and Asher: these are the sons of Jacob, which were born to him in Padan-aram."
+  },
+  "gen-35-27": {
+    "id": "gen-35-27",
+    "reference": "Genesis 35:27",
+    "web": "Jacob came to Isaac his father, to Mamre, to Kiriath Arba (which is Hebron), where Abraham and Isaac lived as foreigners.",
+    "kjv": "And Jacob came unto Isaac his father unto Mamre, unto the city of Arbah, which is Hebron, where Abraham and Isaac sojourned."
+  },
+  "gen-35-28": {
+    "id": "gen-35-28",
+    "reference": "Genesis 35:28",
+    "web": "The days of Isaac were one hundred eighty years.",
+    "kjv": "And the days of Isaac were an hundred and fourscore years."
+  },
+  "gen-35-29": {
+    "id": "gen-35-29",
+    "reference": "Genesis 35:29",
+    "web": "Isaac gave up the spirit and died, and was gathered to his people, old and full of days. Esau and Jacob, his sons, buried him.",
+    "kjv": "And Isaac gave up the ghost, and died, and was gathered unto his people, being old and full of days: and his sons Esau and Jacob buried him."
+  },
+  "gen-38-1": {
+    "id": "gen-38-1",
+    "reference": "Genesis 38:1",
+    "web": "At that time, Judah went down from his brothers, and visited a certain Adullamite, whose name was Hirah.",
+    "kjv": "And it came to pass at that time, that Judah went down from his brethren, and turned in to a certain Adullamite, whose name was Hirah."
+  },
+  "gen-38-2": {
+    "id": "gen-38-2",
+    "reference": "Genesis 38:2",
+    "web": "There, Judah saw the daughter of a certain Canaanite man named Shua. He took her, and went in to her.",
+    "kjv": "And Judah saw there a daughter of a certain Canaanite, whose name was Shuah; and he took her, and went in unto her."
+  },
+  "gen-38-3": {
+    "id": "gen-38-3",
+    "reference": "Genesis 38:3",
+    "web": "She conceived, and bore a son; and he named him Er.",
+    "kjv": "And she conceived, and bare a son; and he called his name Er."
+  },
+  "gen-38-4": {
+    "id": "gen-38-4",
+    "reference": "Genesis 38:4",
+    "web": "She conceived again, and bore a son; and she named him Onan.",
+    "kjv": "And she conceived again, and bare a son; and she called his name Onan."
+  },
+  "gen-38-5": {
+    "id": "gen-38-5",
+    "reference": "Genesis 38:5",
+    "web": "She yet again bore a son, and named him Shelah. He was at Chezib when she bore him.",
+    "kjv": "And she yet again conceived, and bare a son; and called his name Shelah: and he was at Chezib, when she bare him."
   },
   "gen-38-6": {
     "id": "gen-38-6",
@@ -975,11 +2577,395 @@ export const scripture: Record<string, Verse> = {
     "web": "Joshua the son of Nun secretly sent two men out of Shittim as spies, saying, “Go, view the land, including Jericho.” They went and came into the house of a prostitute whose name was Rahab, and slept there.",
     "kjv": "And Joshua the son of Nun sent out of Shittim two men to spy secretly, saying, Go view the land, even Jericho. And they went, and came into an harlot’s house, named Rahab, and lodged there."
   },
+  "josh-2-2": {
+    "id": "josh-2-2",
+    "reference": "Joshua 2:2",
+    "web": "The king of Jericho was told, “Behold, men of the children of Israel came in here tonight to spy out the land.”",
+    "kjv": "And it was told the king of Jericho, saying, Behold, there came men in hither to night of the children of Israel to search out the country."
+  },
+  "josh-2-3": {
+    "id": "josh-2-3",
+    "reference": "Joshua 2:3",
+    "web": "Jericho’s king sent to Rahab, saying, “Bring out the men who have come to you, who have entered into your house; for they have come to spy out all the land.”",
+    "kjv": "And the king of Jericho sent unto Rahab, saying, Bring forth the men that are come to thee, which are entered into thine house: for they be come to search out all the country."
+  },
+  "josh-2-4": {
+    "id": "josh-2-4",
+    "reference": "Joshua 2:4",
+    "web": "The woman took the two men and hid them. Then she said, “Yes, the men came to me, but I didn’t know where they came from.",
+    "kjv": "And the woman took the two men, and hid them, and said thus, There came men unto me, but I wist not whence they were:"
+  },
+  "josh-2-5": {
+    "id": "josh-2-5",
+    "reference": "Joshua 2:5",
+    "web": "About the time of the shutting of the gate, when it was dark, the men went out. Where the men went, I don’t know. Pursue them quickly. You may catch up with them.”",
+    "kjv": "And it came to pass about the time of shutting of the gate, when it was dark, that the men went out: whither the men went I wot not: pursue after them quickly; for ye shall overtake them."
+  },
+  "josh-2-6": {
+    "id": "josh-2-6",
+    "reference": "Joshua 2:6",
+    "web": "But she had brought them up to the roof, and hidden them under the stalks of flax which she had laid in order on the roof.",
+    "kjv": "But she had brought them up to the roof of the house, and hid them with the stalks of flax, which she had laid in order upon the roof."
+  },
+  "josh-2-7": {
+    "id": "josh-2-7",
+    "reference": "Joshua 2:7",
+    "web": "The men pursued them along the way to the fords of the Jordan River. As soon as those who pursued them had gone out, they shut the gate.",
+    "kjv": "And the men pursued after them the way to Jordan unto the fords: and as soon as they which pursued after them were gone out, they shut the gate."
+  },
+  "josh-2-8": {
+    "id": "josh-2-8",
+    "reference": "Joshua 2:8",
+    "web": "Before they had lain down, she came up to them on the roof.",
+    "kjv": "And before they were laid down, she came up unto them upon the roof;"
+  },
+  "josh-2-9": {
+    "id": "josh-2-9",
+    "reference": "Joshua 2:9",
+    "web": "She said to the men, “I know that the LORD has given you the land, and that the fear of you has fallen upon us, and that all the inhabitants of the land melt away before you.",
+    "kjv": "And she said unto the men, I know that the LORD hath given you the land, and that your terror is fallen upon us, and that all the inhabitants of the land faint because of you."
+  },
+  "josh-2-10": {
+    "id": "josh-2-10",
+    "reference": "Joshua 2:10",
+    "web": "For we have heard how the LORD dried up the water of the Red Sea before you, when you came out of Egypt; and what you did to the two kings of the Amorites, who were beyond the Jordan, to Sihon and to Og, whom you utterly destroyed.",
+    "kjv": "For we have heard how the LORD dried up the water of the Red sea for you, when ye came out of Egypt; and what ye did unto the two kings of the Amorites, that were on the other side Jordan, Sihon and Og, whom ye utterly destroyed."
+  },
+  "josh-2-11": {
+    "id": "josh-2-11",
+    "reference": "Joshua 2:11",
+    "web": "As soon as we had heard it, our hearts melted, and there wasn’t any more spirit in any man, because of you: for the LORD your God, he is God in heaven above, and on earth beneath.",
+    "kjv": "And as soon as we had heard these things, our hearts did melt, neither did there remain any more courage in any man, because of you: for the LORD your God, he is God in heaven above, and in earth beneath."
+  },
+  "josh-2-12": {
+    "id": "josh-2-12",
+    "reference": "Joshua 2:12",
+    "web": "Now therefore, please swear to me by the LORD, since I have dealt kindly with you, that you also will deal kindly with my father’s house, and give me a true sign;",
+    "kjv": "Now therefore, I pray you, swear unto me by the LORD, since I have shewed you kindness, that ye will also shew kindness unto my father’s house, and give me a true token:"
+  },
+  "josh-2-13": {
+    "id": "josh-2-13",
+    "reference": "Joshua 2:13",
+    "web": "and that you will save alive my father, my mother, my brothers, and my sisters, and all that they have, and will deliver our lives from death.”",
+    "kjv": "And that ye will save alive my father, and my mother, and my brethren, and my sisters, and all that they have, and deliver our lives from death."
+  },
+  "josh-2-14": {
+    "id": "josh-2-14",
+    "reference": "Joshua 2:14",
+    "web": "The men said to her, “Our life for yours, if you don’t talk about this business of ours; and it shall be, when the LORD gives us the land, that we will deal kindly and truly with you.”",
+    "kjv": "And the men answered her, Our life for yours, if ye utter not this our business. And it shall be, when the LORD hath given us the land, that we will deal kindly and truly with thee."
+  },
+  "josh-2-15": {
+    "id": "josh-2-15",
+    "reference": "Joshua 2:15",
+    "web": "Then she let them down by a cord through the window; for her house was on the side of the wall, and she lived on the wall.",
+    "kjv": "Then she let them down by a cord through the window: for her house was upon the town wall, and she dwelt upon the wall."
+  },
+  "josh-2-16": {
+    "id": "josh-2-16",
+    "reference": "Joshua 2:16",
+    "web": "She said to them, “Go to the mountain, lest the pursuers find you. Hide yourselves there three days, until the pursuers have returned. Afterward, you may go your way.”",
+    "kjv": "And she said unto them, Get you to the mountain, lest the pursuers meet you; and hide yourselves there three days, until the pursuers be returned: and afterward may ye go your way."
+  },
+  "josh-2-17": {
+    "id": "josh-2-17",
+    "reference": "Joshua 2:17",
+    "web": "The men said to her, “We will be guiltless of this your oath which you’ve made us to swear.",
+    "kjv": "And the men said unto her, We will be blameless of this thine oath which thou hast made us swear."
+  },
+  "josh-2-18": {
+    "id": "josh-2-18",
+    "reference": "Joshua 2:18",
+    "web": "Behold, when we come into the land, tie this line of scarlet thread in the window which you used to let us down. Gather to yourself into the house your father, your mother, your brothers, and all your father’s household.",
+    "kjv": "Behold, when we come into the land, thou shalt bind this line of scarlet thread in the window which thou didst let us down by: and thou shalt bring thy father, and thy mother, and thy brethren, and all thy father’s household, home unto thee."
+  },
+  "josh-2-19": {
+    "id": "josh-2-19",
+    "reference": "Joshua 2:19",
+    "web": "It shall be that whoever goes out of the doors of your house into the street, his blood will be on his head, and we will be guiltless. Whoever is with you in the house, his blood shall be on our head, if any hand is on him.",
+    "kjv": "And it shall be, that whosoever shall go out of the doors of thy house into the street, his blood shall be upon his head, and we will be guiltless: and whosoever shall be with thee in the house, his blood shall be on our head, if any hand be upon him."
+  },
+  "josh-2-20": {
+    "id": "josh-2-20",
+    "reference": "Joshua 2:20",
+    "web": "But if you talk about this business of ours, then we shall be guiltless of your oath which you’ve made us to swear.”",
+    "kjv": "And if thou utter this our business, then we will be quit of thine oath which thou hast made us to swear."
+  },
+  "josh-2-21": {
+    "id": "josh-2-21",
+    "reference": "Joshua 2:21",
+    "web": "She said, “Let it be as you have said.” She sent them away, and they departed. Then she tied the scarlet line in the window.",
+    "kjv": "And she said, According unto your words, so be it. And she sent them away, and they departed: and she bound the scarlet line in the window."
+  },
+  "josh-2-22": {
+    "id": "josh-2-22",
+    "reference": "Joshua 2:22",
+    "web": "They went and came to the mountain, and stayed there three days, until the pursuers had returned. The pursuers sought them all along the way, but didn’t find them.",
+    "kjv": "And they went, and came unto the mountain, and abode there three days, until the pursuers were returned: and the pursuers sought them throughout all the way, but found them not."
+  },
+  "josh-2-23": {
+    "id": "josh-2-23",
+    "reference": "Joshua 2:23",
+    "web": "Then the two men returned, descended from the mountain, crossed the river, and came to Joshua the son of Nun. They told him all that had happened to them.",
+    "kjv": "So the two men returned, and descended from the mountain, and passed over, and came to Joshua the son of Nun, and told him all things that befell them:"
+  },
+  "josh-2-24": {
+    "id": "josh-2-24",
+    "reference": "Joshua 2:24",
+    "web": "They said to Joshua, “Truly the LORD has delivered all the land into our hands. Moreover, all the inhabitants of the land melt away before us.”",
+    "kjv": "And they said unto Joshua, Truly the LORD hath delivered into our hands all the land; for even all the inhabitants of the country do faint because of us."
+  },
+  "josh-6-1": {
+    "id": "josh-6-1",
+    "reference": "Joshua 6:1",
+    "web": "Now Jericho was tightly shut up because of the children of Israel. No one went out, and no one came in.",
+    "kjv": "Now Jericho was straitly shut up because of the children of Israel: none went out, and none came in."
+  },
+  "josh-6-2": {
+    "id": "josh-6-2",
+    "reference": "Joshua 6:2",
+    "web": "The LORD said to Joshua, “Behold, I have given Jericho into your hand, with its king and the mighty men of valor.",
+    "kjv": "And the LORD said unto Joshua, See, I have given into thine hand Jericho, and the king thereof, and the mighty men of valour."
+  },
+  "josh-6-3": {
+    "id": "josh-6-3",
+    "reference": "Joshua 6:3",
+    "web": "All of your men of war shall march around the city, going around the city once. You shall do this six days.",
+    "kjv": "And ye shall compass the city, all ye men of war, and go round about the city once. Thus shalt thou do six days."
+  },
+  "josh-6-4": {
+    "id": "josh-6-4",
+    "reference": "Joshua 6:4",
+    "web": "Seven priests shall bear seven trumpets of rams’ horns before the ark. On the seventh day, you shall march around the city seven times, and the priests shall blow the trumpets.",
+    "kjv": "And seven priests shall bear before the ark seven trumpets of rams’ horns: and the seventh day ye shall compass the city seven times, and the priests shall blow with the trumpets."
+  },
+  "josh-6-5": {
+    "id": "josh-6-5",
+    "reference": "Joshua 6:5",
+    "web": "It shall be that when they make a long blast with the ram’s horn, and when you hear the sound of the trumpet, all the people shall shout with a great shout; then the city wall will fall down flat, and the people shall go up, every man straight in front of him.”",
+    "kjv": "And it shall come to pass, that when they make a long blast with the ram’s horn, and when ye hear the sound of the trumpet, all the people shall shout with a great shout; and the wall of the city shall fall down flat, and the people shall ascend up every man straight before him."
+  },
+  "josh-6-6": {
+    "id": "josh-6-6",
+    "reference": "Joshua 6:6",
+    "web": "Joshua the son of Nun called the priests, and said to them, “Take up the ark of the covenant, and let seven priests bear seven trumpets of rams’ horns before the LORD’s ark.”",
+    "kjv": "And Joshua the son of Nun called the priests, and said unto them, Take up the ark of the covenant, and let seven priests bear seven trumpets of rams’ horns before the ark of the LORD."
+  },
+  "josh-6-7": {
+    "id": "josh-6-7",
+    "reference": "Joshua 6:7",
+    "web": "They said to the people, “Advance! March around the city, and let the armed men pass on before the LORD’s ark.”",
+    "kjv": "And he said unto the people, Pass on, and compass the city, and let him that is armed pass on before the ark of the LORD."
+  },
+  "josh-6-8": {
+    "id": "josh-6-8",
+    "reference": "Joshua 6:8",
+    "web": "It was so, that when Joshua had spoken to the people, the seven priests bearing the seven trumpets of rams’ horns before the LORD advanced and blew the trumpets, and the ark of the LORD’s covenant followed them.",
+    "kjv": "And it came to pass, when Joshua had spoken unto the people, that the seven priests bearing the seven trumpets of rams’ horns passed on before the LORD, and blew with the trumpets: and the ark of the covenant of the LORD followed them."
+  },
+  "josh-6-9": {
+    "id": "josh-6-9",
+    "reference": "Joshua 6:9",
+    "web": "The armed men went before the priests who blew the trumpets, and the ark went after them. The trumpets sounded as they went.",
+    "kjv": "And the armed men went before the priests that blew with the trumpets, and the rereward came after the ark, the priests going on, and blowing with the trumpets."
+  },
+  "josh-6-10": {
+    "id": "josh-6-10",
+    "reference": "Joshua 6:10",
+    "web": "Joshua commanded the people, saying, “You shall not shout nor let your voice be heard, neither shall any word proceed out of your mouth until the day I tell you to shout. Then you shall shout.”",
+    "kjv": "And Joshua had commanded the people, saying, Ye shall not shout, nor make any noise with your voice, neither shall any word proceed out of your mouth, until the day I bid you shout; then shall ye shout."
+  },
+  "josh-6-11": {
+    "id": "josh-6-11",
+    "reference": "Joshua 6:11",
+    "web": "So he caused the LORD’s ark to go around the city, circling it once. Then they came into the camp, and stayed in the camp.",
+    "kjv": "So the ark of the LORD compassed the city, going about it once: and they came into the camp, and lodged in the camp."
+  },
+  "josh-6-12": {
+    "id": "josh-6-12",
+    "reference": "Joshua 6:12",
+    "web": "Joshua rose early in the morning, and the priests took up the LORD’s ark.",
+    "kjv": "And Joshua rose early in the morning, and the priests took up the ark of the LORD."
+  },
+  "josh-6-13": {
+    "id": "josh-6-13",
+    "reference": "Joshua 6:13",
+    "web": "The seven priests bearing the seven trumpets of rams’ horns in front of the LORD’s ark went on continually, and blew the trumpets. The armed men went in front of them. The rear guard came after the LORD’s ark. The trumpets sounded as they went.",
+    "kjv": "And seven priests bearing seven trumpets of rams’ horns before the ark of the LORD went on continually, and blew with the trumpets: and the armed men went before them; but the rereward came after the ark of the LORD, the priests going on, and blowing with the trumpets."
+  },
+  "josh-6-14": {
+    "id": "josh-6-14",
+    "reference": "Joshua 6:14",
+    "web": "The second day they marched around the city once, and returned into the camp. They did this six days.",
+    "kjv": "And the second day they compassed the city once, and returned into the camp: so they did six days."
+  },
+  "josh-6-15": {
+    "id": "josh-6-15",
+    "reference": "Joshua 6:15",
+    "web": "On the seventh day, they rose early at the dawning of the day, and marched around the city in the same way seven times. On this day only they marched around the city seven times.",
+    "kjv": "And it came to pass on the seventh day, that they rose early about the dawning of the day, and compassed the city after the same manner seven times: only on that day they compassed the city seven times."
+  },
+  "josh-6-16": {
+    "id": "josh-6-16",
+    "reference": "Joshua 6:16",
+    "web": "At the seventh time, when the priests blew the trumpets, Joshua said to the people, “Shout, for the LORD has given you the city!",
+    "kjv": "And it came to pass at the seventh time, when the priests blew with the trumpets, Joshua said unto the people, Shout; for the LORD hath given you the city."
+  },
+  "josh-6-17": {
+    "id": "josh-6-17",
+    "reference": "Joshua 6:17",
+    "web": "The city shall be devoted, even it and all that is in it, to the LORD. Only Rahab the prostitute shall live, she and all who are with her in the house, because she hid the messengers that we sent.",
+    "kjv": "And the city shall be accursed, even it, and all that are therein, to the LORD: only Rahab the harlot shall live, she and all that are with her in the house, because she hid the messengers that we sent."
+  },
+  "josh-6-18": {
+    "id": "josh-6-18",
+    "reference": "Joshua 6:18",
+    "web": "But as for you, only keep yourselves from what is devoted to destruction, lest when you have devoted it, you take of the devoted thing; so you would make the camp of Israel accursed and trouble it.",
+    "kjv": "And ye, in any wise keep yourselves from the accursed thing, lest ye make yourselves accursed, when ye take of the accursed thing, and make the camp of Israel a curse, and trouble it."
+  },
+  "josh-6-19": {
+    "id": "josh-6-19",
+    "reference": "Joshua 6:19",
+    "web": "But all the silver, gold, and vessels of bronze and iron are holy to the LORD. They shall come into the LORD’s treasury.”",
+    "kjv": "But all the silver, and gold, and vessels of brass and iron, are consecrated unto the LORD: they shall come into the treasury of the LORD."
+  },
+  "josh-6-20": {
+    "id": "josh-6-20",
+    "reference": "Joshua 6:20",
+    "web": "So the people shouted and the priests blew the trumpets. When the people heard the sound of the trumpet, the people shouted with a great shout, and the wall fell down flat, so that the people went up into the city, every man straight in front of him, and they took the city.",
+    "kjv": "So the people shouted when the priests blew with the trumpets: and it came to pass, when the people heard the sound of the trumpet, and the people shouted with a great shout, that the wall fell down flat, so that the people went up into the city, every man straight before him, and they took the city."
+  },
+  "josh-6-21": {
+    "id": "josh-6-21",
+    "reference": "Joshua 6:21",
+    "web": "They utterly destroyed all that was in the city, both man and woman, both young and old, and ox, sheep, and donkey, with the edge of the sword.",
+    "kjv": "And they utterly destroyed all that was in the city, both man and woman, young and old, and ox, and sheep, and ass, with the edge of the sword."
+  },
+  "josh-6-22": {
+    "id": "josh-6-22",
+    "reference": "Joshua 6:22",
+    "web": "Joshua said to the two men who had spied out the land, “Go into the prostitute’s house, and bring the woman and all that she has out from there, as you swore to her.”",
+    "kjv": "But Joshua had said unto the two men that had spied out the country, Go into the harlot’s house, and bring out thence the woman, and all that she hath, as ye sware unto her."
+  },
+  "josh-6-23": {
+    "id": "josh-6-23",
+    "reference": "Joshua 6:23",
+    "web": "The young men who were spies went in, and brought out Rahab with her father, her mother, her brothers, and all that she had. They also brought out all of her relatives, and they set them outside of the camp of Israel.",
+    "kjv": "And the young men that were spies went in, and brought out Rahab, and her father, and her mother, and her brethren, and all that she had; and they brought out all her kindred, and left them without the camp of Israel."
+  },
+  "josh-6-24": {
+    "id": "josh-6-24",
+    "reference": "Joshua 6:24",
+    "web": "They burned the city with fire, and all that was in it. Only they put the silver, the gold, and the vessels of bronze and of iron into the treasury of the LORD’s house.",
+    "kjv": "And they burnt the city with fire, and all that was therein: only the silver, and the gold, and the vessels of brass and of iron, they put into the treasury of the house of the LORD."
+  },
   "josh-6-25": {
     "id": "josh-6-25",
     "reference": "Joshua 6:25",
     "web": "But Rahab the prostitute, her father’s household, and all that she had, Joshua saved alive. She lives in the middle of Israel to this day, because she hid the messengers whom Joshua sent to spy out Jericho.",
     "kjv": "And Joshua saved Rahab the harlot alive, and her father’s household, and all that she had; and she dwelleth in Israel even unto this day; because she hid the messengers, which Joshua sent to spy out Jericho."
+  },
+  "josh-6-26": {
+    "id": "josh-6-26",
+    "reference": "Joshua 6:26",
+    "web": "Joshua commanded them with an oath at that time, saying, “Cursed is the man before the LORD who rises up and builds this city Jericho. With the loss of his firstborn he will lay its foundation, and with the loss of his youngest son he will set up its gates.”",
+    "kjv": "And Joshua adjured them at that time, saying, Cursed be the man before the LORD, that riseth up and buildeth this city Jericho: he shall lay the foundation thereof in his firstborn, and in his youngest son shall he set up the gates of it."
+  },
+  "josh-6-27": {
+    "id": "josh-6-27",
+    "reference": "Joshua 6:27",
+    "web": "So the LORD was with Joshua; and his fame was in all the land.",
+    "kjv": "So the LORD was with Joshua; and his fame was noised throughout all the country."
+  },
+  "ruth-1-1": {
+    "id": "ruth-1-1",
+    "reference": "Ruth 1:1",
+    "web": "In the days when the judges judged, there was a famine in the land. A certain man of Bethlehem Judah went to live in the country of Moab with his wife and his two sons.",
+    "kjv": "Now it came to pass in the days when the judges ruled, that there was a famine in the land. And a certain man of Beth-lehem-judah went to sojourn in the country of Moab, he, and his wife, and his two sons."
+  },
+  "ruth-1-2": {
+    "id": "ruth-1-2",
+    "reference": "Ruth 1:2",
+    "web": "The name of the man was Elimelech, and the name of his wife Naomi. The names of his two sons were Mahlon and Chilion, Ephrathites of Bethlehem Judah. They came into the country of Moab and lived there.",
+    "kjv": "And the name of the man was Elimelech, and the name of his wife Naomi, and the name of his two sons Mahlon and Chilion, Ephrathites of Beth-lehem-judah. And they came into the country of Moab, and continued there."
+  },
+  "ruth-1-3": {
+    "id": "ruth-1-3",
+    "reference": "Ruth 1:3",
+    "web": "Elimelech, Naomi’s husband, died; and she was left with her two sons.",
+    "kjv": "And Elimelech Naomi’s husband died; and she was left, and her two sons."
+  },
+  "ruth-1-4": {
+    "id": "ruth-1-4",
+    "reference": "Ruth 1:4",
+    "web": "They took for themselves wives of the women of Moab. The name of the one was Orpah, and the name of the other was Ruth. They lived there about ten years.",
+    "kjv": "And they took them wives of the women of Moab; the name of the one was Orpah, and the name of the other Ruth: and they dwelled there about ten years."
+  },
+  "ruth-1-5": {
+    "id": "ruth-1-5",
+    "reference": "Ruth 1:5",
+    "web": "Mahlon and Chilion both died, and the woman was bereaved of her two children and of her husband.",
+    "kjv": "And Mahlon and Chilion died also both of them; and the woman was left of her two sons and her husband."
+  },
+  "ruth-1-6": {
+    "id": "ruth-1-6",
+    "reference": "Ruth 1:6",
+    "web": "Then she arose with her daughters-in-law, that she might return from the country of Moab; for she had heard in the country of Moab how the LORD had visited his people in giving them bread.",
+    "kjv": "Then she arose with her daughters in law, that she might return from the country of Moab: for she had heard in the country of Moab how that the LORD had visited his people in giving them bread."
+  },
+  "ruth-1-7": {
+    "id": "ruth-1-7",
+    "reference": "Ruth 1:7",
+    "web": "She went out of the place where she was, and her two daughters-in-law with her. They went on the way to return to the land of Judah.",
+    "kjv": "Wherefore she went forth out of the place where she was, and her two daughters in law with her; and they went on the way to return unto the land of Judah."
+  },
+  "ruth-1-8": {
+    "id": "ruth-1-8",
+    "reference": "Ruth 1:8",
+    "web": "Naomi said to her two daughters-in-law, “Go, return each of you to her mother’s house. May the LORD deal kindly with you, as you have dealt with the dead and with me.",
+    "kjv": "And Naomi said unto her two daughters in law, Go, return each to her mother’s house: the LORD deal kindly with you, as ye have dealt with the dead, and with me."
+  },
+  "ruth-1-9": {
+    "id": "ruth-1-9",
+    "reference": "Ruth 1:9",
+    "web": "May the LORD grant you that you may find rest, each of you in the house of her husband.”\n\nThen she kissed them, and they lifted up their voices, and wept.",
+    "kjv": "The LORD grant you that ye may find rest, each of you in the house of her husband. Then she kissed them; and they lifted up their voice, and wept."
+  },
+  "ruth-1-10": {
+    "id": "ruth-1-10",
+    "reference": "Ruth 1:10",
+    "web": "They said to her, “No, but we will return with you to your people.”",
+    "kjv": "And they said unto her, Surely we will return with thee unto thy people."
+  },
+  "ruth-1-11": {
+    "id": "ruth-1-11",
+    "reference": "Ruth 1:11",
+    "web": "Naomi said, “Go back, my daughters. Why do you want to go with me? Do I still have sons in my womb, that they may be your husbands?",
+    "kjv": "And Naomi said, Turn again, my daughters: why will ye go with me? are there yet any more sons in my womb, that they may be your husbands?"
+  },
+  "ruth-1-12": {
+    "id": "ruth-1-12",
+    "reference": "Ruth 1:12",
+    "web": "Go back, my daughters, go your way; for I am too old to have a husband. If I should say, ‘I have hope,’ if I should even have a husband tonight, and should also bear sons,",
+    "kjv": "Turn again, my daughters, go your way; for I am too old to have an husband. If I should say, I have hope, if I should have an husband also to night, and should also bear sons;"
+  },
+  "ruth-1-13": {
+    "id": "ruth-1-13",
+    "reference": "Ruth 1:13",
+    "web": "would you then wait until they were grown? Would you then refrain from having husbands? No, my daughters, for it grieves me seriously for your sakes, for the LORD’s hand has gone out against me.”",
+    "kjv": "Would ye tarry for them till they were grown? would ye stay for them from having husbands? nay, my daughters; for it grieveth me much for your sakes that the hand of the LORD is gone out against me."
+  },
+  "ruth-1-14": {
+    "id": "ruth-1-14",
+    "reference": "Ruth 1:14",
+    "web": "They lifted up their voices and wept again; then Orpah kissed her mother-in-law, but Ruth stayed with her.",
+    "kjv": "And they lifted up their voice, and wept again: and Orpah kissed her mother in law; but Ruth clave unto her."
+  },
+  "ruth-1-15": {
+    "id": "ruth-1-15",
+    "reference": "Ruth 1:15",
+    "web": "She said, “Behold, your sister-in-law has gone back to her people and to her god. Follow your sister-in-law.”",
+    "kjv": "And she said, Behold, thy sister in law is gone back unto her people, and unto her gods: return thou after thy sister in law."
   },
   "ruth-1-16": {
     "id": "ruth-1-16",
@@ -993,11 +2979,221 @@ export const scripture: Record<string, Verse> = {
     "web": "Where you die, I will die, and there I will be buried. May the LORD do so to me, and more also, if anything but death parts you and me.”",
     "kjv": "Where thou diest, will I die, and there will I be buried: the LORD do so to me, and more also, if ought but death part thee and me."
   },
+  "ruth-1-18": {
+    "id": "ruth-1-18",
+    "reference": "Ruth 1:18",
+    "web": "When Naomi saw that she was determined to go with her, she stopped urging her.",
+    "kjv": "When she saw that she was stedfastly minded to go with her, then she left speaking unto her."
+  },
+  "ruth-1-19": {
+    "id": "ruth-1-19",
+    "reference": "Ruth 1:19",
+    "web": "So they both went until they came to Bethlehem. When they had come to Bethlehem, all the city was excited about them, and they asked, “Is this Naomi?”",
+    "kjv": "So they two went until they came to Beth-lehem. And it came to pass, when they were come to Beth-lehem, that all the city was moved about them, and they said, Is this Naomi?"
+  },
+  "ruth-1-20": {
+    "id": "ruth-1-20",
+    "reference": "Ruth 1:20",
+    "web": "She said to them, “Don’t call me Naomi. Call me Mara, for the Almighty has dealt very bitterly with me.",
+    "kjv": "And she said unto them, Call me not Naomi, call me Mara: for the Almighty hath dealt very bitterly with me."
+  },
+  "ruth-1-21": {
+    "id": "ruth-1-21",
+    "reference": "Ruth 1:21",
+    "web": "I went out full, and the LORD has brought me home again empty. Why do you call me Naomi, since the LORD has testified against me, and the Almighty has afflicted me?”",
+    "kjv": "I went out full, and the LORD hath brought me home again empty: why then call ye me Naomi, seeing the LORD hath testified against me, and the Almighty hath afflicted me?"
+  },
+  "ruth-1-22": {
+    "id": "ruth-1-22",
+    "reference": "Ruth 1:22",
+    "web": "So Naomi returned, and Ruth the Moabitess, her daughter-in-law, with her, who returned out of the country of Moab. They came to Bethlehem in the beginning of barley harvest.",
+    "kjv": "So Naomi returned, and Ruth the Moabitess, her daughter in law, with her, which returned out of the country of Moab: and they came to Beth-lehem in the beginning of barley harvest."
+  },
   "ruth-2-1": {
     "id": "ruth-2-1",
     "reference": "Ruth 2:1",
     "web": "Naomi had a relative of her husband’s, a mighty man of wealth, of the family of Elimelech, and his name was Boaz.",
     "kjv": "And Naomi had a kinsman of her husband’s, a mighty man of wealth, of the family of Elimelech; and his name was Boaz."
+  },
+  "ruth-2-2": {
+    "id": "ruth-2-2",
+    "reference": "Ruth 2:2",
+    "web": "Ruth the Moabitess said to Naomi, “Let me now go to the field, and glean among the ears of grain after him in whose sight I find favor.”\n\nShe said to her, “Go, my daughter.”",
+    "kjv": "And Ruth the Moabitess said unto Naomi, Let me now go to the field, and glean ears of corn after him in whose sight I shall find grace. And she said unto her, Go, my daughter."
+  },
+  "ruth-2-3": {
+    "id": "ruth-2-3",
+    "reference": "Ruth 2:3",
+    "web": "She went, and came and gleaned in the field after the reapers; and she happened to come to the portion of the field belonging to Boaz, who was of the family of Elimelech.",
+    "kjv": "And she went, and came, and gleaned in the field after the reapers: and her hap was to light on a part of the field belonging unto Boaz, who was of the kindred of Elimelech."
+  },
+  "ruth-2-4": {
+    "id": "ruth-2-4",
+    "reference": "Ruth 2:4",
+    "web": "Behold, Boaz came from Bethlehem, and said to the reapers, “May the LORD be with you.”\n\nThey answered him, “May the LORD bless you.”",
+    "kjv": "And, behold, Boaz came from Beth-lehem, and said unto the reapers, The LORD be with you. And they answered him, The LORD bless thee."
+  },
+  "ruth-2-5": {
+    "id": "ruth-2-5",
+    "reference": "Ruth 2:5",
+    "web": "Then Boaz said to his servant who was set over the reapers, “Whose young lady is this?”",
+    "kjv": "Then said Boaz unto his servant that was set over the reapers, Whose damsel is this?"
+  },
+  "ruth-2-6": {
+    "id": "ruth-2-6",
+    "reference": "Ruth 2:6",
+    "web": "The servant who was set over the reapers answered, “It is the Moabite lady who came back with Naomi out of the country of Moab.",
+    "kjv": "And the servant that was set over the reapers answered and said, It is the Moabitish damsel that came back with Naomi out of the country of Moab:"
+  },
+  "ruth-2-7": {
+    "id": "ruth-2-7",
+    "reference": "Ruth 2:7",
+    "web": "She said, ‘Please let me glean and gather after the reapers among the sheaves.’ So she came, and has continued even from the morning until now, except that she rested a little in the house.”",
+    "kjv": "And she said, I pray you, let me glean and gather after the reapers among the sheaves: so she came, and hath continued even from the morning until now, that she tarried a little in the house."
+  },
+  "ruth-2-8": {
+    "id": "ruth-2-8",
+    "reference": "Ruth 2:8",
+    "web": "Then Boaz said to Ruth, “Listen, my daughter. Don’t go to glean in another field, and don’t go from here, but stay here close to my maidens.",
+    "kjv": "Then said Boaz unto Ruth, Hearest thou not, my daughter? Go not to glean in another field, neither go from hence, but abide here fast by my maidens:"
+  },
+  "ruth-2-9": {
+    "id": "ruth-2-9",
+    "reference": "Ruth 2:9",
+    "web": "Let your eyes be on the field that they reap, and go after them. Haven’t I commanded the young men not to touch you? When you are thirsty, go to the vessels, and drink from that which the young men have drawn.”",
+    "kjv": "Let thine eyes be on the field that they do reap, and go thou after them: have I not charged the young men that they shall not touch thee? and when thou art athirst, go unto the vessels, and drink of that which the young men have drawn."
+  },
+  "ruth-2-10": {
+    "id": "ruth-2-10",
+    "reference": "Ruth 2:10",
+    "web": "Then she fell on her face and bowed herself to the ground, and said to him, “Why have I found favor in your sight, that you should take knowledge of me, since I am a foreigner?”",
+    "kjv": "Then she fell on her face, and bowed herself to the ground, and said unto him, Why have I found grace in thine eyes, that thou shouldest take knowledge of me, seeing I am a stranger?"
+  },
+  "ruth-2-11": {
+    "id": "ruth-2-11",
+    "reference": "Ruth 2:11",
+    "web": "Boaz answered her, “I have been told all about what you have done for your mother-in-law since the death of your husband, and how you have left your father, your mother, and the land of your birth, and have come to a people that you didn’t know before.",
+    "kjv": "And Boaz answered and said unto her, It hath fully been shewed me, all that thou hast done unto thy mother in law since the death of thine husband: and how thou hast left thy father and thy mother, and the land of thy nativity, and art come unto a people which thou knewest not heretofore."
+  },
+  "ruth-2-12": {
+    "id": "ruth-2-12",
+    "reference": "Ruth 2:12",
+    "web": "May the LORD repay your work, and a full reward be given to you from the LORD, the God of Israel, under whose wings you have come to take refuge.”",
+    "kjv": "The LORD recompense thy work, and a full reward be given thee of the LORD God of Israel, under whose wings thou art come to trust."
+  },
+  "ruth-2-13": {
+    "id": "ruth-2-13",
+    "reference": "Ruth 2:13",
+    "web": "Then she said, “Let me find favor in your sight, my lord, because you have comforted me, and because you have spoken kindly to your servant, though I am not as one of your servants.”",
+    "kjv": "Then she said, Let me find favour in thy sight, my lord; for that thou hast comforted me, and for that thou hast spoken friendly unto thine handmaid, though I be not like unto one of thine handmaidens."
+  },
+  "ruth-2-14": {
+    "id": "ruth-2-14",
+    "reference": "Ruth 2:14",
+    "web": "At meal time Boaz said to her, “Come here, and eat some bread, and dip your morsel in the vinegar.”\n\nShe sat beside the reapers, and they passed her parched grain. She ate, was satisfied, and left some of it.",
+    "kjv": "And Boaz said unto her, At mealtime come thou hither, and eat of the bread, and dip thy morsel in the vinegar. And she sat beside the reapers: and he reached her parched corn, and she did eat, and was sufficed, and left."
+  },
+  "ruth-2-15": {
+    "id": "ruth-2-15",
+    "reference": "Ruth 2:15",
+    "web": "When she had risen up to glean, Boaz commanded his young men, saying, “Let her glean even among the sheaves, and don’t reproach her.",
+    "kjv": "And when she was risen up to glean, Boaz commanded his young men, saying, Let her glean even among the sheaves, and reproach her not:"
+  },
+  "ruth-2-16": {
+    "id": "ruth-2-16",
+    "reference": "Ruth 2:16",
+    "web": "Also pull out some for her from the bundles, and leave it. Let her glean, and don’t rebuke her.”",
+    "kjv": "And let fall also some of the handfuls of purpose for her, and leave them, that she may glean them, and rebuke her not."
+  },
+  "ruth-2-17": {
+    "id": "ruth-2-17",
+    "reference": "Ruth 2:17",
+    "web": "So she gleaned in the field until evening; and she beat out that which she had gleaned, and it was about an ephah of barley.",
+    "kjv": "So she gleaned in the field until even, and beat out that she had gleaned: and it was about an ephah of barley."
+  },
+  "ruth-2-18": {
+    "id": "ruth-2-18",
+    "reference": "Ruth 2:18",
+    "web": "She took it up, and went into the city. Then her mother-in-law saw what she had gleaned; and she brought out and gave to her that which she had left after she had enough.",
+    "kjv": "And she took it up, and went into the city: and her mother in law saw what she had gleaned: and she brought forth, and gave to her that she had reserved after she was sufficed."
+  },
+  "ruth-2-19": {
+    "id": "ruth-2-19",
+    "reference": "Ruth 2:19",
+    "web": "Her mother-in-law said to her, “Where have you gleaned today? Where have you worked? Blessed be he who noticed you.”\n\nShe told her mother-in-law with whom she had worked, “The man’s name with whom I worked today is Boaz.”",
+    "kjv": "And her mother in law said unto her, Where hast thou gleaned to day? and where wroughtest thou? blessed be he that did take knowledge of thee. And she shewed her mother in law with whom she had wrought, and said, The man’s name with whom I wrought to day is Boaz."
+  },
+  "ruth-2-20": {
+    "id": "ruth-2-20",
+    "reference": "Ruth 2:20",
+    "web": "Naomi said to her daughter-in-law, “May he be blessed by the LORD, who has not abandoned his kindness to the living and to the dead.” Naomi said to her, “The man is a close relative to us, one of our near kinsmen.”",
+    "kjv": "And Naomi said unto her daughter in law, Blessed be he of the LORD, who hath not left off his kindness to the living and to the dead. And Naomi said unto her, The man is near of kin unto us, one of our next kinsmen."
+  },
+  "ruth-2-21": {
+    "id": "ruth-2-21",
+    "reference": "Ruth 2:21",
+    "web": "Ruth the Moabitess said, “Yes, he said to me, ‘You shall stay close to my young men until they have finished all my harvest.’”",
+    "kjv": "And Ruth the Moabitess said, He said unto me also, Thou shalt keep fast by my young men, until they have ended all my harvest."
+  },
+  "ruth-2-22": {
+    "id": "ruth-2-22",
+    "reference": "Ruth 2:22",
+    "web": "Naomi said to Ruth her daughter-in-law, “It is good, my daughter, that you go out with his maidens, and that they not harm you in any other field.”",
+    "kjv": "And Naomi said unto Ruth her daughter in law, It is good, my daughter, that thou go out with his maidens, that they meet thee not in any other field."
+  },
+  "ruth-2-23": {
+    "id": "ruth-2-23",
+    "reference": "Ruth 2:23",
+    "web": "So she stayed close to the maidens of Boaz, to glean to the end of barley harvest and of wheat harvest; and she lived with her mother-in-law.",
+    "kjv": "So she kept fast by the maidens of Boaz to glean unto the end of barley harvest and of wheat harvest; and dwelt with her mother in law."
+  },
+  "ruth-4-1": {
+    "id": "ruth-4-1",
+    "reference": "Ruth 4:1",
+    "web": "Now Boaz went up to the gate and sat down there. Behold, the near kinsman of whom Boaz spoke came by. Boaz said to him, “Come over here, friend, and sit down!” He came over, and sat down.",
+    "kjv": "Then went Boaz up to the gate, and sat him down there: and, behold, the kinsman of whom Boaz spake came by; unto whom he said, Ho, such a one! turn aside, sit down here. And he turned aside, and sat down."
+  },
+  "ruth-4-2": {
+    "id": "ruth-4-2",
+    "reference": "Ruth 4:2",
+    "web": "Boaz took ten men of the elders of the city, and said, “Sit down here,” and they sat down.",
+    "kjv": "And he took ten men of the elders of the city, and said, Sit ye down here. And they sat down."
+  },
+  "ruth-4-3": {
+    "id": "ruth-4-3",
+    "reference": "Ruth 4:3",
+    "web": "He said to the near kinsman, “Naomi, who has come back out of the country of Moab, is selling the parcel of land, which was our brother Elimelech’s.",
+    "kjv": "And he said unto the kinsman, Naomi, that is come again out of the country of Moab, selleth a parcel of land, which was our brother Elimelech’s:"
+  },
+  "ruth-4-4": {
+    "id": "ruth-4-4",
+    "reference": "Ruth 4:4",
+    "web": "I thought I should tell you, saying, ‘Buy it before those who sit here, and before the elders of my people.’ If you will redeem it, redeem it; but if you will not redeem it, then tell me, that I may know. For there is no one to redeem it besides you; and I am after you.”\n\nHe said, “I will redeem it.”",
+    "kjv": "And I thought to advertise thee, saying, Buy it before the inhabitants, and before the elders of my people. If thou wilt redeem it, redeem it: but if thou wilt not redeem it, then tell me, that I may know: for there is none to redeem it beside thee; and I am after thee. And he said, I will redeem it."
+  },
+  "ruth-4-5": {
+    "id": "ruth-4-5",
+    "reference": "Ruth 4:5",
+    "web": "Then Boaz said, “On the day you buy the field from the hand of Naomi, you must buy it also from Ruth the Moabitess, the wife of the dead, to raise up the name of the dead on his inheritance.”",
+    "kjv": "Then said Boaz, What day thou buyest the field of the hand of Naomi, thou must buy it also of Ruth the Moabitess, the wife of the dead, to raise up the name of the dead upon his inheritance."
+  },
+  "ruth-4-6": {
+    "id": "ruth-4-6",
+    "reference": "Ruth 4:6",
+    "web": "The near kinsman said, “I can’t redeem it for myself, lest I endanger my own inheritance. Take my right of redemption for yourself; for I can’t redeem it.”",
+    "kjv": "And the kinsman said, I cannot redeem it for myself, lest I mar mine own inheritance: redeem thou my right to thyself; for I cannot redeem it."
+  },
+  "ruth-4-7": {
+    "id": "ruth-4-7",
+    "reference": "Ruth 4:7",
+    "web": "Now this was the custom in former time in Israel concerning redeeming and concerning exchanging, to confirm all things: a man took off his sandal, and gave it to his neighbor; and this was the way of formalizing transactions in Israel.",
+    "kjv": "Now this was the manner in former time in Israel concerning redeeming and concerning changing, for to confirm all things; a man plucked off his shoe, and gave it to his neighbour: and this was a testimony in Israel."
+  },
+  "ruth-4-8": {
+    "id": "ruth-4-8",
+    "reference": "Ruth 4:8",
+    "web": "So the near kinsman said to Boaz, “Buy it for yourself,” then he took off his sandal.",
+    "kjv": "Therefore the kinsman said unto Boaz, Buy it for thee. So he drew off his shoe."
   },
   "ruth-4-9": {
     "id": "ruth-4-9",
@@ -1083,6 +3279,72 @@ export const scripture: Record<string, Verse> = {
     "web": "and Obed became the father of Jesse, and Jesse became the father of David.",
     "kjv": "And Obed begat Jesse, and Jesse begat David."
   },
+  "1-sam-16-1": {
+    "id": "1-sam-16-1",
+    "reference": "1 Samuel 16:1",
+    "web": "The LORD said to Samuel, “How long will you mourn for Saul, since I have rejected him from being king over Israel? Fill your horn with oil, and go. I will send you to Jesse the Bethlehemite, for I have provided a king for myself among his sons.”",
+    "kjv": "And the LORD said unto Samuel, How long wilt thou mourn for Saul, seeing I have rejected him from reigning over Israel? fill thine horn with oil, and go, I will send thee to Jesse the Beth-lehemite: for I have provided me a king among his sons."
+  },
+  "1-sam-16-2": {
+    "id": "1-sam-16-2",
+    "reference": "1 Samuel 16:2",
+    "web": "Samuel said, “How can I go? If Saul hears it, he will kill me.”\n\nThe LORD said, “Take a heifer with you, and say, ‘I have come to sacrifice to the LORD.’",
+    "kjv": "And Samuel said, How can I go? if Saul hear it, he will kill me. And the LORD said, Take an heifer with thee, and say, I am come to sacrifice to the LORD."
+  },
+  "1-sam-16-3": {
+    "id": "1-sam-16-3",
+    "reference": "1 Samuel 16:3",
+    "web": "Call Jesse to the sacrifice, and I will show you what you shall do. You shall anoint to me him whom I name to you.”",
+    "kjv": "And call Jesse to the sacrifice, and I will shew thee what thou shalt do: and thou shalt anoint unto me him whom I name unto thee."
+  },
+  "1-sam-16-4": {
+    "id": "1-sam-16-4",
+    "reference": "1 Samuel 16:4",
+    "web": "Samuel did that which the LORD spoke, and came to Bethlehem. The elders of the city came to meet him trembling, and said, “Do you come peaceably?”",
+    "kjv": "And Samuel did that which the LORD spake, and came to Beth-lehem. And the elders of the town trembled at his coming, and said, Comest thou peaceably?"
+  },
+  "1-sam-16-5": {
+    "id": "1-sam-16-5",
+    "reference": "1 Samuel 16:5",
+    "web": "He said, “Peaceably; I have come to sacrifice to the LORD. Sanctify yourselves, and come with me to the sacrifice.” He sanctified Jesse and his sons, and called them to the sacrifice.",
+    "kjv": "And he said, Peaceably: I am come to sacrifice unto the LORD: sanctify yourselves, and come with me to the sacrifice. And he sanctified Jesse and his sons, and called them to the sacrifice."
+  },
+  "1-sam-16-6": {
+    "id": "1-sam-16-6",
+    "reference": "1 Samuel 16:6",
+    "web": "When they had come, he looked at Eliab, and said, “Surely the LORD’s anointed is before him.”",
+    "kjv": "And it came to pass, when they were come, that he looked on Eliab, and said, Surely the LORD’s anointed is before him."
+  },
+  "1-sam-16-7": {
+    "id": "1-sam-16-7",
+    "reference": "1 Samuel 16:7",
+    "web": "But the LORD said to Samuel, “Don’t look on his face, or on the height of his stature, because I have rejected him; for I don’t see as man sees. For man looks at the outward appearance, but the LORD looks at the heart.”",
+    "kjv": "But the LORD said unto Samuel, Look not on his countenance, or on the height of his stature; because I have refused him: for the Lord seeth not as man seeth; for man looketh on the outward appearance, but the LORD looketh on the heart."
+  },
+  "1-sam-16-8": {
+    "id": "1-sam-16-8",
+    "reference": "1 Samuel 16:8",
+    "web": "Then Jesse called Abinadab, and made him pass before Samuel. He said, “The LORD has not chosen this one, either.”",
+    "kjv": "Then Jesse called Abinadab, and made him pass before Samuel. And he said, Neither hath the LORD chosen this."
+  },
+  "1-sam-16-9": {
+    "id": "1-sam-16-9",
+    "reference": "1 Samuel 16:9",
+    "web": "Then Jesse made Shammah to pass by. He said, “The LORD has not chosen this one, either.”",
+    "kjv": "Then Jesse made Shammah to pass by. And he said, Neither hath the LORD chosen this."
+  },
+  "1-sam-16-10": {
+    "id": "1-sam-16-10",
+    "reference": "1 Samuel 16:10",
+    "web": "Jesse made seven of his sons to pass before Samuel. Samuel said to Jesse, “The LORD has not chosen these.”",
+    "kjv": "Again, Jesse made seven of his sons to pass before Samuel. And Samuel said unto Jesse, The LORD hath not chosen these."
+  },
+  "1-sam-16-11": {
+    "id": "1-sam-16-11",
+    "reference": "1 Samuel 16:11",
+    "web": "Samuel said to Jesse, “Are all your children here?”\n\nHe said, “There remains yet the youngest. Behold, he is keeping the sheep.”\n\nSamuel said to Jesse, “Send and get him, for we will not sit down until he comes here.”",
+    "kjv": "And Samuel said unto Jesse, Are here all thy children? And he said, There remaineth yet the youngest, and, behold, he keepeth the sheep. And Samuel said unto Jesse, Send and fetch him: for we will not sit down till he come hither."
+  },
   "1-sam-16-12": {
     "id": "1-sam-16-12",
     "reference": "1 Samuel 16:12",
@@ -1094,6 +3356,132 @@ export const scripture: Record<string, Verse> = {
     "reference": "1 Samuel 16:13",
     "web": "Then Samuel took the horn of oil and anointed him in the middle of his brothers. Then the LORD’s Spirit came mightily on David from that day forward. So Samuel rose up and went to Ramah.",
     "kjv": "Then Samuel took the horn of oil, and anointed him in the midst of his brethren: and the Spirit of the LORD came upon David from that day forward. So Samuel rose up, and went to Ramah."
+  },
+  "1-sam-16-14": {
+    "id": "1-sam-16-14",
+    "reference": "1 Samuel 16:14",
+    "web": "Now the LORD’s Spirit departed from Saul, and an evil spirit from the LORD troubled him.",
+    "kjv": "But the Spirit of the LORD departed from Saul, and an evil spirit from the LORD troubled him."
+  },
+  "1-sam-16-15": {
+    "id": "1-sam-16-15",
+    "reference": "1 Samuel 16:15",
+    "web": "Saul’s servants said to him, “See now, an evil spirit from God troubles you.",
+    "kjv": "And Saul’s servants said unto him, Behold now, an evil spirit from God troubleth thee."
+  },
+  "1-sam-16-16": {
+    "id": "1-sam-16-16",
+    "reference": "1 Samuel 16:16",
+    "web": "Let our lord now command your servants who are in front of you to seek out a man who is a skillful player on the harp. Then when the evil spirit from God is on you, he will play with his hand, and you will be well.”",
+    "kjv": "Let our lord now command thy servants, which are before thee, to seek out a man, who is a cunning player on an harp: and it shall come to pass, when the evil spirit from God is upon thee, that he shall play with his hand, and thou shalt be well."
+  },
+  "1-sam-16-17": {
+    "id": "1-sam-16-17",
+    "reference": "1 Samuel 16:17",
+    "web": "Saul said to his servants, “Provide me now a man who can play well, and bring him to me.”",
+    "kjv": "And Saul said unto his servants, Provide me now a man that can play well, and bring him to me."
+  },
+  "1-sam-16-18": {
+    "id": "1-sam-16-18",
+    "reference": "1 Samuel 16:18",
+    "web": "Then one of the young men answered and said, “Behold, I have seen a son of Jesse the Bethlehemite who is skillful in playing, a mighty man of valor, a man of war, prudent in speech, and a handsome person; and the LORD is with him.”",
+    "kjv": "Then answered one of the servants, and said, Behold, I have seen a son of Jesse the Beth-lehemite, that is cunning in playing, and a mighty valiant man, and a man of war, and prudent in matters, and a comely person, and the LORD is with him."
+  },
+  "1-sam-16-19": {
+    "id": "1-sam-16-19",
+    "reference": "1 Samuel 16:19",
+    "web": "Therefore Saul sent messengers to Jesse, and said, “Send me David your son, who is with the sheep.”",
+    "kjv": "Wherefore Saul sent messengers unto Jesse, and said, Send me David thy son, which is with the sheep."
+  },
+  "1-sam-16-20": {
+    "id": "1-sam-16-20",
+    "reference": "1 Samuel 16:20",
+    "web": "Jesse took a donkey loaded with bread, a container of wine, and a young goat, and sent them by David his son to Saul.",
+    "kjv": "And Jesse took an ass laden with bread, and a bottle of wine, and a kid, and sent them by David his son unto Saul."
+  },
+  "1-sam-16-21": {
+    "id": "1-sam-16-21",
+    "reference": "1 Samuel 16:21",
+    "web": "David came to Saul and stood before him. He loved him greatly; and he became his armor bearer.",
+    "kjv": "And David came to Saul, and stood before him: and he loved him greatly; and he became his armourbearer."
+  },
+  "1-sam-16-22": {
+    "id": "1-sam-16-22",
+    "reference": "1 Samuel 16:22",
+    "web": "Saul sent to Jesse, saying, “Please let David stand before me, for he has found favor in my sight.”",
+    "kjv": "And Saul sent to Jesse, saying, Let David, I pray thee, stand before me; for he hath found favour in my sight."
+  },
+  "1-sam-16-23": {
+    "id": "1-sam-16-23",
+    "reference": "1 Samuel 16:23",
+    "web": "When the spirit from God was on Saul, David took the harp and played with his hand; so Saul was refreshed and was well, and the evil spirit departed from him.",
+    "kjv": "And it came to pass, when the evil spirit from God was upon Saul, that David took an harp, and played with his hand: so Saul was refreshed, and was well, and the evil spirit departed from him."
+  },
+  "2-sam-7-1": {
+    "id": "2-sam-7-1",
+    "reference": "2 Samuel 7:1",
+    "web": "When the king lived in his house, and the LORD had given him rest from all his enemies all around,",
+    "kjv": "And it came to pass, when the king sat in his house, and the LORD had given him rest round about from all his enemies;"
+  },
+  "2-sam-7-2": {
+    "id": "2-sam-7-2",
+    "reference": "2 Samuel 7:2",
+    "web": "the king said to Nathan the prophet, “See now, I dwell in a house of cedar, but God’s ark dwells within curtains.”",
+    "kjv": "That the king said unto Nathan the prophet, See now, I dwell in an house of cedar, but the ark of God dwelleth within curtains."
+  },
+  "2-sam-7-3": {
+    "id": "2-sam-7-3",
+    "reference": "2 Samuel 7:3",
+    "web": "Nathan said to the king, “Go, do all that is in your heart, for the LORD is with you.”",
+    "kjv": "And Nathan said to the king, Go, do all that is in thine heart; for the LORD is with thee."
+  },
+  "2-sam-7-4": {
+    "id": "2-sam-7-4",
+    "reference": "2 Samuel 7:4",
+    "web": "That same night, the LORD’s word came to Nathan, saying,",
+    "kjv": "And it came to pass that night, that the word of the LORD came unto Nathan, saying,"
+  },
+  "2-sam-7-5": {
+    "id": "2-sam-7-5",
+    "reference": "2 Samuel 7:5",
+    "web": "“Go and tell my servant David, ‘The LORD says, “Should you build me a house for me to dwell in?",
+    "kjv": "Go and tell my servant David, Thus saith the LORD, Shalt thou build me an house for me to dwell in?"
+  },
+  "2-sam-7-6": {
+    "id": "2-sam-7-6",
+    "reference": "2 Samuel 7:6",
+    "web": "For I have not lived in a house since the day that I brought the children of Israel up out of Egypt, even to this day, but have moved around in a tent and in a tabernacle.",
+    "kjv": "Whereas I have not dwelt in any house since the time that I brought up the children of Israel out of Egypt, even to this day, but have walked in a tent and in a tabernacle."
+  },
+  "2-sam-7-7": {
+    "id": "2-sam-7-7",
+    "reference": "2 Samuel 7:7",
+    "web": "In all places in which I have walked with all the children of Israel, did I say a word to anyone from the tribes of Israel whom I commanded to be shepherd of my people Israel, saying, ‘Why have you not built me a house of cedar?’”’",
+    "kjv": "In all the places wherein I have walked with all the children of Israel spake I a word with any of the tribes of Israel, whom I commanded to feed my people Israel, saying, Why build ye not me an house of cedar?"
+  },
+  "2-sam-7-8": {
+    "id": "2-sam-7-8",
+    "reference": "2 Samuel 7:8",
+    "web": "Now therefore tell my servant David this: ‘The LORD of Armies says, “I took you from the sheep pen, from following the sheep, to be prince over my people, over Israel.",
+    "kjv": "Now therefore so shalt thou say unto my servant David, Thus saith the LORD of hosts, I took thee from the sheepcote, from following the sheep, to be ruler over my people, over Israel:"
+  },
+  "2-sam-7-9": {
+    "id": "2-sam-7-9",
+    "reference": "2 Samuel 7:9",
+    "web": "I have been with you wherever you went, and have cut off all your enemies from before you. I will make you a great name, like the name of the great ones who are in the earth.",
+    "kjv": "And I was with thee whithersoever thou wentest, and have cut off all thine enemies out of thy sight, and have made thee a great name, like unto the name of the great men that are in the earth."
+  },
+  "2-sam-7-10": {
+    "id": "2-sam-7-10",
+    "reference": "2 Samuel 7:10",
+    "web": "I will appoint a place for my people Israel, and will plant them, that they may dwell in their own place and be moved no more. The children of wickedness will not afflict them any more, as at the first,",
+    "kjv": "Moreover I will appoint a place for my people Israel, and will plant them, that they may dwell in a place of their own, and move no more; neither shall the children of wickedness afflict them any more, as beforetime,"
+  },
+  "2-sam-7-11": {
+    "id": "2-sam-7-11",
+    "reference": "2 Samuel 7:11",
+    "web": "and as from the day that I commanded judges to be over my people Israel. I will cause you to rest from all your enemies. Moreover the LORD tells you that the LORD will make you a house.",
+    "kjv": "And as since the time that I commanded judges to be over my people Israel, and have caused thee to rest from all thine enemies. Also the LORD telleth thee that he will make thee an house."
   },
   "2-sam-7-12": {
     "id": "2-sam-7-12",
@@ -1125,6 +3513,222 @@ export const scripture: Record<string, Verse> = {
     "web": "Your house and your kingdom will be made sure forever before you. Your throne will be established forever.”’”",
     "kjv": "And thine house and thy kingdom shall be established for ever before thee: thy throne shall be established for ever."
   },
+  "2-sam-7-17": {
+    "id": "2-sam-7-17",
+    "reference": "2 Samuel 7:17",
+    "web": "Nathan spoke to David all these words, and according to all this vision.",
+    "kjv": "According to all these words, and according to all this vision, so did Nathan speak unto David."
+  },
+  "2-sam-7-18": {
+    "id": "2-sam-7-18",
+    "reference": "2 Samuel 7:18",
+    "web": "Then David the king went in and sat before the LORD; and he said, “Who am I, Lord GOD, and what is my house, that you have brought me this far?",
+    "kjv": "Then went king David in, and sat before the LORD, and he said, Who am I, O Lord GOD? and what is my house, that thou hast brought me hitherto?"
+  },
+  "2-sam-7-19": {
+    "id": "2-sam-7-19",
+    "reference": "2 Samuel 7:19",
+    "web": "This was yet a small thing in your eyes, Lord GOD, but you have spoken also of your servant’s house for a great while to come; and this among men, Lord GOD!",
+    "kjv": "And this was yet a small thing in thy sight, O Lord GOD; but thou hast spoken also of thy servant’s house for a great while to come. And is this the manner of man, O Lord GOD?"
+  },
+  "2-sam-7-20": {
+    "id": "2-sam-7-20",
+    "reference": "2 Samuel 7:20",
+    "web": "What more can David say to you? For you know your servant, Lord GOD.",
+    "kjv": "And what can David say more unto thee? for thou, Lord GOD, knowest thy servant."
+  },
+  "2-sam-7-21": {
+    "id": "2-sam-7-21",
+    "reference": "2 Samuel 7:21",
+    "web": "For your word’s sake, and according to your own heart, you have worked all this greatness, to make your servant know it.",
+    "kjv": "For thy word’s sake, and according to thine own heart, hast thou done all these great things, to make thy servant know them."
+  },
+  "2-sam-7-22": {
+    "id": "2-sam-7-22",
+    "reference": "2 Samuel 7:22",
+    "web": "Therefore you are great, LORD God. For there is no one like you, neither is there any God besides you, according to all that we have heard with our ears.",
+    "kjv": "Wherefore thou art great, O LORD God: for there is none like thee, neither is there any God beside thee, according to all that we have heard with our ears."
+  },
+  "2-sam-7-23": {
+    "id": "2-sam-7-23",
+    "reference": "2 Samuel 7:23",
+    "web": "What one nation in the earth is like your people, even like Israel, whom God went to redeem to himself for a people, and to make himself a name, and to do great things for you, and awesome things for your land, before your people, whom you redeemed to yourself out of Egypt, from the nations and their gods?",
+    "kjv": "And what one nation in the earth is like thy people, even like Israel, whom God went to redeem for a people to himself, and to make him a name, and to do for you great things and terrible, for thy land, before thy people, which thou redeemedst to thee from Egypt, from the nations and their gods?"
+  },
+  "2-sam-7-24": {
+    "id": "2-sam-7-24",
+    "reference": "2 Samuel 7:24",
+    "web": "You established for yourself your people Israel to be your people forever; and you, LORD, became their God.",
+    "kjv": "For thou hast confirmed to thyself thy people Israel to be a people unto thee for ever: and thou, LORD, art become their God."
+  },
+  "2-sam-7-25": {
+    "id": "2-sam-7-25",
+    "reference": "2 Samuel 7:25",
+    "web": "“Now, LORD God, the word that you have spoken concerning your servant, and concerning his house, confirm it forever, and do as you have spoken.",
+    "kjv": "And now, O LORD God, the word that thou hast spoken concerning thy servant, and concerning his house, establish it for ever, and do as thou hast said."
+  },
+  "2-sam-7-26": {
+    "id": "2-sam-7-26",
+    "reference": "2 Samuel 7:26",
+    "web": "Let your name be magnified forever, saying, ‘The LORD of Armies is God over Israel; and the house of your servant David will be established before you.’",
+    "kjv": "And let thy name be magnified for ever, saying, The LORD of hosts is the God over Israel: and let the house of thy servant David be established before thee."
+  },
+  "2-sam-7-27": {
+    "id": "2-sam-7-27",
+    "reference": "2 Samuel 7:27",
+    "web": "For you, LORD of Armies, the God of Israel, have revealed to your servant, saying, ‘I will build you a house.’ Therefore your servant has found in his heart to pray this prayer to you.",
+    "kjv": "For thou, O LORD of hosts, God of Israel, hast revealed to thy servant, saying, I will build thee an house: therefore hath thy servant found in his heart to pray this prayer unto thee."
+  },
+  "2-sam-7-28": {
+    "id": "2-sam-7-28",
+    "reference": "2 Samuel 7:28",
+    "web": "“Now, O Lord GOD, you are God, and your words are truth, and you have promised this good thing to your servant.",
+    "kjv": "And now, O Lord GOD, thou art that God, and thy words be true, and thou hast promised this goodness unto thy servant:"
+  },
+  "2-sam-7-29": {
+    "id": "2-sam-7-29",
+    "reference": "2 Samuel 7:29",
+    "web": "Now therefore, let it please you to bless the house of your servant, that it may continue forever before you; for you, Lord GOD, have spoken it. Let the house of your servant be blessed forever with your blessing.”",
+    "kjv": "Therefore now let it please thee to bless the house of thy servant, that it may continue for ever before thee: for thou, O Lord GOD, hast spoken it: and with thy blessing let the house of thy servant be blessed for ever."
+  },
+  "2-sam-12-1": {
+    "id": "2-sam-12-1",
+    "reference": "2 Samuel 12:1",
+    "web": "The LORD sent Nathan to David. He came to him, and said to him, “There were two men in one city: the one rich, and the other poor.",
+    "kjv": "And the LORD sent Nathan unto David. And he came unto him, and said unto him, There were two men in one city; the one rich, and the other poor."
+  },
+  "2-sam-12-2": {
+    "id": "2-sam-12-2",
+    "reference": "2 Samuel 12:2",
+    "web": "The rich man had very many flocks and herds,",
+    "kjv": "The rich man had exceeding many flocks and herds:"
+  },
+  "2-sam-12-3": {
+    "id": "2-sam-12-3",
+    "reference": "2 Samuel 12:3",
+    "web": "but the poor man had nothing, except one little ewe lamb, which he had bought and raised. It grew up together with him and with his children. It ate of his own food, drank of his own cup, and lay in his bosom, and was like a daughter to him.",
+    "kjv": "But the poor man had nothing, save one little ewe lamb, which he had bought and nourished up: and it grew up together with him, and with his children; it did eat of his own meat, and drank of his own cup, and lay in his bosom, and was unto him as a daughter."
+  },
+  "2-sam-12-4": {
+    "id": "2-sam-12-4",
+    "reference": "2 Samuel 12:4",
+    "web": "A traveler came to the rich man, and he didn’t want to take of his own flock and of his own herd to prepare for the wayfaring man who had come to him, but took the poor man’s lamb and prepared it for the man who had come to him.”",
+    "kjv": "And there came a traveller unto the rich man, and he spared to take of his own flock and of his own herd, to dress for the wayfaring man that was come unto him; but took the poor man’s lamb, and dressed it for the man that was come to him."
+  },
+  "2-sam-12-5": {
+    "id": "2-sam-12-5",
+    "reference": "2 Samuel 12:5",
+    "web": "David’s anger burned hot against the man, and he said to Nathan, “As the LORD lives, the man who has done this deserves to die!",
+    "kjv": "And David’s anger was greatly kindled against the man; and he said to Nathan, As the LORD liveth, the man that hath done this thing shall surely die:"
+  },
+  "2-sam-12-6": {
+    "id": "2-sam-12-6",
+    "reference": "2 Samuel 12:6",
+    "web": "He must restore the lamb fourfold, because he did this thing and because he had no pity!”",
+    "kjv": "And he shall restore the lamb fourfold, because he did this thing, and because he had no pity."
+  },
+  "2-sam-12-7": {
+    "id": "2-sam-12-7",
+    "reference": "2 Samuel 12:7",
+    "web": "Nathan said to David, “You are the man! This is what the LORD, the God of Israel, says: ‘I anointed you king over Israel, and I delivered you out of the hand of Saul.",
+    "kjv": "And Nathan said to David, Thou art the man. Thus saith the LORD God of Israel, I anointed thee king over Israel, and I delivered thee out of the hand of Saul;"
+  },
+  "2-sam-12-8": {
+    "id": "2-sam-12-8",
+    "reference": "2 Samuel 12:8",
+    "web": "I gave you your master’s house and your master’s wives into your bosom, and gave you the house of Israel and of Judah; and if that would have been too little, I would have added to you many more such things.",
+    "kjv": "And I gave thee thy master’s house, and thy master’s wives into thy bosom, and gave thee the house of Israel and of Judah; and if that had been too little, I would moreover have given unto thee such and such things."
+  },
+  "2-sam-12-9": {
+    "id": "2-sam-12-9",
+    "reference": "2 Samuel 12:9",
+    "web": "Why have you despised the LORD’s word, to do that which is evil in his sight? You have struck Uriah the Hittite with the sword, have taken his wife to be your wife, and have slain him with the sword of the children of Ammon.",
+    "kjv": "Wherefore hast thou despised the commandment of the LORD, to do evil in his sight? thou hast killed Uriah the Hittite with the sword, and hast taken his wife to be thy wife, and hast slain him with the sword of the children of Ammon."
+  },
+  "2-sam-12-10": {
+    "id": "2-sam-12-10",
+    "reference": "2 Samuel 12:10",
+    "web": "Now therefore the sword will never depart from your house, because you have despised me and have taken Uriah the Hittite’s wife to be your wife.’",
+    "kjv": "Now therefore the sword shall never depart from thine house; because thou hast despised me, and hast taken the wife of Uriah the Hittite to be thy wife."
+  },
+  "2-sam-12-11": {
+    "id": "2-sam-12-11",
+    "reference": "2 Samuel 12:11",
+    "web": "“This is what the LORD says: ‘Behold, I will raise up evil against you out of your own house; and I will take your wives before your eyes and give them to your neighbor, and he will lie with your wives in the sight of this sun.",
+    "kjv": "Thus saith the LORD, Behold, I will raise up evil against thee out of thine own house, and I will take thy wives before thine eyes, and give them unto thy neighbour, and he shall lie with thy wives in the sight of this sun."
+  },
+  "2-sam-12-12": {
+    "id": "2-sam-12-12",
+    "reference": "2 Samuel 12:12",
+    "web": "For you did this secretly, but I will do this thing before all Israel, and before the sun.’”",
+    "kjv": "For thou didst it secretly: but I will do this thing before all Israel, and before the sun."
+  },
+  "2-sam-12-13": {
+    "id": "2-sam-12-13",
+    "reference": "2 Samuel 12:13",
+    "web": "David said to Nathan, “I have sinned against the LORD.”\n\nNathan said to David, “The LORD also has put away your sin. You will not die.",
+    "kjv": "And David said unto Nathan, I have sinned against the LORD. And Nathan said unto David, The LORD also hath put away thy sin; thou shalt not die."
+  },
+  "2-sam-12-14": {
+    "id": "2-sam-12-14",
+    "reference": "2 Samuel 12:14",
+    "web": "However, because by this deed you have given great occasion to the LORD’s enemies to blaspheme, the child also who is born to you will surely die.”",
+    "kjv": "Howbeit, because by this deed thou hast given great occasion to the enemies of the LORD to blaspheme, the child also that is born unto thee shall surely die."
+  },
+  "2-sam-12-15": {
+    "id": "2-sam-12-15",
+    "reference": "2 Samuel 12:15",
+    "web": "Then Nathan departed to his house.\n\nThe LORD struck the child that Uriah’s wife bore to David, and he was very sick.",
+    "kjv": "And Nathan departed unto his house. And the LORD struck the child that Uriah’s wife bare unto David, and it was very sick."
+  },
+  "2-sam-12-16": {
+    "id": "2-sam-12-16",
+    "reference": "2 Samuel 12:16",
+    "web": "David therefore begged God for the child; and David fasted, and went in and lay all night on the ground.",
+    "kjv": "David therefore besought God for the child; and David fasted, and went in, and lay all night upon the earth."
+  },
+  "2-sam-12-17": {
+    "id": "2-sam-12-17",
+    "reference": "2 Samuel 12:17",
+    "web": "The elders of his house arose beside him, to raise him up from the earth; but he would not, and he didn’t eat bread with them.",
+    "kjv": "And the elders of his house arose, and went to him, to raise him up from the earth: but he would not, neither did he eat bread with them."
+  },
+  "2-sam-12-18": {
+    "id": "2-sam-12-18",
+    "reference": "2 Samuel 12:18",
+    "web": "On the seventh day, the child died. David’s servants were afraid to tell him that the child was dead, for they said, “Behold, while the child was yet alive, we spoke to him and he didn’t listen to our voice. How will he then harm himself if we tell him that the child is dead?”",
+    "kjv": "And it came to pass on the seventh day, that the child died. And the servants of David feared to tell him that the child was dead: for they said, Behold, while the child was yet alive, we spake unto him, and he would not hearken unto our voice: how will he then vex himself, if we tell him that the child is dead?"
+  },
+  "2-sam-12-19": {
+    "id": "2-sam-12-19",
+    "reference": "2 Samuel 12:19",
+    "web": "But when David saw that his servants were whispering together, David perceived that the child was dead; and David said to his servants, “Is the child dead?”\n\nThey said, “He is dead.”",
+    "kjv": "But when David saw that his servants whispered, David perceived that the child was dead: therefore David said unto his servants, Is the child dead? And they said, He is dead."
+  },
+  "2-sam-12-20": {
+    "id": "2-sam-12-20",
+    "reference": "2 Samuel 12:20",
+    "web": "Then David arose from the earth, and washed and anointed himself, and changed his clothing; and he came into the LORD’s house, and worshiped. Then he came to his own house; and when he requested, they set bread before him and he ate.",
+    "kjv": "Then David arose from the earth, and washed, and anointed himself, and changed his apparel, and came into the house of the LORD, and worshipped: then he came to his own house; and when he required, they set bread before him, and he did eat."
+  },
+  "2-sam-12-21": {
+    "id": "2-sam-12-21",
+    "reference": "2 Samuel 12:21",
+    "web": "Then his servants said to him, “What is this that you have done? You fasted and wept for the child while he was alive, but when the child was dead, you rose up and ate bread.”",
+    "kjv": "Then said his servants unto him, What thing is this that thou hast done? thou didst fast and weep for the child, while it was alive; but when the child was dead, thou didst rise and eat bread."
+  },
+  "2-sam-12-22": {
+    "id": "2-sam-12-22",
+    "reference": "2 Samuel 12:22",
+    "web": "He said, “While the child was yet alive, I fasted and wept; for I said, ‘Who knows whether the LORD will not be gracious to me, that the child may live?’",
+    "kjv": "And he said, While the child was yet alive, I fasted and wept: for I said, Who can tell whether GOD will be gracious to me, that the child may live?"
+  },
+  "2-sam-12-23": {
+    "id": "2-sam-12-23",
+    "reference": "2 Samuel 12:23",
+    "web": "But now he is dead. Why should I fast? Can I bring him back again? I will go to him, but he will not return to me.”",
+    "kjv": "But now he is dead, wherefore should I fast? can I bring him back again? I shall go to him, but he shall not return to me."
+  },
   "2-sam-12-24": {
     "id": "2-sam-12-24",
     "reference": "2 Samuel 12:24",
@@ -1136,6 +3740,42 @@ export const scripture: Record<string, Verse> = {
     "reference": "2 Samuel 12:25",
     "web": "and he sent by the hand of Nathan the prophet, and he named him Jedidiah, for the LORD’s sake.",
     "kjv": "And he sent by the hand of Nathan the prophet; and he called his name Jedidiah, because of the LORD."
+  },
+  "2-sam-12-26": {
+    "id": "2-sam-12-26",
+    "reference": "2 Samuel 12:26",
+    "web": "Now Joab fought against Rabbah of the children of Ammon, and took the royal city.",
+    "kjv": "And Joab fought against Rabbah of the children of Ammon, and took the royal city."
+  },
+  "2-sam-12-27": {
+    "id": "2-sam-12-27",
+    "reference": "2 Samuel 12:27",
+    "web": "Joab sent messengers to David, and said, “I have fought against Rabbah. Yes, I have taken the city of waters.",
+    "kjv": "And Joab sent messengers to David, and said, I have fought against Rabbah, and have taken the city of waters."
+  },
+  "2-sam-12-28": {
+    "id": "2-sam-12-28",
+    "reference": "2 Samuel 12:28",
+    "web": "Now therefore gather the rest of the people together, and encamp against the city and take it; lest I take the city, and it be called by my name.”",
+    "kjv": "Now therefore gather the rest of the people together, and encamp against the city, and take it: lest I take the city, and it be called after my name."
+  },
+  "2-sam-12-29": {
+    "id": "2-sam-12-29",
+    "reference": "2 Samuel 12:29",
+    "web": "David gathered all the people together and went to Rabbah, and fought against it and took it.",
+    "kjv": "And David gathered all the people together, and went to Rabbah, and fought against it, and took it."
+  },
+  "2-sam-12-30": {
+    "id": "2-sam-12-30",
+    "reference": "2 Samuel 12:30",
+    "web": "He took the crown of their king from off his head; and its weight was a talent of gold, and in it were precious stones; and it was set on David’s head. He brought a great quantity of plunder out of the city.",
+    "kjv": "And he took their king’s crown from off his head, the weight whereof was a talent of gold with the precious stones: and it was set on David’s head. And he brought forth the spoil of the city in great abundance."
+  },
+  "2-sam-12-31": {
+    "id": "2-sam-12-31",
+    "reference": "2 Samuel 12:31",
+    "web": "He brought out the people who were in it, and put them to work under saws, under iron picks, under axes of iron, and made them go to the brick kiln; and he did so to all the cities of the children of Ammon. Then David and all the people returned to Jerusalem.",
+    "kjv": "And he brought forth the people that were therein, and put them under saws, and under harrows of iron, and under axes of iron, and made them pass through the brickkiln: and thus did he unto all the cities of the children of Ammon. So David and all the people returned unto Jerusalem."
   },
   "matt-1-1": {
     "id": "matt-1-1",
@@ -1263,6 +3903,204 @@ export const scripture: Record<string, Verse> = {
     "web": "She shall give birth to a son. You shall name him Jesus, for it is he who shall save his people from their sins.”",
     "kjv": "And she shall bring forth a son, and thou shalt call his name JESUS: for he shall save his people from their sins."
   },
+  "matt-1-22": {
+    "id": "matt-1-22",
+    "reference": "Matthew 1:22",
+    "web": "Now all this has happened that it might be fulfilled which was spoken by the Lord through the prophet, saying,",
+    "kjv": "Now all this was done, that it might be fulfilled which was spoken of the Lord by the prophet, saying,"
+  },
+  "matt-1-23": {
+    "id": "matt-1-23",
+    "reference": "Matthew 1:23",
+    "web": "“Behold, the virgin shall be with child, and shall give birth to a son. They shall call his name Immanuel,” which is, being interpreted, “God with us.”",
+    "kjv": "Behold, a virgin shall be with child, and shall bring forth a son, and they shall call his name Emmanuel, which being interpreted is, God with us."
+  },
+  "matt-1-24": {
+    "id": "matt-1-24",
+    "reference": "Matthew 1:24",
+    "web": "Joseph arose from his sleep, and did as the angel of the Lord commanded him, and took his wife to himself;",
+    "kjv": "Then Joseph being raised from sleep did as the angel of the Lord had bidden him, and took unto him his wife:"
+  },
+  "matt-1-25": {
+    "id": "matt-1-25",
+    "reference": "Matthew 1:25",
+    "web": "and didn’t know her sexually until she had given birth to her firstborn son. He named him Jesus.",
+    "kjv": "And knew her not till she had brought forth her firstborn son: and he called his name JESUS."
+  },
+  "luke-1-1": {
+    "id": "luke-1-1",
+    "reference": "Luke 1:1",
+    "web": "Since many have undertaken to set in order a narrative concerning those matters which have been fulfilled among us,",
+    "kjv": "Forasmuch as many have taken in hand to set forth in order a declaration of those things which are most surely believed among us,"
+  },
+  "luke-1-2": {
+    "id": "luke-1-2",
+    "reference": "Luke 1:2",
+    "web": "even as those who from the beginning were eyewitnesses and servants of the word delivered them to us,",
+    "kjv": "Even as they delivered them unto us, which from the beginning were eyewitnesses, and ministers of the word;"
+  },
+  "luke-1-3": {
+    "id": "luke-1-3",
+    "reference": "Luke 1:3",
+    "web": "it seemed good to me also, having traced the course of all things accurately from the first, to write to you in order, most excellent Theophilus;",
+    "kjv": "It seemed good to me also, having had perfect understanding of all things from the very first, to write unto thee in order, most excellent Theophilus,"
+  },
+  "luke-1-4": {
+    "id": "luke-1-4",
+    "reference": "Luke 1:4",
+    "web": "that you might know the certainty concerning the things in which you were instructed.",
+    "kjv": "That thou mightest know the certainty of those things, wherein thou hast been instructed."
+  },
+  "luke-1-5": {
+    "id": "luke-1-5",
+    "reference": "Luke 1:5",
+    "web": "There was in the days of Herod, the king of Judea, a certain priest named Zacharias, of the priestly division of Abijah. He had a wife of the daughters of Aaron, and her name was Elizabeth.",
+    "kjv": "There was in the days of Herod, the king of Judæa, a certain priest named Zacharias, of the course of Abia: and his wife was of the daughters of Aaron, and her name was Elisabeth."
+  },
+  "luke-1-6": {
+    "id": "luke-1-6",
+    "reference": "Luke 1:6",
+    "web": "They were both righteous before God, walking blamelessly in all the commandments and ordinances of the Lord.",
+    "kjv": "And they were both righteous before God, walking in all the commandments and ordinances of the Lord blameless."
+  },
+  "luke-1-7": {
+    "id": "luke-1-7",
+    "reference": "Luke 1:7",
+    "web": "But they had no child, because Elizabeth was barren, and they both were well advanced in years.",
+    "kjv": "And they had no child, because that Elisabeth was barren, and they both were now well stricken in years."
+  },
+  "luke-1-8": {
+    "id": "luke-1-8",
+    "reference": "Luke 1:8",
+    "web": "Now while he executed the priest’s office before God in the order of his division",
+    "kjv": "And it came to pass, that while he executed the priest’s office before God in the order of his course,"
+  },
+  "luke-1-9": {
+    "id": "luke-1-9",
+    "reference": "Luke 1:9",
+    "web": "according to the custom of the priest’s office, his lot was to enter into the temple of the Lord and burn incense.",
+    "kjv": "According to the custom of the priest’s office, his lot was to burn incense when he went into the temple of the Lord."
+  },
+  "luke-1-10": {
+    "id": "luke-1-10",
+    "reference": "Luke 1:10",
+    "web": "The whole multitude of the people were praying outside at the hour of incense.",
+    "kjv": "And the whole multitude of the people were praying without at the time of incense."
+  },
+  "luke-1-11": {
+    "id": "luke-1-11",
+    "reference": "Luke 1:11",
+    "web": "An angel of the Lord appeared to him, standing on the right side of the altar of incense.",
+    "kjv": "And there appeared unto him an angel of the Lord standing on the right side of the altar of incense."
+  },
+  "luke-1-12": {
+    "id": "luke-1-12",
+    "reference": "Luke 1:12",
+    "web": "Zacharias was troubled when he saw him, and fear fell upon him.",
+    "kjv": "And when Zacharias saw him, he was troubled, and fear fell upon him."
+  },
+  "luke-1-13": {
+    "id": "luke-1-13",
+    "reference": "Luke 1:13",
+    "web": "But the angel said to him, “Don’t be afraid, Zacharias, because your request has been heard. Your wife, Elizabeth, will bear you a son, and you shall call his name John.",
+    "kjv": "But the angel said unto him, Fear not, Zacharias: for thy prayer is heard; and thy wife Elisabeth shall bear thee a son, and thou shalt call his name John."
+  },
+  "luke-1-14": {
+    "id": "luke-1-14",
+    "reference": "Luke 1:14",
+    "web": "You will have joy and gladness, and many will rejoice at his birth.",
+    "kjv": "And thou shalt have joy and gladness; and many shall rejoice at his birth."
+  },
+  "luke-1-15": {
+    "id": "luke-1-15",
+    "reference": "Luke 1:15",
+    "web": "For he will be great in the sight of the Lord, and he will drink no wine nor strong drink. He will be filled with the Holy Spirit, even from his mother’s womb.",
+    "kjv": "For he shall be great in the sight of the Lord, and shall drink neither wine nor strong drink; and he shall be filled with the Holy Ghost, even from his mother’s womb."
+  },
+  "luke-1-16": {
+    "id": "luke-1-16",
+    "reference": "Luke 1:16",
+    "web": "He will turn many of the children of Israel to the Lord their God.",
+    "kjv": "And many of the children of Israel shall he turn to the Lord their God."
+  },
+  "luke-1-17": {
+    "id": "luke-1-17",
+    "reference": "Luke 1:17",
+    "web": "He will go before him in the spirit and power of Elijah, ‘to turn the hearts of the fathers to the children,’ and the disobedient to the wisdom of the just; to prepare a people prepared for the Lord.”",
+    "kjv": "And he shall go before him in the spirit and power of Elias, to turn the hearts of the fathers to the children, and the disobedient to the wisdom of the just; to make ready a people prepared for the Lord."
+  },
+  "luke-1-18": {
+    "id": "luke-1-18",
+    "reference": "Luke 1:18",
+    "web": "Zacharias said to the angel, “How can I be sure of this? For I am an old man, and my wife is well advanced in years.”",
+    "kjv": "And Zacharias said unto the angel, Whereby shall I know this? for I am an old man, and my wife well stricken in years."
+  },
+  "luke-1-19": {
+    "id": "luke-1-19",
+    "reference": "Luke 1:19",
+    "web": "The angel answered him, “I am Gabriel, who stands in the presence of God. I was sent to speak to you and to bring you this good news.",
+    "kjv": "And the angel answering said unto him, I am Gabriel, that stand in the presence of God; and am sent to speak unto thee, and to shew thee these glad tidings."
+  },
+  "luke-1-20": {
+    "id": "luke-1-20",
+    "reference": "Luke 1:20",
+    "web": "Behold, you will be silent and not able to speak until the day that these things will happen, because you didn’t believe my words, which will be fulfilled in their proper time.”",
+    "kjv": "And, behold, thou shalt be dumb, and not able to speak, until the day that these things shall be performed, because thou believest not my words, which shall be fulfilled in their season."
+  },
+  "luke-1-21": {
+    "id": "luke-1-21",
+    "reference": "Luke 1:21",
+    "web": "The people were waiting for Zacharias, and they marveled that he delayed in the temple.",
+    "kjv": "And the people waited for Zacharias, and marvelled that he tarried so long in the temple."
+  },
+  "luke-1-22": {
+    "id": "luke-1-22",
+    "reference": "Luke 1:22",
+    "web": "When he came out, he could not speak to them. They perceived that he had seen a vision in the temple. He continued making signs to them, and remained mute.",
+    "kjv": "And when he came out, he could not speak unto them: and they perceived that he had seen a vision in the temple: for he beckoned unto them, and remained speechless."
+  },
+  "luke-1-23": {
+    "id": "luke-1-23",
+    "reference": "Luke 1:23",
+    "web": "When the days of his service were fulfilled, he departed to his house.",
+    "kjv": "And it came to pass, that, as soon as the days of his ministration were accomplished, he departed to his own house."
+  },
+  "luke-1-24": {
+    "id": "luke-1-24",
+    "reference": "Luke 1:24",
+    "web": "After these days Elizabeth his wife conceived, and she hid herself five months, saying,",
+    "kjv": "And after those days his wife Elisabeth conceived, and hid herself five months, saying,"
+  },
+  "luke-1-25": {
+    "id": "luke-1-25",
+    "reference": "Luke 1:25",
+    "web": "“Thus has the Lord done to me in the days in which he looked at me, to take away my reproach among men.”",
+    "kjv": "Thus hath the Lord dealt with me in the days wherein he looked on me, to take away my reproach among men."
+  },
+  "luke-1-26": {
+    "id": "luke-1-26",
+    "reference": "Luke 1:26",
+    "web": "Now in the sixth month, the angel Gabriel was sent from God to a city of Galilee named Nazareth,",
+    "kjv": "And in the sixth month the angel Gabriel was sent from God unto a city of Galilee, named Nazareth,"
+  },
+  "luke-1-27": {
+    "id": "luke-1-27",
+    "reference": "Luke 1:27",
+    "web": "to a virgin pledged to be married to a man whose name was Joseph, of David’s house. The virgin’s name was Mary.",
+    "kjv": "To a virgin espoused to a man whose name was Joseph, of the house of David; and the virgin’s name was Mary."
+  },
+  "luke-1-28": {
+    "id": "luke-1-28",
+    "reference": "Luke 1:28",
+    "web": "Having come in, the angel said to her, “Rejoice, you highly favored one! The Lord is with you. Blessed are you among women!”",
+    "kjv": "And the angel came in unto her, and said, Hail, thou that art highly favoured, the Lord is with thee: blessed art thou among women."
+  },
+  "luke-1-29": {
+    "id": "luke-1-29",
+    "reference": "Luke 1:29",
+    "web": "But when she saw him, she was greatly troubled at the saying, and considered what kind of salutation this might be.",
+    "kjv": "And when she saw him, she was troubled at his saying, and cast in her mind what manner of salutation this should be."
+  },
   "luke-1-30": {
     "id": "luke-1-30",
     "reference": "Luke 1:30",
@@ -1298,6 +4136,408 @@ export const scripture: Record<string, Verse> = {
     "reference": "Luke 1:35",
     "web": "The angel answered her, “The Holy Spirit will come on you, and the power of the Most High will overshadow you. Therefore also the holy one who is born from you will be called the Son of God.",
     "kjv": "And the angel answered and said unto her, The Holy Ghost shall come upon thee, and the power of the Highest shall overshadow thee: therefore also that holy thing which shall be born of thee shall be called the Son of God."
+  },
+  "luke-1-36": {
+    "id": "luke-1-36",
+    "reference": "Luke 1:36",
+    "web": "Behold, Elizabeth your relative also has conceived a son in her old age; and this is the sixth month with her who was called barren.",
+    "kjv": "And, behold, thy cousin Elisabeth, she hath also conceived a son in her old age: and this is the sixth month with her, who was called barren."
+  },
+  "luke-1-37": {
+    "id": "luke-1-37",
+    "reference": "Luke 1:37",
+    "web": "For nothing spoken by God is impossible.”",
+    "kjv": "For with God nothing shall be impossible."
+  },
+  "luke-1-38": {
+    "id": "luke-1-38",
+    "reference": "Luke 1:38",
+    "web": "Mary said, “Behold, the servant of the Lord; let it be done to me according to your word.”\n\nThen the angel departed from her.",
+    "kjv": "And Mary said, Behold the handmaid of the Lord; be it unto me according to thy word. And the angel departed from her."
+  },
+  "luke-1-39": {
+    "id": "luke-1-39",
+    "reference": "Luke 1:39",
+    "web": "Mary arose in those days and went into the hill country with haste, into a city of Judah,",
+    "kjv": "And Mary arose in those days, and went into the hill country with haste, into a city of Juda;"
+  },
+  "luke-1-40": {
+    "id": "luke-1-40",
+    "reference": "Luke 1:40",
+    "web": "and entered into the house of Zacharias and greeted Elizabeth.",
+    "kjv": "And entered into the house of Zacharias, and saluted Elisabeth."
+  },
+  "luke-1-41": {
+    "id": "luke-1-41",
+    "reference": "Luke 1:41",
+    "web": "When Elizabeth heard Mary’s greeting, the baby leaped in her womb; and Elizabeth was filled with the Holy Spirit.",
+    "kjv": "And it came to pass, that, when Elisabeth heard the salutation of Mary, the babe leaped in her womb; and Elisabeth was filled with the Holy Ghost:"
+  },
+  "luke-1-42": {
+    "id": "luke-1-42",
+    "reference": "Luke 1:42",
+    "web": "She called out with a loud voice and said, “Blessed are you among women, and blessed is the fruit of your womb!",
+    "kjv": "And she spake out with a loud voice, and said, Blessed art thou among women, and blessed is the fruit of thy womb."
+  },
+  "luke-1-43": {
+    "id": "luke-1-43",
+    "reference": "Luke 1:43",
+    "web": "Why am I so favored, that the mother of my Lord should come to me?",
+    "kjv": "And whence is this to me, that the mother of my Lord should come to me?"
+  },
+  "luke-1-44": {
+    "id": "luke-1-44",
+    "reference": "Luke 1:44",
+    "web": "For behold, when the voice of your greeting came into my ears, the baby leaped in my womb for joy!",
+    "kjv": "For, lo, as soon as the voice of thy salutation sounded in mine ears, the babe leaped in my womb for joy."
+  },
+  "luke-1-45": {
+    "id": "luke-1-45",
+    "reference": "Luke 1:45",
+    "web": "Blessed is she who believed, for there will be a fulfillment of the things which have been spoken to her from the Lord!”",
+    "kjv": "And blessed is she that believed: for there shall be a performance of those things which were told her from the Lord."
+  },
+  "luke-1-46": {
+    "id": "luke-1-46",
+    "reference": "Luke 1:46",
+    "web": "Mary said, “My soul magnifies the Lord.",
+    "kjv": "And Mary said, My soul doth magnify the Lord,"
+  },
+  "luke-1-47": {
+    "id": "luke-1-47",
+    "reference": "Luke 1:47",
+    "web": "My spirit has rejoiced in God my Savior,",
+    "kjv": "And my spirit hath rejoiced in God my Saviour."
+  },
+  "luke-1-48": {
+    "id": "luke-1-48",
+    "reference": "Luke 1:48",
+    "web": "for he has looked at the humble state of his servant. For behold, from now on, all generations will call me blessed.",
+    "kjv": "For he hath regarded the low estate of his handmaiden: for, behold, from henceforth all generations shall call me blessed."
+  },
+  "luke-1-49": {
+    "id": "luke-1-49",
+    "reference": "Luke 1:49",
+    "web": "For he who is mighty has done great things for me. Holy is his name.",
+    "kjv": "For he that is mighty hath done to me great things; and holy is his name."
+  },
+  "luke-1-50": {
+    "id": "luke-1-50",
+    "reference": "Luke 1:50",
+    "web": "His mercy is for generations and generations on those who fear him.",
+    "kjv": "And his mercy is on them that fear him from generation to generation."
+  },
+  "luke-1-51": {
+    "id": "luke-1-51",
+    "reference": "Luke 1:51",
+    "web": "He has shown strength with his arm. He has scattered the proud in the imagination of their hearts.",
+    "kjv": "He hath shewed strength with his arm; he hath scattered the proud in the imagination of their hearts."
+  },
+  "luke-1-52": {
+    "id": "luke-1-52",
+    "reference": "Luke 1:52",
+    "web": "He has put down princes from their thrones, and has exalted the lowly.",
+    "kjv": "He hath put down the mighty from their seats, and exalted them of low degree."
+  },
+  "luke-1-53": {
+    "id": "luke-1-53",
+    "reference": "Luke 1:53",
+    "web": "He has filled the hungry with good things. He has sent the rich away empty.",
+    "kjv": "He hath filled the hungry with good things; and the rich he hath sent empty away."
+  },
+  "luke-1-54": {
+    "id": "luke-1-54",
+    "reference": "Luke 1:54",
+    "web": "He has given help to Israel, his servant, that he might remember mercy,",
+    "kjv": "He hath holpen his servant Israel, in remembrance of his mercy;"
+  },
+  "luke-1-55": {
+    "id": "luke-1-55",
+    "reference": "Luke 1:55",
+    "web": "as he spoke to our fathers, to Abraham and his offspring forever.”",
+    "kjv": "As he spake to our fathers, to Abraham, and to his seed for ever."
+  },
+  "luke-1-56": {
+    "id": "luke-1-56",
+    "reference": "Luke 1:56",
+    "web": "Mary stayed with her about three months, and then returned to her house.",
+    "kjv": "And Mary abode with her about three months, and returned to her own house."
+  },
+  "luke-1-57": {
+    "id": "luke-1-57",
+    "reference": "Luke 1:57",
+    "web": "Now the time that Elizabeth should give birth was fulfilled, and she gave birth to a son.",
+    "kjv": "Now Elisabeth’s full time came that she should be delivered; and she brought forth a son."
+  },
+  "luke-1-58": {
+    "id": "luke-1-58",
+    "reference": "Luke 1:58",
+    "web": "Her neighbors and her relatives heard that the Lord had magnified his mercy toward her, and they rejoiced with her.",
+    "kjv": "And her neighbours and her cousins heard how the Lord had shewed great mercy upon her; and they rejoiced with her."
+  },
+  "luke-1-59": {
+    "id": "luke-1-59",
+    "reference": "Luke 1:59",
+    "web": "On the eighth day, they came to circumcise the child; and they would have called him Zacharias, after the name of his father.",
+    "kjv": "And it came to pass, that on the eighth day they came to circumcise the child; and they called him Zacharias, after the name of his father."
+  },
+  "luke-1-60": {
+    "id": "luke-1-60",
+    "reference": "Luke 1:60",
+    "web": "His mother answered, “Not so; but he will be called John.”",
+    "kjv": "And his mother answered and said, Not so; but he shall be called John."
+  },
+  "luke-1-61": {
+    "id": "luke-1-61",
+    "reference": "Luke 1:61",
+    "web": "They said to her, “There is no one among your relatives who is called by this name.”",
+    "kjv": "And they said unto her, There is none of thy kindred that is called by this name."
+  },
+  "luke-1-62": {
+    "id": "luke-1-62",
+    "reference": "Luke 1:62",
+    "web": "They made signs to his father, what he would have him called.",
+    "kjv": "And they made signs to his father, how he would have him called."
+  },
+  "luke-1-63": {
+    "id": "luke-1-63",
+    "reference": "Luke 1:63",
+    "web": "He asked for a writing tablet, and wrote, “His name is John.”\n\nThey all marveled.",
+    "kjv": "And he asked for a writing table, and wrote, saying, His name is John. And they marvelled all."
+  },
+  "luke-1-64": {
+    "id": "luke-1-64",
+    "reference": "Luke 1:64",
+    "web": "His mouth was opened immediately and his tongue freed, and he spoke, blessing God.",
+    "kjv": "And his mouth was opened immediately, and his tongue loosed, and he spake, and praised God."
+  },
+  "luke-1-65": {
+    "id": "luke-1-65",
+    "reference": "Luke 1:65",
+    "web": "Fear came on all who lived around them, and all these sayings were talked about throughout all the hill country of Judea.",
+    "kjv": "And fear came on all that dwelt round about them: and all these sayings were noised abroad throughout all the hill country of Judæa."
+  },
+  "luke-1-66": {
+    "id": "luke-1-66",
+    "reference": "Luke 1:66",
+    "web": "All who heard them laid them up in their heart, saying, “What then will this child be?” The hand of the Lord was with him.",
+    "kjv": "And all they that heard them laid them up in their hearts, saying, What manner of child shall this be! And the hand of the Lord was with him."
+  },
+  "luke-1-67": {
+    "id": "luke-1-67",
+    "reference": "Luke 1:67",
+    "web": "His father Zacharias was filled with the Holy Spirit, and prophesied, saying,",
+    "kjv": "And his father Zacharias was filled with the Holy Ghost, and prophesied, saying,"
+  },
+  "luke-1-68": {
+    "id": "luke-1-68",
+    "reference": "Luke 1:68",
+    "web": "“Blessed be the Lord, the God of Israel, for he has visited and redeemed his people;",
+    "kjv": "Blessed be the Lord God of Israel; for he hath visited and redeemed his people,"
+  },
+  "luke-1-69": {
+    "id": "luke-1-69",
+    "reference": "Luke 1:69",
+    "web": "and has raised up a horn of salvation for us in the house of his servant David",
+    "kjv": "And hath raised up an horn of salvation for us in the house of his servant David;"
+  },
+  "luke-1-70": {
+    "id": "luke-1-70",
+    "reference": "Luke 1:70",
+    "web": "(as he spoke by the mouth of his holy prophets who have been from of old),",
+    "kjv": "As he spake by the mouth of his holy prophets, which have been since the world began:"
+  },
+  "luke-1-71": {
+    "id": "luke-1-71",
+    "reference": "Luke 1:71",
+    "web": "salvation from our enemies and from the hand of all who hate us;",
+    "kjv": "That we should be saved from our enemies, and from the hand of all that hate us;"
+  },
+  "luke-1-72": {
+    "id": "luke-1-72",
+    "reference": "Luke 1:72",
+    "web": "to show mercy toward our fathers, to remember his holy covenant,",
+    "kjv": "To perform the mercy promised to our fathers, and to remember his holy covenant;"
+  },
+  "luke-1-73": {
+    "id": "luke-1-73",
+    "reference": "Luke 1:73",
+    "web": "the oath which he swore to Abraham our father,",
+    "kjv": "The oath which he sware to our father Abraham,"
+  },
+  "luke-1-74": {
+    "id": "luke-1-74",
+    "reference": "Luke 1:74",
+    "web": "to grant to us that we, being delivered out of the hand of our enemies, should serve him without fear,",
+    "kjv": "That he would grant unto us, that we being delivered out of the hand of our enemies might serve him without fear,"
+  },
+  "luke-1-75": {
+    "id": "luke-1-75",
+    "reference": "Luke 1:75",
+    "web": "in holiness and righteousness before him all the days of our life.",
+    "kjv": "In holiness and righteousness before him, all the days of our life."
+  },
+  "luke-1-76": {
+    "id": "luke-1-76",
+    "reference": "Luke 1:76",
+    "web": "And you, child, will be called a prophet of the Most High; for you will go before the face of the Lord to prepare his ways,",
+    "kjv": "And thou, child, shalt be called the prophet of the Highest: for thou shalt go before the face of the Lord to prepare his ways;"
+  },
+  "luke-1-77": {
+    "id": "luke-1-77",
+    "reference": "Luke 1:77",
+    "web": "to give knowledge of salvation to his people by the remission of their sins,",
+    "kjv": "To give knowledge of salvation unto his people by the remission of their sins,"
+  },
+  "luke-1-78": {
+    "id": "luke-1-78",
+    "reference": "Luke 1:78",
+    "web": "because of the tender mercy of our God, by which the dawn from on high will visit us,",
+    "kjv": "Through the tender mercy of our God; whereby the dayspring from on high hath visited us,"
+  },
+  "luke-1-79": {
+    "id": "luke-1-79",
+    "reference": "Luke 1:79",
+    "web": "to shine on those who sit in darkness and the shadow of death; to guide our feet into the way of peace.”",
+    "kjv": "To give light to them that sit in darkness and in the shadow of death, to guide our feet into the way of peace."
+  },
+  "luke-1-80": {
+    "id": "luke-1-80",
+    "reference": "Luke 1:80",
+    "web": "The child was growing and becoming strong in spirit, and was in the desert until the day of his public appearance to Israel.",
+    "kjv": "And the child grew, and waxed strong in spirit, and was in the deserts till the day of his shewing unto Israel."
+  },
+  "luke-3-1": {
+    "id": "luke-3-1",
+    "reference": "Luke 3:1",
+    "web": "Now in the fifteenth year of the reign of Tiberius Caesar, Pontius Pilate being governor of Judea, and Herod being tetrarch of Galilee, and his brother Philip tetrarch of the region of Ituraea and Trachonitis, and Lysanias tetrarch of Abilene,",
+    "kjv": "Now in the fifteenth year of the reign of Tiberius Cæsar, Pontius Pilate being governor of Judæa, and Herod being tetrarch of Galilee, and his brother Philip tetrarch of Ituraea and of the region of Trachonitis, and Lysanias the tetrarch of Abilene,"
+  },
+  "luke-3-2": {
+    "id": "luke-3-2",
+    "reference": "Luke 3:2",
+    "web": "during the high priesthood of Annas and Caiaphas, the word of God came to John, the son of Zacharias, in the wilderness.",
+    "kjv": "Annas and Caiaphas being the high priests, the word of God came unto John the son of Zacharias in the wilderness."
+  },
+  "luke-3-3": {
+    "id": "luke-3-3",
+    "reference": "Luke 3:3",
+    "web": "He came into all the region around the Jordan, preaching the baptism of repentance for remission of sins.",
+    "kjv": "And he came into all the country about Jordan, preaching the baptism of repentance for the remission of sins;"
+  },
+  "luke-3-4": {
+    "id": "luke-3-4",
+    "reference": "Luke 3:4",
+    "web": "As it is written in the book of the words of Isaiah the prophet, “The voice of one crying in the wilderness, ‘Make ready the way of the Lord. Make his paths straight.",
+    "kjv": "As it is written in the book of the words of Esaias the prophet, saying, The voice of one crying in the wilderness, Prepare ye the way of the Lord, make his paths straight."
+  },
+  "luke-3-5": {
+    "id": "luke-3-5",
+    "reference": "Luke 3:5",
+    "web": "Every valley will be filled. Every mountain and hill will be brought low. The crooked will become straight, and the rough ways smooth.",
+    "kjv": "Every valley shall be filled, and every mountain and hill shall be brought low; and the crooked shall be made straight, and the rough ways shall be made smooth;"
+  },
+  "luke-3-6": {
+    "id": "luke-3-6",
+    "reference": "Luke 3:6",
+    "web": "All flesh will see God’s salvation.’”",
+    "kjv": "And all flesh shall see the salvation of God."
+  },
+  "luke-3-7": {
+    "id": "luke-3-7",
+    "reference": "Luke 3:7",
+    "web": "He said therefore to the multitudes who went out to be baptized by him, “You offspring of vipers, who warned you to flee from the wrath to come?",
+    "kjv": "Then said he to the multitude that came forth to be baptized of him, O generation of vipers, who hath warned you to flee from the wrath to come?"
+  },
+  "luke-3-8": {
+    "id": "luke-3-8",
+    "reference": "Luke 3:8",
+    "web": "Therefore produce fruits worthy of repentance, and don’t begin to say among yourselves, ‘We have Abraham for our father;’ for I tell you that God is able to raise up children to Abraham from these stones!",
+    "kjv": "Bring forth therefore fruits worthy of repentance, and begin not to say within yourselves, We have Abraham to our father: for I say unto you, That God is able of these stones to raise up children unto Abraham."
+  },
+  "luke-3-9": {
+    "id": "luke-3-9",
+    "reference": "Luke 3:9",
+    "web": "Even now the ax also lies at the root of the trees. Every tree therefore that doesn’t produce good fruit is cut down and thrown into the fire.”",
+    "kjv": "And now also the axe is laid unto the root of the trees: every tree therefore which bringeth not forth good fruit is hewn down, and cast into the fire."
+  },
+  "luke-3-10": {
+    "id": "luke-3-10",
+    "reference": "Luke 3:10",
+    "web": "The multitudes asked him, “What then must we do?”",
+    "kjv": "And the people asked him, saying, What shall we do then?"
+  },
+  "luke-3-11": {
+    "id": "luke-3-11",
+    "reference": "Luke 3:11",
+    "web": "He answered them, “He who has two coats, let him give to him who has none. He who has food, let him do likewise.”",
+    "kjv": "He answereth and saith unto them, He that hath two coats, let him impart to him that hath none; and he that hath meat, let him do likewise."
+  },
+  "luke-3-12": {
+    "id": "luke-3-12",
+    "reference": "Luke 3:12",
+    "web": "Tax collectors also came to be baptized, and they said to him, “Teacher, what must we do?”",
+    "kjv": "Then came also publicans to be baptized, and said unto him, Master, what shall we do?"
+  },
+  "luke-3-13": {
+    "id": "luke-3-13",
+    "reference": "Luke 3:13",
+    "web": "He said to them, “Collect no more than that which is appointed to you.”",
+    "kjv": "And he said unto them, Exact no more than that which is appointed you."
+  },
+  "luke-3-14": {
+    "id": "luke-3-14",
+    "reference": "Luke 3:14",
+    "web": "Soldiers also asked him, saying, “What about us? What must we do?”\n\nHe said to them, “Extort from no one by violence, neither accuse anyone wrongfully. Be content with your wages.”",
+    "kjv": "And the soldiers likewise demanded of him, saying, And what shall we do? And he said unto them, Do violence to no man, neither accuse any falsely; and be content with your wages."
+  },
+  "luke-3-15": {
+    "id": "luke-3-15",
+    "reference": "Luke 3:15",
+    "web": "As the people were in expectation, and all men reasoned in their hearts concerning John, whether perhaps he was the Christ,",
+    "kjv": "And as the people were in expectation, and all men mused in their hearts of John, whether he were the Christ, or not;"
+  },
+  "luke-3-16": {
+    "id": "luke-3-16",
+    "reference": "Luke 3:16",
+    "web": "John answered them all, “I indeed baptize you with water, but he comes who is mightier than I, the strap of whose sandals I am not worthy to loosen. He will baptize you in the Holy Spirit and fire.",
+    "kjv": "John answered, saying unto them all, I indeed baptize you with water; but one mightier than I cometh, the latchet of whose shoes I am not worthy to unloose: he shall baptize you with the Holy Ghost and with fire:"
+  },
+  "luke-3-17": {
+    "id": "luke-3-17",
+    "reference": "Luke 3:17",
+    "web": "His winnowing fan is in his hand, and he will thoroughly cleanse his threshing floor, and will gather the wheat into his barn; but he will burn up the chaff with unquenchable fire.”",
+    "kjv": "Whose fan is in his hand, and he will throughly purge his floor, and will gather the wheat into his garner; but the chaff he will burn with fire unquenchable."
+  },
+  "luke-3-18": {
+    "id": "luke-3-18",
+    "reference": "Luke 3:18",
+    "web": "Then with many other exhortations he preached good news to the people,",
+    "kjv": "And many other things in his exhortation preached he unto the people."
+  },
+  "luke-3-19": {
+    "id": "luke-3-19",
+    "reference": "Luke 3:19",
+    "web": "but Herod the tetrarch, being reproved by him for Herodias, his brother’s wife, and for all the evil things which Herod had done,",
+    "kjv": "But Herod the tetrarch, being reproved by him for Herodias his brother Philip’s wife, and for all the evils which Herod had done,"
+  },
+  "luke-3-20": {
+    "id": "luke-3-20",
+    "reference": "Luke 3:20",
+    "web": "added this also to them all, that he shut up John in prison.",
+    "kjv": "Added yet this above all, that he shut up John in prison."
+  },
+  "luke-3-21": {
+    "id": "luke-3-21",
+    "reference": "Luke 3:21",
+    "web": "Now when all the people were baptized, Jesus also had been baptized and was praying. The sky was opened,",
+    "kjv": "Now when all the people were baptized, it came to pass, that Jesus also being baptized, and praying, the heaven was opened,"
+  },
+  "luke-3-22": {
+    "id": "luke-3-22",
+    "reference": "Luke 3:22",
+    "web": "and the Holy Spirit descended in a bodily form like a dove on him; and a voice came out of the sky, saying “You are my beloved Son. In you I am well pleased.”",
+    "kjv": "And the Holy Ghost descended in a bodily shape like a dove upon him, and a voice came from heaven, which said, Thou art my beloved Son; in thee I am well pleased."
   },
   "luke-3-23": {
     "id": "luke-3-23",
@@ -1395,6 +4635,30 @@ export const scripture: Record<string, Verse> = {
     "web": "the son of Enos, the son of Seth, the son of Adam, the son of God.",
     "kjv": "Which was the son of Enos, which was the son of Seth, which was the son of Adam, which was the son of God."
   },
+  "heb-11-1": {
+    "id": "heb-11-1",
+    "reference": "Hebrews 11:1",
+    "web": "Now faith is assurance of things hoped for, proof of things not seen.",
+    "kjv": "Now faith is the substance of things hoped for, the evidence of things not seen."
+  },
+  "heb-11-2": {
+    "id": "heb-11-2",
+    "reference": "Hebrews 11:2",
+    "web": "For by this, the elders obtained approval.",
+    "kjv": "For by it the elders obtained a good report."
+  },
+  "heb-11-3": {
+    "id": "heb-11-3",
+    "reference": "Hebrews 11:3",
+    "web": "By faith we understand that the universe has been framed by the word of God, so that what is seen has not been made out of things which are visible.",
+    "kjv": "Through faith we understand that the worlds were framed by the word of God, so that things which are seen were not made of things which do appear."
+  },
+  "heb-11-4": {
+    "id": "heb-11-4",
+    "reference": "Hebrews 11:4",
+    "web": "By faith Abel offered to God a more excellent sacrifice than Cain, through which he had testimony given to him that he was righteous, God testifying with respect to his gifts; and through it he, being dead, still speaks.",
+    "kjv": "By faith Abel offered unto God a more excellent sacrifice than Cain, by which he obtained witness that he was righteous, God testifying of his gifts: and by it he being dead yet speaketh."
+  },
   "heb-11-5": {
     "id": "heb-11-5",
     "reference": "Hebrews 11:5",
@@ -1437,16 +4701,1343 @@ export const scripture: Record<string, Verse> = {
     "web": "By faith even Sarah herself received power to conceive, and she bore a child when she was past age, since she counted him faithful who had promised.",
     "kjv": "Through faith also Sara herself received strength to conceive seed, and was delivered of a child when she was past age, because she judged him faithful who had promised."
   },
+  "heb-11-12": {
+    "id": "heb-11-12",
+    "reference": "Hebrews 11:12",
+    "web": "Therefore as many as the stars of the sky in multitude, and as innumerable as the sand which is by the sea shore, were fathered by one man, and him as good as dead.",
+    "kjv": "Therefore sprang there even of one, and him as good as dead, so many as the stars of the sky in multitude, and as the sand which is by the sea shore innumerable."
+  },
+  "heb-11-13": {
+    "id": "heb-11-13",
+    "reference": "Hebrews 11:13",
+    "web": "These all died in faith, not having received the promises, but having seen them and embraced them from afar, and having confessed that they were strangers and pilgrims on the earth.",
+    "kjv": "These all died in faith, not having received the promises, but having seen them afar off, and were persuaded of them, and embraced them, and confessed that they were strangers and pilgrims on the earth."
+  },
+  "heb-11-14": {
+    "id": "heb-11-14",
+    "reference": "Hebrews 11:14",
+    "web": "For those who say such things make it clear that they are seeking a country of their own.",
+    "kjv": "For they that say such things declare plainly that they seek a country."
+  },
+  "heb-11-15": {
+    "id": "heb-11-15",
+    "reference": "Hebrews 11:15",
+    "web": "If indeed they had been thinking of that country from which they went out, they would have had enough time to return.",
+    "kjv": "And truly, if they had been mindful of that country from whence they came out, they might have had opportunity to have returned."
+  },
+  "heb-11-16": {
+    "id": "heb-11-16",
+    "reference": "Hebrews 11:16",
+    "web": "But now they desire a better country, that is, a heavenly one. Therefore God is not ashamed of them, to be called their God, for he has prepared a city for them.",
+    "kjv": "But now they desire a better country, that is, an heavenly: wherefore God is not ashamed to be called their God: for he hath prepared for them a city."
+  },
+  "heb-11-17": {
+    "id": "heb-11-17",
+    "reference": "Hebrews 11:17",
+    "web": "By faith, Abraham, being tested, offered up Isaac. Yes, he who had gladly received the promises was offering up his only born son,",
+    "kjv": "By faith Abraham, when he was tried, offered up Isaac: and he that had received the promises offered up his only begotten son,"
+  },
+  "heb-11-18": {
+    "id": "heb-11-18",
+    "reference": "Hebrews 11:18",
+    "web": "to whom it was said, “Your offspring will be accounted as from Isaac,”",
+    "kjv": "Of whom it was said, That in Isaac shall thy seed be called:"
+  },
+  "heb-11-19": {
+    "id": "heb-11-19",
+    "reference": "Hebrews 11:19",
+    "web": "concluding that God is able to raise up even from the dead. Figuratively speaking, he also did receive him back from the dead.",
+    "kjv": "Accounting that God was able to raise him up, even from the dead; from whence also he received him in a figure."
+  },
+  "heb-11-20": {
+    "id": "heb-11-20",
+    "reference": "Hebrews 11:20",
+    "web": "By faith Isaac blessed Jacob and Esau, even concerning things to come.",
+    "kjv": "By faith Isaac blessed Jacob and Esau concerning things to come."
+  },
+  "heb-11-21": {
+    "id": "heb-11-21",
+    "reference": "Hebrews 11:21",
+    "web": "By faith Jacob, when he was dying, blessed each of the sons of Joseph, and worshiped, leaning on the top of his staff.",
+    "kjv": "By faith Jacob, when he was a dying, blessed both the sons of Joseph; and worshipped, leaning upon the top of his staff."
+  },
+  "heb-11-22": {
+    "id": "heb-11-22",
+    "reference": "Hebrews 11:22",
+    "web": "By faith Joseph, when his end was near, made mention of the departure of the children of Israel, and gave instructions concerning his bones.",
+    "kjv": "By faith Joseph, when he died, made mention of the departing of the children of Israel; and gave commandment concerning his bones."
+  },
+  "heb-11-23": {
+    "id": "heb-11-23",
+    "reference": "Hebrews 11:23",
+    "web": "By faith Moses, when he was born, was hidden for three months by his parents, because they saw that he was a beautiful child; and they were not afraid of the king’s commandment.",
+    "kjv": "By faith Moses, when he was born, was hid three months of his parents, because they saw he was a proper child; and they were not afraid of the king’s commandment."
+  },
+  "heb-11-24": {
+    "id": "heb-11-24",
+    "reference": "Hebrews 11:24",
+    "web": "By faith Moses, when he had grown up, refused to be called the son of Pharaoh’s daughter,",
+    "kjv": "By faith Moses, when he was come to years, refused to be called the son of Pharaoh’s daughter;"
+  },
+  "heb-11-25": {
+    "id": "heb-11-25",
+    "reference": "Hebrews 11:25",
+    "web": "choosing rather to share ill treatment with God’s people than to enjoy the pleasures of sin for a time,",
+    "kjv": "Choosing rather to suffer affliction with the people of God, than to enjoy the pleasures of sin for a season;"
+  },
+  "heb-11-26": {
+    "id": "heb-11-26",
+    "reference": "Hebrews 11:26",
+    "web": "considering the reproach of Christ greater riches than the treasures of Egypt; for he looked to the reward.",
+    "kjv": "Esteeming the reproach of Christ greater riches than the treasures in Egypt: for he had respect unto the recompence of the reward."
+  },
+  "heb-11-27": {
+    "id": "heb-11-27",
+    "reference": "Hebrews 11:27",
+    "web": "By faith he left Egypt, not fearing the wrath of the king; for he endured, as seeing him who is invisible.",
+    "kjv": "By faith he forsook Egypt, not fearing the wrath of the king: for he endured, as seeing him who is invisible."
+  },
+  "heb-11-28": {
+    "id": "heb-11-28",
+    "reference": "Hebrews 11:28",
+    "web": "By faith he kept the Passover and the sprinkling of the blood, that the destroyer of the firstborn should not touch them.",
+    "kjv": "Through faith he kept the passover, and the sprinkling of blood, lest he that destroyed the firstborn should touch them."
+  },
+  "heb-11-29": {
+    "id": "heb-11-29",
+    "reference": "Hebrews 11:29",
+    "web": "By faith they passed through the Red Sea as on dry land. When the Egyptians tried to do so, they were swallowed up.",
+    "kjv": "By faith they passed through the Red sea as by dry land: which the Egyptians assaying to do were drowned."
+  },
+  "heb-11-30": {
+    "id": "heb-11-30",
+    "reference": "Hebrews 11:30",
+    "web": "By faith the walls of Jericho fell down after they had been encircled for seven days.",
+    "kjv": "By faith the walls of Jericho fell down, after they were compassed about seven days."
+  },
   "heb-11-31": {
     "id": "heb-11-31",
     "reference": "Hebrews 11:31",
     "web": "By faith Rahab the prostitute didn’t perish with those who were disobedient, having received the spies in peace.",
     "kjv": "By faith the harlot Rahab perished not with them that believed not, when she had received the spies with peace."
   },
+  "heb-11-32": {
+    "id": "heb-11-32",
+    "reference": "Hebrews 11:32",
+    "web": "What more shall I say? For the time would fail me if I told of Gideon, Barak, Samson, Jephthah, David, Samuel, and the prophets—",
+    "kjv": "And what shall I more say? for the time would fail me to tell of Gedeon, and of Barak, and of Samson, and of Jephthae; of David also, and Samuel, and of the prophets:"
+  },
+  "heb-11-33": {
+    "id": "heb-11-33",
+    "reference": "Hebrews 11:33",
+    "web": "who through faith subdued kingdoms, worked out righteousness, obtained promises, stopped the mouths of lions,",
+    "kjv": "Who through faith subdued kingdoms, wrought righteousness, obtained promises, stopped the mouths of lions,"
+  },
+  "heb-11-34": {
+    "id": "heb-11-34",
+    "reference": "Hebrews 11:34",
+    "web": "quenched the power of fire, escaped the edge of the sword, from weakness were made strong, grew mighty in war, and caused foreign armies to flee.",
+    "kjv": "Quenched the violence of fire, escaped the edge of the sword, out of weakness were made strong, waxed valiant in fight, turned to flight the armies of the aliens."
+  },
+  "heb-11-35": {
+    "id": "heb-11-35",
+    "reference": "Hebrews 11:35",
+    "web": "Women received their dead by resurrection. Others were tortured, not accepting their deliverance, that they might obtain a better resurrection.",
+    "kjv": "Women received their dead raised to life again: and others were tortured, not accepting deliverance; that they might obtain a better resurrection:"
+  },
+  "heb-11-36": {
+    "id": "heb-11-36",
+    "reference": "Hebrews 11:36",
+    "web": "Others were tried by mocking and scourging, yes, moreover by bonds and imprisonment.",
+    "kjv": "And others had trial of cruel mockings and scourgings, yea, moreover of bonds and imprisonment:"
+  },
+  "heb-11-37": {
+    "id": "heb-11-37",
+    "reference": "Hebrews 11:37",
+    "web": "They were stoned. They were sawn apart. They were tempted. They were slain with the sword. They went around in sheep skins and in goat skins; being destitute, afflicted, ill-treated—",
+    "kjv": "They were stoned, they were sawn asunder, were tempted, were slain with the sword: they wandered about in sheepskins and goatskins; being destitute, afflicted, tormented;"
+  },
+  "heb-11-38": {
+    "id": "heb-11-38",
+    "reference": "Hebrews 11:38",
+    "web": "of whom the world was not worthy—wandering in deserts, mountains, caves, and the holes of the earth.",
+    "kjv": "(Of whom the world was not worthy:) they wandered in deserts, and in mountains, and in dens and caves of the earth."
+  },
+  "heb-11-39": {
+    "id": "heb-11-39",
+    "reference": "Hebrews 11:39",
+    "web": "These all, having been commended for their faith, didn’t receive the promise,",
+    "kjv": "And these all, having obtained a good report through faith, received not the promise:"
+  },
+  "heb-11-40": {
+    "id": "heb-11-40",
+    "reference": "Hebrews 11:40",
+    "web": "God having provided some better thing concerning us, so that apart from us they should not be made perfect.",
+    "kjv": "God having provided some better thing for us, that they without us should not be made perfect."
+  },
+  "jas-2-1": {
+    "id": "jas-2-1",
+    "reference": "James 2:1",
+    "web": "My brothers, don’t hold the faith of our glorious Lord Jesus Christ with partiality.",
+    "kjv": "My brethren, have not the faith of our Lord Jesus Christ, the Lord of glory, with respect of persons."
+  },
+  "jas-2-2": {
+    "id": "jas-2-2",
+    "reference": "James 2:2",
+    "web": "For if a man with a gold ring, in fine clothing, comes into your synagogue, and a poor man in filthy clothing also comes in,",
+    "kjv": "For if there come unto your assembly a man with a gold ring, in goodly apparel, and there come in also a poor man in vile raiment;"
+  },
+  "jas-2-3": {
+    "id": "jas-2-3",
+    "reference": "James 2:3",
+    "web": "and you pay special attention to him who wears the fine clothing and say, “Sit here in a good place;” and you tell the poor man, “Stand there,” or “Sit by my footstool”",
+    "kjv": "And ye have respect to him that weareth the gay clothing, and say unto him, Sit thou here in a good place; and say to the poor, Stand thou there, or sit here under my footstool:"
+  },
+  "jas-2-4": {
+    "id": "jas-2-4",
+    "reference": "James 2:4",
+    "web": "haven’t you shown partiality among yourselves, and become judges with evil thoughts?",
+    "kjv": "Are ye not then partial in yourselves, and are become judges of evil thoughts?"
+  },
+  "jas-2-5": {
+    "id": "jas-2-5",
+    "reference": "James 2:5",
+    "web": "Listen, my beloved brothers. Didn’t God choose those who are poor in this world to be rich in faith and heirs of the Kingdom which he promised to those who love him?",
+    "kjv": "Hearken, my beloved brethren, Hath not God chosen the poor of this world rich in faith, and heirs of the kingdom which he hath promised to them that love him?"
+  },
+  "jas-2-6": {
+    "id": "jas-2-6",
+    "reference": "James 2:6",
+    "web": "But you have dishonored the poor man. Don’t the rich oppress you and personally drag you before the courts?",
+    "kjv": "But ye have despised the poor. Do not rich men oppress you, and draw you before the judgment seats?"
+  },
+  "jas-2-7": {
+    "id": "jas-2-7",
+    "reference": "James 2:7",
+    "web": "Don’t they blaspheme the honorable name by which you are called?",
+    "kjv": "Do not they blaspheme that worthy name by the which ye are called?"
+  },
+  "jas-2-8": {
+    "id": "jas-2-8",
+    "reference": "James 2:8",
+    "web": "However, if you fulfill the royal law according to the Scripture, “You shall love your neighbor as yourself,” you do well.",
+    "kjv": "If ye fulfil the royal law according to the scripture, Thou shalt love thy neighbour as thyself, ye do well:"
+  },
+  "jas-2-9": {
+    "id": "jas-2-9",
+    "reference": "James 2:9",
+    "web": "But if you show partiality, you commit sin, being convicted by the law as transgressors.",
+    "kjv": "But if ye have respect to persons, ye commit sin, and are convinced of the law as transgressors."
+  },
+  "jas-2-10": {
+    "id": "jas-2-10",
+    "reference": "James 2:10",
+    "web": "For whoever keeps the whole law, and yet stumbles in one point, he has become guilty of all.",
+    "kjv": "For whosoever shall keep the whole law, and yet offend in one point, he is guilty of all."
+  },
+  "jas-2-11": {
+    "id": "jas-2-11",
+    "reference": "James 2:11",
+    "web": "For he who said, “Do not commit adultery,” also said, “Do not commit murder.” Now if you do not commit adultery but do murder, you have become a transgressor of the law.",
+    "kjv": "For he that said, Do not commit adultery, said also, Do not kill. Now if thou commit no adultery, yet if thou kill, thou art become a transgressor of the law."
+  },
+  "jas-2-12": {
+    "id": "jas-2-12",
+    "reference": "James 2:12",
+    "web": "So speak and so do as men who are to be judged by the law of freedom.",
+    "kjv": "So speak ye, and so do, as they that shall be judged by the law of liberty."
+  },
+  "jas-2-13": {
+    "id": "jas-2-13",
+    "reference": "James 2:13",
+    "web": "For judgment is without mercy to him who has shown no mercy. Mercy triumphs over judgment.",
+    "kjv": "For he shall have judgment without mercy, that hath shewed no mercy; and mercy rejoiceth against judgment."
+  },
+  "jas-2-14": {
+    "id": "jas-2-14",
+    "reference": "James 2:14",
+    "web": "What good is it, my brothers, if a man says he has faith, but has no works? Can faith save him?",
+    "kjv": "What doth it profit, my brethren, though a man say he hath faith, and have not works? can faith save him?"
+  },
+  "jas-2-15": {
+    "id": "jas-2-15",
+    "reference": "James 2:15",
+    "web": "And if a brother or sister is naked and in lack of daily food,",
+    "kjv": "If a brother or sister be naked, and destitute of daily food,"
+  },
+  "jas-2-16": {
+    "id": "jas-2-16",
+    "reference": "James 2:16",
+    "web": "and one of you tells them, “Go in peace. Be warmed and filled;” yet you didn’t give them the things the body needs, what good is it?",
+    "kjv": "And one of you say unto them, Depart in peace, be ye warmed and filled; notwithstanding ye give them not those things which are needful to the body; what doth it profit?"
+  },
+  "jas-2-17": {
+    "id": "jas-2-17",
+    "reference": "James 2:17",
+    "web": "Even so faith, if it has no works, is dead in itself.",
+    "kjv": "Even so faith, if it hath not works, is dead, being alone."
+  },
+  "jas-2-18": {
+    "id": "jas-2-18",
+    "reference": "James 2:18",
+    "web": "Yes, a man will say, “You have faith, and I have works.” Show me your faith without works, and I will show you my faith by my works.",
+    "kjv": "Yea, a man may say, Thou hast faith, and I have works: shew me thy faith without thy works, and I will shew thee my faith by my works."
+  },
+  "jas-2-19": {
+    "id": "jas-2-19",
+    "reference": "James 2:19",
+    "web": "You believe that God is one. You do well. The demons also believe—and shudder.",
+    "kjv": "Thou believest that there is one God; thou doest well: the devils also believe, and tremble."
+  },
+  "jas-2-20": {
+    "id": "jas-2-20",
+    "reference": "James 2:20",
+    "web": "But do you want to know, vain man, that faith apart from works is dead?",
+    "kjv": "But wilt thou know, O vain man, that faith without works is dead?"
+  },
+  "jas-2-21": {
+    "id": "jas-2-21",
+    "reference": "James 2:21",
+    "web": "Wasn’t Abraham our father justified by works, in that he offered up Isaac his son on the altar?",
+    "kjv": "Was not Abraham our father justified by works, when he had offered Isaac his son upon the altar?"
+  },
+  "jas-2-22": {
+    "id": "jas-2-22",
+    "reference": "James 2:22",
+    "web": "You see that faith worked with his works, and by works faith was perfected.",
+    "kjv": "Seest thou how faith wrought with his works, and by works was faith made perfect?"
+  },
+  "jas-2-23": {
+    "id": "jas-2-23",
+    "reference": "James 2:23",
+    "web": "So the Scripture was fulfilled which says, “Abraham believed God, and it was accounted to him as righteousness,” and he was called the friend of God.",
+    "kjv": "And the scripture was fulfilled which saith, Abraham believed God, and it was imputed unto him for righteousness: and he was called the Friend of God."
+  },
+  "jas-2-24": {
+    "id": "jas-2-24",
+    "reference": "James 2:24",
+    "web": "You see then that by works a man is justified, and not only by faith.",
+    "kjv": "Ye see then how that by works a man is justified, and not by faith only."
+  },
   "jas-2-25": {
     "id": "jas-2-25",
     "reference": "James 2:25",
     "web": "In the same way, wasn’t Rahab the prostitute also justified by works when she received the messengers and sent them out another way?",
     "kjv": "Likewise also was not Rahab the harlot justified by works, when she had received the messengers, and had sent them out another way?"
+  },
+  "jas-2-26": {
+    "id": "jas-2-26",
+    "reference": "James 2:26",
+    "web": "For as the body apart from the spirit is dead, even so faith apart from works is dead.",
+    "kjv": "For as the body without the spirit is dead, so faith without works is dead also."
+  }
+};
+
+export const chapters: Record<string, import("./types").BibleChapter> = {
+  "gen-2": {
+    "id": "gen-2",
+    "reference": "Genesis 2",
+    "verseIds": [
+      "gen-2-1",
+      "gen-2-2",
+      "gen-2-3",
+      "gen-2-4",
+      "gen-2-5",
+      "gen-2-6",
+      "gen-2-7",
+      "gen-2-8",
+      "gen-2-9",
+      "gen-2-10",
+      "gen-2-11",
+      "gen-2-12",
+      "gen-2-13",
+      "gen-2-14",
+      "gen-2-15",
+      "gen-2-16",
+      "gen-2-17",
+      "gen-2-18",
+      "gen-2-19",
+      "gen-2-20",
+      "gen-2-21",
+      "gen-2-22",
+      "gen-2-23",
+      "gen-2-24",
+      "gen-2-25"
+    ]
+  },
+  "gen-4": {
+    "id": "gen-4",
+    "reference": "Genesis 4",
+    "verseIds": [
+      "gen-4-1",
+      "gen-4-2",
+      "gen-4-3",
+      "gen-4-4",
+      "gen-4-5",
+      "gen-4-6",
+      "gen-4-7",
+      "gen-4-8",
+      "gen-4-9",
+      "gen-4-10",
+      "gen-4-11",
+      "gen-4-12",
+      "gen-4-13",
+      "gen-4-14",
+      "gen-4-15",
+      "gen-4-16",
+      "gen-4-17",
+      "gen-4-18",
+      "gen-4-19",
+      "gen-4-20",
+      "gen-4-21",
+      "gen-4-22",
+      "gen-4-23",
+      "gen-4-24",
+      "gen-4-25",
+      "gen-4-26"
+    ]
+  },
+  "gen-5": {
+    "id": "gen-5",
+    "reference": "Genesis 5",
+    "verseIds": [
+      "gen-5-1",
+      "gen-5-2",
+      "gen-5-3",
+      "gen-5-4",
+      "gen-5-5",
+      "gen-5-6",
+      "gen-5-7",
+      "gen-5-8",
+      "gen-5-9",
+      "gen-5-10",
+      "gen-5-11",
+      "gen-5-12",
+      "gen-5-13",
+      "gen-5-14",
+      "gen-5-15",
+      "gen-5-16",
+      "gen-5-17",
+      "gen-5-18",
+      "gen-5-19",
+      "gen-5-20",
+      "gen-5-21",
+      "gen-5-22",
+      "gen-5-23",
+      "gen-5-24",
+      "gen-5-25",
+      "gen-5-26",
+      "gen-5-27",
+      "gen-5-28",
+      "gen-5-29",
+      "gen-5-30",
+      "gen-5-31",
+      "gen-5-32"
+    ]
+  },
+  "gen-6": {
+    "id": "gen-6",
+    "reference": "Genesis 6",
+    "verseIds": [
+      "gen-6-1",
+      "gen-6-2",
+      "gen-6-3",
+      "gen-6-4",
+      "gen-6-5",
+      "gen-6-6",
+      "gen-6-7",
+      "gen-6-8",
+      "gen-6-9",
+      "gen-6-10",
+      "gen-6-11",
+      "gen-6-12",
+      "gen-6-13",
+      "gen-6-14",
+      "gen-6-15",
+      "gen-6-16",
+      "gen-6-17",
+      "gen-6-18",
+      "gen-6-19",
+      "gen-6-20",
+      "gen-6-21",
+      "gen-6-22"
+    ]
+  },
+  "gen-9": {
+    "id": "gen-9",
+    "reference": "Genesis 9",
+    "verseIds": [
+      "gen-9-1",
+      "gen-9-2",
+      "gen-9-3",
+      "gen-9-4",
+      "gen-9-5",
+      "gen-9-6",
+      "gen-9-7",
+      "gen-9-8",
+      "gen-9-9",
+      "gen-9-10",
+      "gen-9-11",
+      "gen-9-12",
+      "gen-9-13",
+      "gen-9-14",
+      "gen-9-15",
+      "gen-9-16",
+      "gen-9-17",
+      "gen-9-18",
+      "gen-9-19",
+      "gen-9-20",
+      "gen-9-21",
+      "gen-9-22",
+      "gen-9-23",
+      "gen-9-24",
+      "gen-9-25",
+      "gen-9-26",
+      "gen-9-27",
+      "gen-9-28",
+      "gen-9-29"
+    ]
+  },
+  "gen-11": {
+    "id": "gen-11",
+    "reference": "Genesis 11",
+    "verseIds": [
+      "gen-11-1",
+      "gen-11-2",
+      "gen-11-3",
+      "gen-11-4",
+      "gen-11-5",
+      "gen-11-6",
+      "gen-11-7",
+      "gen-11-8",
+      "gen-11-9",
+      "gen-11-10",
+      "gen-11-11",
+      "gen-11-12",
+      "gen-11-13",
+      "gen-11-14",
+      "gen-11-15",
+      "gen-11-16",
+      "gen-11-17",
+      "gen-11-18",
+      "gen-11-19",
+      "gen-11-20",
+      "gen-11-21",
+      "gen-11-22",
+      "gen-11-23",
+      "gen-11-24",
+      "gen-11-25",
+      "gen-11-26",
+      "gen-11-27",
+      "gen-11-28",
+      "gen-11-29",
+      "gen-11-30",
+      "gen-11-31",
+      "gen-11-32"
+    ]
+  },
+  "gen-12": {
+    "id": "gen-12",
+    "reference": "Genesis 12",
+    "verseIds": [
+      "gen-12-1",
+      "gen-12-2",
+      "gen-12-3",
+      "gen-12-4",
+      "gen-12-5",
+      "gen-12-6",
+      "gen-12-7",
+      "gen-12-8",
+      "gen-12-9",
+      "gen-12-10",
+      "gen-12-11",
+      "gen-12-12",
+      "gen-12-13",
+      "gen-12-14",
+      "gen-12-15",
+      "gen-12-16",
+      "gen-12-17",
+      "gen-12-18",
+      "gen-12-19",
+      "gen-12-20"
+    ]
+  },
+  "gen-15": {
+    "id": "gen-15",
+    "reference": "Genesis 15",
+    "verseIds": [
+      "gen-15-1",
+      "gen-15-2",
+      "gen-15-3",
+      "gen-15-4",
+      "gen-15-5",
+      "gen-15-6",
+      "gen-15-7",
+      "gen-15-8",
+      "gen-15-9",
+      "gen-15-10",
+      "gen-15-11",
+      "gen-15-12",
+      "gen-15-13",
+      "gen-15-14",
+      "gen-15-15",
+      "gen-15-16",
+      "gen-15-17",
+      "gen-15-18",
+      "gen-15-19",
+      "gen-15-20",
+      "gen-15-21"
+    ]
+  },
+  "gen-16": {
+    "id": "gen-16",
+    "reference": "Genesis 16",
+    "verseIds": [
+      "gen-16-1",
+      "gen-16-2",
+      "gen-16-3",
+      "gen-16-4",
+      "gen-16-5",
+      "gen-16-6",
+      "gen-16-7",
+      "gen-16-8",
+      "gen-16-9",
+      "gen-16-10",
+      "gen-16-11",
+      "gen-16-12",
+      "gen-16-13",
+      "gen-16-14",
+      "gen-16-15",
+      "gen-16-16"
+    ]
+  },
+  "gen-21": {
+    "id": "gen-21",
+    "reference": "Genesis 21",
+    "verseIds": [
+      "gen-21-1",
+      "gen-21-2",
+      "gen-21-3",
+      "gen-21-4",
+      "gen-21-5",
+      "gen-21-6",
+      "gen-21-7",
+      "gen-21-8",
+      "gen-21-9",
+      "gen-21-10",
+      "gen-21-11",
+      "gen-21-12",
+      "gen-21-13",
+      "gen-21-14",
+      "gen-21-15",
+      "gen-21-16",
+      "gen-21-17",
+      "gen-21-18",
+      "gen-21-19",
+      "gen-21-20",
+      "gen-21-21",
+      "gen-21-22",
+      "gen-21-23",
+      "gen-21-24",
+      "gen-21-25",
+      "gen-21-26",
+      "gen-21-27",
+      "gen-21-28",
+      "gen-21-29",
+      "gen-21-30",
+      "gen-21-31",
+      "gen-21-32",
+      "gen-21-33",
+      "gen-21-34"
+    ]
+  },
+  "gen-25": {
+    "id": "gen-25",
+    "reference": "Genesis 25",
+    "verseIds": [
+      "gen-25-1",
+      "gen-25-2",
+      "gen-25-3",
+      "gen-25-4",
+      "gen-25-5",
+      "gen-25-6",
+      "gen-25-7",
+      "gen-25-8",
+      "gen-25-9",
+      "gen-25-10",
+      "gen-25-11",
+      "gen-25-12",
+      "gen-25-13",
+      "gen-25-14",
+      "gen-25-15",
+      "gen-25-16",
+      "gen-25-17",
+      "gen-25-18",
+      "gen-25-19",
+      "gen-25-20",
+      "gen-25-21",
+      "gen-25-22",
+      "gen-25-23",
+      "gen-25-24",
+      "gen-25-25",
+      "gen-25-26",
+      "gen-25-27",
+      "gen-25-28",
+      "gen-25-29",
+      "gen-25-30",
+      "gen-25-31",
+      "gen-25-32",
+      "gen-25-33",
+      "gen-25-34"
+    ]
+  },
+  "gen-29": {
+    "id": "gen-29",
+    "reference": "Genesis 29",
+    "verseIds": [
+      "gen-29-1",
+      "gen-29-2",
+      "gen-29-3",
+      "gen-29-4",
+      "gen-29-5",
+      "gen-29-6",
+      "gen-29-7",
+      "gen-29-8",
+      "gen-29-9",
+      "gen-29-10",
+      "gen-29-11",
+      "gen-29-12",
+      "gen-29-13",
+      "gen-29-14",
+      "gen-29-15",
+      "gen-29-16",
+      "gen-29-17",
+      "gen-29-18",
+      "gen-29-19",
+      "gen-29-20",
+      "gen-29-21",
+      "gen-29-22",
+      "gen-29-23",
+      "gen-29-24",
+      "gen-29-25",
+      "gen-29-26",
+      "gen-29-27",
+      "gen-29-28",
+      "gen-29-29",
+      "gen-29-30",
+      "gen-29-31",
+      "gen-29-32",
+      "gen-29-33",
+      "gen-29-34",
+      "gen-29-35"
+    ]
+  },
+  "gen-30": {
+    "id": "gen-30",
+    "reference": "Genesis 30",
+    "verseIds": [
+      "gen-30-1",
+      "gen-30-2",
+      "gen-30-3",
+      "gen-30-4",
+      "gen-30-5",
+      "gen-30-6",
+      "gen-30-7",
+      "gen-30-8",
+      "gen-30-9",
+      "gen-30-10",
+      "gen-30-11",
+      "gen-30-12",
+      "gen-30-13",
+      "gen-30-14",
+      "gen-30-15",
+      "gen-30-16",
+      "gen-30-17",
+      "gen-30-18",
+      "gen-30-19",
+      "gen-30-20",
+      "gen-30-21",
+      "gen-30-22",
+      "gen-30-23",
+      "gen-30-24",
+      "gen-30-25",
+      "gen-30-26",
+      "gen-30-27",
+      "gen-30-28",
+      "gen-30-29",
+      "gen-30-30",
+      "gen-30-31",
+      "gen-30-32",
+      "gen-30-33",
+      "gen-30-34",
+      "gen-30-35",
+      "gen-30-36",
+      "gen-30-37",
+      "gen-30-38",
+      "gen-30-39",
+      "gen-30-40",
+      "gen-30-41",
+      "gen-30-42",
+      "gen-30-43"
+    ]
+  },
+  "gen-35": {
+    "id": "gen-35",
+    "reference": "Genesis 35",
+    "verseIds": [
+      "gen-35-1",
+      "gen-35-2",
+      "gen-35-3",
+      "gen-35-4",
+      "gen-35-5",
+      "gen-35-6",
+      "gen-35-7",
+      "gen-35-8",
+      "gen-35-9",
+      "gen-35-10",
+      "gen-35-11",
+      "gen-35-12",
+      "gen-35-13",
+      "gen-35-14",
+      "gen-35-15",
+      "gen-35-16",
+      "gen-35-17",
+      "gen-35-18",
+      "gen-35-19",
+      "gen-35-20",
+      "gen-35-21",
+      "gen-35-22",
+      "gen-35-23",
+      "gen-35-24",
+      "gen-35-25",
+      "gen-35-26",
+      "gen-35-27",
+      "gen-35-28",
+      "gen-35-29"
+    ]
+  },
+  "gen-38": {
+    "id": "gen-38",
+    "reference": "Genesis 38",
+    "verseIds": [
+      "gen-38-1",
+      "gen-38-2",
+      "gen-38-3",
+      "gen-38-4",
+      "gen-38-5",
+      "gen-38-6",
+      "gen-38-7",
+      "gen-38-8",
+      "gen-38-9",
+      "gen-38-10",
+      "gen-38-11",
+      "gen-38-12",
+      "gen-38-13",
+      "gen-38-14",
+      "gen-38-15",
+      "gen-38-16",
+      "gen-38-17",
+      "gen-38-18",
+      "gen-38-19",
+      "gen-38-20",
+      "gen-38-21",
+      "gen-38-22",
+      "gen-38-23",
+      "gen-38-24",
+      "gen-38-25",
+      "gen-38-26",
+      "gen-38-27",
+      "gen-38-28",
+      "gen-38-29",
+      "gen-38-30"
+    ]
+  },
+  "josh-2": {
+    "id": "josh-2",
+    "reference": "Joshua 2",
+    "verseIds": [
+      "josh-2-1",
+      "josh-2-2",
+      "josh-2-3",
+      "josh-2-4",
+      "josh-2-5",
+      "josh-2-6",
+      "josh-2-7",
+      "josh-2-8",
+      "josh-2-9",
+      "josh-2-10",
+      "josh-2-11",
+      "josh-2-12",
+      "josh-2-13",
+      "josh-2-14",
+      "josh-2-15",
+      "josh-2-16",
+      "josh-2-17",
+      "josh-2-18",
+      "josh-2-19",
+      "josh-2-20",
+      "josh-2-21",
+      "josh-2-22",
+      "josh-2-23",
+      "josh-2-24"
+    ]
+  },
+  "josh-6": {
+    "id": "josh-6",
+    "reference": "Joshua 6",
+    "verseIds": [
+      "josh-6-1",
+      "josh-6-2",
+      "josh-6-3",
+      "josh-6-4",
+      "josh-6-5",
+      "josh-6-6",
+      "josh-6-7",
+      "josh-6-8",
+      "josh-6-9",
+      "josh-6-10",
+      "josh-6-11",
+      "josh-6-12",
+      "josh-6-13",
+      "josh-6-14",
+      "josh-6-15",
+      "josh-6-16",
+      "josh-6-17",
+      "josh-6-18",
+      "josh-6-19",
+      "josh-6-20",
+      "josh-6-21",
+      "josh-6-22",
+      "josh-6-23",
+      "josh-6-24",
+      "josh-6-25",
+      "josh-6-26",
+      "josh-6-27"
+    ]
+  },
+  "ruth-1": {
+    "id": "ruth-1",
+    "reference": "Ruth 1",
+    "verseIds": [
+      "ruth-1-1",
+      "ruth-1-2",
+      "ruth-1-3",
+      "ruth-1-4",
+      "ruth-1-5",
+      "ruth-1-6",
+      "ruth-1-7",
+      "ruth-1-8",
+      "ruth-1-9",
+      "ruth-1-10",
+      "ruth-1-11",
+      "ruth-1-12",
+      "ruth-1-13",
+      "ruth-1-14",
+      "ruth-1-15",
+      "ruth-1-16",
+      "ruth-1-17",
+      "ruth-1-18",
+      "ruth-1-19",
+      "ruth-1-20",
+      "ruth-1-21",
+      "ruth-1-22"
+    ]
+  },
+  "ruth-2": {
+    "id": "ruth-2",
+    "reference": "Ruth 2",
+    "verseIds": [
+      "ruth-2-1",
+      "ruth-2-2",
+      "ruth-2-3",
+      "ruth-2-4",
+      "ruth-2-5",
+      "ruth-2-6",
+      "ruth-2-7",
+      "ruth-2-8",
+      "ruth-2-9",
+      "ruth-2-10",
+      "ruth-2-11",
+      "ruth-2-12",
+      "ruth-2-13",
+      "ruth-2-14",
+      "ruth-2-15",
+      "ruth-2-16",
+      "ruth-2-17",
+      "ruth-2-18",
+      "ruth-2-19",
+      "ruth-2-20",
+      "ruth-2-21",
+      "ruth-2-22",
+      "ruth-2-23"
+    ]
+  },
+  "ruth-4": {
+    "id": "ruth-4",
+    "reference": "Ruth 4",
+    "verseIds": [
+      "ruth-4-1",
+      "ruth-4-2",
+      "ruth-4-3",
+      "ruth-4-4",
+      "ruth-4-5",
+      "ruth-4-6",
+      "ruth-4-7",
+      "ruth-4-8",
+      "ruth-4-9",
+      "ruth-4-10",
+      "ruth-4-11",
+      "ruth-4-12",
+      "ruth-4-13",
+      "ruth-4-14",
+      "ruth-4-15",
+      "ruth-4-16",
+      "ruth-4-17",
+      "ruth-4-18",
+      "ruth-4-19",
+      "ruth-4-20",
+      "ruth-4-21",
+      "ruth-4-22"
+    ]
+  },
+  "1-sam-16": {
+    "id": "1-sam-16",
+    "reference": "1 Samuel 16",
+    "verseIds": [
+      "1-sam-16-1",
+      "1-sam-16-2",
+      "1-sam-16-3",
+      "1-sam-16-4",
+      "1-sam-16-5",
+      "1-sam-16-6",
+      "1-sam-16-7",
+      "1-sam-16-8",
+      "1-sam-16-9",
+      "1-sam-16-10",
+      "1-sam-16-11",
+      "1-sam-16-12",
+      "1-sam-16-13",
+      "1-sam-16-14",
+      "1-sam-16-15",
+      "1-sam-16-16",
+      "1-sam-16-17",
+      "1-sam-16-18",
+      "1-sam-16-19",
+      "1-sam-16-20",
+      "1-sam-16-21",
+      "1-sam-16-22",
+      "1-sam-16-23"
+    ]
+  },
+  "2-sam-7": {
+    "id": "2-sam-7",
+    "reference": "2 Samuel 7",
+    "verseIds": [
+      "2-sam-7-1",
+      "2-sam-7-2",
+      "2-sam-7-3",
+      "2-sam-7-4",
+      "2-sam-7-5",
+      "2-sam-7-6",
+      "2-sam-7-7",
+      "2-sam-7-8",
+      "2-sam-7-9",
+      "2-sam-7-10",
+      "2-sam-7-11",
+      "2-sam-7-12",
+      "2-sam-7-13",
+      "2-sam-7-14",
+      "2-sam-7-15",
+      "2-sam-7-16",
+      "2-sam-7-17",
+      "2-sam-7-18",
+      "2-sam-7-19",
+      "2-sam-7-20",
+      "2-sam-7-21",
+      "2-sam-7-22",
+      "2-sam-7-23",
+      "2-sam-7-24",
+      "2-sam-7-25",
+      "2-sam-7-26",
+      "2-sam-7-27",
+      "2-sam-7-28",
+      "2-sam-7-29"
+    ]
+  },
+  "2-sam-12": {
+    "id": "2-sam-12",
+    "reference": "2 Samuel 12",
+    "verseIds": [
+      "2-sam-12-1",
+      "2-sam-12-2",
+      "2-sam-12-3",
+      "2-sam-12-4",
+      "2-sam-12-5",
+      "2-sam-12-6",
+      "2-sam-12-7",
+      "2-sam-12-8",
+      "2-sam-12-9",
+      "2-sam-12-10",
+      "2-sam-12-11",
+      "2-sam-12-12",
+      "2-sam-12-13",
+      "2-sam-12-14",
+      "2-sam-12-15",
+      "2-sam-12-16",
+      "2-sam-12-17",
+      "2-sam-12-18",
+      "2-sam-12-19",
+      "2-sam-12-20",
+      "2-sam-12-21",
+      "2-sam-12-22",
+      "2-sam-12-23",
+      "2-sam-12-24",
+      "2-sam-12-25",
+      "2-sam-12-26",
+      "2-sam-12-27",
+      "2-sam-12-28",
+      "2-sam-12-29",
+      "2-sam-12-30",
+      "2-sam-12-31"
+    ]
+  },
+  "matt-1": {
+    "id": "matt-1",
+    "reference": "Matthew 1",
+    "verseIds": [
+      "matt-1-1",
+      "matt-1-2",
+      "matt-1-3",
+      "matt-1-4",
+      "matt-1-5",
+      "matt-1-6",
+      "matt-1-7",
+      "matt-1-8",
+      "matt-1-9",
+      "matt-1-10",
+      "matt-1-11",
+      "matt-1-12",
+      "matt-1-13",
+      "matt-1-14",
+      "matt-1-15",
+      "matt-1-16",
+      "matt-1-17",
+      "matt-1-18",
+      "matt-1-19",
+      "matt-1-20",
+      "matt-1-21",
+      "matt-1-22",
+      "matt-1-23",
+      "matt-1-24",
+      "matt-1-25"
+    ]
+  },
+  "luke-1": {
+    "id": "luke-1",
+    "reference": "Luke 1",
+    "verseIds": [
+      "luke-1-1",
+      "luke-1-2",
+      "luke-1-3",
+      "luke-1-4",
+      "luke-1-5",
+      "luke-1-6",
+      "luke-1-7",
+      "luke-1-8",
+      "luke-1-9",
+      "luke-1-10",
+      "luke-1-11",
+      "luke-1-12",
+      "luke-1-13",
+      "luke-1-14",
+      "luke-1-15",
+      "luke-1-16",
+      "luke-1-17",
+      "luke-1-18",
+      "luke-1-19",
+      "luke-1-20",
+      "luke-1-21",
+      "luke-1-22",
+      "luke-1-23",
+      "luke-1-24",
+      "luke-1-25",
+      "luke-1-26",
+      "luke-1-27",
+      "luke-1-28",
+      "luke-1-29",
+      "luke-1-30",
+      "luke-1-31",
+      "luke-1-32",
+      "luke-1-33",
+      "luke-1-34",
+      "luke-1-35",
+      "luke-1-36",
+      "luke-1-37",
+      "luke-1-38",
+      "luke-1-39",
+      "luke-1-40",
+      "luke-1-41",
+      "luke-1-42",
+      "luke-1-43",
+      "luke-1-44",
+      "luke-1-45",
+      "luke-1-46",
+      "luke-1-47",
+      "luke-1-48",
+      "luke-1-49",
+      "luke-1-50",
+      "luke-1-51",
+      "luke-1-52",
+      "luke-1-53",
+      "luke-1-54",
+      "luke-1-55",
+      "luke-1-56",
+      "luke-1-57",
+      "luke-1-58",
+      "luke-1-59",
+      "luke-1-60",
+      "luke-1-61",
+      "luke-1-62",
+      "luke-1-63",
+      "luke-1-64",
+      "luke-1-65",
+      "luke-1-66",
+      "luke-1-67",
+      "luke-1-68",
+      "luke-1-69",
+      "luke-1-70",
+      "luke-1-71",
+      "luke-1-72",
+      "luke-1-73",
+      "luke-1-74",
+      "luke-1-75",
+      "luke-1-76",
+      "luke-1-77",
+      "luke-1-78",
+      "luke-1-79",
+      "luke-1-80"
+    ]
+  },
+  "luke-3": {
+    "id": "luke-3",
+    "reference": "Luke 3",
+    "verseIds": [
+      "luke-3-1",
+      "luke-3-2",
+      "luke-3-3",
+      "luke-3-4",
+      "luke-3-5",
+      "luke-3-6",
+      "luke-3-7",
+      "luke-3-8",
+      "luke-3-9",
+      "luke-3-10",
+      "luke-3-11",
+      "luke-3-12",
+      "luke-3-13",
+      "luke-3-14",
+      "luke-3-15",
+      "luke-3-16",
+      "luke-3-17",
+      "luke-3-18",
+      "luke-3-19",
+      "luke-3-20",
+      "luke-3-21",
+      "luke-3-22",
+      "luke-3-23",
+      "luke-3-24",
+      "luke-3-25",
+      "luke-3-26",
+      "luke-3-27",
+      "luke-3-28",
+      "luke-3-29",
+      "luke-3-30",
+      "luke-3-31",
+      "luke-3-32",
+      "luke-3-33",
+      "luke-3-34",
+      "luke-3-35",
+      "luke-3-36",
+      "luke-3-37",
+      "luke-3-38"
+    ]
+  },
+  "heb-11": {
+    "id": "heb-11",
+    "reference": "Hebrews 11",
+    "verseIds": [
+      "heb-11-1",
+      "heb-11-2",
+      "heb-11-3",
+      "heb-11-4",
+      "heb-11-5",
+      "heb-11-6",
+      "heb-11-7",
+      "heb-11-8",
+      "heb-11-9",
+      "heb-11-10",
+      "heb-11-11",
+      "heb-11-12",
+      "heb-11-13",
+      "heb-11-14",
+      "heb-11-15",
+      "heb-11-16",
+      "heb-11-17",
+      "heb-11-18",
+      "heb-11-19",
+      "heb-11-20",
+      "heb-11-21",
+      "heb-11-22",
+      "heb-11-23",
+      "heb-11-24",
+      "heb-11-25",
+      "heb-11-26",
+      "heb-11-27",
+      "heb-11-28",
+      "heb-11-29",
+      "heb-11-30",
+      "heb-11-31",
+      "heb-11-32",
+      "heb-11-33",
+      "heb-11-34",
+      "heb-11-35",
+      "heb-11-36",
+      "heb-11-37",
+      "heb-11-38",
+      "heb-11-39",
+      "heb-11-40"
+    ]
+  },
+  "jas-2": {
+    "id": "jas-2",
+    "reference": "James 2",
+    "verseIds": [
+      "jas-2-1",
+      "jas-2-2",
+      "jas-2-3",
+      "jas-2-4",
+      "jas-2-5",
+      "jas-2-6",
+      "jas-2-7",
+      "jas-2-8",
+      "jas-2-9",
+      "jas-2-10",
+      "jas-2-11",
+      "jas-2-12",
+      "jas-2-13",
+      "jas-2-14",
+      "jas-2-15",
+      "jas-2-16",
+      "jas-2-17",
+      "jas-2-18",
+      "jas-2-19",
+      "jas-2-20",
+      "jas-2-21",
+      "jas-2-22",
+      "jas-2-23",
+      "jas-2-24",
+      "jas-2-25",
+      "jas-2-26"
+    ]
   }
 };

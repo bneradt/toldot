@@ -34,8 +34,9 @@ Override the default SQLite path with `BIBLE_SQLITE=/path/to/bible.sqlite`.
 - World English Bible: public domain; WEB is a trademark of eBible.org.
 - King James Version: public domain outside UK Crown rights.
 
-The generated file contains only the passages used by this edition, not either
-complete Bible.
+The generated file contains the complete chapters surrounding this edition's
+references in both translations, not either complete Bible. This keeps chapter
+context available instantly without runtime API requests.
 
 ## Container
 

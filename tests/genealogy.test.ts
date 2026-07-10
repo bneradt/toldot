@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { people, peopleById, relationships, views } from "../src/data/genealogy";
-import { scripture } from "../src/data/scripture.generated";
+import { chapters, scripture } from "../src/data/scripture.generated";
 
 describe("Toldot genealogy dataset", () => {
   it("ships a substantial first edition", () => {
@@ -51,6 +51,37 @@ describe("Toldot genealogy dataset", () => {
     for (const personId of ["rahab", "boaz", "ruth", "david", "mary", "jesus"]) {
       const person = peopleById.get(personId);
       expect(person?.passages.some((passage) => passage.category === "story"), personId).toBe(true);
+    }
+  });
+
+  it("bundles complete bilingual chapters for every passage reference", () => {
+    expect(chapters["matt-1"].verseIds).toHaveLength(25);
+    expect(chapters["gen-38"].verseIds).toHaveLength(30);
+
+    for (const person of people) {
+      for (const passage of person.passages) {
+        for (const verseId of passage.verseIds) {
+          const chapterId = verseId.slice(0, verseId.lastIndexOf("-"));
+          const chapter = chapters[chapterId];
+          expect(chapter, `${person.name}: ${chapterId}`).toBeDefined();
+          chapter.verseIds.forEach((chapterVerseId) => {
+            expect(scripture[chapterVerseId]?.web.length).toBeGreaterThan(0);
+            expect(scripture[chapterVerseId]?.kjv.length).toBeGreaterThan(0);
+          });
+        }
+      }
+    }
+  });
+
+  it("places Perez and Zerah under both Judah and Tamar in Matthew", () => {
+    for (const childId of ["perez", "zerah"]) {
+      for (const parentId of ["judah", "tamar"]) {
+        expect(relationships.some((relationship) =>
+          relationship.from === parentId
+          && relationship.to === childId
+          && relationship.sourceLayers.includes("Matthew"),
+        ), `${parentId} -> ${childId}`).toBe(true);
+      }
     }
   });
 });

@@ -191,16 +191,16 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
 
     const layout = graph.layout({
       name: "dagre",
-      rankDir: "LR",
-      rankSep: 78,
-      nodeSep: 34,
+      rankDir: "TB",
+      rankSep: 70,
+      nodeSep: 38,
       edgeSep: 14,
       padding: 36,
       animate: false,
     } as cytoscape.LayoutOptions);
 
     layout.one("layoutstop", () => {
-      const ordered = [...graph.nodes()].sort((a, b) => a.position("x") - b.position("x"));
+      const ordered = [...graph.nodes()].sort((a, b) => a.position("y") - b.position("y"));
       let opening = graph.collection();
       ordered.slice(0, Math.min(12, ordered.length)).forEach((node) => {
         opening = opening.merge(node);
@@ -213,7 +213,16 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
     const observer = new ResizeObserver(() => graph.resize());
     observer.observe(container);
 
+    const panWithWheel = (event: WheelEvent) => {
+      if (event.ctrlKey || event.metaKey) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      graph.panBy({ x: -event.deltaX, y: -event.deltaY });
+    };
+    container.addEventListener("wheel", panWithWheel, { capture: true, passive: false });
+
     return () => {
+      container.removeEventListener("wheel", panWithWheel, { capture: true });
       observer.disconnect();
       graph.destroy();
       graphRef.current = null;
@@ -253,6 +262,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
         <button type="button" onClick={() => zoom(0.8)} aria-label="Zoom out">−</button>
         <button type="button" className="fit-button" onClick={fit}>Fit all</button>
       </div>
+      <div className="graph-scroll-hint">Scroll to move through generations</div>
     </div>
   );
 }

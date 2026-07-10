@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { relationshipsForPerson, peopleById } from "../data/genealogy";
-import { scripture } from "../data/scripture.generated";
+import { chapters, scripture } from "../data/scripture.generated";
 import type { Person, Relationship, Translation } from "../data/types";
 
 interface PersonPanelProps {
@@ -18,6 +19,7 @@ function relationshipLabel(relationship: Relationship, personId: string) {
 }
 
 function Passage({ title, verseIds, translation }: { title: string; verseIds: string[]; translation: Translation }) {
+  const [openChapterId, setOpenChapterId] = useState<string | null>(null);
   const verses = verseIds.map((id) => scripture[id]).filter(Boolean);
   if (!verses.length) return null;
   const first = verses[0];
@@ -29,6 +31,10 @@ function Passage({ title, verseIds, translation }: { title: string; verseIds: st
     : first.reference === last.reference
       ? first.reference
       : `${first.reference}–${last.reference.split(":").at(-1)}`;
+  const chapterIds = [...new Set(verseIds.map((id) => id.slice(0, id.lastIndexOf("-"))))]
+    .filter((id) => chapters[id]);
+  const openChapter = openChapterId ? chapters[openChapterId] : null;
+  const selectedVerseIds = new Set(verseIds);
 
   return (
     <article className="passage-card">
@@ -44,6 +50,46 @@ function Passage({ title, verseIds, translation }: { title: string; verseIds: st
           </span>
         ))}
       </blockquote>
+      <div className="chapter-actions">
+        <span>Read in context</span>
+        <div>
+          {chapterIds.map((chapterId) => {
+            const chapter = chapters[chapterId];
+            const isOpen = openChapterId === chapterId;
+            return (
+              <button
+                type="button"
+                key={chapterId}
+                className={isOpen ? "active" : ""}
+                aria-expanded={isOpen}
+                aria-controls={`chapter-${chapterId}`}
+                onClick={() => setOpenChapterId(isOpen ? null : chapterId)}
+              >
+                {isOpen ? "Hide" : "Read"} {chapter.reference}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+      {openChapter && (
+        <section className="chapter-reader" id={`chapter-${openChapter.id}`} aria-label={`${openChapter.reference} in full`}>
+          <div className="chapter-reader-heading">
+            <div><span>Full chapter</span><h4>{openChapter.reference}</h4></div>
+            <button type="button" onClick={() => setOpenChapterId(null)} aria-label={`Close ${openChapter.reference}`}>×</button>
+          </div>
+          <div className="chapter-text">
+            {openChapter.verseIds.map((verseId) => {
+              const verse = scripture[verseId];
+              return (
+                <span className={selectedVerseIds.has(verseId) ? "context-verse selected" : "context-verse"} key={verseId}>
+                  <sup>{verse.reference.split(":").at(-1)}</sup>
+                  {verse[translation]}
+                </span>
+              );
+            })}
+          </div>
+        </section>
+      )}
     </article>
   );
 }

@@ -7,6 +7,12 @@ export interface Verse {
   kjv: string;
 }
 
+export interface BibleChapter {
+  id: string;
+  reference: string;
+  verseIds: string[];
+}
+
 export type PassageCategory = "genealogy" | "story";
 
 export interface PassageSelection {
