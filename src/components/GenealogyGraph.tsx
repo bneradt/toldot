@@ -115,9 +115,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
       return [{
         data: {
           id: person.id,
-          label: view.id === "patriarchs" && person.birthOrder
-            ? `${person.birthOrder}. ${person.name}`
-            : person.name,
+          label: person.name,
           descriptor: person.descriptor ?? "",
           layoutOrder,
           birthOrder: person.birthOrder ?? null,
