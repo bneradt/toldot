@@ -121,6 +121,13 @@ export function PersonPanel({
 
       {person.note && <div className="textual-note"><strong>Source note</strong>{person.note}</div>}
 
+      {person.recommendedReading?.length ? (
+        <section className="reading-guide" aria-label={`Suggested reading for ${person.name}`}>
+          <strong>Suggested reading</strong>
+          <div>{person.recommendedReading.map((reference) => <span key={reference}>{reference}</span>)}</div>
+        </section>
+      ) : null}
+
       <div className="panel-section connections-section">
         <h3>Connections</h3>
         <div className="connection-list">

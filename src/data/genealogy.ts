@@ -103,6 +103,12 @@ function addStory(personId: string, title: string, verseIds: string[]) {
   person.notable = true;
 }
 
+function addReadingGuide(personId: string, references: string[]) {
+  const person = personMap.get(personId);
+  if (!person) throw new Error(`Cannot add a reading guide to unknown person ${personId}`);
+  person.recommendedReading = references;
+}
+
 function addDescendants(
   parentId: string,
   entries: ChainEntry[],
@@ -496,8 +502,12 @@ addDescendants("haran", [
 addPerson({ id: "sarah", name: "Sarah", aliases: ["Sarai"], primaryVerseId: "gen-21-2", sex: "female", notable: true }, "Genesis", [patriarchs, promise]);
 addPerson({ id: "hagar", name: "Hagar", primaryVerseId: "gen-16-15", sex: "female", notable: true }, "Genesis", [patriarchs]);
 addPerson({ id: "ishmael", name: "Ishmael", primaryVerseId: "gen-16-15", notable: true }, "Genesis", [patriarchs]);
-addPerson({ id: "rebekah", name: "Rebekah", aliases: ["Rebecca"], primaryVerseId: "gen-25-20", sex: "female", notable: true }, "Genesis", [patriarchs, promise]);
+addPerson({ id: "rebekah", name: "Rebekah", aliases: ["Rebecca"], descriptor: "sister of Laban; mother of Jacob and Esau", primaryVerseId: "gen-25-20", sex: "female", notable: true }, "Genesis", [patriarchs, promise]);
 addPerson({ id: "esau", name: "Esau", aliases: ["Edom"], primaryVerseId: "gen-25-25", notable: true }, "Genesis", [patriarchs]);
+addPerson({ id: "nahor-brother", name: "Nahor", descriptor: "brother of Abraham", primaryVerseId: "gen-11-26" }, "Genesis", [patriarchs]);
+addPerson({ id: "milcah", name: "Milcah", descriptor: "wife of Nahor", primaryVerseId: "gen-11-29", sex: "female" }, "Genesis", [patriarchs]);
+addPerson({ id: "bethuel", name: "Bethuel", descriptor: "father of Rebekah and Laban", primaryVerseId: "gen-22-23" }, "Genesis", [patriarchs]);
+addPerson({ id: "laban", name: "Laban", descriptor: "Jacob’s uncle; brother of Rebekah; father of Leah and Rachel", primaryVerseId: "gen-28-5" }, "Genesis", [patriarchs]);
 connect("abraham", "sarah", "spouse", "Genesis", ["gen-11-29"]);
 connect("abraham", "hagar", "concubine", "Genesis", ["gen-16-3"]);
 connect("sarah", "isaac", "parent", "Genesis", ["gen-21-2"]);
@@ -507,17 +517,24 @@ connect("isaac", "rebekah", "spouse", "Genesis", ["gen-25-20"]);
 connect("isaac", "esau", "parent", "Genesis", ["gen-25-26"]);
 connect("rebekah", "esau", "parent", "Genesis", ["gen-25-24", "gen-25-25"]);
 connect("rebekah", "jacob", "parent", "Genesis", ["gen-25-24", "gen-25-26"]);
+connect("nahor-brother", "milcah", "spouse", "Genesis", ["gen-11-29"]);
+connect("nahor-brother", "bethuel", "parent", "Genesis", ["gen-22-20", "gen-22-23"]);
+connect("milcah", "bethuel", "parent", "Genesis", ["gen-22-20", "gen-22-23"]);
+connect("bethuel", "rebekah", "parent", "Genesis", ["gen-24-15"]);
+connect("bethuel", "laban", "parent", "Genesis", ["gen-28-5"]);
 
 const mothers = [
-  { id: "leah", name: "Leah", ref: "gen-29-16", relationship: "spouse" },
-  { id: "rachel", name: "Rachel", ref: "gen-29-16", relationship: "spouse" },
-  { id: "bilhah", name: "Bilhah", ref: "gen-29-29", relationship: "concubine" },
-  { id: "zilpah", name: "Zilpah", ref: "gen-29-24", relationship: "concubine" },
-] satisfies Array<{ id: string; name: string; ref: string; relationship: "spouse" | "concubine" }>;
+  { id: "leah", name: "Leah", descriptor: "daughter of Laban; cousin and wife of Jacob", ref: "gen-29-16", relationship: "spouse" },
+  { id: "rachel", name: "Rachel", descriptor: "daughter of Laban; cousin and wife of Jacob", ref: "gen-29-16", relationship: "spouse" },
+  { id: "bilhah", name: "Bilhah", descriptor: "Rachel’s servant and Jacob’s concubine", ref: "gen-29-29", relationship: "concubine" },
+  { id: "zilpah", name: "Zilpah", descriptor: "Leah’s servant and Jacob’s concubine", ref: "gen-29-24", relationship: "concubine" },
+] satisfies Array<{ id: string; name: string; descriptor: string; ref: string; relationship: "spouse" | "concubine" }>;
 mothers.forEach((mother) => {
-  addPerson({ id: mother.id, name: mother.name, primaryVerseId: mother.ref, sex: "female", notable: mother.id === "leah" || mother.id === "rachel" }, "Genesis", [patriarchs]);
+  addPerson({ id: mother.id, name: mother.name, descriptor: mother.descriptor, primaryVerseId: mother.ref, sex: "female", notable: mother.id === "leah" || mother.id === "rachel" }, "Genesis", [patriarchs]);
   connect("jacob", mother.id, mother.relationship, "Genesis", [mother.ref]);
 });
+connect("laban", "leah", "parent", "Genesis", ["gen-29-16"]);
+connect("laban", "rachel", "parent", "Genesis", ["gen-29-16"]);
 
 const sons = [
   ["reuben", "Reuben", "leah", "gen-29-32"], ["simeon", "Simeon", "leah", "gen-29-33"],
@@ -538,6 +555,11 @@ sons.forEach(([id, name, motherId, ref], birthIndex) => {
 
 addPerson({ id: "tamar", name: "Tamar", descriptor: "mother of Perez and Zerah", primaryVerseId: "gen-38-6", sex: "female", notable: true }, "Genesis", [patriarchs, davidic, promise, matthew]);
 addPerson({ id: "zerah", name: "Zerah", aliases: ["Zara"], primaryVerseId: "gen-38-30" }, "Genesis", [patriarchs, davidic, matthew]);
+addPerson({ id: "er-judah", name: "Er", descriptor: "Judah’s firstborn son", primaryVerseId: "gen-38-3" }, "Genesis", [patriarchs]);
+addPerson({ id: "onan", name: "Onan", descriptor: "Judah’s second son", primaryVerseId: "gen-38-4" }, "Genesis", [patriarchs]);
+connect("judah", "er-judah", "parent", "Genesis", ["gen-38-3"]);
+connect("judah", "onan", "parent", "Genesis", ["gen-38-4"]);
+connect("er-judah", "tamar", "spouse", "Genesis", ["gen-38-6"]);
 connect("tamar", "perez", "parent", "Genesis", ["gen-38-29"]);
 connect("tamar", "perez", "parent", "Matthew", ["matt-1-3"]);
 connect("judah", "zerah", "parent", "Genesis", ["gen-38-30"]);
@@ -574,6 +596,47 @@ addStory("bathsheba", "The birth of Solomon", ["2-sam-12-24", "2-sam-12-25", "ma
 addStory("joseph-of-nazareth", "Joseph receives Mary", ["matt-1-18", "matt-1-19", "matt-1-20", "matt-1-21"]);
 addStory("mary", "The promised birth", ["luke-1-30", "luke-1-31", "luke-1-32", "luke-1-33", "luke-1-34", "luke-1-35"]);
 addStory("jesus", "Jesus in the genealogies", ["matt-1-1", "matt-1-16", "matt-1-21", "luke-3-23"]);
+
+// Broader story selections for every person marked as having a richer history.
+addStory("abel", "Abel’s offering and death", ["gen-4-2", "gen-4-3", "gen-4-4", "gen-4-5", "gen-4-8", "gen-4-9", "gen-4-10", "heb-11-4"]);
+addStory("noah", "The flood and God’s covenant", ["gen-6-13", "gen-6-14", "gen-6-18", "gen-6-22", "gen-7-1", "gen-7-5", "gen-8-15", "gen-8-16", "gen-8-20", "gen-8-21", "gen-8-22", "gen-9-8", "gen-9-9", "gen-9-10", "gen-9-11", "gen-9-12", "gen-9-13"]);
+addStory("nimrod", "Nimrod’s kingdom", ["gen-10-8", "gen-10-9", "gen-10-10", "gen-10-11", "gen-10-12"]);
+addStory("lot", "Lot separates from Abraham and escapes Sodom", ["gen-13-5", "gen-13-6", "gen-13-7", "gen-13-8", "gen-13-9", "gen-13-10", "gen-13-11", "gen-13-12", "gen-13-13", "gen-19-1", "gen-19-15", "gen-19-16", "gen-19-17", "gen-19-29"]);
+addStory("abraham", "The covenant and the testing of Abraham", ["gen-17-1", "gen-17-2", "gen-17-3", "gen-17-4", "gen-17-5", "gen-17-6", "gen-17-7", "gen-17-8", "gen-18-10", "gen-18-11", "gen-18-12", "gen-18-13", "gen-18-14", "gen-22-1", "gen-22-2", "gen-22-9", "gen-22-10", "gen-22-11", "gen-22-12", "gen-22-15", "gen-22-16", "gen-22-17", "gen-22-18"]);
+addStory("sarah", "Sarah hears the promise", ["gen-18-9", "gen-18-10", "gen-18-11", "gen-18-12", "gen-18-13", "gen-18-14", "gen-18-15"]);
+addStory("hagar", "Hagar meets the God who sees", ["gen-16-7", "gen-16-8", "gen-16-9", "gen-16-10", "gen-16-11", "gen-16-12", "gen-16-13", "gen-16-14", "gen-16-15", "gen-16-16", "gen-21-14", "gen-21-15", "gen-21-16", "gen-21-17", "gen-21-18", "gen-21-19", "gen-21-20", "gen-21-21"]);
+addStory("ishmael", "Ishmael’s birth and preservation", ["gen-16-10", "gen-16-11", "gen-16-12", "gen-16-15", "gen-16-16", "gen-21-13", "gen-21-14", "gen-21-15", "gen-21-16", "gen-21-17", "gen-21-18", "gen-21-19", "gen-21-20", "gen-21-21"]);
+addStory("isaac", "The promised son", ["gen-21-1", "gen-21-2", "gen-21-3", "gen-21-4", "gen-21-5", "gen-21-6", "gen-21-7", "gen-22-6", "gen-22-7", "gen-22-8", "gen-22-9", "gen-22-10", "gen-22-11", "gen-22-12", "gen-24-62", "gen-24-63", "gen-24-64", "gen-24-65", "gen-24-66", "gen-24-67", "gen-26-2", "gen-26-3", "gen-26-4", "gen-26-5"]);
+addStory("rebekah", "Rebekah joins Isaac’s family", ["gen-24-15", "gen-24-16", "gen-24-17", "gen-24-18", "gen-24-19", "gen-24-20", "gen-24-24", "gen-24-27", "gen-24-57", "gen-24-58", "gen-24-59", "gen-24-60", "gen-24-61", "gen-24-64", "gen-24-65", "gen-24-67"]);
+addStory("esau", "Esau’s birthright, blessing, and reunion", ["gen-25-29", "gen-25-30", "gen-25-31", "gen-25-32", "gen-25-33", "gen-25-34", "gen-27-30", "gen-27-31", "gen-27-32", "gen-27-33", "gen-27-34", "gen-27-35", "gen-27-36", "gen-27-37", "gen-27-38", "gen-27-39", "gen-27-40", "gen-33-1", "gen-33-2", "gen-33-3", "gen-33-4"]);
+addStory("jacob", "Bethel, wrestling, and the name Israel", ["gen-28-10", "gen-28-11", "gen-28-12", "gen-28-13", "gen-28-14", "gen-28-15", "gen-28-16", "gen-28-17", "gen-28-18", "gen-28-19", "gen-28-20", "gen-28-21", "gen-28-22", "gen-32-24", "gen-32-25", "gen-32-26", "gen-32-27", "gen-32-28", "gen-32-29", "gen-32-30", "gen-35-9", "gen-35-10", "gen-35-11", "gen-35-12", "gen-35-13", "gen-35-14", "gen-35-15"]);
+addStory("laban", "Laban, Jacob, Leah, and Rachel", ["gen-29-13", "gen-29-14", "gen-29-15", "gen-29-16", "gen-29-17", "gen-29-18", "gen-29-19", "gen-29-20", "gen-29-21", "gen-29-22", "gen-29-23", "gen-29-24", "gen-29-25", "gen-29-26", "gen-29-27", "gen-29-28", "gen-29-29", "gen-29-30", "gen-31-43", "gen-31-44", "gen-31-45", "gen-31-46", "gen-31-47", "gen-31-48", "gen-31-49", "gen-31-50", "gen-31-51", "gen-31-52", "gen-31-53", "gen-31-54", "gen-31-55"]);
+addStory("leah", "Leah’s marriage and children", ["gen-29-16", "gen-29-17", "gen-29-18", "gen-29-21", "gen-29-22", "gen-29-23", "gen-29-24", "gen-29-25", "gen-29-26", "gen-29-27", "gen-29-28", "gen-29-31", "gen-29-32", "gen-29-33", "gen-29-34", "gen-29-35", "gen-30-17", "gen-30-18", "gen-30-19", "gen-30-20", "gen-30-21"]);
+addStory("rachel", "Rachel’s marriage and children", ["gen-29-9", "gen-29-10", "gen-29-11", "gen-29-12", "gen-29-13", "gen-29-17", "gen-29-18", "gen-29-20", "gen-29-27", "gen-29-28", "gen-29-29", "gen-29-30", "gen-30-1", "gen-30-2", "gen-30-22", "gen-30-23", "gen-30-24", "gen-35-16", "gen-35-17", "gen-35-18", "gen-35-19", "gen-35-20"]);
+addStory("reuben", "Reuben’s turning points", ["gen-29-32", "gen-35-22", "gen-37-21", "gen-37-22", "gen-37-29", "gen-37-30", "gen-42-37", "gen-49-3", "gen-49-4"]);
+addStory("simeon", "Simeon in Jacob’s family", ["gen-29-33", "gen-34-25", "gen-34-26", "gen-34-27", "gen-34-28", "gen-34-29", "gen-34-30", "gen-34-31", "gen-42-24", "gen-49-5", "gen-49-6", "gen-49-7"]);
+addStory("levi", "Levi in Jacob’s family", ["gen-29-34", "gen-34-25", "gen-34-26", "gen-34-27", "gen-34-28", "gen-34-29", "gen-34-30", "gen-34-31", "gen-49-5", "gen-49-6", "gen-49-7"]);
+addStory("judah", "Judah’s transformation and blessing", ["gen-37-26", "gen-37-27", "gen-38-26", "gen-43-8", "gen-43-9", "gen-43-10", "gen-44-18", "gen-44-19", "gen-44-20", "gen-44-21", "gen-44-22", "gen-44-23", "gen-44-24", "gen-44-25", "gen-44-26", "gen-44-27", "gen-44-28", "gen-44-29", "gen-44-30", "gen-44-31", "gen-44-32", "gen-44-33", "gen-44-34", "gen-49-8", "gen-49-9", "gen-49-10", "gen-49-11", "gen-49-12"]);
+addStory("joseph-patriarch", "Joseph’s suffering, rise, and reconciliation", ["gen-37-3", "gen-37-4", "gen-37-5", "gen-37-6", "gen-37-7", "gen-37-8", "gen-37-9", "gen-37-10", "gen-37-11", "gen-39-2", "gen-39-3", "gen-39-4", "gen-39-5", "gen-39-6", "gen-39-7", "gen-39-8", "gen-39-9", "gen-41-37", "gen-41-38", "gen-41-39", "gen-41-40", "gen-41-41", "gen-41-42", "gen-41-43", "gen-41-44", "gen-41-45", "gen-41-46", "gen-45-1", "gen-45-2", "gen-45-3", "gen-45-4", "gen-45-5", "gen-45-6", "gen-45-7", "gen-45-8", "gen-45-9", "gen-45-10", "gen-45-11", "gen-45-12", "gen-45-13", "gen-45-14", "gen-45-15", "gen-50-19", "gen-50-20", "gen-50-21"]);
+addStory("er-judah", "Er’s death", ["gen-38-6", "gen-38-7"]);
+addStory("onan", "Onan’s refusal and death", ["gen-38-8", "gen-38-9", "gen-38-10"]);
+addStory("boaz", "Boaz throughout Ruth 2–4", ["ruth-2-1", "ruth-2-4", "ruth-2-8", "ruth-2-9", "ruth-2-10", "ruth-2-11", "ruth-2-12", "ruth-2-14", "ruth-2-15", "ruth-2-16", "ruth-3-7", "ruth-3-8", "ruth-3-9", "ruth-3-10", "ruth-3-11", "ruth-3-12", "ruth-3-13", "ruth-4-1", "ruth-4-2", "ruth-4-3", "ruth-4-4", "ruth-4-5", "ruth-4-6", "ruth-4-9", "ruth-4-10", "ruth-4-13", "ruth-4-21"]);
+addStory("ruth", "Ruth and Boaz", ["ruth-2-2", "ruth-2-3", "ruth-2-8", "ruth-2-9", "ruth-2-10", "ruth-2-11", "ruth-2-12", "ruth-2-19", "ruth-2-20", "ruth-2-21", "ruth-2-22", "ruth-2-23", "ruth-3-1", "ruth-3-5", "ruth-3-6", "ruth-3-9", "ruth-3-10", "ruth-3-11", "ruth-3-12", "ruth-3-13", "ruth-4-13", "ruth-4-14", "ruth-4-15", "ruth-4-16", "ruth-4-17"]);
+addStory("david", "David and Goliath", ["1-sam-17-32", "1-sam-17-33", "1-sam-17-34", "1-sam-17-35", "1-sam-17-36", "1-sam-17-37", "1-sam-17-38", "1-sam-17-39", "1-sam-17-40", "1-sam-17-45", "1-sam-17-46", "1-sam-17-47", "1-sam-17-48", "1-sam-17-49", "1-sam-17-50"]);
+addStory("bathsheba", "David, Bathsheba, and Solomon", ["2-sam-11-2", "2-sam-11-3", "2-sam-11-4", "2-sam-11-5", "2-sam-12-24", "2-sam-12-25"]);
+addStory("solomon", "Solomon asks for wisdom", ["1-kgs-3-5", "1-kgs-3-6", "1-kgs-3-7", "1-kgs-3-8", "1-kgs-3-9", "1-kgs-3-10", "1-kgs-3-11", "1-kgs-3-12", "1-kgs-3-13", "1-kgs-3-14", "1-kgs-3-16", "1-kgs-3-17", "1-kgs-3-18", "1-kgs-3-19", "1-kgs-3-20", "1-kgs-3-21", "1-kgs-3-22", "1-kgs-3-23", "1-kgs-3-24", "1-kgs-3-25", "1-kgs-3-26", "1-kgs-3-27", "1-kgs-3-28"]);
+addStory("joseph-of-nazareth", "Joseph protects Jesus", ["matt-2-13", "matt-2-14", "matt-2-15", "matt-2-19", "matt-2-20", "matt-2-21", "matt-2-22", "matt-2-23"]);
+addStory("mary", "Mary treasures the birth of Jesus", ["luke-2-4", "luke-2-5", "luke-2-6", "luke-2-7", "luke-2-15", "luke-2-16", "luke-2-17", "luke-2-18", "luke-2-19"]);
+addStory("jesus", "The birth of Jesus", ["matt-1-18", "matt-1-19", "matt-1-20", "matt-1-21", "matt-1-22", "matt-1-23", "matt-1-24", "matt-1-25", "luke-2-10", "luke-2-11", "luke-2-12", "luke-2-13", "luke-2-14"]);
+
+addReadingGuide("noah", ["Genesis 6–9"]);
+addReadingGuide("abraham", ["Genesis 11:26–25:11", "Romans 4", "Hebrews 11:8–19"]);
+addReadingGuide("isaac", ["Genesis 21–28", "Genesis 35:27–29"]);
+addReadingGuide("jacob", ["Genesis 25–35", "Genesis 46–49"]);
+addReadingGuide("joseph-patriarch", ["Genesis 37–50"]);
+addReadingGuide("david", ["1 Samuel 16–31", "2 Samuel 1–24", "1 Kings 1–2", "Selected Psalms"]);
+addReadingGuide("solomon", ["1 Kings 1–11", "Proverbs", "Ecclesiastes"]);
+addReadingGuide("jesus", ["Matthew 1–28", "Mark 1–16", "Luke 1–24", "John 1–21"]);
 
 export const people = [...personMap.values()];
 export const peopleById = new Map(people.map((person) => [person.id, person]));
@@ -615,7 +678,7 @@ export const views: GenealogyView[] = [
     id: "patriarchs",
     title: "The Patriarchs",
     eyebrow: "Abraham to Israel’s sons",
-    description: "The immediate families of Abraham, Isaac, and Jacob, ending with Judah’s sons Perez and Zerah.",
+    description: "The families of Abraham, Isaac, and Jacob, including Rebekah and Laban’s branch and Judah’s sons.",
     personIds: [...patriarchs],
     rootIds: ["terah"],
     sourceLayers: ["Genesis", "Ruth"],

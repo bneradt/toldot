@@ -31,6 +31,7 @@ export interface Person {
   note?: string;
   notable?: boolean;
   birthOrder?: number;
+  recommendedReading?: string[];
   passages: PassageSelection[];
 }
 

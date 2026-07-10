@@ -49,24 +49,30 @@ function arrangePatriarchs(graph: Core) {
   position("hagar", -190, 130);
   position("abraham", 0, 130);
   position("sarah", 190, 130);
-  position("ishmael", -170, 270);
-  position("isaac", 80, 270);
-  position("rebekah", 250, 270);
-  position("leah", -540, 420);
-  position("bilhah", -180, 420);
-  position("jacob", 0, 420);
-  position("zilpah", 180, 420);
-  position("esau", 430, 420);
-  position("rachel", 720, 420);
+  position("nahor-brother", 500, 130);
+  position("milcah", 670, 130);
+  position("bethuel", 585, 255);
+  position("ishmael", -150, 380);
+  position("isaac", 100, 380);
+  position("rebekah", 270, 380);
+  position("laban", 585, 380);
+  position("bilhah", -180, 530);
+  position("jacob", 0, 530);
+  position("zilpah", 180, 530);
+  position("esau", 380, 530);
+  position("leah", 585, 530);
+  position("rachel", 750, 530);
 
   patriarchSonsInBirthOrder.forEach((personId, index) => {
-    position(personId, (index - 5.5) * 150, 580);
+    position(personId, (index - 5.5) * 150, 690);
   });
 
   const judahX = (3 - 5.5) * 150;
-  position("tamar", judahX - 145, 730);
-  position("perez", judahX - 65, 870);
-  position("zerah", judahX + 95, 870);
+  position("er-judah", judahX - 475, 835);
+  position("onan", judahX - 315, 835);
+  position("tamar", judahX - 155, 835);
+  position("perez", judahX - 135, 980);
+  position("zerah", judahX + 25, 980);
 }
 
 export function GenealogyGraph({ view, selectedId, onSelect, onHover }: GenealogyGraphProps) {

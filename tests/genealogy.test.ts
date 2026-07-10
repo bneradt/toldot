@@ -62,9 +62,45 @@ describe("Toldot genealogy dataset", () => {
   });
 
   it("provides richer story passages for major figures", () => {
-    for (const personId of ["rahab", "boaz", "ruth", "david", "mary", "jesus"]) {
-      const person = peopleById.get(personId);
-      expect(person?.passages.some((passage) => passage.category === "story"), personId).toBe(true);
+    for (const person of people.filter((candidate) => candidate.notable)) {
+      expect(person.passages.some((passage) => passage.category === "story"), person.id).toBe(true);
+    }
+  });
+
+  it("links the Nahor-Bethuel-Laban branch to Rebekah, Leah, and Rachel", () => {
+    const patriarchs = views.find((view) => view.id === "patriarchs")!;
+    for (const personId of ["nahor-brother", "milcah", "bethuel", "laban", "rebekah", "leah", "rachel"]) {
+      expect(patriarchs.personIds, personId).toContain(personId);
+    }
+    for (const [from, to] of [
+      ["nahor-brother", "bethuel"],
+      ["milcah", "bethuel"],
+      ["bethuel", "rebekah"],
+      ["bethuel", "laban"],
+      ["laban", "leah"],
+      ["laban", "rachel"],
+    ]) {
+      expect(relationships.some((relationship) => relationship.from === from && relationship.to === to), `${from} -> ${to}`).toBe(true);
+    }
+  });
+
+  it("includes Judah's older sons and generous story context", () => {
+    const patriarchs = views.find((view) => view.id === "patriarchs")!;
+    for (const sonId of ["er-judah", "onan"]) {
+      expect(patriarchs.personIds).toContain(sonId);
+      expect(relationships.some((relationship) => relationship.from === "judah" && relationship.to === sonId)).toBe(true);
+      expect(peopleById.get(sonId)?.passages.some((passage) => passage.category === "story")).toBe(true);
+    }
+
+    const boazStoryChapters = new Set(
+      peopleById.get("boaz")?.passages
+        .filter((passage) => passage.category === "story")
+        .flatMap((passage) => passage.verseIds.map((verseId) => verseId.slice(0, verseId.lastIndexOf("-")))),
+    );
+    expect([...boazStoryChapters]).toEqual(expect.arrayContaining(["ruth-2", "ruth-3", "ruth-4"]));
+
+    for (const personId of ["abraham", "isaac", "jacob", "joseph-patriarch", "david"]) {
+      expect(peopleById.get(personId)?.recommendedReading?.length, personId).toBeGreaterThan(0);
     }
   });
 
