@@ -56,10 +56,10 @@ function arrangePatriarchs(graph: Core) {
   position("isaac", 100, 380);
   position("rebekah", 270, 380);
   position("laban", 585, 380);
+  position("esau", -390, 530);
   position("bilhah", -180, 530);
   position("jacob", 0, 530);
   position("zilpah", 180, 530);
-  position("esau", 380, 530);
   position("leah", 585, 530);
   position("rachel", 750, 530);
 
