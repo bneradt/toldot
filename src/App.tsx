@@ -39,23 +39,13 @@ export function App() {
       && personIds.has(relationship.to)
       && relationship.sourceLayers.some((layer) => activeView.sourceLayers.includes(layer)),
     );
-    const hasLayer = (layer: "Genesis" | "Ruth" | "Matthew" | "Luke" | "Narrative") =>
-      activeView.sourceLayers.includes(layer)
-      && visibleRelationships.some((relationship) => relationship.sourceLayers.includes(layer));
-    const sources = [
-      hasLayer("Genesis") ? { id: "genesis", label: "Genesis" } : null,
-      hasLayer("Ruth") ? { id: "ruth", label: "Ruth" } : null,
-      hasLayer("Matthew") ? { id: "matthew", label: "Matthew" } : null,
-      hasLayer("Luke") ? { id: "luke", label: "Luke" } : null,
-      activeView.sourceLayers.includes("Matthew")
-        && activeView.sourceLayers.includes("Luke")
-        && visibleRelationships.some((relationship) =>
-          relationship.sourceLayers.includes("Matthew") && relationship.sourceLayers.includes("Luke"),
-        )
-        ? { id: "shared", label: "Matthew + Luke" }
-        : null,
-      hasLayer("Narrative") ? { id: "narrative", label: "Other biblical text" } : null,
-    ].filter((item): item is { id: string; label: string } => Boolean(item));
+    const sources = activeView.id === "promise"
+      ? [
+          { id: "matthew", label: "Matthew 1 line" },
+          { id: "luke", label: "Luke 3 line" },
+          { id: "shared", label: "Recorded in both" },
+        ]
+      : [];
 
     return {
       sources,

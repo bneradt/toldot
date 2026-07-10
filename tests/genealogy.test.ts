@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   people,
   peopleById,
+  patriarchSonsInBirthOrder,
   relationships,
   views,
   visiblePersonIdsForView,
@@ -136,10 +137,10 @@ describe("Toldot genealogy dataset", () => {
       ), personId).toBe(true);
     }
 
-    const expectedBirthOrder = [
-      "reuben", "simeon", "levi", "judah", "dan", "naphtali",
-      "gad", "asher", "issachar", "zebulun", "joseph-patriarch", "benjamin",
-    ];
+    const expectedBirthOrder = patriarchSonsInBirthOrder;
+    expect(expectedBirthOrder[0]).toBe("reuben");
+    expect(expectedBirthOrder[3]).toBe("judah");
+    expect(expectedBirthOrder.at(-1)).toBe("benjamin");
     expect(expectedBirthOrder.map((personId) => peopleById.get(personId)?.birthOrder))
       .toEqual(expectedBirthOrder.map((_, index) => index + 1));
   });

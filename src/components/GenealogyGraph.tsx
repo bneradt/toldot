@@ -1,7 +1,12 @@
 import cytoscape, { type Core, type ElementDefinition } from "cytoscape";
 import dagre from "cytoscape-dagre";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { peopleById, relationships, visiblePersonIdsForView } from "../data/genealogy";
+import {
+  patriarchSonsInBirthOrder,
+  peopleById,
+  relationships,
+  visiblePersonIdsForView,
+} from "../data/genealogy";
 import type { GenealogyView, Person } from "../data/types";
 
 cytoscape.use(dagre);
@@ -25,6 +30,43 @@ function edgeClass(sourceLayers: string[], kind: string, activeLayers: string[])
           ? "ruth"
           : "genesis";
   return `${layer} ${kind}`;
+}
+
+const patriarchMothers = new Set(["leah", "rachel", "bilhah", "zilpah"]);
+const patriarchSons = new Set<string>(patriarchSonsInBirthOrder);
+
+function isPatriarchOverviewRelationship(from: string, to: string) {
+  return !(patriarchMothers.has(from) && patriarchSons.has(to));
+}
+
+function arrangePatriarchs(graph: Core) {
+  const position = (personId: string, x: number, y: number) => {
+    const node = graph.getElementById(personId);
+    if (node.length) node.position({ x, y });
+  };
+
+  position("terah", 0, 0);
+  position("hagar", -190, 130);
+  position("abraham", 0, 130);
+  position("sarah", 190, 130);
+  position("ishmael", -170, 270);
+  position("isaac", 80, 270);
+  position("rebekah", 250, 270);
+  position("leah", -540, 420);
+  position("bilhah", -180, 420);
+  position("jacob", 0, 420);
+  position("zilpah", 180, 420);
+  position("esau", 430, 420);
+  position("rachel", 720, 420);
+
+  patriarchSonsInBirthOrder.forEach((personId, index) => {
+    position(personId, (index - 5.5) * 150, 580);
+  });
+
+  const judahX = (3 - 5.5) * 150;
+  position("tamar", judahX - 145, 730);
+  position("perez", judahX - 65, 870);
+  position("zerah", judahX + 95, 870);
 }
 
 export function GenealogyGraph({ view, selectedId, onSelect, onHover }: GenealogyGraphProps) {
@@ -73,7 +115,9 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
       return [{
         data: {
           id: person.id,
-          label: person.name,
+          label: view.id === "patriarchs" && person.birthOrder
+            ? `${person.birthOrder}. ${person.name}`
+            : person.name,
           descriptor: person.descriptor ?? "",
           layoutOrder,
           birthOrder: person.birthOrder ?? null,
@@ -88,7 +132,8 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
       .filter((relationship) =>
         visible.has(relationship.from)
         && visible.has(relationship.to)
-        && relationship.sourceLayers.some((layer) => view.sourceLayers.includes(layer)),
+        && relationship.sourceLayers.some((layer) => view.sourceLayers.includes(layer))
+        && (view.id !== "patriarchs" || isPatriarchOverviewRelationship(relationship.from, relationship.to)),
       );
     const toEdge = (relationship: (typeof relationships)[number]): ElementDefinition => ({
       data: {
@@ -97,7 +142,11 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
         target: relationship.to,
         kind: relationship.kind,
       },
-      classes: edgeClass(relationship.sourceLayers, relationship.kind, view.sourceLayers),
+      classes: edgeClass(
+        relationship.sourceLayers,
+        relationship.kind,
+        view.id === "promise" ? view.sourceLayers : [],
+      ),
     });
     const partnerRelationships = visibleRelationships.filter(
       (relationship) => relationship.kind === "spouse" || relationship.kind === "concubine",
@@ -115,6 +164,8 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
       wheelSensitivity: 0.22,
       boxSelectionEnabled: false,
       selectionType: "single",
+      userZoomingEnabled: false,
+      autoungrabify: true,
       style: [
         {
           selector: "node",
@@ -255,6 +306,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
 
     layout.one("layoutstop", () => {
       graph.startBatch();
+      if (view.id === "patriarchs") arrangePatriarchs(graph);
       partnerRelationships.forEach((relationship) => {
         const partner = graph.getElementById(relationship.to);
         const anchor = graph.getElementById(relationship.from);
@@ -263,12 +315,16 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
       graph.add(partnerEdges);
       graph.endBatch();
 
-      const ordered = [...graph.nodes()].sort((a, b) => a.position("y") - b.position("y"));
-      let opening = graph.collection();
-      ordered.slice(0, Math.min(12, ordered.length)).forEach((node) => {
-        opening = opening.merge(node);
-      });
-      graph.fit(opening, 54);
+      if (view.id === "patriarchs") {
+        graph.fit(graph.elements(), 54);
+      } else {
+        const ordered = [...graph.nodes()].sort((a, b) => a.position("y") - b.position("y"));
+        let opening = graph.collection();
+        ordered.slice(0, Math.min(12, ordered.length)).forEach((node) => {
+          opening = opening.merge(node);
+        });
+        graph.fit(opening, 54);
+      }
       if (graph.zoom() > 0.95) graph.zoom(0.95);
       positionBranchButtons();
     });
@@ -278,7 +334,6 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
     observer.observe(container);
 
     const panWithWheel = (event: WheelEvent) => {
-      if (event.ctrlKey || event.metaKey) return;
       event.preventDefault();
       event.stopImmediatePropagation();
       graph.panBy({ x: -event.deltaX, y: -event.deltaY });
@@ -365,7 +420,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
         <button type="button" onClick={() => zoom(0.8)} aria-label="Zoom out">−</button>
         <button type="button" className="fit-button" onClick={fit}>Fit all</button>
       </div>
-      <div className="graph-scroll-hint">Scroll to move through generations</div>
+      <div className="graph-scroll-hint">Scroll or drag to move</div>
     </div>
   );
 }

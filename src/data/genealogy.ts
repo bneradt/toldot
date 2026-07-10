@@ -528,6 +528,8 @@ const sons = [
   ["joseph-patriarch", "Joseph", "rachel", "gen-30-24"], ["benjamin", "Benjamin", "rachel", "gen-35-18"],
 ] as const;
 
+export const patriarchSonsInBirthOrder = sons.map(([id]) => id);
+
 sons.forEach(([id, name, motherId, ref], birthIndex) => {
   addPerson({ id, name, primaryVerseId: ref, notable: id === "joseph-patriarch", birthOrder: birthIndex + 1 }, "Genesis", [patriarchs]);
   if (id !== "judah") connect("jacob", id, "parent", "Genesis", [ref]);
