@@ -33,6 +33,8 @@ export interface Person {
   id: string;
   name: string;
   descriptor?: string;
+  peopleGroup?: string;
+  peopleGroupCertainty?: "text" | "likely" | "uncertain";
   aliases?: string[];
   sex?: "male" | "female";
   primaryVerseId: string;

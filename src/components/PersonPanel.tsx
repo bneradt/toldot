@@ -147,6 +147,12 @@ export function PersonPanel({
       <header className="person-heading">
         <h2>{person.name}</h2>
         {person.descriptor && <p>{person.descriptor}</p>}
+        {person.peopleGroup && (
+          <p className="people-group">
+            <span>People / ancient region</span>
+            {person.peopleGroup}{person.peopleGroupCertainty === "uncertain" ? " (uncertain identification)" : ""}
+          </p>
+        )}
         {person.aliases?.length ? <div className="aliases">Also: {person.aliases.join(", ")}</div> : null}
       </header>
 

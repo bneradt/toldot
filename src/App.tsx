@@ -53,6 +53,7 @@ export function App() {
       hasPartners: visibleRelationships.some((relationship) =>
         relationship.kind === "spouse" || relationship.kind === "concubine"),
       hasNotable: activeView.personIds.some((personId) => peopleById.get(personId)?.notable),
+      hasPeopleGroups: activeView.id === "noah-to-abraham",
     };
   }, [activeView]);
 
@@ -60,7 +61,7 @@ export function App() {
     const normalized = query.trim().toLocaleLowerCase();
     if (!normalized) return [];
     return people
-      .filter((person) => [person.name, person.descriptor, ...(person.aliases ?? [])]
+      .filter((person) => [person.name, person.descriptor, person.peopleGroup, ...(person.aliases ?? [])]
         .filter(Boolean)
         .some((value) => value!.toLocaleLowerCase().includes(normalized)))
       .sort((a, b) => {
@@ -152,7 +153,7 @@ export function App() {
             <div className="search-results" role="listbox">
               {results.map((person) => (
                 <button type="button" role="option" aria-selected="false" key={person.id} onClick={() => openPerson(person.id)}>
-                  <span><strong>{person.name}</strong>{person.descriptor && <small>{person.descriptor}</small>}</span>
+                  <span><strong>{person.name}</strong>{(person.descriptor || person.peopleGroup) && <small>{person.descriptor ?? person.peopleGroup}</small>}</span>
                   <em>{scripture[person.primaryVerseId]?.reference}</em>
                 </button>
               ))}
@@ -205,13 +206,14 @@ export function App() {
             {graphLegend.hasWomen && <span><i className="legend-node woman" />Women</span>}
             {graphLegend.hasPartners && <span><i className="legend-line partner" />Marriage / concubinage</span>}
             {graphLegend.hasNotable && <span><i className="legend-node notable" />Richer story</span>}
+            {graphLegend.hasPeopleGroups && <span><i className="legend-node nation" />People / ancient region · ? uncertain</span>}
           </div>
         </section>
 
         <GenealogyGraph view={activeView} selectedId={selectedId} onSelect={openPerson} onHover={setHovered} />
 
         <div className={`hover-preview ${hovered ? "visible" : ""}`} aria-hidden="true">
-          {hovered && <><span>Open person</span><strong>{hovered.name}</strong><small>{hovered.descriptor ?? scripture[hovered.primaryVerseId]?.reference}</small></>}
+          {hovered && <><span>Open person</span><strong>{hovered.name}</strong><small>{hovered.descriptor ?? hovered.peopleGroup ?? scripture[hovered.primaryVerseId]?.reference}</small></>}
         </div>
 
         <details className="name-index">

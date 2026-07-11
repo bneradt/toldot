@@ -124,15 +124,20 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
     const nodes: ElementDefinition[] = visiblePersonIds.flatMap((id, layoutOrder) => {
       const person = peopleById.get(id);
       if (!person) return [];
+      const showPeopleGroup = view.id === "noah-to-abraham" && person.peopleGroup;
+      const peopleGroupLabel = showPeopleGroup
+        ? `${person.peopleGroup}${person.peopleGroupCertainty === "uncertain" ? " ?" : ""}`
+        : "";
       return [{
         data: {
           id: person.id,
           label: person.name,
+          displayLabel: peopleGroupLabel ? `${person.name}\n${peopleGroupLabel}` : person.name,
           descriptor: person.descriptor ?? "",
           layoutOrder,
           birthOrder: person.birthOrder ?? null,
         },
-        classes: [person.notable ? "notable" : "", person.sex === "female" ? "woman" : ""]
+        classes: [person.notable ? "notable" : "", person.sex === "female" ? "woman" : "", peopleGroupLabel ? "nation" : ""]
           .filter(Boolean)
           .join(" "),
       }];
@@ -184,7 +189,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
             "border-color": "#b8ad97",
             "border-width": 1.5,
             color: "#1b2b28",
-            content: "data(label)",
+            content: "data(displayLabel)",
             "font-family": "Georgia, 'Times New Roman', serif",
             "font-size": 15,
             "font-weight": "bold",
@@ -195,6 +200,17 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
             "text-halign": "center",
             "text-valign": "center",
             width: 116,
+          },
+        },
+        {
+          selector: "node.nation",
+          style: {
+            "font-size": 11.5,
+            "line-height": 1.3,
+            "text-max-width": "126px",
+            "text-wrap": "wrap",
+            height: 54,
+            width: 138,
           },
         },
         {

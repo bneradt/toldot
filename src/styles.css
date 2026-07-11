@@ -273,6 +273,7 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
 .legend-line.partner { height: 0; border-top: 2px dashed #8a9a95; background: transparent; }
 .legend-node { display: inline-block; width: 15px; height: 11px; border: 2px solid var(--gold); border-radius: 3px; background: #f8efd8; }
 .legend-node.woman { border-color: #a96851; background: #f6ece5; }
+.legend-node.nation { border-color: #68877e; background: #eef4ee; }
 
 .graph-shell {
   --origin-timeline-width: 340px;
@@ -464,6 +465,8 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
 .person-heading { padding: 24px 22px 19px; border-bottom: 1px solid #ebe3d6; background: linear-gradient(135deg, #f5edde 0%, #fffdf8 65%); }
 .person-heading h2 { margin: 0; color: var(--green); font: 600 35px/1 Georgia, serif; }
 .person-heading p { margin: 7px 0 0; color: #5e6b67; font: italic 14px/1.4 Georgia, serif; }
+.person-heading .people-group { display: grid; gap: 3px; margin-top: 12px; padding: 9px 11px; border: 1px solid #d5dfd7; border-radius: 8px; background: #f2f6f1; color: #35594f; font: 600 13px/1.35 Inter, sans-serif; }
+.person-heading .people-group span { color: #78847f; font-size: 8px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
 .aliases { margin-top: 10px; color: #7e837f; font-size: 10px; }
 .textual-note { margin: 17px 20px 2px; padding: 13px 14px; border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; color: #56615d; font: 12px/1.55 Georgia, serif; background: #f7f0e2; }
 .textual-note strong { display: block; margin-bottom: 3px; color: #84591f; font-family: Inter, sans-serif; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }

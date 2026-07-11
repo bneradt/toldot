@@ -58,6 +58,22 @@ describe("Toldot genealogy dataset", () => {
     }
   });
 
+  it("labels every Noah-to-Abraham card with an ancient people or region", () => {
+    const view = views.find((candidate) => candidate.id === "noah-to-abraham");
+    expect(view).toBeDefined();
+    for (const personId of view!.personIds) {
+      const person = peopleById.get(personId);
+      expect(person?.peopleGroup, person?.name ?? personId).toBeTruthy();
+      expect(["text", "likely", "uncertain"]).toContain(person?.peopleGroupCertainty);
+    }
+
+    expect(peopleById.get("mizraim")?.peopleGroup).toBe("Egypt");
+    expect(peopleById.get("asshur")?.peopleGroup).toBe("Assyrians");
+    expect(peopleById.get("javan")?.peopleGroup).toBe("Ionians / Greeks");
+    expect(peopleById.get("magog")?.peopleGroupCertainty).toBe("uncertain");
+    expect(peopleById.get("lot")?.peopleGroup).toBe("Moabites & Ammonites");
+  });
+
   it("preserves source differences instead of silently harmonizing them", () => {
     const toShealtiel = relationships.filter((relationship) => relationship.to === "shealtiel");
     expect(toShealtiel.some((relationship) => relationship.from === "jechoniah" && relationship.sourceLayers.includes("Matthew"))).toBe(true);
