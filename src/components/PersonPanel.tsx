@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { relationshipsForPerson, peopleById } from "../data/genealogy";
 import { chapters, scripture } from "../data/scripture.generated";
-import type { Person, Relationship, Translation } from "../data/types";
+import type { AgeFact, Person, Relationship, Translation } from "../data/types";
 
 interface PersonPanelProps {
   person: Person;
@@ -17,6 +17,37 @@ function relationshipLabel(relationship: Relationship, personId: string) {
   if (relationship.kind === "as-supposed") return relationship.from === personId ? "Genealogical link" : "As supposed";
   if (relationship.from === personId) return relationship.kind === "parent" ? "Child" : "Descendant in this record";
   return relationship.kind === "parent" ? "Parent" : "Ancestor in this record";
+}
+
+function AgeRecord({ facts, translation }: { facts: AgeFact[]; translation: Translation }) {
+  return (
+    <section className="panel-section age-record">
+      <div className="section-title-row">
+        <h3>Age record</h3>
+        <span>{facts.length}</span>
+      </div>
+      <div className="age-fact-list">
+        {facts.map((fact) => {
+          const verses = fact.verseIds.map((verseId) => scripture[verseId]).filter(Boolean);
+          return (
+            <article className="age-fact" key={fact.id}>
+              <div><span>{fact.label}</span><strong>{fact.value}</strong></div>
+              <cite>{verses.map((verse) => verse.reference).join(" · ")}</cite>
+              {fact.note && <p>{fact.note}</p>}
+              <details>
+                <summary>Read source text</summary>
+                <blockquote>
+                  {verses.map((verse) => (
+                    <span key={verse.id}><sup>{verse.reference}</sup>{verse[translation]}</span>
+                  ))}
+                </blockquote>
+              </details>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
 }
 
 function Passage({ title, verseIds, translation }: { title: string; verseIds: string[]; translation: Translation }) {
@@ -127,6 +158,8 @@ export function PersonPanel({
           <div>{person.recommendedReading.map((reference) => <span key={reference}>{reference}</span>)}</div>
         </section>
       ) : null}
+
+      {person.ageFacts?.length ? <AgeRecord facts={person.ageFacts} translation={translation} /> : null}
 
       <div className="panel-section connections-section">
         <h3>Connections</h3>

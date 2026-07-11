@@ -1,4 +1,5 @@
 import type {
+  AgeFact,
   GenealogyView,
   PassageSelection,
   Person,
@@ -107,6 +108,12 @@ function addReadingGuide(personId: string, references: string[]) {
   const person = personMap.get(personId);
   if (!person) throw new Error(`Cannot add a reading guide to unknown person ${personId}`);
   person.recommendedReading = references;
+}
+
+function addAgeFacts(personId: string, facts: AgeFact[]) {
+  const person = personMap.get(personId);
+  if (!person) throw new Error(`Cannot add age facts to unknown person ${personId}`);
+  person.ageFacts = facts;
 }
 
 function addDescendants(
@@ -638,6 +645,74 @@ addReadingGuide("david", ["1 Samuel 16–31", "2 Samuel 1–24", "1 Kings 1–2"
 addReadingGuide("solomon", ["1 Kings 1–11", "Proverbs", "Ecclesiastes"]);
 addReadingGuide("jesus", ["Matthew 1–28", "Mark 1–16", "Luke 1–24", "John 1–21"]);
 
+addAgeFacts("adam", [
+  { id: "seth-born", label: "At Seth’s birth", value: "130 years old", verseIds: ["gen-5-3"] },
+  { id: "death", label: "Age at death", value: "930 years", verseIds: ["gen-5-5"] },
+]);
+addAgeFacts("seth", [
+  { id: "enosh-born", label: "At Enosh’s birth", value: "105 years old", verseIds: ["gen-5-6"] },
+  { id: "death", label: "Age at death", value: "912 years", verseIds: ["gen-5-8"] },
+]);
+addAgeFacts("enosh", [
+  { id: "kenan-born", label: "At Kenan’s birth", value: "90 years old", verseIds: ["gen-5-9"] },
+  { id: "death", label: "Age at death", value: "905 years", verseIds: ["gen-5-11"] },
+]);
+addAgeFacts("kenan", [
+  { id: "mahalalel-born", label: "At Mahalalel’s birth", value: "70 years old", verseIds: ["gen-5-12"] },
+  { id: "death", label: "Age at death", value: "910 years", verseIds: ["gen-5-14"] },
+]);
+addAgeFacts("mahalalel", [
+  { id: "jared-born", label: "At Jared’s birth", value: "65 years old", verseIds: ["gen-5-15"] },
+  { id: "death", label: "Age at death", value: "895 years", verseIds: ["gen-5-17"] },
+]);
+addAgeFacts("jared", [
+  { id: "enoch-born", label: "At Enoch’s birth", value: "162 years old", verseIds: ["gen-5-18"] },
+  { id: "death", label: "Age at death", value: "962 years", verseIds: ["gen-5-20"] },
+]);
+addAgeFacts("enoch", [
+  { id: "methuselah-born", label: "At Methuselah’s birth", value: "65 years old", verseIds: ["gen-5-21"] },
+  {
+    id: "taken",
+    label: "Total earthly life",
+    value: "365 years",
+    verseIds: ["gen-5-23", "gen-5-24"],
+    note: "Genesis says God took Enoch rather than saying, ‘then he died.’",
+  },
+]);
+addAgeFacts("methuselah", [
+  { id: "lamech-born", label: "At Lamech’s birth", value: "187 years old", verseIds: ["gen-5-25"] },
+  { id: "death", label: "Age at death", value: "969 years", verseIds: ["gen-5-27"] },
+]);
+addAgeFacts("lamech-noah", [
+  { id: "noah-born", label: "At Noah’s birth", value: "182 years old", verseIds: ["gen-5-28"] },
+  { id: "death", label: "Age at death", value: "777 years", verseIds: ["gen-5-31"] },
+]);
+addAgeFacts("noah", [
+  {
+    id: "sons-introduced",
+    label: "When his sons are introduced",
+    value: "500 years old",
+    verseIds: ["gen-5-32"],
+    note: "Genesis introduces Shem, Ham, and Japheth here without assigning all three the same birth year.",
+  },
+  {
+    id: "flood-began",
+    label: "When the flood began",
+    value: "600 years old",
+    verseIds: ["gen-7-6", "gen-7-11"],
+    note: "The flood began in Noah’s 600th year, on the seventeenth day of the second month.",
+  },
+  {
+    id: "waters-dried",
+    label: "When the earth dried",
+    value: "In his 601st year",
+    verseIds: ["gen-8-13", "gen-8-14"],
+    note: "The surface was drying on the first day of the year; the earth was dry by the twenty-seventh day of the second month.",
+  },
+  { id: "after-flood", label: "Years lived after the flood", value: "350 years", verseIds: ["gen-9-28"] },
+  { id: "death", label: "Age at death", value: "950 years", verseIds: ["gen-9-29"] },
+]);
+
 export const people = [...personMap.values()];
 export const peopleById = new Map(people.map((person) => [person.id, person]));
 export const relationships = [...relationshipMap.values()];
@@ -647,7 +722,7 @@ export const views: GenealogyView[] = [
     id: "origins",
     title: "Origins",
     eyebrow: "Adam to Noah",
-    description: "The lines of Cain and Seth from Genesis 4–5, ending with Noah and his three sons.",
+    description: "The lines of Cain and Seth from Genesis 4–5, with their recorded ages and Noah’s flood timeline.",
     personIds: [...origins],
     rootIds: ["adam", "eve"],
     sourceLayers: ["Genesis"],

@@ -27,6 +27,10 @@ describe("Toldot genealogy dataset", () => {
         expect(passage.verseIds.length).toBeGreaterThan(0);
         passage.verseIds.forEach((verseId) => expect(scripture[verseId], `${person.name}: ${verseId}`).toBeDefined());
       }
+      person.ageFacts?.forEach((fact) => {
+        expect(fact.verseIds.length, `${person.name}: ${fact.label}`).toBeGreaterThan(0);
+        fact.verseIds.forEach((verseId) => expect(scripture[verseId], `${person.name} age: ${verseId}`).toBeDefined());
+      });
     }
   });
 
@@ -208,5 +212,34 @@ describe("Toldot genealogy dataset", () => {
     expect(visible).not.toContain("cush");
     expect(visible).not.toContain("gomer");
     expect(chapters["gen-10"].verseIds).toHaveLength(32);
+  });
+
+  it("records the Genesis 5 ages and Noah's flood timeline", () => {
+    const expectedAges: Record<string, [string, string]> = {
+      adam: ["130 years old", "930 years"],
+      seth: ["105 years old", "912 years"],
+      enosh: ["90 years old", "905 years"],
+      kenan: ["70 years old", "910 years"],
+      mahalalel: ["65 years old", "895 years"],
+      jared: ["162 years old", "962 years"],
+      enoch: ["65 years old", "365 years"],
+      methuselah: ["187 years old", "969 years"],
+      "lamech-noah": ["182 years old", "777 years"],
+    };
+
+    for (const [personId, values] of Object.entries(expectedAges)) {
+      expect(peopleById.get(personId)?.ageFacts?.map((fact) => fact.value), personId).toEqual(values);
+    }
+    expect(peopleById.get("enoch")?.ageFacts?.at(-1)?.note).toContain("God took Enoch");
+
+    const noahFacts = peopleById.get("noah")?.ageFacts ?? [];
+    expect(noahFacts.map((fact) => fact.value)).toEqual([
+      "500 years old",
+      "600 years old",
+      "In his 601st year",
+      "350 years",
+      "950 years",
+    ]);
+    expect(noahFacts.find((fact) => fact.id === "flood-began")?.verseIds).toEqual(["gen-7-6", "gen-7-11"]);
   });
 });

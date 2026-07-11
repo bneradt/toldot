@@ -21,6 +21,14 @@ export interface PassageSelection {
   verseIds: string[];
 }
 
+export interface AgeFact {
+  id: string;
+  label: string;
+  value: string;
+  verseIds: string[];
+  note?: string;
+}
+
 export interface Person {
   id: string;
   name: string;
@@ -32,6 +40,7 @@ export interface Person {
   notable?: boolean;
   birthOrder?: number;
   recommendedReading?: string[];
+  ageFacts?: AgeFact[];
   passages: PassageSelection[];
 }
 
