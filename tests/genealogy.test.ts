@@ -248,17 +248,23 @@ describe("Toldot genealogy dataset", () => {
     expect(peopleById.get("japheth")?.ageFacts?.[0].value).toBe("Not stated");
 
     expect(originTimelineEntries.map((entry) => [entry.personId, entry.yearLabel, entry.lifeLabel])).toEqual([
-      ["adam", "Year 0", "Died year 930"],
-      ["seth", "Year 130", "Died year 1042"],
-      ["enosh", "Year 235", "Died year 1140"],
-      ["kenan", "Year 325", "Died year 1235"],
-      ["mahalalel", "Year 395", "Died year 1290"],
-      ["jared", "Year 460", "Died year 1422"],
-      ["enoch", "Year 622", "Taken year 987"],
-      ["methuselah", "Year 687", "Died year 1656"],
-      ["lamech-noah", "Year 874", "Died year 1651"],
-      ["noah", "Year 1056", "Flood year 1656 · died year 2006"],
-      ["shem", "After year 1556", "Shem: 1558–2158 (derived); Ham and Japheth: not stated"],
+      ["adam", "Year 0", "Lifespan 930 years"],
+      ["seth", "Year 130", "Lifespan 912 years"],
+      ["enosh", "Year 235", "Lifespan 905 years"],
+      ["kenan", "Year 325", "Lifespan 910 years"],
+      ["mahalalel", "Year 395", "Lifespan 895 years"],
+      ["jared", "Year 460", "Lifespan 962 years"],
+      ["enoch", "Year 622", "365 years; taken by God"],
+      ["methuselah", "Year 687", "Lifespan 969 years"],
+      ["lamech-noah", "Year 874", "Lifespan 777 years"],
+      ["noah", "Year 1056", "Flood year 1656 · lifespan 950 years"],
+      ["shem", "After year 1556", "Shem born 1558 (derived); Ham and Japheth not stated"],
     ]);
+    expect(originTimelineEntries.map((entry) => [entry.birthYear, entry.endYear])).toEqual([
+      [0, 930], [130, 1042], [235, 1140], [325, 1235], [395, 1290],
+      [460, 1422], [622, 987], [687, 1656], [874, 1651], [1056, 2006], [1558, 2158],
+    ]);
+    expect(originTimelineEntries.every((entry) => entry.endYear && entry.endTitle && entry.color)).toBe(true);
+    expect(new Set(originTimelineEntries.map((entry) => entry.color)).size).toBe(originTimelineEntries.length);
   });
 });

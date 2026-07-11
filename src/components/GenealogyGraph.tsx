@@ -1,6 +1,6 @@
 import cytoscape, { type Core, type ElementDefinition } from "cytoscape";
 import dagre from "cytoscape-dagre";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import {
   originTimelineEntries,
   patriarchSonsInBirthOrder,
@@ -83,6 +83,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
   const onHoverRef = useRef(onHover);
   const branchButtonRefs = useRef(new Map<string, HTMLButtonElement>());
   const timelineEntryRefs = useRef(new Map<string, HTMLDivElement>());
+  const timelineDeathRefs = useRef(new Map<string, HTMLDivElement>());
   const timelineLineRef = useRef<HTMLDivElement>(null);
   const [expandedByView, setExpandedByView] = useState<Record<string, string[]>>({});
 
@@ -296,6 +297,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
 
       if (view.id === "origins") {
         const visibleY: number[] = [];
+        const birthAnchors: Array<{ year: number; y: number; id: string }> = [];
         originTimelineEntries.forEach((entry) => {
           const element = timelineEntryRefs.current.get(entry.id);
           const node = graph.getElementById(entry.personId);
@@ -307,6 +309,47 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
           element.style.transform = `translate3d(0, ${y}px, 0) translateY(-50%)`;
           element.style.visibility = "visible";
           visibleY.push(y);
+          birthAnchors.push({ year: entry.birthYear, y, id: entry.id });
+        });
+
+        birthAnchors.sort((a, b) => a.year - b.year);
+        const yForYear = (year: number) => {
+          if (birthAnchors.length < 2) return birthAnchors[0]?.y ?? 0;
+          let lower = birthAnchors[0];
+          let upper = birthAnchors[1];
+          if (year >= birthAnchors.at(-1)!.year) {
+            lower = birthAnchors.at(-2)!;
+            upper = birthAnchors.at(-1)!;
+          } else {
+            for (let index = 1; index < birthAnchors.length; index += 1) {
+              if (year <= birthAnchors[index].year) {
+                lower = birthAnchors[index - 1];
+                upper = birthAnchors[index];
+                break;
+              }
+            }
+          }
+          const yearSpan = upper.year - lower.year;
+          return lower.y + ((year - lower.year) / yearSpan) * (upper.y - lower.y);
+        };
+
+        let previousDeathY = Number.NEGATIVE_INFINITY;
+        originTimelineEntries
+          .filter((entry) => birthAnchors.some((anchor) => anchor.id === entry.id) && entry.endYear)
+          .sort((a, b) => a.endYear! - b.endYear!)
+          .forEach((entry) => {
+            const element = timelineDeathRefs.current.get(entry.id);
+            if (!element || !entry.endYear) return;
+            const chronologicalY = yForYear(entry.endYear);
+            const displayY = Math.max(chronologicalY, previousDeathY + 25);
+            previousDeathY = displayY;
+            element.style.transform = `translate3d(0, ${displayY}px, 0) translateY(-50%)`;
+            element.style.visibility = "visible";
+            visibleY.push(displayY);
+          });
+
+        timelineDeathRefs.current.forEach((element, id) => {
+          if (!birthAnchors.some((anchor) => anchor.id === id)) element.style.visibility = "hidden";
         });
 
         if (timelineLineRef.current && visibleY.length) {
@@ -381,6 +424,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
         if (button) button.style.visibility = "hidden";
       });
       timelineEntryRefs.current.forEach((entry) => { entry.style.visibility = "hidden"; });
+      timelineDeathRefs.current.forEach((entry) => { entry.style.visibility = "hidden"; });
       if (timelineLineRef.current) timelineLineRef.current.style.visibility = "hidden";
       graph.destroy();
       graphRef.current = null;
@@ -422,13 +466,14 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
         <aside className="origin-timeline" aria-label="Calculated chronology from Adam through Noah’s sons">
           <header>
             <strong>Years from Adam</strong>
-            <span>Calculated chronology · tree spacing is not to scale</span>
+            <span>Births align with the tree · deaths follow chronologically · spacing is not to scale</span>
           </header>
           <div className="origin-timeline-line" ref={timelineLineRef} aria-hidden="true" />
           {originTimelineEntries.map((entry) => (
             <div
               className={`origin-timeline-entry ${entry.id === "noah-sons" ? "sons-entry" : ""}`}
               key={entry.id}
+              style={{ "--timeline-color": entry.color } as CSSProperties}
               ref={(element) => {
                 if (element) timelineEntryRefs.current.set(entry.id, element);
                 else timelineEntryRefs.current.delete(entry.id);
@@ -437,6 +482,20 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
               <span>{entry.yearLabel}</span>
               <strong>{entry.title}</strong>
               <small>{entry.lifeLabel}</small>
+            </div>
+          ))}
+          {originTimelineEntries.filter((entry) => entry.endYear && entry.endTitle).map((entry) => (
+            <div
+              className="origin-timeline-death"
+              key={`${entry.id}-death`}
+              style={{ "--timeline-color": entry.color } as CSSProperties}
+              ref={(element) => {
+                if (element) timelineDeathRefs.current.set(entry.id, element);
+                else timelineDeathRefs.current.delete(entry.id);
+              }}
+            >
+              <strong>{entry.endTitle}</strong>
+              <span>Year {entry.endYear}</span>
             </div>
           ))}
         </aside>

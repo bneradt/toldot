@@ -750,28 +750,36 @@ addAgeFacts("japheth", [
 export interface OriginTimelineEntry {
   id: string;
   personId: string;
+  birthYear: number;
+  endYear?: number;
   yearLabel: string;
   title: string;
   lifeLabel: string;
+  endTitle?: string;
+  color: string;
 }
 
 export const originTimelineEntries: OriginTimelineEntry[] = [
-  { id: "adam", personId: "adam", yearLabel: "Year 0", title: "Adam born", lifeLabel: "Died year 930" },
-  { id: "seth", personId: "seth", yearLabel: "Year 130", title: "Seth born", lifeLabel: "Died year 1042" },
-  { id: "enosh", personId: "enosh", yearLabel: "Year 235", title: "Enosh born", lifeLabel: "Died year 1140" },
-  { id: "kenan", personId: "kenan", yearLabel: "Year 325", title: "Kenan born", lifeLabel: "Died year 1235" },
-  { id: "mahalalel", personId: "mahalalel", yearLabel: "Year 395", title: "Mahalalel born", lifeLabel: "Died year 1290" },
-  { id: "jared", personId: "jared", yearLabel: "Year 460", title: "Jared born", lifeLabel: "Died year 1422" },
-  { id: "enoch", personId: "enoch", yearLabel: "Year 622", title: "Enoch born", lifeLabel: "Taken year 987" },
-  { id: "methuselah", personId: "methuselah", yearLabel: "Year 687", title: "Methuselah born", lifeLabel: "Died year 1656" },
-  { id: "lamech", personId: "lamech-noah", yearLabel: "Year 874", title: "Lamech born", lifeLabel: "Died year 1651" },
-  { id: "noah", personId: "noah", yearLabel: "Year 1056", title: "Noah born", lifeLabel: "Flood year 1656 · died year 2006" },
+  { id: "adam", personId: "adam", birthYear: 0, endYear: 930, yearLabel: "Year 0", title: "Adam born", lifeLabel: "Lifespan 930 years", endTitle: "Adam died", color: "#934f43" },
+  { id: "seth", personId: "seth", birthYear: 130, endYear: 1042, yearLabel: "Year 130", title: "Seth born", lifeLabel: "Lifespan 912 years", endTitle: "Seth died", color: "#2f7467" },
+  { id: "enosh", personId: "enosh", birthYear: 235, endYear: 1140, yearLabel: "Year 235", title: "Enosh born", lifeLabel: "Lifespan 905 years", endTitle: "Enosh died", color: "#536f9d" },
+  { id: "kenan", personId: "kenan", birthYear: 325, endYear: 1235, yearLabel: "Year 325", title: "Kenan born", lifeLabel: "Lifespan 910 years", endTitle: "Kenan died", color: "#96652f" },
+  { id: "mahalalel", personId: "mahalalel", birthYear: 395, endYear: 1290, yearLabel: "Year 395", title: "Mahalalel born", lifeLabel: "Lifespan 895 years", endTitle: "Mahalalel died", color: "#755d91" },
+  { id: "jared", personId: "jared", birthYear: 460, endYear: 1422, yearLabel: "Year 460", title: "Jared born", lifeLabel: "Lifespan 962 years", endTitle: "Jared died", color: "#3f7888" },
+  { id: "enoch", personId: "enoch", birthYear: 622, endYear: 987, yearLabel: "Year 622", title: "Enoch born", lifeLabel: "365 years; taken by God", endTitle: "Enoch taken", color: "#a75f40" },
+  { id: "methuselah", personId: "methuselah", birthYear: 687, endYear: 1656, yearLabel: "Year 687", title: "Methuselah born", lifeLabel: "Lifespan 969 years", endTitle: "Methuselah died", color: "#687a38" },
+  { id: "lamech", personId: "lamech-noah", birthYear: 874, endYear: 1651, yearLabel: "Year 874", title: "Lamech born", lifeLabel: "Lifespan 777 years", endTitle: "Lamech died", color: "#94516a" },
+  { id: "noah", personId: "noah", birthYear: 1056, endYear: 2006, yearLabel: "Year 1056", title: "Noah born", lifeLabel: "Flood year 1656 · lifespan 950 years", endTitle: "Noah died", color: "#356c8b" },
   {
     id: "noah-sons",
     personId: "shem",
+    birthYear: 1558,
+    endYear: 2158,
     yearLabel: "After year 1556",
     title: "Shem, Ham, and Japheth",
-    lifeLabel: "Shem: 1558–2158 (derived); Ham and Japheth: not stated",
+    lifeLabel: "Shem born 1558 (derived); Ham and Japheth not stated",
+    endTitle: "Shem died (derived)",
+    color: "#806728",
   },
 ];
 

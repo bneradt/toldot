@@ -275,7 +275,7 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
 .legend-node.woman { border-color: #a96851; background: #f6ece5; }
 
 .graph-shell {
-  --origin-timeline-width: 220px;
+  --origin-timeline-width: 292px;
   position: relative;
   min-height: 430px;
   overflow: hidden;
@@ -306,27 +306,44 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
   pointer-events: none;
   backdrop-filter: blur(5px);
 }
-.origin-timeline header { position: absolute; z-index: 2; top: 10px; right: 18px; left: 10px; padding: 7px 8px; border-radius: 7px; background: rgb(255 253 248 / 92%); }
+.origin-timeline header { position: absolute; z-index: 2; top: 10px; right: 8px; left: 8px; padding: 7px 8px; border-radius: 7px; background: rgb(255 253 248 / 92%); }
 .origin-timeline header strong { display: block; color: #31554d; font-size: 9px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
 .origin-timeline header span { display: block; margin-top: 3px; color: #7b817e; font-size: 7px; line-height: 1.35; }
-.origin-timeline-line { position: absolute; right: 11px; width: 2px; background: #9eafa9; visibility: hidden; }
+.origin-timeline-line { position: absolute; left: 150px; width: 2px; background: #9eafa9; visibility: hidden; }
 .origin-timeline-entry {
   position: absolute;
-  right: 22px;
   left: 8px;
+  width: 132px;
   padding: 6px 8px;
   border: 1px solid #d8cdbb;
+  border-left: 3px solid var(--timeline-color);
   border-radius: 7px;
   background: rgb(255 253 248 / 95%);
   box-shadow: 0 2px 8px rgb(39 57 51 / 7%);
   visibility: hidden;
 }
-.origin-timeline-entry::after { position: absolute; top: 50%; right: -23px; width: 22px; border-top: 1px solid #9eafa9; content: ""; }
-.origin-timeline-entry::before { position: absolute; z-index: 1; top: calc(50% - 3px); right: -27px; width: 7px; height: 7px; border: 2px solid #f7f2e8; border-radius: 50%; background: #5d8178; content: ""; }
-.origin-timeline-entry > span { display: block; color: #a06e30; font-size: 7px; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
+.origin-timeline-entry::after { position: absolute; top: 50%; right: -11px; width: 10px; border-top: 1px solid var(--timeline-color); content: ""; }
+.origin-timeline-entry::before { position: absolute; z-index: 1; top: calc(50% - 4px); right: -16px; width: 8px; height: 8px; border: 2px solid #f7f2e8; border-radius: 50%; background: var(--timeline-color); content: ""; }
+.origin-timeline-entry > span { display: block; color: var(--timeline-color); font-size: 7px; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
 .origin-timeline-entry > strong { display: block; margin-top: 2px; color: #29453f; font: 600 11px/1.15 Georgia, serif; }
 .origin-timeline-entry > small { display: block; margin-top: 2px; color: #747c78; font-size: 7px; line-height: 1.3; }
 .origin-timeline-entry.sons-entry { padding-block: 7px; }
+.origin-timeline-death {
+  position: absolute;
+  right: 8px;
+  width: 126px;
+  padding: 5px 7px;
+  border: 1px solid color-mix(in srgb, var(--timeline-color) 45%, #d8cdbb);
+  border-left: 3px solid var(--timeline-color);
+  border-radius: 6px;
+  background: rgb(255 253 248 / 95%);
+  box-shadow: 0 2px 7px rgb(39 57 51 / 6%);
+  visibility: hidden;
+}
+.origin-timeline-death::before { position: absolute; top: 50%; left: -13px; width: 11px; border-top: 1px solid var(--timeline-color); content: ""; }
+.origin-timeline-death::after { position: absolute; top: calc(50% - 4px); left: -17px; width: 8px; height: 8px; border: 2px solid #f7f2e8; border-radius: 50%; background: #fffdf8; box-shadow: inset 0 0 0 2px var(--timeline-color); content: ""; }
+.origin-timeline-death strong { display: block; overflow: hidden; color: var(--timeline-color); font: 600 9px/1.15 Georgia, serif; text-overflow: ellipsis; white-space: nowrap; }
+.origin-timeline-death span { display: block; margin-top: 2px; color: #747c78; font-size: 7px; font-weight: 750; text-transform: uppercase; }
 .node-branch-controls {
   position: absolute;
   z-index: 3;
@@ -566,13 +583,17 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
   .view-heading p { font-size: 12px; }
   .legend { justify-content: flex-start; margin-top: 11px; }
   .graph-shell, .graph-canvas { min-height: 56dvh; height: 56dvh; }
-  .graph-shell { --origin-timeline-width: 160px; }
-  .origin-timeline header { right: 13px; left: 6px; }
+  .graph-shell { --origin-timeline-width: 230px; }
+  .origin-timeline header { right: 6px; left: 6px; }
   .origin-timeline header span { display: none; }
-  .origin-timeline-entry { right: 17px; left: 5px; padding: 5px 6px; }
-  .origin-timeline-entry::after { right: -18px; width: 17px; }
-  .origin-timeline-entry::before { right: -22px; }
+  .origin-timeline-line { left: 115px; }
+  .origin-timeline-entry { left: 5px; width: 102px; padding: 5px 6px; }
+  .origin-timeline-entry::after { right: -9px; width: 8px; }
+  .origin-timeline-entry::before { right: -14px; }
   .origin-timeline-entry > strong { font-size: 10px; }
+  .origin-timeline-entry > small { display: none; }
+  .origin-timeline-death { right: 5px; width: 102px; padding: 5px 6px; }
+  .origin-timeline-death strong { font-size: 8px; }
   .graph-scroll-hint { display: none; }
   .hover-preview { display: none; }
   .person-panel { top: auto; right: 0; bottom: 0; left: 0; width: auto; max-height: 84dvh; border-top: 1px solid #cfc4b1; border-left: 0; border-radius: 18px 18px 0 0; box-shadow: 0 -20px 50px rgb(26 44 39 / 18%); }
