@@ -58,11 +58,16 @@ describe("Toldot genealogy dataset", () => {
     }
   });
 
-  it("labels every Noah-to-Abraham card with an ancient people or region", () => {
+  it("labels the Table of Nations without repeating the Abraham-line caption", () => {
     const view = views.find((candidate) => candidate.id === "noah-to-abraham");
     expect(view).toBeDefined();
+    const intentionallyNameOnly = new Set(["reu", "serug", "nahor-ancestor", "terah", "sarah"]);
     for (const personId of view!.personIds) {
       const person = peopleById.get(personId);
+      if (intentionallyNameOnly.has(personId)) {
+        expect(person?.peopleGroup, person?.name ?? personId).toBeUndefined();
+        continue;
+      }
       expect(person?.peopleGroup, person?.name ?? personId).toBeTruthy();
       expect(["text", "likely", "uncertain"]).toContain(person?.peopleGroupCertainty);
     }
@@ -72,6 +77,30 @@ describe("Toldot genealogy dataset", () => {
     expect(peopleById.get("javan")?.peopleGroup).toBe("Ionians / Greeks");
     expect(peopleById.get("magog")?.peopleGroupCertainty).toBe("uncertain");
     expect(peopleById.get("lot")?.peopleGroup).toBe("Moabites & Ammonites");
+    expect(peopleById.get("peleg")?.peopleGroup).toBe("Line to Abraham");
+  });
+
+  it("records Sarah as Abraham’s wife and paternal half-sister", () => {
+    const noahView = views.find((view) => view.id === "noah-to-abraham")!;
+    const patriarchsView = views.find((view) => view.id === "patriarchs")!;
+    const sarah = peopleById.get("sarah")!;
+
+    expect(noahView.personIds).toContain("sarah");
+    expect(patriarchsView.personIds).toContain("sarah");
+    expect(sarah.descriptor).toBe("wife and paternal half-sister of Abraham");
+    expect(relationships).toContainEqual(expect.objectContaining({
+      from: "terah",
+      to: "sarah",
+      kind: "parent",
+      verseIds: ["gen-20-12"],
+    }));
+    expect(relationships).toContainEqual(expect.objectContaining({
+      from: "abraham",
+      to: "sarah",
+      kind: "spouse",
+    }));
+    expect(sarah.passages.find((passage) => passage.title.includes("half-sister"))?.verseIds).toHaveLength(18);
+    expect(chapters["gen-20"].verseIds).toHaveLength(18);
   });
 
   it("preserves source differences instead of silently harmonizing them", () => {

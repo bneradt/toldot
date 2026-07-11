@@ -506,7 +506,15 @@ addDescendants("haran", [
   { id: "lot", name: "Lot", primaryVerseId: "gen-11-27", notable: true },
 ], noahToAbraham, shemBranch, "parent");
 
-addPerson({ id: "sarah", name: "Sarah", aliases: ["Sarai"], primaryVerseId: "gen-21-2", sex: "female", notable: true }, "Genesis", [patriarchs, promise]);
+addPerson({
+  id: "sarah",
+  name: "Sarah",
+  aliases: ["Sarai"],
+  descriptor: "wife and paternal half-sister of Abraham",
+  primaryVerseId: "gen-20-12",
+  sex: "female",
+  notable: true,
+}, "Genesis", [noahToAbraham, shemBranch, patriarchs, promise]);
 addPerson({ id: "hagar", name: "Hagar", primaryVerseId: "gen-16-15", sex: "female", notable: true }, "Genesis", [patriarchs]);
 addPerson({ id: "ishmael", name: "Ishmael", primaryVerseId: "gen-16-15", notable: true }, "Genesis", [patriarchs]);
 addPerson({ id: "rebekah", name: "Rebekah", aliases: ["Rebecca"], descriptor: "sister of Laban; mother of Jacob and Esau", primaryVerseId: "gen-25-20", sex: "female", notable: true }, "Genesis", [patriarchs, promise]);
@@ -515,7 +523,8 @@ addPerson({ id: "nahor-brother", name: "Nahor", descriptor: "brother of Abraham"
 addPerson({ id: "milcah", name: "Milcah", descriptor: "wife of Nahor", primaryVerseId: "gen-11-29", sex: "female" }, "Genesis", [patriarchs]);
 addPerson({ id: "bethuel", name: "Bethuel", descriptor: "father of Rebekah and Laban", primaryVerseId: "gen-22-23" }, "Genesis", [patriarchs]);
 addPerson({ id: "laban", name: "Laban", descriptor: "Jacob’s uncle; brother of Rebekah; father of Leah and Rachel", primaryVerseId: "gen-28-5" }, "Genesis", [patriarchs]);
-connect("abraham", "sarah", "spouse", "Genesis", ["gen-11-29"]);
+connect("terah", "sarah", "parent", "Genesis", ["gen-20-12"]);
+connect("abraham", "sarah", "spouse", "Genesis", ["gen-11-29", "gen-20-12"]);
 connect("abraham", "hagar", "concubine", "Genesis", ["gen-16-3"]);
 connect("sarah", "isaac", "parent", "Genesis", ["gen-21-2"]);
 connect("abraham", "ishmael", "parent", "Genesis", ["gen-16-15"]);
@@ -611,6 +620,8 @@ addStory("nimrod", "Nimrod’s kingdom", ["gen-10-8", "gen-10-9", "gen-10-10", "
 addStory("lot", "Lot separates from Abraham and escapes Sodom", ["gen-13-5", "gen-13-6", "gen-13-7", "gen-13-8", "gen-13-9", "gen-13-10", "gen-13-11", "gen-13-12", "gen-13-13", "gen-19-1", "gen-19-15", "gen-19-16", "gen-19-17", "gen-19-29"]);
 addStory("abraham", "The covenant and the testing of Abraham", ["gen-17-1", "gen-17-2", "gen-17-3", "gen-17-4", "gen-17-5", "gen-17-6", "gen-17-7", "gen-17-8", "gen-18-10", "gen-18-11", "gen-18-12", "gen-18-13", "gen-18-14", "gen-22-1", "gen-22-2", "gen-22-9", "gen-22-10", "gen-22-11", "gen-22-12", "gen-22-15", "gen-22-16", "gen-22-17", "gen-22-18"]);
 addStory("sarah", "Sarah hears the promise", ["gen-18-9", "gen-18-10", "gen-18-11", "gen-18-12", "gen-18-13", "gen-18-14", "gen-18-15"]);
+addStory("sarah", "Abram calls Sarai his sister in Egypt", Array.from({ length: 11 }, (_, index) => `gen-12-${index + 10}`));
+addStory("sarah", "Abraham explains Sarah is his half-sister", Array.from({ length: 18 }, (_, index) => `gen-20-${index + 1}`));
 addStory("hagar", "Hagar meets the God who sees", ["gen-16-7", "gen-16-8", "gen-16-9", "gen-16-10", "gen-16-11", "gen-16-12", "gen-16-13", "gen-16-14", "gen-16-15", "gen-16-16", "gen-21-14", "gen-21-15", "gen-21-16", "gen-21-17", "gen-21-18", "gen-21-19", "gen-21-20", "gen-21-21"]);
 addStory("ishmael", "Ishmael’s birth and preservation", ["gen-16-10", "gen-16-11", "gen-16-12", "gen-16-15", "gen-16-16", "gen-21-13", "gen-21-14", "gen-21-15", "gen-21-16", "gen-21-17", "gen-21-18", "gen-21-19", "gen-21-20", "gen-21-21"]);
 addStory("isaac", "The promised son", ["gen-21-1", "gen-21-2", "gen-21-3", "gen-21-4", "gen-21-5", "gen-21-6", "gen-21-7", "gen-22-6", "gen-22-7", "gen-22-8", "gen-22-9", "gen-22-10", "gen-22-11", "gen-22-12", "gen-24-62", "gen-24-63", "gen-24-64", "gen-24-65", "gen-24-66", "gen-24-67", "gen-26-2", "gen-26-3", "gen-26-4", "gen-26-5"]);
@@ -884,10 +895,6 @@ const tableOfNationsLabels: Record<string, [string, Person["peopleGroupCertainty
   "havilah-joktan": ["South Arabia", "uncertain"],
   jobab: ["South Arabia", "uncertain"],
 
-  reu: ["Line to Abraham", "text"],
-  serug: ["Line to Abraham", "text"],
-  "nahor-ancestor": ["Line to Abraham", "text"],
-  terah: ["Abrahamic family", "text"],
   abraham: ["Hebrews / Abrahamic peoples", "text"],
   "nahor-brother": ["Aramean kin of Abraham", "text"],
   haran: ["Line to Moab & Ammon", "text"],

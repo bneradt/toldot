@@ -128,16 +128,25 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
       const peopleGroupLabel = showPeopleGroup
         ? `${person.peopleGroup}${person.peopleGroupCertainty === "uncertain" ? " ?" : ""}`
         : "";
+      const relationshipLabel = person.id === "sarah" && (view.id === "noah-to-abraham" || view.id === "patriarchs")
+        ? "wife & paternal half-sister"
+        : "";
+      const subtitle = peopleGroupLabel || relationshipLabel;
       return [{
         data: {
           id: person.id,
           label: person.name,
-          displayLabel: peopleGroupLabel ? `${person.name}\n${peopleGroupLabel}` : person.name,
+          displayLabel: subtitle ? `${person.name}\n${subtitle}` : person.name,
           descriptor: person.descriptor ?? "",
           layoutOrder,
           birthOrder: person.birthOrder ?? null,
         },
-        classes: [person.notable ? "notable" : "", person.sex === "female" ? "woman" : "", peopleGroupLabel ? "nation" : ""]
+        classes: [
+          person.notable ? "notable" : "",
+          person.sex === "female" ? "woman" : "",
+          subtitle ? "subtitle" : "",
+          relationshipLabel ? "relationship-note" : "",
+        ]
           .filter(Boolean)
           .join(" "),
       }];
@@ -202,7 +211,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
           },
         },
         {
-          selector: "node.nation",
+          selector: "node.subtitle",
           style: {
             "font-size": 11.5,
             "line-height": 1.3,
@@ -210,6 +219,13 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
             "text-wrap": "wrap",
             height: 54,
             width: 138,
+          },
+        },
+        {
+          selector: "node.relationship-note",
+          style: {
+            "text-max-width": "148px",
+            width: 160,
           },
         },
         {
