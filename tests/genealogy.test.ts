@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   people,
   peopleById,
+  originTimelineEntries,
   patriarchSonsInBirthOrder,
   relationships,
   views,
@@ -241,5 +242,23 @@ describe("Toldot genealogy dataset", () => {
       "950 years",
     ]);
     expect(noahFacts.find((fact) => fact.id === "flood-began")?.verseIds).toEqual(["gen-7-6", "gen-7-11"]);
+
+    expect(peopleById.get("shem")?.ageFacts?.map((fact) => fact.value)).toEqual(["100 years old", "600 years"]);
+    expect(peopleById.get("ham")?.ageFacts?.[0].value).toBe("Not stated");
+    expect(peopleById.get("japheth")?.ageFacts?.[0].value).toBe("Not stated");
+
+    expect(originTimelineEntries.map((entry) => [entry.personId, entry.yearLabel, entry.lifeLabel])).toEqual([
+      ["adam", "Year 0", "Died year 930"],
+      ["seth", "Year 130", "Died year 1042"],
+      ["enosh", "Year 235", "Died year 1140"],
+      ["kenan", "Year 325", "Died year 1235"],
+      ["mahalalel", "Year 395", "Died year 1290"],
+      ["jared", "Year 460", "Died year 1422"],
+      ["enoch", "Year 622", "Taken year 987"],
+      ["methuselah", "Year 687", "Died year 1656"],
+      ["lamech-noah", "Year 874", "Died year 1651"],
+      ["noah", "Year 1056", "Flood year 1656 · died year 2006"],
+      ["shem", "After year 1556", "Shem: 1558–2158 (derived); Ham and Japheth: not stated"],
+    ]);
   });
 });

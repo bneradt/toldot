@@ -275,6 +275,7 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
 .legend-node.woman { border-color: #a96851; background: #f6ece5; }
 
 .graph-shell {
+  --origin-timeline-width: 220px;
   position: relative;
   min-height: 430px;
   overflow: hidden;
@@ -290,6 +291,42 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
 }
 .graph-canvas { width: 100%; height: 100%; min-height: 430px; cursor: grab; touch-action: none; }
 .graph-canvas:active { cursor: grabbing; }
+.graph-shell.has-origin-timeline .graph-canvas { width: calc(100% - var(--origin-timeline-width)); margin-left: var(--origin-timeline-width); }
+.origin-timeline {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: var(--origin-timeline-width);
+  overflow: hidden;
+  border-right: 1px solid #d8cdbb;
+  background: rgb(247 242 232 / 92%);
+  box-shadow: 10px 0 22px rgb(43 58 52 / 5%);
+  pointer-events: none;
+  backdrop-filter: blur(5px);
+}
+.origin-timeline header { position: absolute; z-index: 2; top: 10px; right: 18px; left: 10px; padding: 7px 8px; border-radius: 7px; background: rgb(255 253 248 / 92%); }
+.origin-timeline header strong { display: block; color: #31554d; font-size: 9px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+.origin-timeline header span { display: block; margin-top: 3px; color: #7b817e; font-size: 7px; line-height: 1.35; }
+.origin-timeline-line { position: absolute; right: 11px; width: 2px; background: #9eafa9; visibility: hidden; }
+.origin-timeline-entry {
+  position: absolute;
+  right: 22px;
+  left: 8px;
+  padding: 6px 8px;
+  border: 1px solid #d8cdbb;
+  border-radius: 7px;
+  background: rgb(255 253 248 / 95%);
+  box-shadow: 0 2px 8px rgb(39 57 51 / 7%);
+  visibility: hidden;
+}
+.origin-timeline-entry::after { position: absolute; top: 50%; right: -23px; width: 22px; border-top: 1px solid #9eafa9; content: ""; }
+.origin-timeline-entry::before { position: absolute; z-index: 1; top: calc(50% - 3px); right: -27px; width: 7px; height: 7px; border: 2px solid #f7f2e8; border-radius: 50%; background: #5d8178; content: ""; }
+.origin-timeline-entry > span { display: block; color: #a06e30; font-size: 7px; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
+.origin-timeline-entry > strong { display: block; margin-top: 2px; color: #29453f; font: 600 11px/1.15 Georgia, serif; }
+.origin-timeline-entry > small { display: block; margin-top: 2px; color: #747c78; font-size: 7px; line-height: 1.3; }
+.origin-timeline-entry.sons-entry { padding-block: 7px; }
 .node-branch-controls {
   position: absolute;
   z-index: 3;
@@ -529,6 +566,13 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
   .view-heading p { font-size: 12px; }
   .legend { justify-content: flex-start; margin-top: 11px; }
   .graph-shell, .graph-canvas { min-height: 56dvh; height: 56dvh; }
+  .graph-shell { --origin-timeline-width: 160px; }
+  .origin-timeline header { right: 13px; left: 6px; }
+  .origin-timeline header span { display: none; }
+  .origin-timeline-entry { right: 17px; left: 5px; padding: 5px 6px; }
+  .origin-timeline-entry::after { right: -18px; width: 17px; }
+  .origin-timeline-entry::before { right: -22px; }
+  .origin-timeline-entry > strong { font-size: 10px; }
   .graph-scroll-hint { display: none; }
   .hover-preview { display: none; }
   .person-panel { top: auto; right: 0; bottom: 0; left: 0; width: auto; max-height: 84dvh; border-top: 1px solid #cfc4b1; border-left: 0; border-radius: 18px 18px 0 0; box-shadow: 0 -20px 50px rgb(26 44 39 / 18%); }

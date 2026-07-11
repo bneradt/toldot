@@ -712,6 +712,68 @@ addAgeFacts("noah", [
   { id: "after-flood", label: "Years lived after the flood", value: "350 years", verseIds: ["gen-9-28"] },
   { id: "death", label: "Age at death", value: "950 years", verseIds: ["gen-9-29"] },
 ]);
+addAgeFacts("shem", [
+  {
+    id: "arpachshad-born",
+    label: "At Arpachshad’s birth",
+    value: "100 years old",
+    verseIds: ["gen-11-10"],
+    note: "Arpachshad was born two years after the flood.",
+  },
+  {
+    id: "lifespan",
+    label: "Calculated lifespan",
+    value: "600 years",
+    verseIds: ["gen-11-10", "gen-11-11"],
+    note: "Genesis gives 100 years before Arpachshad’s birth and 500 years afterward.",
+  },
+]);
+addAgeFacts("ham", [
+  {
+    id: "not-stated",
+    label: "Birth and death ages",
+    value: "Not stated",
+    verseIds: ["gen-5-32"],
+    note: "Genesis names Ham among Noah’s sons but does not give his age or lifespan.",
+  },
+]);
+addAgeFacts("japheth", [
+  {
+    id: "not-stated",
+    label: "Birth and death ages",
+    value: "Not stated",
+    verseIds: ["gen-5-32"],
+    note: "Genesis names Japheth among Noah’s sons but does not give his age or lifespan.",
+  },
+]);
+
+export interface OriginTimelineEntry {
+  id: string;
+  personId: string;
+  yearLabel: string;
+  title: string;
+  lifeLabel: string;
+}
+
+export const originTimelineEntries: OriginTimelineEntry[] = [
+  { id: "adam", personId: "adam", yearLabel: "Year 0", title: "Adam born", lifeLabel: "Died year 930" },
+  { id: "seth", personId: "seth", yearLabel: "Year 130", title: "Seth born", lifeLabel: "Died year 1042" },
+  { id: "enosh", personId: "enosh", yearLabel: "Year 235", title: "Enosh born", lifeLabel: "Died year 1140" },
+  { id: "kenan", personId: "kenan", yearLabel: "Year 325", title: "Kenan born", lifeLabel: "Died year 1235" },
+  { id: "mahalalel", personId: "mahalalel", yearLabel: "Year 395", title: "Mahalalel born", lifeLabel: "Died year 1290" },
+  { id: "jared", personId: "jared", yearLabel: "Year 460", title: "Jared born", lifeLabel: "Died year 1422" },
+  { id: "enoch", personId: "enoch", yearLabel: "Year 622", title: "Enoch born", lifeLabel: "Taken year 987" },
+  { id: "methuselah", personId: "methuselah", yearLabel: "Year 687", title: "Methuselah born", lifeLabel: "Died year 1656" },
+  { id: "lamech", personId: "lamech-noah", yearLabel: "Year 874", title: "Lamech born", lifeLabel: "Died year 1651" },
+  { id: "noah", personId: "noah", yearLabel: "Year 1056", title: "Noah born", lifeLabel: "Flood year 1656 · died year 2006" },
+  {
+    id: "noah-sons",
+    personId: "shem",
+    yearLabel: "After year 1556",
+    title: "Shem, Ham, and Japheth",
+    lifeLabel: "Shem: 1558–2158 (derived); Ham and Japheth: not stated",
+  },
+];
 
 export const people = [...personMap.values()];
 export const peopleById = new Map(people.map((person) => [person.id, person]));

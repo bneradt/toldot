@@ -2,6 +2,7 @@ import cytoscape, { type Core, type ElementDefinition } from "cytoscape";
 import dagre from "cytoscape-dagre";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
+  originTimelineEntries,
   patriarchSonsInBirthOrder,
   peopleById,
   relationships,
@@ -81,6 +82,8 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
   const onSelectRef = useRef(onSelect);
   const onHoverRef = useRef(onHover);
   const branchButtonRefs = useRef(new Map<string, HTMLButtonElement>());
+  const timelineEntryRefs = useRef(new Map<string, HTMLDivElement>());
+  const timelineLineRef = useRef<HTMLDivElement>(null);
   const [expandedByView, setExpandedByView] = useState<Record<string, string[]>>({});
 
   const expandedBranchIds = useMemo(
@@ -278,19 +281,44 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
     graph.on("mouseover", "node", (event) => onHoverRef.current(peopleById.get(event.target.id()) ?? null));
     graph.on("mouseout", "node", () => onHoverRef.current(null));
 
-    const positionBranchButtons = () => {
+    const positionOverlayControls = () => {
+      const containerLeft = container.offsetLeft;
       view.branches?.forEach((branch) => {
         const button = branchButtonRefs.current.get(branch.id);
         const node = graph.getElementById(branch.rootPersonId);
         if (!button || !node.length) return;
         const position = node.renderedPosition();
-        const left = position.x + node.renderedWidth() / 2 - 10;
+        const left = containerLeft + position.x + node.renderedWidth() / 2 - 10;
         const top = position.y - node.renderedHeight() / 2 - 10;
         button.style.transform = `translate3d(${left}px, ${top}px, 0)`;
         button.style.visibility = "visible";
       });
+
+      if (view.id === "origins") {
+        const visibleY: number[] = [];
+        originTimelineEntries.forEach((entry) => {
+          const element = timelineEntryRefs.current.get(entry.id);
+          const node = graph.getElementById(entry.personId);
+          if (!element || !node.length) {
+            if (element) element.style.visibility = "hidden";
+            return;
+          }
+          const y = container.offsetTop + node.renderedPosition().y;
+          element.style.transform = `translate3d(0, ${y}px, 0) translateY(-50%)`;
+          element.style.visibility = "visible";
+          visibleY.push(y);
+        });
+
+        if (timelineLineRef.current && visibleY.length) {
+          const first = Math.min(...visibleY);
+          const last = Math.max(...visibleY);
+          timelineLineRef.current.style.top = `${first}px`;
+          timelineLineRef.current.style.height = `${Math.max(0, last - first)}px`;
+          timelineLineRef.current.style.visibility = "visible";
+        }
+      }
     };
-    graph.on("render", positionBranchButtons);
+    graph.on("render", positionOverlayControls);
 
     const layout = graph.layout({
       name: "dagre",
@@ -327,10 +355,10 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
         ordered.slice(0, Math.min(12, ordered.length)).forEach((node) => {
           opening = opening.merge(node);
         });
-        graph.fit(opening, 54);
+        graph.fit(opening, view.id === "origins" ? 88 : 54);
       }
       if (graph.zoom() > 0.95) graph.zoom(0.95);
-      positionBranchButtons();
+      positionOverlayControls();
     });
     layout.run();
 
@@ -347,11 +375,13 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
     return () => {
       container.removeEventListener("wheel", panWithWheel, { capture: true });
       observer.disconnect();
-      graph.off("render", positionBranchButtons);
+      graph.off("render", positionOverlayControls);
       view.branches?.forEach((branch) => {
         const button = branchButtonRefs.current.get(branch.id);
         if (button) button.style.visibility = "hidden";
       });
+      timelineEntryRefs.current.forEach((entry) => { entry.style.visibility = "hidden"; });
+      if (timelineLineRef.current) timelineLineRef.current.style.visibility = "hidden";
       graph.destroy();
       graphRef.current = null;
     };
@@ -387,7 +417,30 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
   const fit = () => graphRef.current?.animate({ fit: { eles: graphRef.current.elements(), padding: 44 }, duration: 240 });
 
   return (
-    <div className="graph-shell">
+    <div className={`graph-shell ${view.id === "origins" ? "has-origin-timeline" : ""}`}>
+      {view.id === "origins" && (
+        <aside className="origin-timeline" aria-label="Calculated chronology from Adam through Noah’s sons">
+          <header>
+            <strong>Years from Adam</strong>
+            <span>Calculated chronology · tree spacing is not to scale</span>
+          </header>
+          <div className="origin-timeline-line" ref={timelineLineRef} aria-hidden="true" />
+          {originTimelineEntries.map((entry) => (
+            <div
+              className={`origin-timeline-entry ${entry.id === "noah-sons" ? "sons-entry" : ""}`}
+              key={entry.id}
+              ref={(element) => {
+                if (element) timelineEntryRefs.current.set(entry.id, element);
+                else timelineEntryRefs.current.delete(entry.id);
+              }}
+            >
+              <span>{entry.yearLabel}</span>
+              <strong>{entry.title}</strong>
+              <small>{entry.lifeLabel}</small>
+            </div>
+          ))}
+        </aside>
+      )}
       <div
         ref={containerRef}
         className="graph-canvas"
