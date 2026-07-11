@@ -508,7 +508,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
               <small>{entry.lifeLabel}</small>
             </div>
           ))}
-          {originTimelineEntries.filter((entry) => entry.endYear && entry.endTitle).map((entry) => (
+          {originTimelineEntries.filter((entry) => entry.endYear && entry.endTitle && entry.endAge).map((entry) => (
             <div
               className="origin-timeline-death"
               key={`${entry.id}-death`}
@@ -518,7 +518,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
                 else timelineDeathRefs.current.delete(entry.id);
               }}
             >
-              <span>Year {entry.endYear}: {entry.endTitle}</span>
+              <span>{entry.endYear}: {entry.endTitle} ({entry.endAge})</span>
             </div>
           ))}
           {originTimelineMilestones.map((milestone) => (

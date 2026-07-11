@@ -265,7 +265,11 @@ describe("Toldot genealogy dataset", () => {
       [0, 930], [130, 1042], [235, 1140], [325, 1235], [395, 1290],
       [460, 1422], [622, 987], [687, 1656], [874, 1651], [1056, 2006], [1558, 2158],
     ]);
-    expect(originTimelineEntries.every((entry) => entry.endYear && entry.endTitle && entry.color)).toBe(true);
+    expect(originTimelineEntries.every((entry) => entry.endYear && entry.endAge && entry.endTitle && entry.color)).toBe(true);
+    expect(originTimelineEntries.map((entry) => entry.endAge)).toEqual([
+      930, 912, 905, 910, 895, 962, 365, 969, 777, 950, 600,
+    ]);
+    expect(originTimelineEntries.find((entry) => entry.id === "noah-sons")?.endTitle).toBe("Shem died");
     expect(new Set(originTimelineEntries.map((entry) => entry.color)).size).toBe(originTimelineEntries.length);
     expect(originTimelineMilestones).toEqual([
       expect.objectContaining({
