@@ -3,6 +3,7 @@ import {
   people,
   peopleById,
   originTimelineEntries,
+  originTimelineMilestones,
   patriarchSonsInBirthOrder,
   relationships,
   views,
@@ -266,5 +267,17 @@ describe("Toldot genealogy dataset", () => {
     ]);
     expect(originTimelineEntries.every((entry) => entry.endYear && entry.endTitle && entry.color)).toBe(true);
     expect(new Set(originTimelineEntries.map((entry) => entry.color)).size).toBe(originTimelineEntries.length);
+    expect(originTimelineMilestones).toEqual([
+      expect.objectContaining({
+        id: "flood",
+        year: 1656,
+        title: "Flood begins",
+        anchorPersonId: "noah",
+        alignWithEndId: "methuselah",
+      }),
+    ]);
+    expect(originTimelineEntries.find((entry) => entry.id === "methuselah")?.endYear).toBe(
+      originTimelineMilestones[0].year,
+    );
   });
 });

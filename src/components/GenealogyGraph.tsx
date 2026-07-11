@@ -3,6 +3,7 @@ import dagre from "cytoscape-dagre";
 import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import {
   originTimelineEntries,
+  originTimelineMilestones,
   patriarchSonsInBirthOrder,
   peopleById,
   relationships,
@@ -84,6 +85,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
   const branchButtonRefs = useRef(new Map<string, HTMLButtonElement>());
   const timelineEntryRefs = useRef(new Map<string, HTMLDivElement>());
   const timelineDeathRefs = useRef(new Map<string, HTMLDivElement>());
+  const timelineMilestoneRefs = useRef(new Map<string, HTMLDivElement>());
   const timelineLineRef = useRef<HTMLDivElement>(null);
   const [expandedByView, setExpandedByView] = useState<Record<string, string[]>>({});
 
@@ -334,6 +336,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
         };
 
         let previousDeathY = Number.NEGATIVE_INFINITY;
+        const deathDisplayY = new Map<string, number>();
         originTimelineEntries
           .filter((entry) => birthAnchors.some((anchor) => anchor.id === entry.id) && entry.endYear)
           .sort((a, b) => a.endYear! - b.endYear!)
@@ -341,8 +344,9 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
             const element = timelineDeathRefs.current.get(entry.id);
             if (!element || !entry.endYear) return;
             const chronologicalY = yForYear(entry.endYear);
-            const displayY = Math.max(chronologicalY, previousDeathY + 25);
+            const displayY = Math.max(chronologicalY, previousDeathY + 22);
             previousDeathY = displayY;
+            deathDisplayY.set(entry.id, displayY);
             element.style.transform = `translate3d(0, ${displayY}px, 0) translateY(-50%)`;
             element.style.visibility = "visible";
             visibleY.push(displayY);
@@ -350,6 +354,25 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
 
         timelineDeathRefs.current.forEach((element, id) => {
           if (!birthAnchors.some((anchor) => anchor.id === id)) element.style.visibility = "hidden";
+        });
+
+        originTimelineMilestones.forEach((milestone) => {
+          const element = timelineMilestoneRefs.current.get(milestone.id);
+          const anchorNode = graph.getElementById(milestone.anchorPersonId);
+          if (!element || !anchorNode.length) {
+            if (element) element.style.visibility = "hidden";
+            return;
+          }
+          const displayY = milestone.alignWithEndId
+            ? deathDisplayY.get(milestone.alignWithEndId)
+            : yForYear(milestone.year);
+          if (displayY === undefined) {
+            element.style.visibility = "hidden";
+            return;
+          }
+          element.style.transform = `translate3d(0, ${displayY}px, 0) translateY(-50%)`;
+          element.style.visibility = "visible";
+          visibleY.push(displayY);
         });
 
         if (timelineLineRef.current && visibleY.length) {
@@ -425,6 +448,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
       });
       timelineEntryRefs.current.forEach((entry) => { entry.style.visibility = "hidden"; });
       timelineDeathRefs.current.forEach((entry) => { entry.style.visibility = "hidden"; });
+      timelineMilestoneRefs.current.forEach((entry) => { entry.style.visibility = "hidden"; });
       if (timelineLineRef.current) timelineLineRef.current.style.visibility = "hidden";
       graph.destroy();
       graphRef.current = null;
@@ -466,7 +490,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
         <aside className="origin-timeline" aria-label="Calculated chronology from Adam through Noah’s sons">
           <header>
             <strong>Years from Adam</strong>
-            <span>Births align with the tree · deaths follow chronologically · spacing is not to scale</span>
+            <span>Births align with the tree · deaths and the flood follow chronologically · spacing is not to scale</span>
           </header>
           <div className="origin-timeline-line" ref={timelineLineRef} aria-hidden="true" />
           {originTimelineEntries.map((entry) => (
@@ -494,8 +518,20 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
                 else timelineDeathRefs.current.delete(entry.id);
               }}
             >
-              <strong>{entry.endTitle}</strong>
-              <span>Year {entry.endYear}</span>
+              <span>Year {entry.endYear}: {entry.endTitle}</span>
+            </div>
+          ))}
+          {originTimelineMilestones.map((milestone) => (
+            <div
+              className="origin-timeline-milestone"
+              key={milestone.id}
+              style={{ "--timeline-color": milestone.color } as CSSProperties}
+              ref={(element) => {
+                if (element) timelineMilestoneRefs.current.set(milestone.id, element);
+                else timelineMilestoneRefs.current.delete(milestone.id);
+              }}
+            >
+              <span>Year {milestone.year}: {milestone.title}</span>
             </div>
           ))}
         </aside>

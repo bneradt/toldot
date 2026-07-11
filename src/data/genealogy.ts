@@ -759,6 +759,15 @@ export interface OriginTimelineEntry {
   color: string;
 }
 
+export interface OriginTimelineMilestone {
+  id: string;
+  year: number;
+  title: string;
+  color: string;
+  anchorPersonId: string;
+  alignWithEndId?: string;
+}
+
 export const originTimelineEntries: OriginTimelineEntry[] = [
   { id: "adam", personId: "adam", birthYear: 0, endYear: 930, yearLabel: "Year 0", title: "Adam born", lifeLabel: "Lifespan 930 years", endTitle: "Adam died", color: "#934f43" },
   { id: "seth", personId: "seth", birthYear: 130, endYear: 1042, yearLabel: "Year 130", title: "Seth born", lifeLabel: "Lifespan 912 years", endTitle: "Seth died", color: "#2f7467" },
@@ -780,6 +789,17 @@ export const originTimelineEntries: OriginTimelineEntry[] = [
     lifeLabel: "Shem born 1558 (derived); Ham and Japheth not stated",
     endTitle: "Shem died (derived)",
     color: "#806728",
+  },
+];
+
+export const originTimelineMilestones: OriginTimelineMilestone[] = [
+  {
+    id: "flood",
+    year: 1656,
+    title: "Flood begins",
+    color: "#356c8b",
+    anchorPersonId: "noah",
+    alignWithEndId: "methuselah",
   },
 ];
 
