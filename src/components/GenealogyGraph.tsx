@@ -37,45 +37,6 @@ function edgeClass(sourceLayers: string[], kind: string, activeLayers: string[])
 const patriarchMothers = new Set(["leah", "rachel", "bilhah", "zilpah"]);
 const patriarchSons = new Set<string>(patriarchSonsInBirthOrder);
 
-interface OriginMobileEvent {
-  id: string;
-  year: number;
-  label: string;
-  detail?: string;
-  color: string;
-  kind: "birth" | "death" | "milestone";
-}
-
-const originMobileEvents: OriginMobileEvent[] = [
-  ...originTimelineEntries.flatMap((entry): OriginMobileEvent[] => {
-    const events: OriginMobileEvent[] = [{
-      id: `${entry.id}-birth`,
-      year: entry.birthYear,
-      label: entry.id === "noah-sons" ? "Shem born; Ham and Japheth ages not stated" : entry.title,
-      detail: entry.lifeLabel,
-      color: entry.color,
-      kind: "birth",
-    }];
-    if (entry.endYear && entry.endTitle && entry.endAge) {
-      events.push({
-        id: `${entry.id}-death`,
-        year: entry.endYear,
-        label: `${entry.endTitle} (${entry.endAge})`,
-        color: entry.color,
-        kind: "death",
-      });
-    }
-    return events;
-  }),
-  ...originTimelineMilestones.map((milestone): OriginMobileEvent => ({
-    id: milestone.id,
-    year: milestone.year,
-    label: milestone.title,
-    color: milestone.color,
-    kind: "milestone",
-  })),
-].sort((a, b) => a.year - b.year || a.kind.localeCompare(b.kind));
-
 function isPatriarchOverviewRelationship(from: string, to: string) {
   return !(patriarchMothers.has(from) && patriarchSons.has(to));
 }
@@ -356,14 +317,13 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
 
     const positionOverlayControls = () => {
       const containerLeft = container.offsetLeft;
-      const containerTop = container.offsetTop;
       view.branches?.forEach((branch) => {
         const button = branchButtonRefs.current.get(branch.id);
         const node = graph.getElementById(branch.rootPersonId);
         if (!button || !node.length) return;
         const position = node.renderedPosition();
         const left = containerLeft + position.x + node.renderedWidth() / 2 - 10;
-        const top = containerTop + position.y - node.renderedHeight() / 2 - 10;
+        const top = position.y - node.renderedHeight() / 2 - 10;
         button.style.transform = `translate3d(${left}px, ${top}px, 0)`;
         button.style.visibility = "visible";
       });
@@ -557,29 +517,6 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
 
   return (
     <div className={`graph-shell ${view.id === "origins" ? "has-origin-timeline" : ""}`}>
-      {view.id === "origins" && (
-        <section className="origin-mobile-timeline" aria-label="Origins chronology">
-          <header>
-            <strong>Years from Adam</strong>
-            <span>Scroll the chronology; the family tree moves independently below.</span>
-          </header>
-          <div className="origin-mobile-events">
-            {originMobileEvents.map((event) => (
-              <article
-                className={`origin-mobile-event ${event.kind}`}
-                key={event.id}
-                style={{ "--timeline-color": event.color } as CSSProperties}
-              >
-                <span>Year {event.year}</span>
-                <div>
-                  <strong>{event.label}</strong>
-                  {event.detail && <small>{event.detail}</small>}
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-      )}
       {view.id === "origins" && (
         <aside className="origin-timeline" aria-label="Calculated chronology from Adam through Noah’s sons">
           <header>
