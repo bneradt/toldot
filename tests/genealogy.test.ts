@@ -208,6 +208,38 @@ describe("Toldot genealogy dataset", () => {
     expect(davidic.personIds).toContain("david");
     expect(davidic.personIds).not.toContain("solomon");
     expect(davidic.personIds).not.toContain("jesus");
+
+    const jesseChildren = [
+      "eliab-jesse",
+      "abinadab-jesse",
+      "shimea-jesse",
+      "nethanel-jesse",
+      "raddai",
+      "ozem",
+      "david",
+      "zeruiah",
+      "abigail-david-sister",
+    ];
+    jesseChildren.forEach((personId) => {
+      expect(davidic.personIds, personId).toContain(personId);
+      expect(relationships.some((relationship) =>
+        relationship.from === "jesse"
+        && relationship.to === personId
+        && relationship.sourceLayers.includes("Narrative"),
+      ), `Jesse -> ${personId}`).toBe(true);
+    });
+
+    for (const sonId of ["joab", "abishai", "asahel"]) {
+      expect(relationships.some((relationship) =>
+        relationship.from === "zeruiah" && relationship.to === sonId,
+      ), `Zeruiah -> ${sonId}`).toBe(true);
+      expect(peopleById.get(sonId)?.passages.some((passage) => passage.category === "story"), sonId).toBe(true);
+    }
+    expect(relationships.some((relationship) =>
+      relationship.from === "abigail-david-sister" && relationship.to === "amasa",
+    )).toBe(true);
+    expect(peopleById.get("amasa")?.passages.some((passage) => passage.category === "story")).toBe(true);
+    expect(chapters["1-chr-2"].verseIds).toHaveLength(55);
   });
 
   it("records partners accurately and numbers Jacob's sons in birth order", () => {

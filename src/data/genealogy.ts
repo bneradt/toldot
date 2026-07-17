@@ -175,7 +175,7 @@ const sharedToDavid: ChainEntry[] = [
   { id: "salmon", name: "Salmon", primaryVerseId: "ruth-4-20" },
   { id: "boaz", name: "Boaz", aliases: ["Booz"], primaryVerseId: "ruth-4-21", notable: true },
   { id: "obed", name: "Obed", primaryVerseId: "ruth-4-21" },
-  { id: "jesse", name: "Jesse", primaryVerseId: "ruth-4-22" },
+  { id: "jesse", name: "Jesse", descriptor: "father of David, Zeruiah, and Abigail", primaryVerseId: "ruth-4-22" },
   { id: "david", name: "David", descriptor: "king of Israel", primaryVerseId: "ruth-4-22", notable: true },
 ];
 
@@ -596,6 +596,36 @@ connect("bathsheba", "solomon", "parent", "Narrative", ["2-sam-12-24"]);
 connect("joseph-of-nazareth", "mary", "spouse", "Matthew", ["matt-1-16", "matt-1-18"]);
 connect("mary", "jesus", "parent", "Matthew", ["matt-1-16", "matt-1-18"]);
 
+// Jesse’s household and David’s nephews, the “sons of Zeruiah.”
+addPerson({ id: "jesse", name: "Jesse", descriptor: "father of David, Zeruiah, and Abigail", primaryVerseId: "1-chr-2-13" }, "Narrative", [davidic]);
+addPerson({ id: "eliab-jesse", name: "Eliab", descriptor: "Jesse’s firstborn; brother of David", primaryVerseId: "1-chr-2-13", birthOrder: 1 }, "Narrative", [davidic]);
+addPerson({ id: "abinadab-jesse", name: "Abinadab", descriptor: "Jesse’s second son; brother of David", primaryVerseId: "1-chr-2-13", birthOrder: 2 }, "Narrative", [davidic]);
+addPerson({ id: "shimea-jesse", name: "Shimea", aliases: ["Shammah"], descriptor: "Jesse’s third son; brother of David", primaryVerseId: "1-chr-2-13", birthOrder: 3 }, "Narrative", [davidic]);
+addPerson({ id: "nethanel-jesse", name: "Nethanel", descriptor: "Jesse’s fourth son; brother of David", primaryVerseId: "1-chr-2-14", birthOrder: 4 }, "Narrative", [davidic]);
+addPerson({ id: "raddai", name: "Raddai", descriptor: "Jesse’s fifth son; brother of David", primaryVerseId: "1-chr-2-14", birthOrder: 5 }, "Narrative", [davidic]);
+addPerson({ id: "ozem", name: "Ozem", descriptor: "Jesse’s sixth son; brother of David", primaryVerseId: "1-chr-2-15", birthOrder: 6 }, "Narrative", [davidic]);
+addPerson({ id: "david", name: "David", descriptor: "king of Israel", primaryVerseId: "1-chr-2-15", notable: true, birthOrder: 7 }, "Narrative", [davidic]);
+addPerson({ id: "zeruiah", name: "Zeruiah", descriptor: "sister of David; mother of Joab, Abishai, and Asahel", primaryVerseId: "1-chr-2-16", sex: "female", notable: true }, "Narrative", [davidic]);
+addPerson({ id: "abigail-david-sister", name: "Abigail", descriptor: "sister of David; mother of Amasa", primaryVerseId: "1-chr-2-16", sex: "female", notable: true }, "Narrative", [davidic]);
+addPerson({ id: "joab", name: "Joab", descriptor: "son of Zeruiah; David’s nephew and commander", primaryVerseId: "1-chr-2-16", notable: true }, "Narrative", [davidic]);
+addPerson({ id: "abishai", name: "Abishai", descriptor: "son of Zeruiah; David’s nephew and warrior", primaryVerseId: "1-chr-2-16", notable: true }, "Narrative", [davidic]);
+addPerson({ id: "asahel", name: "Asahel", descriptor: "son of Zeruiah; David’s swift-footed nephew", primaryVerseId: "1-chr-2-16", notable: true }, "Narrative", [davidic]);
+addPerson({ id: "amasa", name: "Amasa", descriptor: "son of Abigail; David’s nephew and commander", primaryVerseId: "1-chr-2-17", notable: true }, "Narrative", [davidic]);
+
+connect("jesse", "eliab-jesse", "parent", "Narrative", ["1-chr-2-13"]);
+connect("jesse", "abinadab-jesse", "parent", "Narrative", ["1-chr-2-13"]);
+connect("jesse", "shimea-jesse", "parent", "Narrative", ["1-chr-2-13"]);
+connect("jesse", "nethanel-jesse", "parent", "Narrative", ["1-chr-2-14"]);
+connect("jesse", "raddai", "parent", "Narrative", ["1-chr-2-14"]);
+connect("jesse", "ozem", "parent", "Narrative", ["1-chr-2-15"]);
+connect("jesse", "david", "genealogical", "Narrative", ["1-chr-2-15"]);
+connect("jesse", "zeruiah", "parent", "Narrative", ["1-chr-2-16"]);
+connect("jesse", "abigail-david-sister", "parent", "Narrative", ["1-chr-2-16"]);
+connect("zeruiah", "joab", "parent", "Narrative", ["1-chr-2-16"]);
+connect("zeruiah", "abishai", "parent", "Narrative", ["1-chr-2-16"]);
+connect("zeruiah", "asahel", "parent", "Narrative", ["1-chr-2-16"]);
+connect("abigail-david-sister", "amasa", "parent", "Narrative", ["1-chr-2-17"]);
+
 addStory("adam", "The first human family", ["gen-2-22", "gen-2-23", "gen-2-24", "gen-4-1", "gen-4-2"]);
 addStory("eve", "The first human family", ["gen-2-22", "gen-2-23", "gen-2-24", "gen-4-1", "gen-4-2"]);
 addStory("cain", "Cain and his family", ["gen-4-1", "gen-4-2", "gen-4-8", "gen-4-9", "gen-4-10", "gen-4-11", "gen-4-12", "gen-4-13", "gen-4-14", "gen-4-15", "gen-4-16", "gen-4-17"]);
@@ -641,6 +671,15 @@ addStory("onan", "Onan’s refusal and death", ["gen-38-8", "gen-38-9", "gen-38-
 addStory("boaz", "Boaz throughout Ruth 2–4", ["ruth-2-1", "ruth-2-4", "ruth-2-8", "ruth-2-9", "ruth-2-10", "ruth-2-11", "ruth-2-12", "ruth-2-14", "ruth-2-15", "ruth-2-16", "ruth-3-7", "ruth-3-8", "ruth-3-9", "ruth-3-10", "ruth-3-11", "ruth-3-12", "ruth-3-13", "ruth-4-1", "ruth-4-2", "ruth-4-3", "ruth-4-4", "ruth-4-5", "ruth-4-6", "ruth-4-9", "ruth-4-10", "ruth-4-13", "ruth-4-21"]);
 addStory("ruth", "Ruth and Boaz", ["ruth-2-2", "ruth-2-3", "ruth-2-8", "ruth-2-9", "ruth-2-10", "ruth-2-11", "ruth-2-12", "ruth-2-19", "ruth-2-20", "ruth-2-21", "ruth-2-22", "ruth-2-23", "ruth-3-1", "ruth-3-5", "ruth-3-6", "ruth-3-9", "ruth-3-10", "ruth-3-11", "ruth-3-12", "ruth-3-13", "ruth-4-13", "ruth-4-14", "ruth-4-15", "ruth-4-16", "ruth-4-17"]);
 addStory("david", "David and Goliath", ["1-sam-17-32", "1-sam-17-33", "1-sam-17-34", "1-sam-17-35", "1-sam-17-36", "1-sam-17-37", "1-sam-17-38", "1-sam-17-39", "1-sam-17-40", "1-sam-17-45", "1-sam-17-46", "1-sam-17-47", "1-sam-17-48", "1-sam-17-49", "1-sam-17-50"]);
+addStory("jesse", "Jesse’s sons and daughters", ["1-chr-2-13", "1-chr-2-14", "1-chr-2-15", "1-chr-2-16", "1-chr-2-17"]);
+addStory("eliab-jesse", "Eliab and David", ["1-sam-16-6", "1-sam-16-7", "1-sam-17-28", "1-sam-17-29"]);
+addStory("zeruiah", "Zeruiah and her sons", ["1-chr-2-16", "2-sam-2-18", "2-sam-2-19", "2-sam-2-20", "2-sam-2-21", "2-sam-2-22", "2-sam-2-23"]);
+addStory("abigail-david-sister", "Abigail and her son Amasa", ["1-chr-2-16", "1-chr-2-17", "2-sam-17-25"]);
+addStory("joab", "Joab, David’s commander", ["2-sam-3-26", "2-sam-3-27", "2-sam-10-7", "2-sam-10-9", "2-sam-10-10", "2-sam-10-11", "2-sam-10-12", "2-sam-10-13", "2-sam-10-14", "2-sam-18-14", "2-sam-18-15", "2-sam-20-8", "2-sam-20-9", "2-sam-20-10", "1-kgs-2-28", "1-kgs-2-29", "1-kgs-2-30", "1-kgs-2-31", "1-kgs-2-32", "1-kgs-2-33", "1-kgs-2-34"]);
+addStory("abishai", "Abishai’s loyalty and valor", ["1-sam-26-6", "1-sam-26-7", "1-sam-26-8", "1-sam-26-9", "2-sam-10-10", "2-sam-10-11", "2-sam-21-16", "2-sam-21-17", "2-sam-23-18", "2-sam-23-19"]);
+addStory("asahel", "Asahel pursues Abner", ["2-sam-2-18", "2-sam-2-19", "2-sam-2-20", "2-sam-2-21", "2-sam-2-22", "2-sam-2-23", "2-sam-3-27"]);
+addStory("amasa", "Amasa’s commands and death", ["2-sam-17-25", "2-sam-19-13", "2-sam-20-4", "2-sam-20-5", "2-sam-20-6", "2-sam-20-7", "2-sam-20-8", "2-sam-20-9", "2-sam-20-10"]);
+addReadingGuide("joab", ["2 Samuel 2–3, 10–20", "1 Kings 1–2"]);
 addStory("bathsheba", "David, Bathsheba, and Solomon", ["2-sam-11-2", "2-sam-11-3", "2-sam-11-4", "2-sam-11-5", "2-sam-12-24", "2-sam-12-25"]);
 addStory("solomon", "Solomon asks for wisdom", ["1-kgs-3-5", "1-kgs-3-6", "1-kgs-3-7", "1-kgs-3-8", "1-kgs-3-9", "1-kgs-3-10", "1-kgs-3-11", "1-kgs-3-12", "1-kgs-3-13", "1-kgs-3-14", "1-kgs-3-16", "1-kgs-3-17", "1-kgs-3-18", "1-kgs-3-19", "1-kgs-3-20", "1-kgs-3-21", "1-kgs-3-22", "1-kgs-3-23", "1-kgs-3-24", "1-kgs-3-25", "1-kgs-3-26", "1-kgs-3-27", "1-kgs-3-28"]);
 addStory("joseph-of-nazareth", "Joseph protects Jesus", ["matt-2-13", "matt-2-14", "matt-2-15", "matt-2-19", "matt-2-20", "matt-2-21", "matt-2-22", "matt-2-23"]);
@@ -958,10 +997,10 @@ export const views: GenealogyView[] = [
     id: "davidic",
     title: "The Davidic Line",
     eyebrow: "Judah to David",
-    description: "The family line from the patriarch Judah through Perez, Boaz, and Jesse to David.",
+    description: "The line from Judah to David, with Jesse’s household and the sons of Zeruiah who shaped David’s reign.",
     personIds: [...davidic],
     rootIds: ["judah", "tamar"],
-    sourceLayers: ["Genesis", "Ruth", "Matthew"],
+    sourceLayers: ["Genesis", "Ruth", "Matthew", "Narrative"],
     accent: "family",
   },
   {

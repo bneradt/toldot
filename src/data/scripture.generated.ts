@@ -9327,6 +9327,582 @@ export const scripture: Record<string, Verse> = {
     "web": "Saul said to him, “Whose son are you, you young man?”\n\nDavid answered, “I am the son of your servant Jesse the Bethlehemite.”",
     "kjv": "And Saul said to him, Whose son art thou, thou young man? And David answered, I am the son of thy servant Jesse the Beth-lehemite."
   },
+  "1-sam-26-1": {
+    "id": "1-sam-26-1",
+    "reference": "1 Samuel 26:1",
+    "web": "The Ziphites came to Saul to Gibeah, saying, “Doesn’t David hide himself in the hill of Hachilah, which is before the desert?”",
+    "kjv": "And the Ziphites came unto Saul to Gibeah, saying, Doth not David hide himself in the hill of Hachilah, which is before Jeshimon?"
+  },
+  "1-sam-26-2": {
+    "id": "1-sam-26-2",
+    "reference": "1 Samuel 26:2",
+    "web": "Then Saul arose and went down to the wilderness of Ziph, having three thousand chosen men of Israel with him, to seek David in the wilderness of Ziph.",
+    "kjv": "Then Saul arose, and went down to the wilderness of Ziph, having three thousand chosen men of Israel with him, to seek David in the wilderness of Ziph."
+  },
+  "1-sam-26-3": {
+    "id": "1-sam-26-3",
+    "reference": "1 Samuel 26:3",
+    "web": "Saul encamped in the hill of Hachilah, which is before the desert, by the way. But David stayed in the wilderness, and he saw that Saul came after him into the wilderness.",
+    "kjv": "And Saul pitched in the hill of Hachilah, which is before Jeshimon, by the way. But David abode in the wilderness, and he saw that Saul came after him into the wilderness."
+  },
+  "1-sam-26-4": {
+    "id": "1-sam-26-4",
+    "reference": "1 Samuel 26:4",
+    "web": "David therefore sent out spies, and understood that Saul had certainly come.",
+    "kjv": "David therefore sent out spies, and understood that Saul was come in very deed."
+  },
+  "1-sam-26-5": {
+    "id": "1-sam-26-5",
+    "reference": "1 Samuel 26:5",
+    "web": "Then David arose and came to the place where Saul had encamped; and David saw the place where Saul lay, with Abner the son of Ner, the captain of his army. Saul lay within the place of the wagons, and the people were encamped around him.",
+    "kjv": "And David arose, and came to the place where Saul had pitched: and David beheld the place where Saul lay, and Abner the son of Ner, the captain of his host: and Saul lay in the trench, and the people pitched round about him."
+  },
+  "1-sam-26-6": {
+    "id": "1-sam-26-6",
+    "reference": "1 Samuel 26:6",
+    "web": "Then David answered and said to Ahimelech the Hittite, and to Abishai the son of Zeruiah, brother of Joab, saying, “Who will go down with me to Saul to the camp?”\n\nAbishai said, “I will go down with you.”",
+    "kjv": "Then answered David and said to Ahimelech the Hittite, and to Abishai the son of Zeruiah, brother to Joab, saying, Who will go down with me to Saul to the camp? And Abishai said, I will go down with thee."
+  },
+  "1-sam-26-7": {
+    "id": "1-sam-26-7",
+    "reference": "1 Samuel 26:7",
+    "web": "So David and Abishai came to the people by night; and, behold, Saul lay sleeping within the place of the wagons, with his spear stuck in the ground at his head; and Abner and the people lay around him.",
+    "kjv": "So David and Abishai came to the people by night: and, behold, Saul lay sleeping within the trench, and his spear stuck in the ground at his bolster: but Abner and the people lay round about him."
+  },
+  "1-sam-26-8": {
+    "id": "1-sam-26-8",
+    "reference": "1 Samuel 26:8",
+    "web": "Then Abishai said to David, “God has delivered up your enemy into your hand today. Now therefore please let me strike him with the spear to the earth at one stroke, and I will not strike him the second time.”",
+    "kjv": "Then said Abishai to David, God hath delivered thine enemy into thine hand this day: now therefore let me smite him, I pray thee, with the spear even to the earth at once, and I will not smite him the second time."
+  },
+  "1-sam-26-9": {
+    "id": "1-sam-26-9",
+    "reference": "1 Samuel 26:9",
+    "web": "David said to Abishai, “Don’t destroy him, for who can stretch out his hand against the LORD’s anointed, and be guiltless?”",
+    "kjv": "And David said to Abishai, Destroy him not: for who can stretch forth his hand against the LORD’s anointed, and be guiltless?"
+  },
+  "1-sam-26-10": {
+    "id": "1-sam-26-10",
+    "reference": "1 Samuel 26:10",
+    "web": "David said, “As the LORD lives, the LORD will strike him; or his day shall come to die, or he shall go down into battle and perish.",
+    "kjv": "David said furthermore, As the LORD liveth, the LORD shall smite him; or his day shall come to die; or he shall descend into battle, and perish."
+  },
+  "1-sam-26-11": {
+    "id": "1-sam-26-11",
+    "reference": "1 Samuel 26:11",
+    "web": "The LORD forbid that I should stretch out my hand against the LORD’s anointed; but now please take the spear that is at his head and the jar of water, and let’s go.”",
+    "kjv": "The LORD forbid that I should stretch forth mine hand against the LORD’s anointed: but, I pray thee, take thou now the spear that is at his bolster, and the cruse of water, and let us go."
+  },
+  "1-sam-26-12": {
+    "id": "1-sam-26-12",
+    "reference": "1 Samuel 26:12",
+    "web": "So David took the spear and the jar of water from Saul’s head, and they went away. No man saw it, or knew it, nor did any awake; for they were all asleep, because a deep sleep from the LORD had fallen on them.",
+    "kjv": "So David took the spear and the cruse of water from Saul’s bolster; and they gat them away, and no man saw it, nor knew it, neither awaked: for they were all asleep; because a deep sleep from the LORD was fallen upon them."
+  },
+  "1-sam-26-13": {
+    "id": "1-sam-26-13",
+    "reference": "1 Samuel 26:13",
+    "web": "Then David went over to the other side, and stood on the top of the mountain far away, a great space being between them;",
+    "kjv": "Then David went over to the other side, and stood on the top of an hill afar off; a great space being between them:"
+  },
+  "1-sam-26-14": {
+    "id": "1-sam-26-14",
+    "reference": "1 Samuel 26:14",
+    "web": "and David cried to the people, and to Abner the son of Ner, saying, “Don’t you answer, Abner?”\n\nThen Abner answered, “Who are you who calls to the king?”",
+    "kjv": "And David cried to the people, and to Abner the son of Ner, saying, Answerest thou not, Abner? Then Abner answered and said, Who art thou that criest to the king?"
+  },
+  "1-sam-26-15": {
+    "id": "1-sam-26-15",
+    "reference": "1 Samuel 26:15",
+    "web": "David said to Abner, “Aren’t you a man? Who is like you in Israel? Why then have you not kept watch over your lord the king? For one of the people came in to destroy your lord the king.",
+    "kjv": "And David said to Abner, Art not thou a valiant man? and who is like to thee in Israel? wherefore then hast thou not kept thy lord the king? for there came one of the people in to destroy the king thy lord."
+  },
+  "1-sam-26-16": {
+    "id": "1-sam-26-16",
+    "reference": "1 Samuel 26:16",
+    "web": "This thing isn’t good that you have done. As the LORD lives, you are worthy to die, because you have not kept watch over your lord, the LORD’s anointed. Now see where the king’s spear is, and the jar of water that was at his head.”",
+    "kjv": "This thing is not good that thou hast done. As the LORD liveth, ye are worthy to die, because ye have not kept your master, the LORD’s anointed. And now see where the king’s spear is, and the cruse of water that was at his bolster."
+  },
+  "1-sam-26-17": {
+    "id": "1-sam-26-17",
+    "reference": "1 Samuel 26:17",
+    "web": "Saul recognized David’s voice, and said, “Is this your voice, my son David?”\n\nDavid said, “It is my voice, my lord, O king.”",
+    "kjv": "And Saul knew David’s voice, and said, Is this thy voice, my son David? And David said, It is my voice, my lord, O king."
+  },
+  "1-sam-26-18": {
+    "id": "1-sam-26-18",
+    "reference": "1 Samuel 26:18",
+    "web": "He said, “Why does my lord pursue his servant? For what have I done? What evil is in my hand?",
+    "kjv": "And he said, Wherefore doth my lord thus pursue after his servant? for what have I done? or what evil is in mine hand?"
+  },
+  "1-sam-26-19": {
+    "id": "1-sam-26-19",
+    "reference": "1 Samuel 26:19",
+    "web": "Now therefore, please let my lord the king hear the words of his servant. If it is so that the LORD has stirred you up against me, let him accept an offering. But if it is the children of men, they are cursed before the LORD; for they have driven me out today that I shouldn’t cling to the LORD’s inheritance, saying, ‘Go, serve other gods!’",
+    "kjv": "Now therefore, I pray thee, let my lord the king hear the words of his servant. If the LORD have stirred thee up against me, let him accept an offering: but if they be the children of men, cursed be they before the LORD; for they have driven me out this day from abiding in the inheritance of the LORD, saying, Go, serve other gods."
+  },
+  "1-sam-26-20": {
+    "id": "1-sam-26-20",
+    "reference": "1 Samuel 26:20",
+    "web": "Now therefore, don’t let my blood fall to the earth away from the presence of the LORD; for the king of Israel has come out to seek a flea, as when one hunts a partridge in the mountains.”",
+    "kjv": "Now therefore, let not my blood fall to the earth before the face of the LORD: for the king of Israel is come out to seek a flea, as when one doth hunt a partridge in the mountains."
+  },
+  "1-sam-26-21": {
+    "id": "1-sam-26-21",
+    "reference": "1 Samuel 26:21",
+    "web": "Then Saul said, “I have sinned. Return, my son David; for I will no more do you harm, because my life was precious in your eyes today. Behold, I have played the fool, and have erred exceedingly.”",
+    "kjv": "Then said Saul, I have sinned: return, my son David: for I will no more do thee harm, because my soul was precious in thine eyes this day: behold, I have played the fool, and have erred exceedingly."
+  },
+  "1-sam-26-22": {
+    "id": "1-sam-26-22",
+    "reference": "1 Samuel 26:22",
+    "web": "David answered, “Behold the spear, O king! Let one of the young men come over and get it.",
+    "kjv": "And David answered and said, Behold the king’s spear! and let one of the young men come over and fetch it."
+  },
+  "1-sam-26-23": {
+    "id": "1-sam-26-23",
+    "reference": "1 Samuel 26:23",
+    "web": "The LORD will give to every man his righteousness and his faithfulness; because the LORD delivered you into my hand today, and I wouldn’t stretch out my hand against the LORD’s anointed.",
+    "kjv": "The LORD render to every man his righteousness and his faithfulness: for the LORD delivered thee into my hand to day, but I would not stretch forth mine hand against the LORD’s anointed."
+  },
+  "1-sam-26-24": {
+    "id": "1-sam-26-24",
+    "reference": "1 Samuel 26:24",
+    "web": "Behold, as your life was respected today in my eyes, so let my life be respected in the LORD’s eyes, and let him deliver me out of all oppression.”",
+    "kjv": "And, behold, as thy life was much set by this day in mine eyes, so let my life be much set by in the eyes of the LORD, and let him deliver me out of all tribulation."
+  },
+  "1-sam-26-25": {
+    "id": "1-sam-26-25",
+    "reference": "1 Samuel 26:25",
+    "web": "Then Saul said to David, “You are blessed, my son David. You will both do mightily, and will surely prevail.”\n\nSo David went his way, and Saul returned to his place.",
+    "kjv": "Then Saul said to David, Blessed be thou, my son David: thou shalt both do great things, and also shalt still prevail. So David went on his way, and Saul returned to his place."
+  },
+  "2-sam-2-1": {
+    "id": "2-sam-2-1",
+    "reference": "2 Samuel 2:1",
+    "web": "After this, David inquired of the LORD, saying, “Shall I go up into any of the cities of Judah?”\n\nThe LORD said to him, “Go up.”\n\nDavid said, “Where shall I go up?”\n\nHe said, “To Hebron.”",
+    "kjv": "And it came to pass after this, that David enquired of the LORD, saying, Shall I go up into any of the cities of Judah? And the LORD said unto him, Go up. And David said, Whither shall I go up? And he said, Unto Hebron."
+  },
+  "2-sam-2-2": {
+    "id": "2-sam-2-2",
+    "reference": "2 Samuel 2:2",
+    "web": "So David went up there with his two wives, Ahinoam the Jezreelitess, and Abigail the wife of Nabal the Carmelite.",
+    "kjv": "So David went up thither, and his two wives also, Ahinoam the Jezreelitess, and Abigail Nabal’s wife the Carmelite."
+  },
+  "2-sam-2-3": {
+    "id": "2-sam-2-3",
+    "reference": "2 Samuel 2:3",
+    "web": "David brought up his men who were with him, every man with his household. They lived in the cities of Hebron.",
+    "kjv": "And his men that were with him did David bring up, every man with his household: and they dwelt in the cities of Hebron."
+  },
+  "2-sam-2-4": {
+    "id": "2-sam-2-4",
+    "reference": "2 Samuel 2:4",
+    "web": "The men of Judah came, and there they anointed David king over the house of Judah. They told David, “The men of Jabesh Gilead were those who buried Saul.”",
+    "kjv": "And the men of Judah came, and there they anointed David king over the house of Judah. And they told David, saying, That the men of Jabesh-gilead were they that buried Saul."
+  },
+  "2-sam-2-5": {
+    "id": "2-sam-2-5",
+    "reference": "2 Samuel 2:5",
+    "web": "David sent messengers to the men of Jabesh Gilead, and said to them, “Blessed are you by the LORD, that you have shown this kindness to your lord, even to Saul, and have buried him.",
+    "kjv": "And David sent messengers unto the men of Jabesh-gilead, and said unto them, Blessed be ye of the LORD, that ye have shewed this kindness unto your lord, even unto Saul, and have buried him."
+  },
+  "2-sam-2-6": {
+    "id": "2-sam-2-6",
+    "reference": "2 Samuel 2:6",
+    "web": "Now may the LORD show loving kindness and truth to you. I also will reward you for this kindness, because you have done this thing.",
+    "kjv": "And now the LORD shew kindness and truth unto you: and I also will requite you this kindness, because ye have done this thing."
+  },
+  "2-sam-2-7": {
+    "id": "2-sam-2-7",
+    "reference": "2 Samuel 2:7",
+    "web": "Now therefore let your hands be strong, and be valiant; for Saul your lord is dead, and also the house of Judah have anointed me king over them.”",
+    "kjv": "Therefore now let your hands be strengthened, and be ye valiant: for your master Saul is dead, and also the house of Judah have anointed me king over them."
+  },
+  "2-sam-2-8": {
+    "id": "2-sam-2-8",
+    "reference": "2 Samuel 2:8",
+    "web": "Now Abner the son of Ner, captain of Saul’s army, had taken Ishbosheth the son of Saul and brought him over to Mahanaim.",
+    "kjv": "But Abner the son of Ner, captain of Saul’s host, took Ish-bosheth the son of Saul, and brought him over to Mahanaim;"
+  },
+  "2-sam-2-9": {
+    "id": "2-sam-2-9",
+    "reference": "2 Samuel 2:9",
+    "web": "He made him king over Gilead, over the Ashurites, over Jezreel, over Ephraim, over Benjamin, and over all Israel.",
+    "kjv": "And made him king over Gilead, and over the Ashurites, and over Jezreel, and over Ephraim, and over Benjamin, and over all Israel."
+  },
+  "2-sam-2-10": {
+    "id": "2-sam-2-10",
+    "reference": "2 Samuel 2:10",
+    "web": "Ishbosheth, Saul’s son, was forty years old when he began to reign over Israel, and he reigned two years. But the house of Judah followed David.",
+    "kjv": "Ish-bosheth Saul’s son was forty years old when he began to reign over Israel, and reigned two years. But the house of Judah followed David."
+  },
+  "2-sam-2-11": {
+    "id": "2-sam-2-11",
+    "reference": "2 Samuel 2:11",
+    "web": "The time that David was king in Hebron over the house of Judah was seven years and six months.",
+    "kjv": "And the time that David was king in Hebron over the house of Judah was seven years and six months."
+  },
+  "2-sam-2-12": {
+    "id": "2-sam-2-12",
+    "reference": "2 Samuel 2:12",
+    "web": "Abner the son of Ner, and the servants of Ishbosheth the son of Saul, went out from Mahanaim to Gibeon.",
+    "kjv": "And Abner the son of Ner, and the servants of Ish-bosheth the son of Saul, went out from Mahanaim to Gibeon."
+  },
+  "2-sam-2-13": {
+    "id": "2-sam-2-13",
+    "reference": "2 Samuel 2:13",
+    "web": "Joab the son of Zeruiah and David’s servants went out, and met them by the pool of Gibeon; and they sat down, the one on the one side of the pool and the other on the other side of the pool.",
+    "kjv": "And Joab the son of Zeruiah, and the servants of David, went out, and met together by the pool of Gibeon: and they sat down, the one on the one side of the pool, and the other on the other side of the pool."
+  },
+  "2-sam-2-14": {
+    "id": "2-sam-2-14",
+    "reference": "2 Samuel 2:14",
+    "web": "Abner said to Joab, “Please let the young men arise and compete before us!”\n\nJoab said, “Let them arise!”",
+    "kjv": "And Abner said to Joab, Let the young men now arise, and play before us. And Joab said, Let them arise."
+  },
+  "2-sam-2-15": {
+    "id": "2-sam-2-15",
+    "reference": "2 Samuel 2:15",
+    "web": "Then they arose and went over by number: twelve for Benjamin and for Ishbosheth the son of Saul, and twelve of David’s servants.",
+    "kjv": "Then there arose and went over by number twelve of Benjamin, which pertained to Ish-bosheth the son of Saul, and twelve of the servants of David."
+  },
+  "2-sam-2-16": {
+    "id": "2-sam-2-16",
+    "reference": "2 Samuel 2:16",
+    "web": "They each caught his opponent by the head and thrust his sword in his fellow’s side; so they fell down together. Therefore that place in Gibeon was called Helkath Hazzurim.",
+    "kjv": "And they caught every one his fellow by the head, and thrust his sword in his fellow’s side; so they fell down together: wherefore that place was called Helkath-hazzurim, which is in Gibeon."
+  },
+  "2-sam-2-17": {
+    "id": "2-sam-2-17",
+    "reference": "2 Samuel 2:17",
+    "web": "The battle was very severe that day; and Abner was beaten, and the men of Israel, before David’s servants.",
+    "kjv": "And there was a very sore battle that day; and Abner was beaten, and the men of Israel, before the servants of David."
+  },
+  "2-sam-2-18": {
+    "id": "2-sam-2-18",
+    "reference": "2 Samuel 2:18",
+    "web": "The three sons of Zeruiah were there: Joab, Abishai, and Asahel. Asahel was as light of foot as a wild gazelle.",
+    "kjv": "And there were three sons of Zeruiah there, Joab, and Abishai, and Asahel: and Asahel was as light of foot as a wild roe."
+  },
+  "2-sam-2-19": {
+    "id": "2-sam-2-19",
+    "reference": "2 Samuel 2:19",
+    "web": "Asahel pursued Abner. He didn’t turn to the right hand or to the left from following Abner.",
+    "kjv": "And Asahel pursued after Abner; and in going he turned not to the right hand nor to the left from following Abner."
+  },
+  "2-sam-2-20": {
+    "id": "2-sam-2-20",
+    "reference": "2 Samuel 2:20",
+    "web": "Then Abner looked behind him and said, “Is that you, Asahel?”\n\nHe answered, “It is.”",
+    "kjv": "Then Abner looked behind him, and said, Art thou Asahel? And he answered, I am."
+  },
+  "2-sam-2-21": {
+    "id": "2-sam-2-21",
+    "reference": "2 Samuel 2:21",
+    "web": "Abner said to him, “Turn away to your right hand or to your left, and grab one of the young men, and take his armor.” But Asahel would not turn away from following him.",
+    "kjv": "And Abner said to him, Turn thee aside to thy right hand or to thy left, and lay thee hold on one of the young men, and take thee his armour. But Asahel would not turn aside from following of him."
+  },
+  "2-sam-2-22": {
+    "id": "2-sam-2-22",
+    "reference": "2 Samuel 2:22",
+    "web": "Abner said again to Asahel, “Turn away from following me. Why should I strike you to the ground? How then could I look Joab your brother in the face?”",
+    "kjv": "And Abner said again to Asahel, Turn thee aside from following me: wherefore should I smite thee to the ground? how then should I hold up my face to Joab thy brother?"
+  },
+  "2-sam-2-23": {
+    "id": "2-sam-2-23",
+    "reference": "2 Samuel 2:23",
+    "web": "However, he refused to turn away. Therefore Abner with the back end of the spear struck him in the body, so that the spear came out behind him; and he fell down there and died in the same place. As many as came to the place where Asahel fell down and died stood still.",
+    "kjv": "Howbeit he refused to turn aside: wherefore Abner with the hinder end of the spear smote him under the fifth rib, that the spear came out behind him; and he fell down there, and died in the same place: and it came to pass, that as many as came to the place where Asahel fell down and died stood still."
+  },
+  "2-sam-2-24": {
+    "id": "2-sam-2-24",
+    "reference": "2 Samuel 2:24",
+    "web": "But Joab and Abishai pursued Abner. The sun went down when they had come to the hill of Ammah, that lies before Giah by the way of the wilderness of Gibeon.",
+    "kjv": "Joab also and Abishai pursued after Abner: and the sun went down when they were come to the hill of Ammah, that lieth before Giah by the way of the wilderness of Gibeon."
+  },
+  "2-sam-2-25": {
+    "id": "2-sam-2-25",
+    "reference": "2 Samuel 2:25",
+    "web": "The children of Benjamin gathered themselves together after Abner and became one band, and stood on the top of a hill.",
+    "kjv": "And the children of Benjamin gathered themselves together after Abner, and became one troop, and stood on the top of an hill."
+  },
+  "2-sam-2-26": {
+    "id": "2-sam-2-26",
+    "reference": "2 Samuel 2:26",
+    "web": "Then Abner called to Joab, and said, “Shall the sword devour forever? Don’t you know that it will be bitterness in the latter end? How long will it be then, before you ask the people to return from following their brothers?”",
+    "kjv": "Then Abner called to Joab, and said, Shall the sword devour for ever? knowest thou not that it will be bitterness in the latter end? how long shall it be then, ere thou bid the people return from following their brethren?"
+  },
+  "2-sam-2-27": {
+    "id": "2-sam-2-27",
+    "reference": "2 Samuel 2:27",
+    "web": "Joab said, “As God lives, if you had not spoken, surely then in the morning the people would have gone away, and not each followed his brother.”",
+    "kjv": "And Joab said, As God liveth, unless thou hadst spoken, surely then in the morning the people had gone up every one from following his brother."
+  },
+  "2-sam-2-28": {
+    "id": "2-sam-2-28",
+    "reference": "2 Samuel 2:28",
+    "web": "So Joab blew the trumpet; and all the people stood still and pursued Israel no more, and they fought no more.",
+    "kjv": "So Joab blew a trumpet, and all the people stood still, and pursued after Israel no more, neither fought they any more."
+  },
+  "2-sam-2-29": {
+    "id": "2-sam-2-29",
+    "reference": "2 Samuel 2:29",
+    "web": "Abner and his men went all that night through the Arabah; and they passed over the Jordan, and went through all Bithron, and came to Mahanaim.",
+    "kjv": "And Abner and his men walked all that night through the plain, and passed over Jordan, and went through all Bithron, and they came to Mahanaim."
+  },
+  "2-sam-2-30": {
+    "id": "2-sam-2-30",
+    "reference": "2 Samuel 2:30",
+    "web": "Joab returned from following Abner; and when he had gathered all the people together, nineteen men of David’s and Asahel were missing.",
+    "kjv": "And Joab returned from following Abner: and when he had gathered all the people together, there lacked of David’s servants nineteen men and Asahel."
+  },
+  "2-sam-2-31": {
+    "id": "2-sam-2-31",
+    "reference": "2 Samuel 2:31",
+    "web": "But David’s servants had struck Benjamin Abner’s men so that three hundred sixty men died.",
+    "kjv": "But the servants of David had smitten of Benjamin, and of Abner’s men, so that three hundred and threescore men died."
+  },
+  "2-sam-2-32": {
+    "id": "2-sam-2-32",
+    "reference": "2 Samuel 2:32",
+    "web": "They took up Asahel and buried him in the tomb of his father, which was in Bethlehem. Joab and his men went all night, and the day broke on them at Hebron.",
+    "kjv": "And they took up Asahel, and buried him in the sepulchre of his father, which was in Beth-lehem. And Joab and his men went all night, and they came to Hebron at break of day."
+  },
+  "2-sam-3-1": {
+    "id": "2-sam-3-1",
+    "reference": "2 Samuel 3:1",
+    "web": "Now there was long war between Saul’s house and David’s house. David grew stronger and stronger, but Saul’s house grew weaker and weaker.",
+    "kjv": "Now there was long war between the house of Saul and the house of David: but David waxed stronger and stronger, and the house of Saul waxed weaker and weaker."
+  },
+  "2-sam-3-2": {
+    "id": "2-sam-3-2",
+    "reference": "2 Samuel 3:2",
+    "web": "Sons were born to David in Hebron. His firstborn was Amnon, of Ahinoam the Jezreelitess;",
+    "kjv": "And unto David were sons born in Hebron: and his firstborn was Amnon, of Ahinoam the Jezreelitess;"
+  },
+  "2-sam-3-3": {
+    "id": "2-sam-3-3",
+    "reference": "2 Samuel 3:3",
+    "web": "and his second, Chileab, of Abigail the wife of Nabal the Carmelite; and the third, Absalom the son of Maacah the daughter of Talmai king of Geshur;",
+    "kjv": "And his second, Chileab, of Abigail the wife of Nabal the Carmelite; and the third, Absalom the son of Maacah the daughter of Talmai king of Geshur;"
+  },
+  "2-sam-3-4": {
+    "id": "2-sam-3-4",
+    "reference": "2 Samuel 3:4",
+    "web": "and the fourth, Adonijah the son of Haggith; and the fifth, Shephatiah the son of Abital;",
+    "kjv": "And the fourth, Adonijah the son of Haggith; and the fifth, Shephatiah the son of Abital;"
+  },
+  "2-sam-3-5": {
+    "id": "2-sam-3-5",
+    "reference": "2 Samuel 3:5",
+    "web": "and the sixth, Ithream, of Eglah, David’s wife. These were born to David in Hebron.",
+    "kjv": "And the sixth, Ithream, by Eglah David’s wife. These were born to David in Hebron."
+  },
+  "2-sam-3-6": {
+    "id": "2-sam-3-6",
+    "reference": "2 Samuel 3:6",
+    "web": "While there was war between Saul’s house and David’s house, Abner made himself strong in Saul’s house.",
+    "kjv": "And it came to pass, while there was war between the house of Saul and the house of David, that Abner made himself strong for the house of Saul."
+  },
+  "2-sam-3-7": {
+    "id": "2-sam-3-7",
+    "reference": "2 Samuel 3:7",
+    "web": "Now Saul had a concubine, whose name was Rizpah, the daughter of Aiah; and Ishbosheth said to Abner, “Why have you gone in to my father’s concubine?”",
+    "kjv": "And Saul had a concubine, whose name was Rizpah, the daughter of Aiah: and Ish-bosheth said to Abner, Wherefore hast thou gone in unto my father’s concubine?"
+  },
+  "2-sam-3-8": {
+    "id": "2-sam-3-8",
+    "reference": "2 Samuel 3:8",
+    "web": "Then Abner was very angry about Ishbosheth’s words, and said, “Am I a dog’s head that belongs to Judah? Today I show kindness to your father Saul’s house, to his brothers, and to his friends, and have not delivered you into the hand of David; and yet you charge me today with a fault concerning this woman!",
+    "kjv": "Then was Abner very wroth for the words of Ish-bosheth, and said, Am I a dog’s head, which against Judah do shew kindness this day unto the house of Saul thy father, to his brethren, and to his friends, and have not delivered thee into the hand of David, that thou chargest me to day with a fault concerning this woman?"
+  },
+  "2-sam-3-9": {
+    "id": "2-sam-3-9",
+    "reference": "2 Samuel 3:9",
+    "web": "God do so to Abner, and more also, if, as the LORD has sworn to David, I don’t do even so to him:",
+    "kjv": "So do God to Abner, and more also, except, as the LORD hath sworn to David, even so I do to him;"
+  },
+  "2-sam-3-10": {
+    "id": "2-sam-3-10",
+    "reference": "2 Samuel 3:10",
+    "web": "to transfer the kingdom from Saul’s house, and to set up David’s throne over Israel and over Judah, from Dan even to Beersheba.”",
+    "kjv": "To translate the kingdom from the house of Saul, and to set up the throne of David over Israel and over Judah, from Dan even to Beer-sheba."
+  },
+  "2-sam-3-11": {
+    "id": "2-sam-3-11",
+    "reference": "2 Samuel 3:11",
+    "web": "He could not answer Abner another word, because he was afraid of him.",
+    "kjv": "And he could not answer Abner a word again, because he feared him."
+  },
+  "2-sam-3-12": {
+    "id": "2-sam-3-12",
+    "reference": "2 Samuel 3:12",
+    "web": "Abner sent messengers to David on his behalf, saying, “Whose is the land?” and saying, “Make your alliance with me, and behold, my hand will be with you to bring all Israel around to you.”",
+    "kjv": "And Abner sent messengers to David on his behalf, saying, Whose is the land? saying also, Make thy league with me, and, behold, my hand shall be with thee, to bring about all Israel unto thee."
+  },
+  "2-sam-3-13": {
+    "id": "2-sam-3-13",
+    "reference": "2 Samuel 3:13",
+    "web": "David said, “Good. I will make a treaty with you, but one thing I require of you. That is, you will not see my face unless you first bring Michal, Saul’s daughter, when you come to see my face.”",
+    "kjv": "And he said, Well; I will make a league with thee: but one thing I require of thee, that is, Thou shalt not see my face, except thou first bring Michal Saul’s daughter, when thou comest to see my face."
+  },
+  "2-sam-3-14": {
+    "id": "2-sam-3-14",
+    "reference": "2 Samuel 3:14",
+    "web": "David sent messengers to Ishbosheth, Saul’s son, saying, “Deliver me my wife Michal, whom I was given to marry for one hundred foreskins of the Philistines.”",
+    "kjv": "And David sent messengers to Ish-bosheth Saul’s son, saying, Deliver me my wife Michal, which I espoused to me for an hundred foreskins of the Philistines."
+  },
+  "2-sam-3-15": {
+    "id": "2-sam-3-15",
+    "reference": "2 Samuel 3:15",
+    "web": "Ishbosheth sent and took her from her husband, Paltiel the son of Laish.",
+    "kjv": "And Ish-bosheth sent, and took her from her husband, even from Phaltiel the son of Laish."
+  },
+  "2-sam-3-16": {
+    "id": "2-sam-3-16",
+    "reference": "2 Samuel 3:16",
+    "web": "Her husband went with her, weeping as he went, and followed her to Bahurim. Then Abner said to him, “Go! Return!” and he returned.",
+    "kjv": "And her husband went with her along weeping behind her to Bahurim. Then said Abner unto him, Go, return. And he returned."
+  },
+  "2-sam-3-17": {
+    "id": "2-sam-3-17",
+    "reference": "2 Samuel 3:17",
+    "web": "Abner had communication with the elders of Israel, saying, “In times past, you sought for David to be king over you.",
+    "kjv": "And Abner had communication with the elders of Israel, saying, Ye sought for David in times past to be king over you:"
+  },
+  "2-sam-3-18": {
+    "id": "2-sam-3-18",
+    "reference": "2 Samuel 3:18",
+    "web": "Now then do it! For the LORD has spoken of David, saying, ‘By the hand of my servant David, I will save my people Israel out of the hand of the Philistines, and out of the hand of all their enemies.’”",
+    "kjv": "Now then do it: for the LORD hath spoken of David, saying, By the hand of my servant David I will save my people Israel out of the hand of the Philistines, and out of the hand of all their enemies."
+  },
+  "2-sam-3-19": {
+    "id": "2-sam-3-19",
+    "reference": "2 Samuel 3:19",
+    "web": "Abner also spoke in the ears of Benjamin; and Abner went also to speak in the ears of David in Hebron all that seemed good to Israel and to the whole house of Benjamin.",
+    "kjv": "And Abner also spake in the ears of Benjamin: and Abner went also to speak in the ears of David in Hebron all that seemed good to Israel, and that seemed good to the whole house of Benjamin."
+  },
+  "2-sam-3-20": {
+    "id": "2-sam-3-20",
+    "reference": "2 Samuel 3:20",
+    "web": "So Abner came to David to Hebron, and twenty men with him. David made Abner and the men who were with him a feast.",
+    "kjv": "So Abner came to David to Hebron, and twenty men with him. And David made Abner and the men that were with him a feast."
+  },
+  "2-sam-3-21": {
+    "id": "2-sam-3-21",
+    "reference": "2 Samuel 3:21",
+    "web": "Abner said to David, “I will arise and go, and will gather all Israel to my lord the king, that they may make a covenant with you, and that you may reign over all that your soul desires.” David sent Abner away; and he went in peace.",
+    "kjv": "And Abner said unto David, I will arise and go, and will gather all Israel unto my lord the king, that they may make a league with thee, and that thou mayest reign over all that thine heart desireth. And David sent Abner away; and he went in peace."
+  },
+  "2-sam-3-22": {
+    "id": "2-sam-3-22",
+    "reference": "2 Samuel 3:22",
+    "web": "Behold, David’s servants and Joab came from a raid and brought in a great plunder with them; but Abner was not with David in Hebron, for he had sent him away, and he had gone in peace.",
+    "kjv": "And, behold, the servants of David and Joab came from pursuing a troop, and brought in a great spoil with them: but Abner was not with David in Hebron; for he had sent him away, and he was gone in peace."
+  },
+  "2-sam-3-23": {
+    "id": "2-sam-3-23",
+    "reference": "2 Samuel 3:23",
+    "web": "When Joab and all the army who was with him had come, they told Joab, “Abner the son of Ner came to the king, and he has sent him away, and he has gone in peace.”",
+    "kjv": "When Joab and all the host that was with him were come, they told Joab, saying, Abner the son of Ner came to the king, and he hath sent him away, and he is gone in peace."
+  },
+  "2-sam-3-24": {
+    "id": "2-sam-3-24",
+    "reference": "2 Samuel 3:24",
+    "web": "Then Joab came to the king and said, “What have you done? Behold, Abner came to you. Why is it that you have sent him away, and he is already gone?",
+    "kjv": "Then Joab came to the king, and said, What hast thou done? behold, Abner came unto thee; why is it that thou hast sent him away, and he is quite gone?"
+  },
+  "2-sam-3-25": {
+    "id": "2-sam-3-25",
+    "reference": "2 Samuel 3:25",
+    "web": "You know Abner the son of Ner. He came to deceive you, and to know your going out and your coming in, and to know all that you do.”",
+    "kjv": "Thou knowest Abner the son of Ner, that he came to deceive thee, and to know thy going out and thy coming in, and to know all that thou doest."
+  },
+  "2-sam-3-26": {
+    "id": "2-sam-3-26",
+    "reference": "2 Samuel 3:26",
+    "web": "When Joab had come out from David, he sent messengers after Abner, and they brought him back from the well of Sirah; but David didn’t know it.",
+    "kjv": "And when Joab was come out from David, he sent messengers after Abner, which brought him again from the well of Sirah: but David knew it not."
+  },
+  "2-sam-3-27": {
+    "id": "2-sam-3-27",
+    "reference": "2 Samuel 3:27",
+    "web": "When Abner had returned to Hebron, Joab took him aside into the middle of the gate to speak with him quietly, and struck him there in the body, so that he died for the blood of Asahel his brother.",
+    "kjv": "And when Abner was returned to Hebron, Joab took him aside in the gate to speak with him quietly, and smote him there under the fifth rib, that he died, for the blood of Asahel his brother."
+  },
+  "2-sam-3-28": {
+    "id": "2-sam-3-28",
+    "reference": "2 Samuel 3:28",
+    "web": "Afterward, when David heard it, he said, “I and my kingdom are guiltless before the LORD forever of the blood of Abner the son of Ner.",
+    "kjv": "And afterward when David heard it, he said, I and my kingdom are guiltless before the LORD for ever from the blood of Abner the son of Ner:"
+  },
+  "2-sam-3-29": {
+    "id": "2-sam-3-29",
+    "reference": "2 Samuel 3:29",
+    "web": "Let it fall on the head of Joab and on all his father’s house. Let there not fail from the house of Joab one who has a discharge, or who is a leper, or who leans on a staff, or who falls by the sword, or who lacks bread.”",
+    "kjv": "Let it rest on the head of Joab, and on all his father’s house; and let there not fail from the house of Joab one that hath an issue, or that is a leper, or that leaneth on a staff, or that falleth on the sword, or that lacketh bread."
+  },
+  "2-sam-3-30": {
+    "id": "2-sam-3-30",
+    "reference": "2 Samuel 3:30",
+    "web": "So Joab and Abishai his brother killed Abner, because he had killed their brother Asahel at Gibeon in the battle.",
+    "kjv": "So Joab and Abishai his brother slew Abner, because he had slain their brother Asahel at Gibeon in the battle."
+  },
+  "2-sam-3-31": {
+    "id": "2-sam-3-31",
+    "reference": "2 Samuel 3:31",
+    "web": "David said to Joab and to all the people who were with him, “Tear your clothes, and clothe yourselves with sackcloth, and mourn in front of Abner.” King David followed the bier.",
+    "kjv": "And David said to Joab, and to all the people that were with him, Rend your clothes, and gird you with sackcloth, and mourn before Abner. And king David himself followed the bier."
+  },
+  "2-sam-3-32": {
+    "id": "2-sam-3-32",
+    "reference": "2 Samuel 3:32",
+    "web": "They buried Abner in Hebron; and the king lifted up his voice and wept at Abner’s grave; and all the people wept.",
+    "kjv": "And they buried Abner in Hebron: and the king lifted up his voice, and wept at the grave of Abner; and all the people wept."
+  },
+  "2-sam-3-33": {
+    "id": "2-sam-3-33",
+    "reference": "2 Samuel 3:33",
+    "web": "The king lamented for Abner, and said, “Should Abner die as a fool dies?",
+    "kjv": "And the king lamented over Abner, and said, Died Abner as a fool dieth?"
+  },
+  "2-sam-3-34": {
+    "id": "2-sam-3-34",
+    "reference": "2 Samuel 3:34",
+    "web": "Your hands weren’t bound, and your feet weren’t put into fetters. As a man falls before the children of iniquity, so you fell.”\n\nAll the people wept again over him.",
+    "kjv": "Thy hands were not bound, nor thy feet put into fetters: as a man falleth before wicked men, so fellest thou. And all the people wept again over him."
+  },
+  "2-sam-3-35": {
+    "id": "2-sam-3-35",
+    "reference": "2 Samuel 3:35",
+    "web": "All the people came to urge David to eat bread while it was yet day; but David swore, saying, “God do so to me, and more also, if I taste bread or anything else, until the sun goes down.”",
+    "kjv": "And when all the people came to cause David to eat meat while it was yet day, David sware, saying, So do God to me, and more also, if I taste bread, or ought else, till the sun be down."
+  },
+  "2-sam-3-36": {
+    "id": "2-sam-3-36",
+    "reference": "2 Samuel 3:36",
+    "web": "All the people took notice of it, and it pleased them, as whatever the king did pleased all the people.",
+    "kjv": "And all the people took notice of it, and it pleased them: as whatsoever the king did pleased all the people."
+  },
+  "2-sam-3-37": {
+    "id": "2-sam-3-37",
+    "reference": "2 Samuel 3:37",
+    "web": "So all the people and all Israel understood that day that it was not of the king to kill Abner the son of Ner.",
+    "kjv": "For all the people and all Israel understood that day that it was not of the king to slay Abner the son of Ner."
+  },
+  "2-sam-3-38": {
+    "id": "2-sam-3-38",
+    "reference": "2 Samuel 3:38",
+    "web": "The king said to his servants, “Don’t you know that a prince and a great man has fallen today in Israel?",
+    "kjv": "And the king said unto his servants, Know ye not that there is a prince and a great man fallen this day in Israel?"
+  },
+  "2-sam-3-39": {
+    "id": "2-sam-3-39",
+    "reference": "2 Samuel 3:39",
+    "web": "I am weak today, though anointed king. These men, the sons of Zeruiah are too hard for me. May the LORD reward the evildoer according to his wickedness.”",
+    "kjv": "And I am this day weak, though anointed king; and these men the sons of Zeruiah be too hard for me: the LORD shall reward the doer of evil according to his wickedness."
+  },
   "2-sam-7-1": {
     "id": "2-sam-7-1",
     "reference": "2 Samuel 7:1",
@@ -9500,6 +10076,120 @@ export const scripture: Record<string, Verse> = {
     "reference": "2 Samuel 7:29",
     "web": "Now therefore, let it please you to bless the house of your servant, that it may continue forever before you; for you, Lord GOD, have spoken it. Let the house of your servant be blessed forever with your blessing.”",
     "kjv": "Therefore now let it please thee to bless the house of thy servant, that it may continue for ever before thee: for thou, O Lord GOD, hast spoken it: and with thy blessing let the house of thy servant be blessed for ever."
+  },
+  "2-sam-10-1": {
+    "id": "2-sam-10-1",
+    "reference": "2 Samuel 10:1",
+    "web": "After this, the king of the children of Ammon died, and Hanun his son reigned in his place.",
+    "kjv": "And it came to pass after this, that the king of the children of Ammon died, and Hanun his son reigned in his stead."
+  },
+  "2-sam-10-2": {
+    "id": "2-sam-10-2",
+    "reference": "2 Samuel 10:2",
+    "web": "David said, “I will show kindness to Hanun the son of Nahash, as his father showed kindness to me.” So David sent by his servants to comfort him concerning his father. David’s servants came into the land of the children of Ammon.",
+    "kjv": "Then said David, I will shew kindness unto Hanun the son of Nahash, as his father shewed kindness unto me. And David sent to comfort him by the hand of his servants for his father. And David’s servants came into the land of the children of Ammon."
+  },
+  "2-sam-10-3": {
+    "id": "2-sam-10-3",
+    "reference": "2 Samuel 10:3",
+    "web": "But the princes of the children of Ammon said to Hanun their lord, “Do you think that David honors your father, in that he has sent comforters to you? Hasn’t David sent his servants to you to search the city, to spy it out, and to overthrow it?”",
+    "kjv": "And the princes of the children of Ammon said unto Hanun their lord, Thinkest thou that David doth honour thy father, that he hath sent comforters unto thee? hath not David rather sent his servants unto thee, to search the city, and to spy it out, and to overthrow it?"
+  },
+  "2-sam-10-4": {
+    "id": "2-sam-10-4",
+    "reference": "2 Samuel 10:4",
+    "web": "So Hanun took David’s servants, shaved off one half of their beards, and cut off their garments in the middle, even to their buttocks, and sent them away.",
+    "kjv": "Wherefore Hanun took David’s servants, and shaved off the one half of their beards, and cut off their garments in the middle, even to their buttocks, and sent them away."
+  },
+  "2-sam-10-5": {
+    "id": "2-sam-10-5",
+    "reference": "2 Samuel 10:5",
+    "web": "When they told David this, he sent to meet them, for the men were greatly ashamed. The king said, “Wait at Jericho until your beards have grown, and then return.”",
+    "kjv": "When they told it unto David, he sent to meet them, because the men were greatly ashamed: and the king said, Tarry at Jericho until your beards be grown, and then return."
+  },
+  "2-sam-10-6": {
+    "id": "2-sam-10-6",
+    "reference": "2 Samuel 10:6",
+    "web": "When the children of Ammon saw that they had become odious to David, the children of Ammon sent and hired the Syrians of Beth Rehob and the Syrians of Zobah, twenty thousand footmen, and the king of Maacah with one thousand men, and the men of Tob twelve thousand men.",
+    "kjv": "And when the children of Ammon saw that they stank before David, the children of Ammon sent and hired the Syrians of Beth-rehob, and the Syrians of Zoba, twenty thousand footmen, and of king Maacah a thousand men, and of Ish-tob twelve thousand men."
+  },
+  "2-sam-10-7": {
+    "id": "2-sam-10-7",
+    "reference": "2 Samuel 10:7",
+    "web": "When David heard of it, he sent Joab and all the army of the mighty men.",
+    "kjv": "And when David heard of it, he sent Joab, and all the host of the mighty men."
+  },
+  "2-sam-10-8": {
+    "id": "2-sam-10-8",
+    "reference": "2 Samuel 10:8",
+    "web": "The children of Ammon came out, and put the battle in array at the entrance of the gate. The Syrians of Zobah and of Rehob and the men of Tob and Maacah were by themselves in the field.",
+    "kjv": "And the children of Ammon came out, and put the battle in array at the entering in of the gate: and the Syrians of Zoba, and of Rehob, and Ish-tob, and Maacah, were by themselves in the field."
+  },
+  "2-sam-10-9": {
+    "id": "2-sam-10-9",
+    "reference": "2 Samuel 10:9",
+    "web": "Now when Joab saw that the battle was set against him before and behind, he chose of all the choice men of Israel and put them in array against the Syrians.",
+    "kjv": "When Joab saw that the front of the battle was against him before and behind, he chose of all the choice men of Israel, and put them in array against the Syrians:"
+  },
+  "2-sam-10-10": {
+    "id": "2-sam-10-10",
+    "reference": "2 Samuel 10:10",
+    "web": "The rest of the people he committed into the hand of Abishai his brother; and he put them in array against the children of Ammon.",
+    "kjv": "And the rest of the people he delivered into the hand of Abishai his brother, that he might put them in array against the children of Ammon."
+  },
+  "2-sam-10-11": {
+    "id": "2-sam-10-11",
+    "reference": "2 Samuel 10:11",
+    "web": "He said, “If the Syrians are too strong for me, then you shall help me; but if the children of Ammon are too strong for you, then I will come and help you.",
+    "kjv": "And he said, If the Syrians be too strong for me, then thou shalt help me: but if the children of Ammon be too strong for thee, then I will come and help thee."
+  },
+  "2-sam-10-12": {
+    "id": "2-sam-10-12",
+    "reference": "2 Samuel 10:12",
+    "web": "Be courageous, and let’s be strong for our people and for the cities of our God; and may the LORD do what seems good to him.”",
+    "kjv": "Be of good courage, and let us play the men for our people, and for the cities of our God: and the LORD do that which seemeth him good."
+  },
+  "2-sam-10-13": {
+    "id": "2-sam-10-13",
+    "reference": "2 Samuel 10:13",
+    "web": "So Joab and the people who were with him came near to the battle against the Syrians, and they fled before him.",
+    "kjv": "And Joab drew nigh, and the people that were with him, unto the battle against the Syrians: and they fled before him."
+  },
+  "2-sam-10-14": {
+    "id": "2-sam-10-14",
+    "reference": "2 Samuel 10:14",
+    "web": "When the children of Ammon saw that the Syrians had fled, they likewise fled before Abishai, and entered into the city. Then Joab returned from the children of Ammon and came to Jerusalem.",
+    "kjv": "And when the children of Ammon saw that the Syrians were fled, then fled they also before Abishai, and entered into the city. So Joab returned from the children of Ammon, and came to Jerusalem."
+  },
+  "2-sam-10-15": {
+    "id": "2-sam-10-15",
+    "reference": "2 Samuel 10:15",
+    "web": "When the Syrians saw that they were defeated by Israel, they gathered themselves together.",
+    "kjv": "And when the Syrians saw that they were smitten before Israel, they gathered themselves together."
+  },
+  "2-sam-10-16": {
+    "id": "2-sam-10-16",
+    "reference": "2 Samuel 10:16",
+    "web": "Hadadezer sent and brought out the Syrians who were beyond the River; and they came to Helam, with Shobach the captain of the army of Hadadezer at their head.",
+    "kjv": "And Hadarezer sent, and brought out the Syrians that were beyond the river: and they came to Helam; and Shobach the captain of the host of Hadarezer went before them."
+  },
+  "2-sam-10-17": {
+    "id": "2-sam-10-17",
+    "reference": "2 Samuel 10:17",
+    "web": "David was told that; and he gathered all Israel together, passed over the Jordan, and came to Helam. The Syrians set themselves in array against David and fought with him.",
+    "kjv": "And when it was told David, he gathered all Israel together, and passed over Jordan, and came to Helam. And the Syrians set themselves in array against David, and fought with him."
+  },
+  "2-sam-10-18": {
+    "id": "2-sam-10-18",
+    "reference": "2 Samuel 10:18",
+    "web": "The Syrians fled before Israel; and David killed seven hundred charioteers of the Syrians and forty thousand horsemen, and struck Shobach the captain of their army, so that he died there.",
+    "kjv": "And the Syrians fled before Israel; and David slew the men of seven hundred chariots of the Syrians, and forty thousand horsemen, and smote Shobach the captain of their host, who died there."
+  },
+  "2-sam-10-19": {
+    "id": "2-sam-10-19",
+    "reference": "2 Samuel 10:19",
+    "web": "When all the kings who were servants to Hadadezer saw that they were defeated before Israel, they made peace with Israel and served them. So the Syrians were afraid to help the children of Ammon any more.",
+    "kjv": "And when all the kings that were servants to Hadarezer saw that they were smitten before Israel, they made peace with Israel, and served them. So the Syrians feared to help the children of Ammon any more."
   },
   "2-sam-11-1": {
     "id": "2-sam-11-1",
@@ -9849,6 +10539,1434 @@ export const scripture: Record<string, Verse> = {
     "web": "He brought out the people who were in it, and put them to work under saws, under iron picks, under axes of iron, and made them go to the brick kiln; and he did so to all the cities of the children of Ammon. Then David and all the people returned to Jerusalem.",
     "kjv": "And he brought forth the people that were therein, and put them under saws, and under harrows of iron, and under axes of iron, and made them pass through the brickkiln: and thus did he unto all the cities of the children of Ammon. So David and all the people returned unto Jerusalem."
   },
+  "2-sam-17-1": {
+    "id": "2-sam-17-1",
+    "reference": "2 Samuel 17:1",
+    "web": "Moreover Ahithophel said to Absalom, “Let me now choose twelve thousand men, and I will arise and pursue after David tonight.",
+    "kjv": "Moreover Ahithophel said unto Absalom, Let me now choose out twelve thousand men, and I will arise and pursue after David this night:"
+  },
+  "2-sam-17-2": {
+    "id": "2-sam-17-2",
+    "reference": "2 Samuel 17:2",
+    "web": "I will come on him while he is weary and exhausted, and will make him afraid. All the people who are with him will flee. I will strike the king only,",
+    "kjv": "And I will come upon him while he is weary and weak handed, and will make him afraid: and all the people that are with him shall flee; and I will smite the king only:"
+  },
+  "2-sam-17-3": {
+    "id": "2-sam-17-3",
+    "reference": "2 Samuel 17:3",
+    "web": "and I will bring back all the people to you. The man whom you seek is as if all returned. All the people shall be in peace.”",
+    "kjv": "And I will bring back all the people unto thee: the man whom thou seekest is as if all returned: so all the people shall be in peace."
+  },
+  "2-sam-17-4": {
+    "id": "2-sam-17-4",
+    "reference": "2 Samuel 17:4",
+    "web": "The saying pleased Absalom well, and all the elders of Israel.",
+    "kjv": "And the saying pleased Absalom well, and all the elders of Israel."
+  },
+  "2-sam-17-5": {
+    "id": "2-sam-17-5",
+    "reference": "2 Samuel 17:5",
+    "web": "Then Absalom said, “Now call Hushai the Archite also, and let’s hear likewise what he says.”",
+    "kjv": "Then said Absalom, Call now Hushai the Archite also, and let us hear likewise what he saith."
+  },
+  "2-sam-17-6": {
+    "id": "2-sam-17-6",
+    "reference": "2 Samuel 17:6",
+    "web": "When Hushai had come to Absalom, Absalom spoke to him, saying, “Ahithophel has spoken like this. Shall we do what he says? If not, speak up.”",
+    "kjv": "And when Hushai was come to Absalom, Absalom spake unto him, saying, Ahithophel hath spoken after this manner: shall we do after his saying? if not; speak thou."
+  },
+  "2-sam-17-7": {
+    "id": "2-sam-17-7",
+    "reference": "2 Samuel 17:7",
+    "web": "Hushai said to Absalom, “The counsel that Ahithophel has given this time is not good.”",
+    "kjv": "And Hushai said unto Absalom, The counsel that Ahithophel hath given is not good at this time."
+  },
+  "2-sam-17-8": {
+    "id": "2-sam-17-8",
+    "reference": "2 Samuel 17:8",
+    "web": "Hushai said moreover, “You know your father and his men, that they are mighty men, and they are fierce in their minds, like a bear robbed of her cubs in the field. Your father is a man of war, and will not lodge with the people.",
+    "kjv": "For, said Hushai, thou knowest thy father and his men, that they be mighty men, and they be chafed in their minds, as a bear robbed of her whelps in the field: and thy father is a man of war, and will not lodge with the people."
+  },
+  "2-sam-17-9": {
+    "id": "2-sam-17-9",
+    "reference": "2 Samuel 17:9",
+    "web": "Behold, he is now hidden in some pit, or in some other place. It will happen, when some of them have fallen at the first, that whoever hears it will say, ‘There is a slaughter among the people who follow Absalom!’",
+    "kjv": "Behold, he is hid now in some pit, or in some other place: and it will come to pass, when some of them be overthrown at the first, that whosoever heareth it will say, There is a slaughter among the people that follow Absalom."
+  },
+  "2-sam-17-10": {
+    "id": "2-sam-17-10",
+    "reference": "2 Samuel 17:10",
+    "web": "Even he who is valiant, whose heart is as the heart of a lion, will utterly melt; for all Israel knows that your father is a mighty man, and those who are with him are valiant men.",
+    "kjv": "And he also that is valiant, whose heart is as the heart of a lion, shall utterly melt: for all Israel knoweth that thy father is a mighty man, and they which be with him are valiant men."
+  },
+  "2-sam-17-11": {
+    "id": "2-sam-17-11",
+    "reference": "2 Samuel 17:11",
+    "web": "But I counsel that all Israel be gathered together to you, from Dan even to Beersheba, as the sand that is by the sea for multitude; and that you go to battle in your own person.",
+    "kjv": "Therefore I counsel that all Israel be generally gathered unto thee, from Dan even to Beer-sheba, as the sand that is by the sea for multitude; and that thou go to battle in thine own person."
+  },
+  "2-sam-17-12": {
+    "id": "2-sam-17-12",
+    "reference": "2 Samuel 17:12",
+    "web": "So we will come on him in some place where he will be found, and we will light on him as the dew falls on the ground, then we will not leave so much as one of him and of all the men who are with him.",
+    "kjv": "So shall we come upon him in some place where he shall be found, and we will light upon him as the dew falleth on the ground: and of him and of all the men that are with him there shall not be left so much as one."
+  },
+  "2-sam-17-13": {
+    "id": "2-sam-17-13",
+    "reference": "2 Samuel 17:13",
+    "web": "Moreover, if he has gone into a city, then all Israel will bring ropes to that city, and we will draw it into the river, until there isn’t one small stone found there.”",
+    "kjv": "Moreover, if he be gotten into a city, then shall all Israel bring ropes to that city, and we will draw it into the river, until there be not one small stone found there."
+  },
+  "2-sam-17-14": {
+    "id": "2-sam-17-14",
+    "reference": "2 Samuel 17:14",
+    "web": "Absalom and all the men of Israel said, “The counsel of Hushai the Archite is better than the counsel of Ahithophel.” For the LORD had ordained to defeat the good counsel of Ahithophel, to the intent that the LORD might bring evil on Absalom.",
+    "kjv": "And Absalom and all the men of Israel said, The counsel of Hushai the Archite is better than the counsel of Ahithophel. For the LORD had appointed to defeat the good counsel of Ahithophel, to the intent that the LORD might bring evil upon Absalom."
+  },
+  "2-sam-17-15": {
+    "id": "2-sam-17-15",
+    "reference": "2 Samuel 17:15",
+    "web": "Then Hushai said to Zadok and to Abiathar the priests, “Ahithophel counseled Absalom and the elders of Israel that way; and I have counseled this way.",
+    "kjv": "Then said Hushai unto Zadok and to Abiathar the priests, Thus and thus did Ahithophel counsel Absalom and the elders of Israel; and thus and thus have I counselled."
+  },
+  "2-sam-17-16": {
+    "id": "2-sam-17-16",
+    "reference": "2 Samuel 17:16",
+    "web": "Now therefore send quickly, and tell David, saying, ‘Don’t lodge tonight at the fords of the wilderness, but by all means pass over, lest the king be swallowed up, and all the people who are with him.’”",
+    "kjv": "Now therefore send quickly, and tell David, saying, Lodge not this night in the plains of the wilderness, but speedily pass over; lest the king be swallowed up, and all the people that are with him."
+  },
+  "2-sam-17-17": {
+    "id": "2-sam-17-17",
+    "reference": "2 Samuel 17:17",
+    "web": "Now Jonathan and Ahimaaz were staying by En Rogel; and a female servant used to go and report to them, and they went and told King David; for they couldn’t risk being seen coming into the city.",
+    "kjv": "Now Jonathan and Ahimaaz stayed by En-rogel; for they might not be seen to come into the city: and a wench went and told them; and they went and told king David."
+  },
+  "2-sam-17-18": {
+    "id": "2-sam-17-18",
+    "reference": "2 Samuel 17:18",
+    "web": "But a boy saw them, and told Absalom. Then they both went away quickly and came to the house of a man in Bahurim, who had a well in his court; and they went down there.",
+    "kjv": "Nevertheless a lad saw them, and told Absalom: but they went both of them away quickly, and came to a man’s house in Bahurim, which had a well in his court; whither they went down."
+  },
+  "2-sam-17-19": {
+    "id": "2-sam-17-19",
+    "reference": "2 Samuel 17:19",
+    "web": "The woman took and spread the covering over the well’s mouth, and spread out crushed grain on it; and nothing was known.",
+    "kjv": "And the woman took and spread a covering over the well’s mouth, and spread ground corn thereon; and the thing was not known."
+  },
+  "2-sam-17-20": {
+    "id": "2-sam-17-20",
+    "reference": "2 Samuel 17:20",
+    "web": "Absalom’s servants came to the woman to the house; and they said, “Where are Ahimaaz and Jonathan?”\n\nThe woman said to them, “They have gone over the brook of water.”\n\nWhen they had sought and could not find them, they returned to Jerusalem.",
+    "kjv": "And when Absalom’s servants came to the woman to the house, they said, Where is Ahimaaz and Jonathan? And the woman said unto them, They be gone over the brook of water. And when they had sought and could not find them, they returned to Jerusalem."
+  },
+  "2-sam-17-21": {
+    "id": "2-sam-17-21",
+    "reference": "2 Samuel 17:21",
+    "web": "After they had departed, they came up out of the well and went and told King David; and they said to David, “Arise and pass quickly over the water; for thus has Ahithophel counseled against you.”",
+    "kjv": "And it came to pass, after they were departed, that they came up out of the well, and went and told king David, and said unto David, Arise, and pass quickly over the water: for thus hath Ahithophel counselled against you."
+  },
+  "2-sam-17-22": {
+    "id": "2-sam-17-22",
+    "reference": "2 Samuel 17:22",
+    "web": "Then David arose, and all the people who were with him, and they passed over the Jordan. By the morning light there lacked not one of them who had not gone over the Jordan.",
+    "kjv": "Then David arose, and all the people that were with him, and they passed over Jordan: by the morning light there lacked not one of them that was not gone over Jordan."
+  },
+  "2-sam-17-23": {
+    "id": "2-sam-17-23",
+    "reference": "2 Samuel 17:23",
+    "web": "When Ahithophel saw that his counsel was not followed, he saddled his donkey, arose, and went home to his city, set his house in order, and hanged himself; and he died, and was buried in the tomb of his father.",
+    "kjv": "And when Ahithophel saw that his counsel was not followed, he saddled his ass, and arose, and gat him home to his house, to his city, and put his household in order, and hanged himself, and died, and was buried in the sepulchre of his father."
+  },
+  "2-sam-17-24": {
+    "id": "2-sam-17-24",
+    "reference": "2 Samuel 17:24",
+    "web": "Then David came to Mahanaim. Absalom passed over the Jordan, he and all the men of Israel with him.",
+    "kjv": "Then David came to Mahanaim. And Absalom passed over Jordan, he and all the men of Israel with him."
+  },
+  "2-sam-17-25": {
+    "id": "2-sam-17-25",
+    "reference": "2 Samuel 17:25",
+    "web": "Absalom set Amasa over the army instead of Joab. Now Amasa was the son of a man whose name was Ithra the Israelite, who went in to Abigail the daughter of Nahash, sister to Zeruiah, Joab’s mother.",
+    "kjv": "And Absalom made Amasa captain of the host instead of Joab: which Amasa was a man’s son, whose name was Ithra an Israelite, that went in to Abigail the daughter of Nahash, sister to Zeruiah Joab’s mother."
+  },
+  "2-sam-17-26": {
+    "id": "2-sam-17-26",
+    "reference": "2 Samuel 17:26",
+    "web": "Israel and Absalom encamped in the land of Gilead.",
+    "kjv": "So Israel and Absalom pitched in the land of Gilead."
+  },
+  "2-sam-17-27": {
+    "id": "2-sam-17-27",
+    "reference": "2 Samuel 17:27",
+    "web": "When David had come to Mahanaim, Shobi the son of Nahash of Rabbah of the children of Ammon, and Machir the son of Ammiel of Lodebar, and Barzillai the Gileadite of Rogelim,",
+    "kjv": "And it came to pass, when David was come to Mahanaim, that Shobi the son of Nahash of Rabbah of the children of Ammon, and Machir the son of Ammiel of Lo-debar, and Barzillai the Gileadite of Rogelim,"
+  },
+  "2-sam-17-28": {
+    "id": "2-sam-17-28",
+    "reference": "2 Samuel 17:28",
+    "web": "brought beds, basins, earthen vessels, wheat, barley, meal, parched grain, beans, lentils, roasted grain,",
+    "kjv": "Brought beds, and basons, and earthen vessels, and wheat, and barley, and flour, and parched corn, and beans, and lentiles, and parched pulse,"
+  },
+  "2-sam-17-29": {
+    "id": "2-sam-17-29",
+    "reference": "2 Samuel 17:29",
+    "web": "honey, butter, sheep, and cheese of the herd, for David and for the people who were with him to eat; for they said, “The people are hungry, weary, and thirsty in the wilderness.”",
+    "kjv": "And honey, and butter, and sheep, and cheese of kine, for David, and for the people that were with him, to eat: for they said, The people is hungry, and weary, and thirsty, in the wilderness."
+  },
+  "2-sam-18-1": {
+    "id": "2-sam-18-1",
+    "reference": "2 Samuel 18:1",
+    "web": "David counted the people who were with him, and set captains of thousands and captains of hundreds over them.",
+    "kjv": "And David numbered the people that were with him, and set captains of thousands and captains of hundreds over them."
+  },
+  "2-sam-18-2": {
+    "id": "2-sam-18-2",
+    "reference": "2 Samuel 18:2",
+    "web": "David sent the people out, a third part under the hand of Joab, and a third part under the hand of Abishai the son of Zeruiah, Joab’s brother, and a third part under the hand of Ittai the Gittite. The king said to the people, “I will also surely go out with you myself.”",
+    "kjv": "And David sent forth a third part of the people under the hand of Joab, and a third part under the hand of Abishai the son of Zeruiah, Joab’s brother, and a third part under the hand of Ittai the Gittite. And the king said unto the people, I will surely go forth with you myself also."
+  },
+  "2-sam-18-3": {
+    "id": "2-sam-18-3",
+    "reference": "2 Samuel 18:3",
+    "web": "But the people said, “You shall not go out, for if we flee away, they will not care for us, neither if half of us die, will they care for us. But you are worth ten thousand of us. Therefore now it is better that you are ready to help us out of the city.”",
+    "kjv": "But the people answered, Thou shalt not go forth: for if we flee away, they will not care for us; neither if half of us die, will they care for us: but now thou art worth ten thousand of us: therefore now it is better that thou succour us out of the city."
+  },
+  "2-sam-18-4": {
+    "id": "2-sam-18-4",
+    "reference": "2 Samuel 18:4",
+    "web": "The king said to them, “I will do what seems best to you.”\n\nThe king stood beside the gate, and all the people went out by hundreds and by thousands.",
+    "kjv": "And the king said unto them, What seemeth you best I will do. And the king stood by the gate side, and all the people came out by hundreds and by thousands."
+  },
+  "2-sam-18-5": {
+    "id": "2-sam-18-5",
+    "reference": "2 Samuel 18:5",
+    "web": "The king commanded Joab and Abishai and Ittai, saying, “Deal gently for my sake with the young man Absalom.” All the people heard when the king commanded all the captains concerning Absalom.",
+    "kjv": "And the king commanded Joab and Abishai and Ittai, saying, Deal gently for my sake with the young man, even with Absalom. And all the people heard when the king gave all the captains charge concerning Absalom."
+  },
+  "2-sam-18-6": {
+    "id": "2-sam-18-6",
+    "reference": "2 Samuel 18:6",
+    "web": "So the people went out into the field against Israel; and the battle was in the forest of Ephraim.",
+    "kjv": "So the people went out into the field against Israel: and the battle was in the wood of Ephraim;"
+  },
+  "2-sam-18-7": {
+    "id": "2-sam-18-7",
+    "reference": "2 Samuel 18:7",
+    "web": "The people of Israel were struck there before David’s servants, and there was a great slaughter there that day of twenty thousand men.",
+    "kjv": "Where the people of Israel were slain before the servants of David, and there was there a great slaughter that day of twenty thousand men."
+  },
+  "2-sam-18-8": {
+    "id": "2-sam-18-8",
+    "reference": "2 Samuel 18:8",
+    "web": "For the battle was there spread over the surface of all the country, and the forest devoured more people that day than the sword devoured.",
+    "kjv": "For the battle was there scattered over the face of all the country: and the wood devoured more people that day than the sword devoured."
+  },
+  "2-sam-18-9": {
+    "id": "2-sam-18-9",
+    "reference": "2 Samuel 18:9",
+    "web": "Absalom happened to meet David’s servants. Absalom was riding on his mule, and the mule went under the thick boughs of a great oak; and his head caught hold of the oak, and he was hanging between the sky and earth; and the mule that was under him went on.",
+    "kjv": "And Absalom met the servants of David. And Absalom rode upon a mule, and the mule went under the thick boughs of a great oak, and his head caught hold of the oak, and he was taken up between the heaven and the earth; and the mule that was under him went away."
+  },
+  "2-sam-18-10": {
+    "id": "2-sam-18-10",
+    "reference": "2 Samuel 18:10",
+    "web": "A certain man saw it, and told Joab, and said, “Behold, I saw Absalom hanging in an oak.”",
+    "kjv": "And a certain man saw it, and told Joab, and said, Behold, I saw Absalom hanged in an oak."
+  },
+  "2-sam-18-11": {
+    "id": "2-sam-18-11",
+    "reference": "2 Samuel 18:11",
+    "web": "Joab said to the man who told him, “Behold, you saw it, and why didn’t you strike him there to the ground? I would have given you ten pieces of silver and a sash.”",
+    "kjv": "And Joab said unto the man that told him, And, behold, thou sawest him, and why didst thou not smite him there to the ground? and I would have given thee ten shekels of silver, and a girdle."
+  },
+  "2-sam-18-12": {
+    "id": "2-sam-18-12",
+    "reference": "2 Samuel 18:12",
+    "web": "The man said to Joab, “Though I should receive a thousand pieces of silver in my hand, I still wouldn’t stretch out my hand against the king’s son; for in our hearing the king commanded you and Abishai and Ittai, saying, ‘Beware that no one touch the young man Absalom.’",
+    "kjv": "And the man said unto Joab, Though I should receive a thousand shekels of silver in mine hand, yet would I not put forth mine hand against the king’s son: for in our hearing the king charged thee and Abishai and Ittai, saying, Beware that none touch the young man Absalom."
+  },
+  "2-sam-18-13": {
+    "id": "2-sam-18-13",
+    "reference": "2 Samuel 18:13",
+    "web": "Otherwise, if I had dealt falsely against his life (and there is no matter hidden from the king), then you yourself would have set yourself against me.”",
+    "kjv": "Otherwise I should have wrought falsehood against mine own life: for there is no matter hid from the king, and thou thyself wouldest have set thyself against me."
+  },
+  "2-sam-18-14": {
+    "id": "2-sam-18-14",
+    "reference": "2 Samuel 18:14",
+    "web": "Then Joab said, “I’m not going to wait like this with you.” He took three darts in his hand and thrust them through Absalom’s heart while he was still alive in the middle of the oak.",
+    "kjv": "Then said Joab, I may not tarry thus with thee. And he took three darts in his hand, and thrust them through the heart of Absalom, while he was yet alive in the midst of the oak."
+  },
+  "2-sam-18-15": {
+    "id": "2-sam-18-15",
+    "reference": "2 Samuel 18:15",
+    "web": "Ten young men who bore Joab’s armor surrounded and struck Absalom, and killed him.",
+    "kjv": "And ten young men that bare Joab’s armour compassed about and smote Absalom, and slew him."
+  },
+  "2-sam-18-16": {
+    "id": "2-sam-18-16",
+    "reference": "2 Samuel 18:16",
+    "web": "Joab blew the trumpet, and the people returned from pursuing after Israel; for Joab held the people back.",
+    "kjv": "And Joab blew the trumpet, and the people returned from pursuing after Israel: for Joab held back the people."
+  },
+  "2-sam-18-17": {
+    "id": "2-sam-18-17",
+    "reference": "2 Samuel 18:17",
+    "web": "They took Absalom and cast him into a great pit in the forest, and raised over him a very great heap of stones. Then all Israel fled, each to his own tent.",
+    "kjv": "And they took Absalom, and cast him into a great pit in the wood, and laid a very great heap of stones upon him: and all Israel fled every one to his tent."
+  },
+  "2-sam-18-18": {
+    "id": "2-sam-18-18",
+    "reference": "2 Samuel 18:18",
+    "web": "Now Absalom in his lifetime had taken and reared up for himself the pillar which is in the king’s valley, for he said, “I have no son to keep my name in memory.” He called the pillar after his own name. It is called Absalom’s monument, to this day.",
+    "kjv": "Now Absalom in his lifetime had taken and reared up for himself a pillar, which is in the king’s dale: for he said, I have no son to keep my name in remembrance: and he called the pillar after his own name: and it is called unto this day, Absalom’s place."
+  },
+  "2-sam-18-19": {
+    "id": "2-sam-18-19",
+    "reference": "2 Samuel 18:19",
+    "web": "Then Ahimaaz the son of Zadok said, “Let me now run and carry the king news, how the LORD has avenged him of his enemies.”",
+    "kjv": "Then said Ahimaaz the son of Zadok, Let me now run, and bear the king tidings, how that the LORD hath avenged him of his enemies."
+  },
+  "2-sam-18-20": {
+    "id": "2-sam-18-20",
+    "reference": "2 Samuel 18:20",
+    "web": "Joab said to him, “You must not be the bearer of news today, but you must carry news another day. But today you must carry no news, because the king’s son is dead.”",
+    "kjv": "And Joab said unto him, Thou shalt not bear tidings this day, but thou shalt bear tidings another day: but this day thou shalt bear no tidings, because the king’s son is dead."
+  },
+  "2-sam-18-21": {
+    "id": "2-sam-18-21",
+    "reference": "2 Samuel 18:21",
+    "web": "Then Joab said to the Cushite, “Go, tell the king what you have seen!” The Cushite bowed himself to Joab, and ran.",
+    "kjv": "Then said Joab to Cushi, Go tell the king what thou hast seen. And Cushi bowed himself unto Joab, and ran."
+  },
+  "2-sam-18-22": {
+    "id": "2-sam-18-22",
+    "reference": "2 Samuel 18:22",
+    "web": "Then Ahimaaz the son of Zadok said yet again to Joab, “But come what may, please let me also run after the Cushite.”\n\nJoab said, “Why do you want to run, my son, since you will have no reward for the news?”",
+    "kjv": "Then said Ahimaaz the son of Zadok yet again to Joab, But howsoever, let me, I pray thee, also run after Cushi. And Joab said, Wherefore wilt thou run, my son, seeing that thou hast no tidings ready?"
+  },
+  "2-sam-18-23": {
+    "id": "2-sam-18-23",
+    "reference": "2 Samuel 18:23",
+    "web": "“But come what may,” he said, “I will run.”\n\nHe said to him, “Run!” Then Ahimaaz ran by the way of the Plain, and outran the Cushite.",
+    "kjv": "But howsoever, said he, let me run. And he said unto him, Run. Then Ahimaaz ran by the way of the plain, and overran Cushi."
+  },
+  "2-sam-18-24": {
+    "id": "2-sam-18-24",
+    "reference": "2 Samuel 18:24",
+    "web": "Now David was sitting between the two gates; and the watchman went up to the roof of the gate to the wall, and lifted up his eyes and looked, and, behold, a man running alone.",
+    "kjv": "And David sat between the two gates: and the watchman went up to the roof over the gate unto the wall, and lifted up his eyes, and looked, and behold a man running alone."
+  },
+  "2-sam-18-25": {
+    "id": "2-sam-18-25",
+    "reference": "2 Samuel 18:25",
+    "web": "The watchman shouted and told the king. The king said, “If he is alone, there is news in his mouth.” He came closer and closer.",
+    "kjv": "And the watchman cried, and told the king. And the king said, If he be alone, there is tidings in his mouth. And he came apace, and drew near."
+  },
+  "2-sam-18-26": {
+    "id": "2-sam-18-26",
+    "reference": "2 Samuel 18:26",
+    "web": "The watchman saw another man running; and the watchman called to the gatekeeper and said, “Behold, a man running alone!”\n\nThe king said, “He also brings news.”",
+    "kjv": "And the watchman saw another man running: and the watchman called unto the porter, and said, Behold another man running alone. And the king said, He also bringeth tidings."
+  },
+  "2-sam-18-27": {
+    "id": "2-sam-18-27",
+    "reference": "2 Samuel 18:27",
+    "web": "The watchman said, “I think the running of the first one is like the running of Ahimaaz the son of Zadok.”\n\nThe king said, “He is a good man, and comes with good news.”",
+    "kjv": "And the watchman said, Me thinketh the running of the foremost is like the running of Ahimaaz the son of Zadok. And the king said, He is a good man, and cometh with good tidings."
+  },
+  "2-sam-18-28": {
+    "id": "2-sam-18-28",
+    "reference": "2 Samuel 18:28",
+    "web": "Ahimaaz called, and said to the king, “All is well.” He bowed himself before the king with his face to the earth, and said, “Blessed is the LORD your God, who has delivered up the men who lifted up their hand against my lord the king!”",
+    "kjv": "And Ahimaaz called, and said unto the king, All is well. And he fell down to the earth upon his face before the king, and said, Blessed be the LORD thy God, which hath delivered up the men that lifted up their hand against my lord the king."
+  },
+  "2-sam-18-29": {
+    "id": "2-sam-18-29",
+    "reference": "2 Samuel 18:29",
+    "web": "The king said, “Is it well with the young man Absalom?”\n\nAhimaaz answered, “When Joab sent the king’s servant, even me your servant, I saw a great tumult, but I don’t know what it was.”",
+    "kjv": "And the king said, Is the young man Absalom safe? And Ahimaaz answered, When Joab sent the king’s servant, and me thy servant, I saw a great tumult, but I knew not what it was."
+  },
+  "2-sam-18-30": {
+    "id": "2-sam-18-30",
+    "reference": "2 Samuel 18:30",
+    "web": "The king said, “Come and stand here.” He came and stood still.",
+    "kjv": "And the king said unto him, Turn aside, and stand here. And he turned aside, and stood still."
+  },
+  "2-sam-18-31": {
+    "id": "2-sam-18-31",
+    "reference": "2 Samuel 18:31",
+    "web": "Behold, the Cushite came. The Cushite said, “Good news for my lord the king, for the LORD has avenged you today of all those who rose up against you.”",
+    "kjv": "And, behold, Cushi came; and Cushi said, Tidings, my lord the king: for the LORD hath avenged thee this day of all them that rose up against thee."
+  },
+  "2-sam-18-32": {
+    "id": "2-sam-18-32",
+    "reference": "2 Samuel 18:32",
+    "web": "The king said to the Cushite, “Is it well with the young man Absalom?”\n\nThe Cushite answered, “May the enemies of my lord the king, and all who rise up against you to do you harm, be as that young man is.”",
+    "kjv": "And the king said unto Cushi, Is the young man Absalom safe? And Cushi answered, The enemies of my lord the king, and all that rise against thee to do thee hurt, be as that young man is."
+  },
+  "2-sam-18-33": {
+    "id": "2-sam-18-33",
+    "reference": "2 Samuel 18:33",
+    "web": "The king was much moved, and went up to the room over the gate and wept. As he went, he said, “My son Absalom! My son, my son Absalom! I wish I had died instead of you, Absalom, my son, my son!”",
+    "kjv": "And the king was much moved, and went up to the chamber over the gate, and wept: and as he went, thus he said, O my son Absalom, my son, my son Absalom! would God I had died for thee, O Absalom, my son, my son!"
+  },
+  "2-sam-19-1": {
+    "id": "2-sam-19-1",
+    "reference": "2 Samuel 19:1",
+    "web": "Joab was told, “Behold, the king weeps and mourns for Absalom.”",
+    "kjv": "And it was told Joab, Behold, the king weepeth and mourneth for Absalom."
+  },
+  "2-sam-19-2": {
+    "id": "2-sam-19-2",
+    "reference": "2 Samuel 19:2",
+    "web": "The victory that day was turned into mourning among all the people, for the people heard it said that day, “The king grieves for his son.”",
+    "kjv": "And the victory that day was turned into mourning unto all the people: for the people heard say that day how the king was grieved for his son."
+  },
+  "2-sam-19-3": {
+    "id": "2-sam-19-3",
+    "reference": "2 Samuel 19:3",
+    "web": "The people sneaked into the city that day, as people who are ashamed steal away when they flee in battle.",
+    "kjv": "And the people gat them by stealth that day into the city, as people being ashamed steal away when they flee in battle."
+  },
+  "2-sam-19-4": {
+    "id": "2-sam-19-4",
+    "reference": "2 Samuel 19:4",
+    "web": "The king covered his face, and the king cried with a loud voice, “My son Absalom, Absalom, my son, my son!”",
+    "kjv": "But the king covered his face, and the king cried with a loud voice, O my son Absalom, O Absalom, my son, my son!"
+  },
+  "2-sam-19-5": {
+    "id": "2-sam-19-5",
+    "reference": "2 Samuel 19:5",
+    "web": "Joab came into the house to the king, and said, “Today you have shamed the faces of all your servants who today have saved your life, and the lives of your sons and of your daughters, and the lives of your wives, and the lives of your concubines;",
+    "kjv": "And Joab came into the house to the king, and said, Thou hast shamed this day the faces of all thy servants, which this day have saved thy life, and the lives of thy sons and of thy daughters, and the lives of thy wives, and the lives of thy concubines;"
+  },
+  "2-sam-19-6": {
+    "id": "2-sam-19-6",
+    "reference": "2 Samuel 19:6",
+    "web": "in that you love those who hate you and hate those who love you. For you have declared today that princes and servants are nothing to you. For today I perceive that if Absalom had lived and we had all died today, then it would have pleased you well.",
+    "kjv": "In that thou lovest thine enemies, and hatest thy friends. For thou hast declared this day, that thou regardest neither princes nor servants: for this day I perceive, that if Absalom had lived, and all we had died this day, then it had pleased thee well."
+  },
+  "2-sam-19-7": {
+    "id": "2-sam-19-7",
+    "reference": "2 Samuel 19:7",
+    "web": "Now therefore arise, go out and speak to comfort your servants; for I swear by the LORD, if you don’t go out, not a man will stay with you this night. That would be worse to you than all the evil that has happened to you from your youth until now.”",
+    "kjv": "Now therefore arise, go forth, and speak comfortably unto thy servants: for I swear by the LORD, if thou go not forth, there will not tarry one with thee this night: and that will be worse unto thee than all the evil that befell thee from thy youth until now."
+  },
+  "2-sam-19-8": {
+    "id": "2-sam-19-8",
+    "reference": "2 Samuel 19:8",
+    "web": "Then the king arose and sat in the gate. The people were all told, “Behold, the king is sitting in the gate.” All the people came before the king. Now Israel had fled every man to his tent.",
+    "kjv": "Then the king arose, and sat in the gate. And they told unto all the people, saying, Behold, the king doth sit in the gate. And all the people came before the king: for Israel had fled every man to his tent."
+  },
+  "2-sam-19-9": {
+    "id": "2-sam-19-9",
+    "reference": "2 Samuel 19:9",
+    "web": "All the people were at strife throughout all the tribes of Israel, saying, “The king delivered us out of the hand of our enemies, and he saved us out of the hand of the Philistines; and now he has fled out of the land from Absalom.",
+    "kjv": "And all the people were at strife throughout all the tribes of Israel, saying, The king saved us out of the hand of our enemies, and he delivered us out of the hand of the Philistines; and now he is fled out of the land for Absalom."
+  },
+  "2-sam-19-10": {
+    "id": "2-sam-19-10",
+    "reference": "2 Samuel 19:10",
+    "web": "Absalom, whom we anointed over us, is dead in battle. Now therefore why don’t you speak a word of bringing the king back?”",
+    "kjv": "And Absalom, whom we anointed over us, is dead in battle. Now therefore why speak ye not a word of bringing the king back?"
+  },
+  "2-sam-19-11": {
+    "id": "2-sam-19-11",
+    "reference": "2 Samuel 19:11",
+    "web": "King David sent to Zadok and to Abiathar the priests, saying, “Speak to the elders of Judah, saying, ‘Why are you the last to bring the king back to his house, since the speech of all Israel has come to the king, to return him to his house?",
+    "kjv": "And king David sent to Zadok and to Abiathar the priests, saying, Speak unto the elders of Judah, saying, Why are ye the last to bring the king back to his house? seeing the speech of all Israel is come to the king, even to his house."
+  },
+  "2-sam-19-12": {
+    "id": "2-sam-19-12",
+    "reference": "2 Samuel 19:12",
+    "web": "You are my brothers. You are my bone and my flesh. Why then are you the last to bring back the king?’",
+    "kjv": "Ye are my brethren, ye are my bones and my flesh: wherefore then are ye the last to bring back the king?"
+  },
+  "2-sam-19-13": {
+    "id": "2-sam-19-13",
+    "reference": "2 Samuel 19:13",
+    "web": "Say to Amasa, ‘Aren’t you my bone and my flesh? God do so to me, and more also, if you aren’t captain of the army before me continually instead of Joab.’”",
+    "kjv": "And say ye to Amasa, Art thou not of my bone, and of my flesh? God do so to me, and more also, if thou be not captain of the host before me continually in the room of Joab."
+  },
+  "2-sam-19-14": {
+    "id": "2-sam-19-14",
+    "reference": "2 Samuel 19:14",
+    "web": "He bowed the heart of all the men of Judah, even as one man, so that they sent to the king, saying, “Return, you and all your servants.”",
+    "kjv": "And he bowed the heart of all the men of Judah, even as the heart of one man; so that they sent this word unto the king, Return thou, and all thy servants."
+  },
+  "2-sam-19-15": {
+    "id": "2-sam-19-15",
+    "reference": "2 Samuel 19:15",
+    "web": "So the king returned, and came to the Jordan. Judah came to Gilgal, to go to meet the king, to bring the king over the Jordan.",
+    "kjv": "So the king returned, and came to Jordan. And Judah came to Gilgal, to go to meet the king, to conduct the king over Jordan."
+  },
+  "2-sam-19-16": {
+    "id": "2-sam-19-16",
+    "reference": "2 Samuel 19:16",
+    "web": "Shimei the son of Gera, the Benjamite, who was of Bahurim, hurried and came down with the men of Judah to meet King David.",
+    "kjv": "And Shimei the son of Gera, a Benjamite, which was of Bahurim, hasted and came down with the men of Judah to meet king David."
+  },
+  "2-sam-19-17": {
+    "id": "2-sam-19-17",
+    "reference": "2 Samuel 19:17",
+    "web": "There were a thousand men of Benjamin with him, and Ziba the servant of Saul’s house, and his fifteen sons and his twenty servants with him; and they went through the Jordan in the presence of the king.",
+    "kjv": "And there were a thousand men of Benjamin with him, and Ziba the servant of the house of Saul, and his fifteen sons and his twenty servants with him; and they went over Jordan before the king."
+  },
+  "2-sam-19-18": {
+    "id": "2-sam-19-18",
+    "reference": "2 Samuel 19:18",
+    "web": "A ferry boat went to bring over the king’s household, and to do what he thought good.\n\nShimei the son of Gera fell down before the king when he had come over the Jordan.",
+    "kjv": "And there went over a ferry boat to carry over the king’s household, and to do what he thought good. And Shimei the son of Gera fell down before the king, as he was come over Jordan;"
+  },
+  "2-sam-19-19": {
+    "id": "2-sam-19-19",
+    "reference": "2 Samuel 19:19",
+    "web": "He said to the king, “Don’t let my lord impute iniquity to me, or remember that which your servant did perversely the day that my lord the king went out of Jerusalem, that the king should take it to his heart.",
+    "kjv": "And said unto the king, Let not my lord impute iniquity unto me, neither do thou remember that which thy servant did perversely the day that my lord the king went out of Jerusalem, that the king should take it to his heart."
+  },
+  "2-sam-19-20": {
+    "id": "2-sam-19-20",
+    "reference": "2 Samuel 19:20",
+    "web": "For your servant knows that I have sinned. Therefore behold, I have come today as the first of all the house of Joseph to go down to meet my lord the king.”",
+    "kjv": "For thy servant doth know that I have sinned: therefore, behold, I am come the first this day of all the house of Joseph to go down to meet my lord the king."
+  },
+  "2-sam-19-21": {
+    "id": "2-sam-19-21",
+    "reference": "2 Samuel 19:21",
+    "web": "But Abishai the son of Zeruiah answered, “Shouldn’t Shimei be put to death for this, because he cursed the LORD’s anointed?”",
+    "kjv": "But Abishai the son of Zeruiah answered and said, Shall not Shimei be put to death for this, because he cursed the LORD’s anointed?"
+  },
+  "2-sam-19-22": {
+    "id": "2-sam-19-22",
+    "reference": "2 Samuel 19:22",
+    "web": "David said, “What have I to do with you, you sons of Zeruiah, that you should be adversaries to me today? Shall any man be put to death today in Israel? For don’t I know that I am king over Israel today?”",
+    "kjv": "And David said, What have I to do with you, ye sons of Zeruiah, that ye should this day be adversaries unto me? shall there any man be put to death this day in Israel? for do not I know that I am this day king over Israel?"
+  },
+  "2-sam-19-23": {
+    "id": "2-sam-19-23",
+    "reference": "2 Samuel 19:23",
+    "web": "The king said to Shimei, “You will not die.” The king swore to him.",
+    "kjv": "Therefore the king said unto Shimei, Thou shalt not die. And the king sware unto him."
+  },
+  "2-sam-19-24": {
+    "id": "2-sam-19-24",
+    "reference": "2 Samuel 19:24",
+    "web": "Mephibosheth the son of Saul came down to meet the king; and he had neither groomed his feet, nor trimmed his beard, nor washed his clothes, from the day the king departed until the day he came home in peace.",
+    "kjv": "And Mephibosheth the son of Saul came down to meet the king, and had neither dressed his feet, nor trimmed his beard, nor washed his clothes, from the day the king departed until the day he came again in peace."
+  },
+  "2-sam-19-25": {
+    "id": "2-sam-19-25",
+    "reference": "2 Samuel 19:25",
+    "web": "When he had come to Jerusalem to meet the king, the king said to him, “Why didn’t you go with me, Mephibosheth?”",
+    "kjv": "And it came to pass, when he was come to Jerusalem to meet the king, that the king said unto him, Wherefore wentest not thou with me, Mephibosheth?"
+  },
+  "2-sam-19-26": {
+    "id": "2-sam-19-26",
+    "reference": "2 Samuel 19:26",
+    "web": "He answered, “My lord, O king, my servant deceived me. For your servant said, ‘I will saddle a donkey for myself, that I may ride on it and go with the king,’ because your servant is lame.",
+    "kjv": "And he answered, My lord, O king, my servant deceived me: for thy servant said, I will saddle me an ass, that I may ride thereon, and go to the king; because thy servant is lame."
+  },
+  "2-sam-19-27": {
+    "id": "2-sam-19-27",
+    "reference": "2 Samuel 19:27",
+    "web": "He has slandered your servant to my lord the king, but my lord the king is as an angel of God. Therefore do what is good in your eyes.",
+    "kjv": "And he hath slandered thy servant unto my lord the king; but my lord the king is as an angel of God: do therefore what is good in thine eyes."
+  },
+  "2-sam-19-28": {
+    "id": "2-sam-19-28",
+    "reference": "2 Samuel 19:28",
+    "web": "For all my father’s house were but dead men before my lord the king; yet you set your servant among those who ate at your own table. What right therefore have I yet that I should appeal any more to the king?”",
+    "kjv": "For all of my father’s house were but dead men before my lord the king: yet didst thou set thy servant among them that did eat at thine own table. What right therefore have I yet to cry any more unto the king?"
+  },
+  "2-sam-19-29": {
+    "id": "2-sam-19-29",
+    "reference": "2 Samuel 19:29",
+    "web": "The king said to him, “Why do you speak any more of your matters? I say, you and Ziba divide the land.”",
+    "kjv": "And the king said unto him, Why speakest thou any more of thy matters? I have said, Thou and Ziba divide the land."
+  },
+  "2-sam-19-30": {
+    "id": "2-sam-19-30",
+    "reference": "2 Samuel 19:30",
+    "web": "Mephibosheth said to the king, “Yes, let him take all, because my lord the king has come in peace to his own house.”",
+    "kjv": "And Mephibosheth said unto the king, Yea, let him take all, forasmuch as my lord the king is come again in peace unto his own house."
+  },
+  "2-sam-19-31": {
+    "id": "2-sam-19-31",
+    "reference": "2 Samuel 19:31",
+    "web": "Barzillai the Gileadite came down from Rogelim; and he went over the Jordan with the king to conduct him over the Jordan.",
+    "kjv": "And Barzillai the Gileadite came down from Rogelim, and went over Jordan with the king, to conduct him over Jordan."
+  },
+  "2-sam-19-32": {
+    "id": "2-sam-19-32",
+    "reference": "2 Samuel 19:32",
+    "web": "Now Barzillai was a very aged man, even eighty years old. He had provided the king with sustenance while he stayed at Mahanaim, for he was a very great man.",
+    "kjv": "Now Barzillai was a very aged man, even fourscore years old: and he had provided the king of sustenance while he lay at Mahanaim; for he was a very great man."
+  },
+  "2-sam-19-33": {
+    "id": "2-sam-19-33",
+    "reference": "2 Samuel 19:33",
+    "web": "The king said to Barzillai, “Come over with me, and I will sustain you with me in Jerusalem.”",
+    "kjv": "And the king said unto Barzillai, Come thou over with me, and I will feed thee with me in Jerusalem."
+  },
+  "2-sam-19-34": {
+    "id": "2-sam-19-34",
+    "reference": "2 Samuel 19:34",
+    "web": "Barzillai said to the king, “How many are the days of the years of my life, that I should go up with the king to Jerusalem?",
+    "kjv": "And Barzillai said unto the king, How long have I to live, that I should go up with the king unto Jerusalem?"
+  },
+  "2-sam-19-35": {
+    "id": "2-sam-19-35",
+    "reference": "2 Samuel 19:35",
+    "web": "I am eighty years old, today. Can I discern between good and bad? Can your servant taste what I eat or what I drink? Can I hear the voice of singing men and singing women any more? Why then should your servant be a burden to my lord the king?",
+    "kjv": "I am this day fourscore years old: and can I discern between good and evil? can thy servant taste what I eat or what I drink? can I hear any more the voice of singing men and singing women? wherefore then should thy servant be yet a burden unto my lord the king?"
+  },
+  "2-sam-19-36": {
+    "id": "2-sam-19-36",
+    "reference": "2 Samuel 19:36",
+    "web": "Your servant will just go over the Jordan with the king. Why should the king repay me with such a reward?",
+    "kjv": "Thy servant will go a little way over Jordan with the king: and why should the king recompense it me with such a reward?"
+  },
+  "2-sam-19-37": {
+    "id": "2-sam-19-37",
+    "reference": "2 Samuel 19:37",
+    "web": "Please let your servant turn back again, that I may die in my own city, by the grave of my father and my mother. But behold, your servant Chimham; let him go over with my lord the king; and do to him what shall seem good to you.”",
+    "kjv": "Let thy servant, I pray thee, turn back again, that I may die in mine own city, and be buried by the grave of my father and of my mother. But behold thy servant Chimham; let him go over with my lord the king; and do to him what shall seem good unto thee."
+  },
+  "2-sam-19-38": {
+    "id": "2-sam-19-38",
+    "reference": "2 Samuel 19:38",
+    "web": "The king answered, “Chimham shall go over with me, and I will do to him that which shall seem good to you. Whatever you request of me, that I will do for you.”",
+    "kjv": "And the king answered, Chimham shall go over with me, and I will do to him that which shall seem good unto thee: and whatsoever thou shalt require of me, that will I do for thee."
+  },
+  "2-sam-19-39": {
+    "id": "2-sam-19-39",
+    "reference": "2 Samuel 19:39",
+    "web": "All the people went over the Jordan, and the king went over. Then the king kissed Barzillai and blessed him; and he returned to his own place.",
+    "kjv": "And all the people went over Jordan. And when the king was come over, the king kissed Barzillai, and blessed him; and he returned unto his own place."
+  },
+  "2-sam-19-40": {
+    "id": "2-sam-19-40",
+    "reference": "2 Samuel 19:40",
+    "web": "So the king went over to Gilgal, and Chimham went over with him. All the people of Judah brought the king over, and also half the people of Israel.",
+    "kjv": "Then the king went on to Gilgal, and Chimham went on with him: and all the people of Judah conducted the king, and also half the people of Israel."
+  },
+  "2-sam-19-41": {
+    "id": "2-sam-19-41",
+    "reference": "2 Samuel 19:41",
+    "web": "Behold, all the men of Israel came to the king, and said to the king, “Why have our brothers the men of Judah stolen you away, and brought the king and his household, over the Jordan, and all David’s men with him?”",
+    "kjv": "And, behold, all the men of Israel came to the king, and said unto the king, Why have our brethren the men of Judah stolen thee away, and have brought the king, and his household, and all David’s men with him, over Jordan?"
+  },
+  "2-sam-19-42": {
+    "id": "2-sam-19-42",
+    "reference": "2 Samuel 19:42",
+    "web": "All the men of Judah answered the men of Israel, “Because the king is a close relative to us. Why then are you angry about this matter? Have we eaten at all at the king’s cost? Or has he given us any gift?”",
+    "kjv": "And all the men of Judah answered the men of Israel, Because the king is near of kin to us: wherefore then be ye angry for this matter? have we eaten at all of the king’s cost? or hath he given us any gift?"
+  },
+  "2-sam-19-43": {
+    "id": "2-sam-19-43",
+    "reference": "2 Samuel 19:43",
+    "web": "The men of Israel answered the men of Judah, and said, “We have ten parts in the king, and we have also more claim to David than you. Why then did you despise us, that our advice should not be first had in bringing back our king?” The words of the men of Judah were fiercer than the words of the men of Israel.",
+    "kjv": "And the men of Israel answered the men of Judah, and said, We have ten parts in the king, and we have also more right in David than ye: why then did ye despise us, that our advice should not be first had in bringing back our king? And the words of the men of Judah were fiercer than the words of the men of Israel."
+  },
+  "2-sam-20-1": {
+    "id": "2-sam-20-1",
+    "reference": "2 Samuel 20:1",
+    "web": "There happened to be there a wicked fellow, whose name was Sheba the son of Bichri, a Benjamite; and he blew the trumpet, and said, “We have no portion in David, neither have we inheritance in the son of Jesse. Every man to his tents, Israel!”",
+    "kjv": "And there happened to be there a man of Belial, whose name was Sheba, the son of Bichri, a Benjamite: and he blew a trumpet, and said, We have no part in David, neither have we inheritance in the son of Jesse: every man to his tents, O Israel."
+  },
+  "2-sam-20-2": {
+    "id": "2-sam-20-2",
+    "reference": "2 Samuel 20:2",
+    "web": "So all the men of Israel went up from following David, and followed Sheba the son of Bichri; but the men of Judah joined with their king, from the Jordan even to Jerusalem.",
+    "kjv": "So every man of Israel went up from after David, and followed Sheba the son of Bichri: but the men of Judah clave unto their king, from Jordan even to Jerusalem."
+  },
+  "2-sam-20-3": {
+    "id": "2-sam-20-3",
+    "reference": "2 Samuel 20:3",
+    "web": "David came to his house at Jerusalem; and the king took the ten women his concubines, whom he had left to keep the house, and put them in custody and provided them with sustenance, but didn’t go in to them. So they were shut up to the day of their death, living in widowhood.",
+    "kjv": "And David came to his house at Jerusalem; and the king took the ten women his concubines, whom he had left to keep the house, and put them in ward, and fed them, but went not in unto them. So they were shut up unto the day of their death, living in widowhood."
+  },
+  "2-sam-20-4": {
+    "id": "2-sam-20-4",
+    "reference": "2 Samuel 20:4",
+    "web": "Then the king said to Amasa, “Call me the men of Judah together within three days, and be here present.”",
+    "kjv": "Then said the king to Amasa, Assemble me the men of Judah within three days, and be thou here present."
+  },
+  "2-sam-20-5": {
+    "id": "2-sam-20-5",
+    "reference": "2 Samuel 20:5",
+    "web": "So Amasa went to call the men of Judah together, but he stayed longer than the set time which had been appointed to him.",
+    "kjv": "So Amasa went to assemble the men of Judah: but he tarried longer than the set time which he had appointed him."
+  },
+  "2-sam-20-6": {
+    "id": "2-sam-20-6",
+    "reference": "2 Samuel 20:6",
+    "web": "David said to Abishai, “Now Sheba the son of Bichri will do us more harm than Absalom did. Take your lord’s servants and pursue after him, lest he get himself fortified cities, and escape out of our sight.”",
+    "kjv": "And David said to Abishai, Now shall Sheba the son of Bichri do us more harm than did Absalom: take thou thy lord’s servants, and pursue after him, lest he get him fenced cities, and escape us."
+  },
+  "2-sam-20-7": {
+    "id": "2-sam-20-7",
+    "reference": "2 Samuel 20:7",
+    "web": "Joab’s men went out after him with the Cherethites, the Pelethites, and all the mighty men; and they went out of Jerusalem to pursue Sheba the son of Bichri.",
+    "kjv": "And there went out after him Joab’s men, and the Cherethites, and the Pelethites, and all the mighty men: and they went out of Jerusalem, to pursue after Sheba the son of Bichri."
+  },
+  "2-sam-20-8": {
+    "id": "2-sam-20-8",
+    "reference": "2 Samuel 20:8",
+    "web": "When they were at the great stone which is in Gibeon, Amasa came to meet them. Joab was clothed in his apparel of war that he had put on, and on it was a sash with a sword fastened on his waist in its sheath; and as he went along it fell out.",
+    "kjv": "When they were at the great stone which is in Gibeon, Amasa went before them. And Joab’s garment that he had put on was girded unto him, and upon it a girdle with a sword fastened upon his loins in the sheath thereof; and as he went forth it fell out."
+  },
+  "2-sam-20-9": {
+    "id": "2-sam-20-9",
+    "reference": "2 Samuel 20:9",
+    "web": "Joab said to Amasa, “Is it well with you, my brother?” Joab took Amasa by the beard with his right hand to kiss him.",
+    "kjv": "And Joab said to Amasa, Art thou in health, my brother? And Joab took Amasa by the beard with the right hand to kiss him."
+  },
+  "2-sam-20-10": {
+    "id": "2-sam-20-10",
+    "reference": "2 Samuel 20:10",
+    "web": "But Amasa took no heed to the sword that was in Joab’s hand. So he struck him with it in the body and shed out his bowels to the ground, and didn’t strike him again; and he died. Joab and Abishai his brother pursued Sheba the son of Bichri.",
+    "kjv": "But Amasa took no heed to the sword that was in Joab’s hand: so he smote him therewith in the fifth rib, and shed out his bowels to the ground, and struck him not again; and he died. So Joab and Abishai his brother pursued after Sheba the son of Bichri."
+  },
+  "2-sam-20-11": {
+    "id": "2-sam-20-11",
+    "reference": "2 Samuel 20:11",
+    "web": "One of Joab’s young men stood by him, and said, “He who favors Joab, and he who is for David, let him follow Joab!”",
+    "kjv": "And one of Joab’s men stood by him, and said, He that favoureth Joab, and he that is for David, let him go after Joab."
+  },
+  "2-sam-20-12": {
+    "id": "2-sam-20-12",
+    "reference": "2 Samuel 20:12",
+    "web": "Amasa lay wallowing in his blood in the middle of the highway. When the man saw that all the people stood still, he carried Amasa out of the highway into the field, and cast a garment over him when he saw that everyone who came by him stood still.",
+    "kjv": "And Amasa wallowed in blood in the midst of the highway. And when the man saw that all the people stood still, he removed Amasa out of the highway into the field, and cast a cloth upon him, when he saw that every one that came by him stood still."
+  },
+  "2-sam-20-13": {
+    "id": "2-sam-20-13",
+    "reference": "2 Samuel 20:13",
+    "web": "When he was removed out of the highway, all the people went on after Joab to pursue Sheba the son of Bichri.",
+    "kjv": "When he was removed out of the highway, all the people went on after Joab, to pursue after Sheba the son of Bichri."
+  },
+  "2-sam-20-14": {
+    "id": "2-sam-20-14",
+    "reference": "2 Samuel 20:14",
+    "web": "He went through all the tribes of Israel to Abel, to Beth Maacah, and all the Berites. They were gathered together, and went also after him.",
+    "kjv": "And he went through all the tribes of Israel unto Abel, and to Beth-maachah, and all the Berites: and they were gathered together, and went also after him."
+  },
+  "2-sam-20-15": {
+    "id": "2-sam-20-15",
+    "reference": "2 Samuel 20:15",
+    "web": "They came and besieged him in Abel of Beth Maacah, and they cast up a mound against the city, and it stood against the rampart; and all the people who were with Joab battered the wall to throw it down.",
+    "kjv": "And they came and besieged him in Abel of Beth-maachah, and they cast up a bank against the city, and it stood in the trench: and all the people that were with Joab battered the wall, to throw it down."
+  },
+  "2-sam-20-16": {
+    "id": "2-sam-20-16",
+    "reference": "2 Samuel 20:16",
+    "web": "Then a wise woman cried out of the city, “Hear, hear! Please say to Joab, ‘Come near here, that I may speak with you.’”",
+    "kjv": "Then cried a wise woman out of the city, Hear, hear; say, I pray you, unto Joab, Come near hither, that I may speak with thee."
+  },
+  "2-sam-20-17": {
+    "id": "2-sam-20-17",
+    "reference": "2 Samuel 20:17",
+    "web": "He came near to her; and the woman said, “Are you Joab?”\n\nHe answered, “I am.”\n\nThen she said to him, “Hear the words of your servant.”\n\nHe answered, “I’m listening.”",
+    "kjv": "And when he was come near unto her, the woman said, Art thou Joab? And he answered, I am he. Then she said unto him, Hear the words of thine handmaid. And he answered, I do hear."
+  },
+  "2-sam-20-18": {
+    "id": "2-sam-20-18",
+    "reference": "2 Samuel 20:18",
+    "web": "Then she spoke, saying, “They used to say in old times, ‘They shall surely ask counsel at Abel,’ and so they settled a matter.",
+    "kjv": "Then she spake, saying, They were wont to speak in old time, saying, They shall surely ask counsel at Abel: and so they ended the matter."
+  },
+  "2-sam-20-19": {
+    "id": "2-sam-20-19",
+    "reference": "2 Samuel 20:19",
+    "web": "I am among those who are peaceable and faithful in Israel. You seek to destroy a city and a mother in Israel. Why will you swallow up the LORD’s inheritance?”",
+    "kjv": "I am one of them that are peaceable and faithful in Israel: thou seekest to destroy a city and a mother in Israel: why wilt thou swallow up the inheritance of the LORD?"
+  },
+  "2-sam-20-20": {
+    "id": "2-sam-20-20",
+    "reference": "2 Samuel 20:20",
+    "web": "Joab answered, “Far be it, far be it from me, that I should swallow up or destroy.",
+    "kjv": "And Joab answered and said, Far be it, far be it from me, that I should swallow up or destroy."
+  },
+  "2-sam-20-21": {
+    "id": "2-sam-20-21",
+    "reference": "2 Samuel 20:21",
+    "web": "The matter is not so. But a man of the hill country of Ephraim, Sheba the son of Bichri by name, has lifted up his hand against the king, even against David. Just deliver him, and I will depart from the city.”\n\nThe woman said to Joab, “Behold, his head will be thrown to you over the wall.”",
+    "kjv": "The matter is not so: but a man of mount Ephraim, Sheba the son of Bichri by name, hath lifted up his hand against the king, even against David: deliver him only, and I will depart from the city. And the woman said unto Joab, Behold, his head shall be thrown to thee over the wall."
+  },
+  "2-sam-20-22": {
+    "id": "2-sam-20-22",
+    "reference": "2 Samuel 20:22",
+    "web": "Then the woman went to all the people in her wisdom. They cut off the head of Sheba the son of Bichri, and threw it out to Joab. He blew the trumpet, and they were dispersed from the city, every man to his tent. Then Joab returned to Jerusalem to the king.",
+    "kjv": "Then the woman went unto all the people in her wisdom. And they cut off the head of Sheba the son of Bichri, and cast it out to Joab. And he blew a trumpet, and they retired from the city, every man to his tent. And Joab returned to Jerusalem unto the king."
+  },
+  "2-sam-20-23": {
+    "id": "2-sam-20-23",
+    "reference": "2 Samuel 20:23",
+    "web": "Now Joab was over all the army of Israel, Benaiah the son of Jehoiada was over the Cherethites and over the Pelethites,",
+    "kjv": "Now Joab was over all the host of Israel: and Benaiah the son of Jehoiada was over the Cherethites and over the Pelethites:"
+  },
+  "2-sam-20-24": {
+    "id": "2-sam-20-24",
+    "reference": "2 Samuel 20:24",
+    "web": "Adoram was over the men subject to forced labor, Jehoshaphat the son of Ahilud was the recorder,",
+    "kjv": "And Adoram was over the tribute: and Jehoshaphat the son of Ahilud was recorder:"
+  },
+  "2-sam-20-25": {
+    "id": "2-sam-20-25",
+    "reference": "2 Samuel 20:25",
+    "web": "Sheva was scribe, Zadok and Abiathar were priests,",
+    "kjv": "And Sheva was scribe: and Zadok and Abiathar were the priests:"
+  },
+  "2-sam-20-26": {
+    "id": "2-sam-20-26",
+    "reference": "2 Samuel 20:26",
+    "web": "and Ira the Jairite was chief minister to David.",
+    "kjv": "And Ira also the Jairite was a chief ruler about David."
+  },
+  "2-sam-21-1": {
+    "id": "2-sam-21-1",
+    "reference": "2 Samuel 21:1",
+    "web": "There was a famine in the days of David for three years, year after year; and David sought the face of the LORD. The LORD said, “It is for Saul, and for his bloody house, because he put the Gibeonites to death.”",
+    "kjv": "Then there was a famine in the days of David three years, year after year; and David enquired of the LORD. And the LORD answered, It is for Saul, and for his bloody house, because he slew the Gibeonites."
+  },
+  "2-sam-21-2": {
+    "id": "2-sam-21-2",
+    "reference": "2 Samuel 21:2",
+    "web": "The king called the Gibeonites and said to them (now the Gibeonites were not of the children of Israel, but of the remnant of the Amorites, and the children of Israel had sworn to them; and Saul sought to kill them in his zeal for the children of Israel and Judah);",
+    "kjv": "And the king called the Gibeonites, and said unto them; (now the Gibeonites were not of the children of Israel, but of the remnant of the Amorites; and the children of Israel had sworn unto them: and Saul sought to slay them in his zeal to the children of Israel and Judah.)"
+  },
+  "2-sam-21-3": {
+    "id": "2-sam-21-3",
+    "reference": "2 Samuel 21:3",
+    "web": "and David said to the Gibeonites, “What should I do for you? And with what should I make atonement, that you may bless the LORD’s inheritance?”",
+    "kjv": "Wherefore David said unto the Gibeonites, What shall I do for you? and wherewith shall I make the atonement, that ye may bless the inheritance of the LORD?"
+  },
+  "2-sam-21-4": {
+    "id": "2-sam-21-4",
+    "reference": "2 Samuel 21:4",
+    "web": "The Gibeonites said to him, “It is no matter of silver or gold between us and Saul or his house; neither is it for us to put any man to death in Israel.”\n\nHe said, “I will do for you whatever you say.”",
+    "kjv": "And the Gibeonites said unto him, We will have no silver nor gold of Saul, nor of his house; neither for us shalt thou kill any man in Israel. And he said, What ye shall say, that will I do for you."
+  },
+  "2-sam-21-5": {
+    "id": "2-sam-21-5",
+    "reference": "2 Samuel 21:5",
+    "web": "They said to the king, “The man who consumed us and who plotted against us, that we should be destroyed from remaining in any of the borders of Israel,",
+    "kjv": "And they answered the king, The man that consumed us, and that devised against us that we should be destroyed from remaining in any of the coasts of Israel,"
+  },
+  "2-sam-21-6": {
+    "id": "2-sam-21-6",
+    "reference": "2 Samuel 21:6",
+    "web": "let seven men of his sons be delivered to us, and we will hang them up to the LORD in Gibeah of Saul, the chosen of the LORD.”\n\nThe king said, “I will give them.”",
+    "kjv": "Let seven men of his sons be delivered unto us, and we will hang them up unto the LORD in Gibeah of Saul, whom the LORD did choose. And the king said, I will give them."
+  },
+  "2-sam-21-7": {
+    "id": "2-sam-21-7",
+    "reference": "2 Samuel 21:7",
+    "web": "But the king spared Mephibosheth the son of Jonathan the son of Saul, because of the LORD’s oath that was between them, between David and Jonathan the son of Saul.",
+    "kjv": "But the king spared Mephibosheth, the son of Jonathan the son of Saul, because of the LORD’s oath that was between them, between David and Jonathan the son of Saul."
+  },
+  "2-sam-21-8": {
+    "id": "2-sam-21-8",
+    "reference": "2 Samuel 21:8",
+    "web": "But the king took the two sons of Rizpah the daughter of Aiah, whom she bore to Saul, Armoni and Mephibosheth; and the five sons of Merab the daughter of Saul, whom she bore to Adriel the son of Barzillai the Meholathite.",
+    "kjv": "But the king took the two sons of Rizpah the daughter of Aiah, whom she bare unto Saul, Armoni and Mephibosheth; and the five sons of Michal the daughter of Saul, whom she brought up for Adriel the son of Barzillai the Meholathite:"
+  },
+  "2-sam-21-9": {
+    "id": "2-sam-21-9",
+    "reference": "2 Samuel 21:9",
+    "web": "He delivered them into the hands of the Gibeonites; and they hanged them on the mountain before the LORD, and all seven of them fell together. They were put to death in the days of harvest, in the first days, at the beginning of barley harvest.",
+    "kjv": "And he delivered them into the hands of the Gibeonites, and they hanged them in the hill before the LORD: and they fell all seven together, and were put to death in the days of harvest, in the first days, in the beginning of barley harvest."
+  },
+  "2-sam-21-10": {
+    "id": "2-sam-21-10",
+    "reference": "2 Samuel 21:10",
+    "web": "Rizpah the daughter of Aiah took sackcloth and spread it for herself on the rock, from the beginning of harvest until water poured on them from the sky. She allowed neither the birds of the sky to rest on them by day, nor the animals of the field by night.",
+    "kjv": "And Rizpah the daughter of Aiah took sackcloth, and spread it for her upon the rock, from the beginning of harvest until water dropped upon them out of heaven, and suffered neither the birds of the air to rest on them by day, nor the beasts of the field by night."
+  },
+  "2-sam-21-11": {
+    "id": "2-sam-21-11",
+    "reference": "2 Samuel 21:11",
+    "web": "David was told what Rizpah the daughter of Aiah, the concubine of Saul, had done.",
+    "kjv": "And it was told David what Rizpah the daughter of Aiah, the concubine of Saul, had done."
+  },
+  "2-sam-21-12": {
+    "id": "2-sam-21-12",
+    "reference": "2 Samuel 21:12",
+    "web": "So David went and took the bones of Saul and the bones of Jonathan his son from the men of Jabesh Gilead, who had stolen them from the street of Beth Shan, where the Philistines had hanged them in the day that the Philistines killed Saul in Gilboa;",
+    "kjv": "And David went and took the bones of Saul and the bones of Jonathan his son from the men of Jabesh-gilead, which had stolen them from the street of Beth-shan, where the Philistines had hanged them, when the Philistines had slain Saul in Gilboa:"
+  },
+  "2-sam-21-13": {
+    "id": "2-sam-21-13",
+    "reference": "2 Samuel 21:13",
+    "web": "and he brought up from there the bones of Saul and the bones of Jonathan his son. They also gathered the bones of those who were hanged.",
+    "kjv": "And he brought up from thence the bones of Saul and the bones of Jonathan his son; and they gathered the bones of them that were hanged."
+  },
+  "2-sam-21-14": {
+    "id": "2-sam-21-14",
+    "reference": "2 Samuel 21:14",
+    "web": "They buried the bones of Saul and Jonathan his son in the country of Benjamin in Zela, in the tomb of Kish his father; and they performed all that the king commanded. After that, God answered prayer for the land.",
+    "kjv": "And the bones of Saul and Jonathan his son buried they in the country of Benjamin in Zelah, in the sepulchre of Kish his father: and they performed all that the king commanded. And after that God was intreated for the land."
+  },
+  "2-sam-21-15": {
+    "id": "2-sam-21-15",
+    "reference": "2 Samuel 21:15",
+    "web": "The Philistines had war again with Israel; and David went down, and his servants with him, and fought against the Philistines. David grew faint;",
+    "kjv": "Moreover the Philistines had yet war again with Israel; and David went down, and his servants with him, and fought against the Philistines: and David waxed faint."
+  },
+  "2-sam-21-16": {
+    "id": "2-sam-21-16",
+    "reference": "2 Samuel 21:16",
+    "web": "and Ishbibenob, who was of the sons of the giant, the weight of whose spear was three hundred shekels of bronze in weight, he being armed with a new sword, thought he would kill David.",
+    "kjv": "And Ishbi-benob, which was of the sons of the giant, the weight of whose spear weighed three hundred shekels of brass in weight, he being girded with a new sword, thought to have slain David."
+  },
+  "2-sam-21-17": {
+    "id": "2-sam-21-17",
+    "reference": "2 Samuel 21:17",
+    "web": "But Abishai the son of Zeruiah helped him, and struck the Philistine and killed him. Then the men of David swore to him, saying, “Don’t go out with us to battle any more, so that you don’t quench the lamp of Israel.”",
+    "kjv": "But Abishai the son of Zeruiah succoured him, and smote the Philistine, and killed him. Then the men of David sware unto him, saying, Thou shalt go no more out with us to battle, that thou quench not the light of Israel."
+  },
+  "2-sam-21-18": {
+    "id": "2-sam-21-18",
+    "reference": "2 Samuel 21:18",
+    "web": "After this, there was again war with the Philistines at Gob. Then Sibbecai the Hushathite killed Saph, who was of the sons of the giant.",
+    "kjv": "And it came to pass after this, that there was again a battle with the Philistines at Gob: then Sibbechai the Hushathite slew Saph, which was of the sons of the giant."
+  },
+  "2-sam-21-19": {
+    "id": "2-sam-21-19",
+    "reference": "2 Samuel 21:19",
+    "web": "There was again war with the Philistines at Gob, and Elhanan the son of Jaare-Oregim the Bethlehemite killed Goliath the Gittite’s brother, the staff of whose spear was like a weaver’s beam.",
+    "kjv": "And there was again a battle in Gob with the Philistines, where Elhanan the son of Jaare-oregim, a Beth-lehemite, slew the brother of Goliath the Gittite, the staff of whose spear was like a weaver’s beam."
+  },
+  "2-sam-21-20": {
+    "id": "2-sam-21-20",
+    "reference": "2 Samuel 21:20",
+    "web": "There was again war at Gath, where there was a man of great stature, who had six fingers on every hand and six toes on every foot, twenty-four in number, and he also was born to the giant.",
+    "kjv": "And there was yet a battle in Gath, where was a man of great stature, that had on every hand six fingers, and on every foot six toes, four and twenty in number; and he also was born to the giant."
+  },
+  "2-sam-21-21": {
+    "id": "2-sam-21-21",
+    "reference": "2 Samuel 21:21",
+    "web": "When he defied Israel, Jonathan the son of Shimei, David’s brother, killed him.",
+    "kjv": "And when he defied Israel, Jonathan the son of Shimea the brother of David slew him."
+  },
+  "2-sam-21-22": {
+    "id": "2-sam-21-22",
+    "reference": "2 Samuel 21:22",
+    "web": "These four were born to the giant in Gath; and they fell by the hand of David and by the hand of his servants.",
+    "kjv": "These four were born to the giant in Gath, and fell by the hand of David, and by the hand of his servants."
+  },
+  "2-sam-23-1": {
+    "id": "2-sam-23-1",
+    "reference": "2 Samuel 23:1",
+    "web": "Now these are the last words of David. David the son of Jesse says, the man who was raised on high says, the anointed of the God of Jacob, the sweet psalmist of Israel:",
+    "kjv": "Now these be the last words of David. David the son of Jesse said, and the man who was raised up on high, the anointed of the God of Jacob, and the sweet psalmist of Israel, said,"
+  },
+  "2-sam-23-2": {
+    "id": "2-sam-23-2",
+    "reference": "2 Samuel 23:2",
+    "web": "“The LORD’s Spirit spoke by me. His word was on my tongue.",
+    "kjv": "The Spirit of the LORD spake by me, and his word was in my tongue."
+  },
+  "2-sam-23-3": {
+    "id": "2-sam-23-3",
+    "reference": "2 Samuel 23:3",
+    "web": "The God of Israel said, the Rock of Israel spoke to me, ‘One who rules over men righteously, who rules in the fear of God,",
+    "kjv": "The God of Israel said, the Rock of Israel spake to me, He that ruleth over men must be just, ruling in the fear of God."
+  },
+  "2-sam-23-4": {
+    "id": "2-sam-23-4",
+    "reference": "2 Samuel 23:4",
+    "web": "shall be as the light of the morning when the sun rises, a morning without clouds, when the tender grass springs out of the earth, through clear shining after rain.’",
+    "kjv": "And he shall be as the light of the morning, when the sun riseth, even a morning without clouds; as the tender grass springing out of the earth by clear shining after rain."
+  },
+  "2-sam-23-5": {
+    "id": "2-sam-23-5",
+    "reference": "2 Samuel 23:5",
+    "web": "Isn’t my house so with God? Yet he has made with me an everlasting covenant, ordered in all things, and sure, for it is all my salvation and all my desire. Won’t he make it grow?",
+    "kjv": "Although my house be not so with God; yet he hath made with me an everlasting covenant, ordered in all things, and sure: for this is all my salvation, and all my desire, although he make it not to grow."
+  },
+  "2-sam-23-6": {
+    "id": "2-sam-23-6",
+    "reference": "2 Samuel 23:6",
+    "web": "But all the ungodly will be as thorns to be thrust away, because they can’t be taken with the hand.",
+    "kjv": "But the sons of Belial shall be all of them as thorns thrust away, because they cannot be taken with hands:"
+  },
+  "2-sam-23-7": {
+    "id": "2-sam-23-7",
+    "reference": "2 Samuel 23:7",
+    "web": "The man who touches them must be armed with iron and the staff of a spear. They will be utterly burned with fire in their place.”",
+    "kjv": "But the man that shall touch them must be fenced with iron and the staff of a spear; and they shall be utterly burned with fire in the same place."
+  },
+  "2-sam-23-8": {
+    "id": "2-sam-23-8",
+    "reference": "2 Samuel 23:8",
+    "web": "These are the names of the mighty men whom David had: Josheb Basshebeth a Tahchemonite, chief of the captains; he was called Adino the Eznite, who killed eight hundred at one time.",
+    "kjv": "These be the names of the mighty men whom David had: The Tachmonite that sat in the seat, chief among the captains; the same was Adino the Eznite: he lift up his spear against eight hundred, whom he slew at one time."
+  },
+  "2-sam-23-9": {
+    "id": "2-sam-23-9",
+    "reference": "2 Samuel 23:9",
+    "web": "After him was Eleazar the son of Dodai the son of an Ahohite, one of the three mighty men with David when they defied the Philistines who were there gathered together to battle, and the men of Israel had gone away.",
+    "kjv": "And after him was Eleazar the son of Dodo the Ahohite, one of the three mighty men with David, when they defied the Philistines that were there gathered together to battle, and the men of Israel were gone away:"
+  },
+  "2-sam-23-10": {
+    "id": "2-sam-23-10",
+    "reference": "2 Samuel 23:10",
+    "web": "He arose and struck the Philistines until his hand was weary, and his hand froze to the sword; and the LORD worked a great victory that day; and the people returned after him only to take plunder.",
+    "kjv": "He arose, and smote the Philistines until his hand was weary, and his hand clave unto the sword: and the LORD wrought a great victory that day; and the people returned after him only to spoil."
+  },
+  "2-sam-23-11": {
+    "id": "2-sam-23-11",
+    "reference": "2 Samuel 23:11",
+    "web": "After him was Shammah the son of Agee a Hararite. The Philistines had gathered together into a troop where there was a plot of ground full of lentils; and the people fled from the Philistines.",
+    "kjv": "And after him was Shammah the son of Agee the Hararite. And the Philistines were gathered together into a troop, where was a piece of ground full of lentiles: and the people fled from the Philistines."
+  },
+  "2-sam-23-12": {
+    "id": "2-sam-23-12",
+    "reference": "2 Samuel 23:12",
+    "web": "But he stood in the middle of the plot and defended it, and killed the Philistines; and the LORD worked a great victory.",
+    "kjv": "But he stood in the midst of the ground, and defended it, and slew the Philistines: and the LORD wrought a great victory."
+  },
+  "2-sam-23-13": {
+    "id": "2-sam-23-13",
+    "reference": "2 Samuel 23:13",
+    "web": "Three of the thirty chief men went down, and came to David in the harvest time to the cave of Adullam; and the troop of the Philistines was encamped in the valley of Rephaim.",
+    "kjv": "And three of the thirty chief went down, and came to David in the harvest time unto the cave of Adullam: and the troop of the Philistines pitched in the valley of Rephaim."
+  },
+  "2-sam-23-14": {
+    "id": "2-sam-23-14",
+    "reference": "2 Samuel 23:14",
+    "web": "David was then in the stronghold; and the garrison of the Philistines was then in Bethlehem.",
+    "kjv": "And David was then in an hold, and the garrison of the Philistines was then in Beth-lehem."
+  },
+  "2-sam-23-15": {
+    "id": "2-sam-23-15",
+    "reference": "2 Samuel 23:15",
+    "web": "David said longingly, “Oh that someone would give me water to drink from the well of Bethlehem, which is by the gate!”",
+    "kjv": "And David longed, and said, Oh that one would give me drink of the water of the well of Beth-lehem, which is by the gate!"
+  },
+  "2-sam-23-16": {
+    "id": "2-sam-23-16",
+    "reference": "2 Samuel 23:16",
+    "web": "The three mighty men broke through the army of the Philistines, and drew water out of the well of Bethlehem that was by the gate and took it and brought it to David; but he would not drink of it, but poured it out to the LORD.",
+    "kjv": "And the three mighty men brake through the host of the Philistines, and drew water out of the well of Beth-lehem, that was by the gate, and took it, and brought it to David: nevertheless he would not drink thereof, but poured it out unto the LORD."
+  },
+  "2-sam-23-17": {
+    "id": "2-sam-23-17",
+    "reference": "2 Samuel 23:17",
+    "web": "He said, “Be it far from me, LORD, that I should do this! Isn’t this the blood of the men who risked their lives to go?” Therefore he would not drink it. The three mighty men did these things.",
+    "kjv": "And he said, Be it far from me, O LORD, that I should do this: is not this the blood of the men that went in jeopardy of their lives? therefore he would not drink it. These things did these three mighty men."
+  },
+  "2-sam-23-18": {
+    "id": "2-sam-23-18",
+    "reference": "2 Samuel 23:18",
+    "web": "Abishai, the brother of Joab, the son of Zeruiah, was chief of the three. He lifted up his spear against three hundred and killed them, and had a name among the three.",
+    "kjv": "And Abishai, the brother of Joab, the son of Zeruiah, was chief among three. And he lifted up his spear against three hundred, and slew them, and had the name among three."
+  },
+  "2-sam-23-19": {
+    "id": "2-sam-23-19",
+    "reference": "2 Samuel 23:19",
+    "web": "Wasn’t he most honorable of the three? Therefore he was made their captain. However he wasn’t included as one of the three.",
+    "kjv": "Was he not most honourable of three? therefore he was their captain: howbeit he attained not unto the first three."
+  },
+  "2-sam-23-20": {
+    "id": "2-sam-23-20",
+    "reference": "2 Samuel 23:20",
+    "web": "Benaiah the son of Jehoiada, the son of a valiant man of Kabzeel, who had done mighty deeds, killed the two sons of Ariel of Moab. He also went down and killed a lion in the middle of a pit in a time of snow.",
+    "kjv": "And Benaiah the son of Jehoiada, the son of a valiant man, of Kabzeel, who had done many acts, he slew two lionlike men of Moab: he went down also and slew a lion in the midst of a pit in time of snow:"
+  },
+  "2-sam-23-21": {
+    "id": "2-sam-23-21",
+    "reference": "2 Samuel 23:21",
+    "web": "He killed a huge Egyptian, and the Egyptian had a spear in his hand; but he went down to him with a staff and plucked the spear out of the Egyptian’s hand, and killed him with his own spear.",
+    "kjv": "And he slew an Egyptian, a goodly man: and the Egyptian had a spear in his hand; but he went down to him with a staff, and plucked the spear out of the Egyptian’s hand, and slew him with his own spear."
+  },
+  "2-sam-23-22": {
+    "id": "2-sam-23-22",
+    "reference": "2 Samuel 23:22",
+    "web": "Benaiah the son of Jehoiada did these things, and had a name among the three mighty men.",
+    "kjv": "These things did Benaiah the son of Jehoiada, and had the name among three mighty men."
+  },
+  "2-sam-23-23": {
+    "id": "2-sam-23-23",
+    "reference": "2 Samuel 23:23",
+    "web": "He was more honorable than the thirty, but he didn’t attain to the three. David set him over his guard.",
+    "kjv": "He was more honourable than the thirty, but he attained not to the first three. And David set him over his guard."
+  },
+  "2-sam-23-24": {
+    "id": "2-sam-23-24",
+    "reference": "2 Samuel 23:24",
+    "web": "Asahel the brother of Joab was one of the thirty: Elhanan the son of Dodo of Bethlehem,",
+    "kjv": "Asahel the brother of Joab was one of the thirty; Elhanan the son of Dodo of Beth-lehem,"
+  },
+  "2-sam-23-25": {
+    "id": "2-sam-23-25",
+    "reference": "2 Samuel 23:25",
+    "web": "Shammah the Harodite, Elika the Harodite,",
+    "kjv": "Shammah the Harodite, Elika the Harodite,"
+  },
+  "2-sam-23-26": {
+    "id": "2-sam-23-26",
+    "reference": "2 Samuel 23:26",
+    "web": "Helez the Paltite, Ira the son of Ikkesh the Tekoite,",
+    "kjv": "Helez the Paltite, Ira the son of Ikkesh the Tekoite,"
+  },
+  "2-sam-23-27": {
+    "id": "2-sam-23-27",
+    "reference": "2 Samuel 23:27",
+    "web": "Abiezer the Anathothite, Mebunnai the Hushathite,",
+    "kjv": "Abiezer the Anethothite, Mebunnai the Hushathite,"
+  },
+  "2-sam-23-28": {
+    "id": "2-sam-23-28",
+    "reference": "2 Samuel 23:28",
+    "web": "Zalmon the Ahohite, Maharai the Netophathite,",
+    "kjv": "Zalmon the Ahohite, Maharai the Netophathite,"
+  },
+  "2-sam-23-29": {
+    "id": "2-sam-23-29",
+    "reference": "2 Samuel 23:29",
+    "web": "Heleb the son of Baanah the Netophathite, Ittai the son of Ribai of Gibeah of the children of Benjamin,",
+    "kjv": "Heleb the son of Baanah, a Netophathite, Ittai the son of Ribai out of Gibeah of the children of Benjamin,"
+  },
+  "2-sam-23-30": {
+    "id": "2-sam-23-30",
+    "reference": "2 Samuel 23:30",
+    "web": "Benaiah a Pirathonite, Hiddai of the brooks of Gaash.",
+    "kjv": "Benaiah the Pirathonite, Hiddai of the brooks of Gaash,"
+  },
+  "2-sam-23-31": {
+    "id": "2-sam-23-31",
+    "reference": "2 Samuel 23:31",
+    "web": "Abialbon the Arbathite, Azmaveth the Barhumite,",
+    "kjv": "Abi-albon the Arbathite, Azmaveth the Barhumite,"
+  },
+  "2-sam-23-32": {
+    "id": "2-sam-23-32",
+    "reference": "2 Samuel 23:32",
+    "web": "Eliahba the Shaalbonite, the sons of Jashen, Jonathan,",
+    "kjv": "Eliahba the Shaalbonite, of the sons of Jashen, Jonathan,"
+  },
+  "2-sam-23-33": {
+    "id": "2-sam-23-33",
+    "reference": "2 Samuel 23:33",
+    "web": "Shammah the Hararite, Ahiam the son of Sharar the Ararite,",
+    "kjv": "Shammah the Hararite, Ahiam the son of Sharar the Hararite,"
+  },
+  "2-sam-23-34": {
+    "id": "2-sam-23-34",
+    "reference": "2 Samuel 23:34",
+    "web": "Eliphelet the son of Ahasbai, the son of the Maacathite, Eliam the son of Ahithophel the Gilonite,",
+    "kjv": "Eliphelet the son of Ahasbai, the son of the Maachathite, Eliam the son of Ahithophel the Gilonite,"
+  },
+  "2-sam-23-35": {
+    "id": "2-sam-23-35",
+    "reference": "2 Samuel 23:35",
+    "web": "Hezro the Carmelite, Paarai the Arbite,",
+    "kjv": "Hezrai the Carmelite, Paarai the Arbite,"
+  },
+  "2-sam-23-36": {
+    "id": "2-sam-23-36",
+    "reference": "2 Samuel 23:36",
+    "web": "Igal the son of Nathan of Zobah, Bani the Gadite,",
+    "kjv": "Igal the son of Nathan of Zobah, Bani the Gadite,"
+  },
+  "2-sam-23-37": {
+    "id": "2-sam-23-37",
+    "reference": "2 Samuel 23:37",
+    "web": "Zelek the Ammonite, Naharai the Beerothite, armor bearers to Joab the son of Zeruiah,",
+    "kjv": "Zelek the Ammonite, Naharai the Beerothite, armourbearer to Joab the son of Zeruiah,"
+  },
+  "2-sam-23-38": {
+    "id": "2-sam-23-38",
+    "reference": "2 Samuel 23:38",
+    "web": "Ira the Ithrite, Gareb the Ithrite,",
+    "kjv": "Ira an Ithrite, Gareb an Ithrite,"
+  },
+  "2-sam-23-39": {
+    "id": "2-sam-23-39",
+    "reference": "2 Samuel 23:39",
+    "web": "and Uriah the Hittite: thirty-seven in all.",
+    "kjv": "Uriah the Hittite: thirty and seven in all."
+  },
+  "1-kgs-2-1": {
+    "id": "1-kgs-2-1",
+    "reference": "1 Kings 2:1",
+    "web": "Now the days of David came near that he should die; and he commanded Solomon his son, saying,",
+    "kjv": "Now the days of David drew nigh that he should die; and he charged Solomon his son, saying,"
+  },
+  "1-kgs-2-2": {
+    "id": "1-kgs-2-2",
+    "reference": "1 Kings 2:2",
+    "web": "“I am going the way of all the earth. You be strong therefore, and show yourself a man;",
+    "kjv": "I go the way of all the earth: be thou strong therefore, and shew thyself a man;"
+  },
+  "1-kgs-2-3": {
+    "id": "1-kgs-2-3",
+    "reference": "1 Kings 2:3",
+    "web": "and keep the instruction of the LORD your God, to walk in his ways, to keep his statutes, his commandments, his ordinances, and his testimonies, according to that which is written in the law of Moses, that you may prosper in all that you do and wherever you turn yourself.",
+    "kjv": "And keep the charge of the LORD thy God, to walk in his ways, to keep his statutes, and his commandments, and his judgments, and his testimonies, as it is written in the law of Moses, that thou mayest prosper in all that thou doest, and whithersoever thou turnest thyself:"
+  },
+  "1-kgs-2-4": {
+    "id": "1-kgs-2-4",
+    "reference": "1 Kings 2:4",
+    "web": "Then the LORD may establish his word which he spoke concerning me, saying, ‘If your children are careful of their way, to walk before me in truth with all their heart and with all their soul, there shall not fail you,’ he said, ‘a man on the throne of Israel.’",
+    "kjv": "That the LORD may continue his word which he spake concerning me, saying, If thy children take heed to their way, to walk before me in truth with all their heart and with all their soul, there shall not fail thee (said he) a man on the throne of Israel."
+  },
+  "1-kgs-2-5": {
+    "id": "1-kgs-2-5",
+    "reference": "1 Kings 2:5",
+    "web": "“Moreover you know also what Joab the son of Zeruiah did to me, even what he did to the two captains of the armies of Israel, to Abner the son of Ner and to Amasa the son of Jether, whom he killed, and shed the blood of war in peace, and put the blood of war on his sash that was around his waist and in his sandals that were on his feet.",
+    "kjv": "Moreover thou knowest also what Joab the son of Zeruiah did to me, and what he did to the two captains of the hosts of Israel, unto Abner the son of Ner, and unto Amasa the son of Jether, whom he slew, and shed the blood of war in peace, and put the blood of war upon his girdle that was about his loins, and in his shoes that were on his feet."
+  },
+  "1-kgs-2-6": {
+    "id": "1-kgs-2-6",
+    "reference": "1 Kings 2:6",
+    "web": "Do therefore according to your wisdom, and don’t let his gray head go down to Sheol in peace.",
+    "kjv": "Do therefore according to thy wisdom, and let not his hoar head go down to the grave in peace."
+  },
+  "1-kgs-2-7": {
+    "id": "1-kgs-2-7",
+    "reference": "1 Kings 2:7",
+    "web": "But show kindness to the sons of Barzillai the Gileadite, and let them be among those who eat at your table; for so they came to me when I fled from Absalom your brother.",
+    "kjv": "But shew kindness unto the sons of Barzillai the Gileadite, and let them be of those that eat at thy table: for so they came to me when I fled because of Absalom thy brother."
+  },
+  "1-kgs-2-8": {
+    "id": "1-kgs-2-8",
+    "reference": "1 Kings 2:8",
+    "web": "“Behold, there is with you Shimei the son of Gera, the Benjamite of Bahurim, who cursed me with a grievous curse in the day when I went to Mahanaim; but he came down to meet me at the Jordan, and I swore to him by the LORD, saying, ‘I will not put you to death with the sword.’",
+    "kjv": "And, behold, thou hast with thee Shimei the son of Gera, a Benjamite of Bahurim, which cursed me with a grievous curse in the day when I went to Mahanaim: but he came down to meet me at Jordan, and I sware to him by the LORD, saying, I will not put thee to death with the sword."
+  },
+  "1-kgs-2-9": {
+    "id": "1-kgs-2-9",
+    "reference": "1 Kings 2:9",
+    "web": "Now therefore don’t hold him guiltless, for you are a wise man; and you will know what you ought to do to him, and you shall bring his gray head down to Sheol with blood.”",
+    "kjv": "Now therefore hold him not guiltless: for thou art a wise man, and knowest what thou oughtest to do unto him; but his hoar head bring thou down to the grave with blood."
+  },
+  "1-kgs-2-10": {
+    "id": "1-kgs-2-10",
+    "reference": "1 Kings 2:10",
+    "web": "David slept with his fathers, and was buried in David’s city.",
+    "kjv": "So David slept with his fathers, and was buried in the city of David."
+  },
+  "1-kgs-2-11": {
+    "id": "1-kgs-2-11",
+    "reference": "1 Kings 2:11",
+    "web": "The days that David reigned over Israel were forty years; he reigned seven years in Hebron, and he reigned thirty-three years in Jerusalem.",
+    "kjv": "And the days that David reigned over Israel were forty years: seven years reigned he in Hebron, and thirty and three years reigned he in Jerusalem."
+  },
+  "1-kgs-2-12": {
+    "id": "1-kgs-2-12",
+    "reference": "1 Kings 2:12",
+    "web": "Solomon sat on David his father’s throne; and his kingdom was firmly established.",
+    "kjv": "Then sat Solomon upon the throne of David his father; and his kingdom was established greatly."
+  },
+  "1-kgs-2-13": {
+    "id": "1-kgs-2-13",
+    "reference": "1 Kings 2:13",
+    "web": "Then Adonijah the son of Haggith came to Bathsheba the mother of Solomon. She said, “Do you come peaceably?”\n\nHe said, “Peaceably.",
+    "kjv": "And Adonijah the son of Haggith came to Bath-sheba the mother of Solomon. And she said, Comest thou peaceably? And he said, Peaceably."
+  },
+  "1-kgs-2-14": {
+    "id": "1-kgs-2-14",
+    "reference": "1 Kings 2:14",
+    "web": "He said moreover, I have something to tell you.”\n\nShe said, “Say on.”",
+    "kjv": "He said moreover, I have somewhat to say unto thee. And she said, Say on."
+  },
+  "1-kgs-2-15": {
+    "id": "1-kgs-2-15",
+    "reference": "1 Kings 2:15",
+    "web": "He said, “You know that the kingdom was mine, and that all Israel set their faces on me, that I should reign. However, the kingdom is turned around, and has become my brother’s; for it was his from the LORD.",
+    "kjv": "And he said, Thou knowest that the kingdom was mine, and that all Israel set their faces on me, that I should reign: howbeit the kingdom is turned about, and is become my brother’s: for it was his from the LORD."
+  },
+  "1-kgs-2-16": {
+    "id": "1-kgs-2-16",
+    "reference": "1 Kings 2:16",
+    "web": "Now I ask one petition of you. Don’t deny me.”\n\nShe said to him, “Say on.”",
+    "kjv": "And now I ask one petition of thee, deny me not. And she said unto him, Say on."
+  },
+  "1-kgs-2-17": {
+    "id": "1-kgs-2-17",
+    "reference": "1 Kings 2:17",
+    "web": "He said, “Please speak to Solomon the king (for he will not tell you ‘no’), that he give me Abishag the Shunammite as wife.”",
+    "kjv": "And he said, Speak, I pray thee, unto Solomon the king, (for he will not say thee nay,) that he give me Abishag the Shunammite to wife."
+  },
+  "1-kgs-2-18": {
+    "id": "1-kgs-2-18",
+    "reference": "1 Kings 2:18",
+    "web": "Bathsheba said, “All right. I will speak for you to the king.”",
+    "kjv": "And Bath-sheba said, Well; I will speak for thee unto the king."
+  },
+  "1-kgs-2-19": {
+    "id": "1-kgs-2-19",
+    "reference": "1 Kings 2:19",
+    "web": "Bathsheba therefore went to King Solomon, to speak to him for Adonijah. The king rose up to meet her and bowed himself to her, and sat down on his throne and caused a throne to be set for the king’s mother; and she sat on his right hand.",
+    "kjv": "Bath-sheba therefore went unto king Solomon, to speak unto him for Adonijah. And the king rose up to meet her, and bowed himself unto her, and sat down on his throne, and caused a seat to be set for the king’s mother; and she sat on his right hand."
+  },
+  "1-kgs-2-20": {
+    "id": "1-kgs-2-20",
+    "reference": "1 Kings 2:20",
+    "web": "Then she said, “I ask one small petition of you; don’t deny me.”\n\nThe king said to her, “Ask on, my mother, for I will not deny you.”",
+    "kjv": "Then she said, I desire one small petition of thee; I pray thee, say me not nay. And the king said unto her, Ask on, my mother: for I will not say thee nay."
+  },
+  "1-kgs-2-21": {
+    "id": "1-kgs-2-21",
+    "reference": "1 Kings 2:21",
+    "web": "She said, “Let Abishag the Shunammite be given to Adonijah your brother as wife.”",
+    "kjv": "And she said, Let Abishag the Shunammite be given to Adonijah thy brother to wife."
+  },
+  "1-kgs-2-22": {
+    "id": "1-kgs-2-22",
+    "reference": "1 Kings 2:22",
+    "web": "King Solomon answered his mother, “Why do you ask Abishag the Shunammite for Adonijah? Ask for him the kingdom also, for he is my elder brother; even for him, and for Abiathar the priest, and for Joab the son of Zeruiah.”",
+    "kjv": "And king Solomon answered and said unto his mother, And why dost thou ask Abishag the Shunammite for Adonijah? ask for him the kingdom also; for he is mine elder brother; even for him, and for Abiathar the priest, and for Joab the son of Zeruiah."
+  },
+  "1-kgs-2-23": {
+    "id": "1-kgs-2-23",
+    "reference": "1 Kings 2:23",
+    "web": "Then King Solomon swore by the LORD, saying, “God do so to me, and more also, if Adonijah has not spoken this word against his own life.",
+    "kjv": "Then king Solomon sware by the LORD, saying, God do so to me, and more also, if Adonijah have not spoken this word against his own life."
+  },
+  "1-kgs-2-24": {
+    "id": "1-kgs-2-24",
+    "reference": "1 Kings 2:24",
+    "web": "Now therefore as the LORD lives, who has established me and set me on my father David’s throne, and who has made me a house as he promised, surely Adonijah shall be put to death today.”",
+    "kjv": "Now therefore, as the LORD liveth, which hath established me, and set me on the throne of David my father, and who hath made me an house, as he promised, Adonijah shall be put to death this day."
+  },
+  "1-kgs-2-25": {
+    "id": "1-kgs-2-25",
+    "reference": "1 Kings 2:25",
+    "web": "King Solomon sent Benaiah the son of Jehoiada; and he fell on him, so that he died.",
+    "kjv": "And king Solomon sent by the hand of Benaiah the son of Jehoiada; and he fell upon him that he died."
+  },
+  "1-kgs-2-26": {
+    "id": "1-kgs-2-26",
+    "reference": "1 Kings 2:26",
+    "web": "To Abiathar the priest the king said, “Go to Anathoth, to your own fields, for you are worthy of death. But I will not at this time put you to death, because you bore the Lord GOD’s ark before David my father, and because you were afflicted in all in which my father was afflicted.”",
+    "kjv": "And unto Abiathar the priest said the king, Get thee to Anathoth, unto thine own fields; for thou art worthy of death: but I will not at this time put thee to death, because thou barest the ark of the Lord GOD before David my father, and because thou hast been afflicted in all wherein my father was afflicted."
+  },
+  "1-kgs-2-27": {
+    "id": "1-kgs-2-27",
+    "reference": "1 Kings 2:27",
+    "web": "So Solomon thrust Abiathar out from being priest to the LORD, that he might fulfill the LORD’s word which he spoke concerning the house of Eli in Shiloh.",
+    "kjv": "So Solomon thrust out Abiathar from being priest unto the LORD; that he might fulfil the word of the LORD, which he spake concerning the house of Eli in Shiloh."
+  },
+  "1-kgs-2-28": {
+    "id": "1-kgs-2-28",
+    "reference": "1 Kings 2:28",
+    "web": "This news came to Joab; for Joab had followed Adonijah, although he didn’t follow Absalom. Joab fled to the LORD’s Tent, and held onto the horns of the altar.",
+    "kjv": "Then tidings came to Joab: for Joab had turned after Adonijah, though he turned not after Absalom. And Joab fled unto the tabernacle of the LORD, and caught hold on the horns of the altar."
+  },
+  "1-kgs-2-29": {
+    "id": "1-kgs-2-29",
+    "reference": "1 Kings 2:29",
+    "web": "King Solomon was told, “Joab has fled to the LORD’s Tent; and behold, he is by the altar.” Then Solomon sent Benaiah the son of Jehoiada, saying, “Go, fall on him.”",
+    "kjv": "And it was told king Solomon that Joab was fled unto the tabernacle of the LORD; and, behold, he is by the altar. Then Solomon sent Benaiah the son of Jehoiada, saying, Go, fall upon him."
+  },
+  "1-kgs-2-30": {
+    "id": "1-kgs-2-30",
+    "reference": "1 Kings 2:30",
+    "web": "Benaiah came to the LORD’s Tent, and said to him, “The king says, ‘Come out!’”\n\nHe said, “No; but I will die here.”\n\nBenaiah brought the king word again, saying, “This is what Joab said, and this is how he answered me.”",
+    "kjv": "And Benaiah came to the tabernacle of the LORD, and said unto him, Thus saith the king, Come forth. And he said, Nay; but I will die here. And Benaiah brought the king word again, saying, Thus said Joab, and thus he answered me."
+  },
+  "1-kgs-2-31": {
+    "id": "1-kgs-2-31",
+    "reference": "1 Kings 2:31",
+    "web": "The king said to him, “Do as he has said, and fall on him, and bury him, that you may take away the blood, which Joab shed without cause, from me and from my father’s house.",
+    "kjv": "And the king said unto him, Do as he hath said, and fall upon him, and bury him; that thou mayest take away the innocent blood, which Joab shed, from me, and from the house of my father."
+  },
+  "1-kgs-2-32": {
+    "id": "1-kgs-2-32",
+    "reference": "1 Kings 2:32",
+    "web": "The LORD will return his blood on his own head, because he fell on two men more righteous and better than he, and killed them with the sword, and my father David didn’t know it: Abner the son of Ner, captain of the army of Israel, and Amasa the son of Jether, captain of the army of Judah.",
+    "kjv": "And the LORD shall return his blood upon his own head, who fell upon two men more righteous and better than he, and slew them with the sword, my father David not knowing thereof, to wit, Abner the son of Ner, captain of the host of Israel, and Amasa the son of Jether, captain of the host of Judah."
+  },
+  "1-kgs-2-33": {
+    "id": "1-kgs-2-33",
+    "reference": "1 Kings 2:33",
+    "web": "So their blood will return on the head of Joab and on the head of his offspring forever. But for David, for his offspring, for his house, and for his throne, there will be peace forever from the LORD.”",
+    "kjv": "Their blood shall therefore return upon the head of Joab, and upon the head of his seed for ever: but upon David, and upon his seed, and upon his house, and upon his throne, shall there be peace for ever from the LORD."
+  },
+  "1-kgs-2-34": {
+    "id": "1-kgs-2-34",
+    "reference": "1 Kings 2:34",
+    "web": "Then Benaiah the son of Jehoiada went up and fell on him, and killed him; and he was buried in his own house in the wilderness.",
+    "kjv": "So Benaiah the son of Jehoiada went up, and fell upon him, and slew him: and he was buried in his own house in the wilderness."
+  },
+  "1-kgs-2-35": {
+    "id": "1-kgs-2-35",
+    "reference": "1 Kings 2:35",
+    "web": "The king put Benaiah the son of Jehoiada in his place over the army; and the king put Zadok the priest in the place of Abiathar.",
+    "kjv": "And the king put Benaiah the son of Jehoiada in his room over the host: and Zadok the priest did the king put in the room of Abiathar."
+  },
+  "1-kgs-2-36": {
+    "id": "1-kgs-2-36",
+    "reference": "1 Kings 2:36",
+    "web": "The king sent and called for Shimei, and said to him, “Build yourself a house in Jerusalem, and live there, and don’t go anywhere else.",
+    "kjv": "And the king sent and called for Shimei, and said unto him, Build thee an house in Jerusalem, and dwell there, and go not forth thence any whither."
+  },
+  "1-kgs-2-37": {
+    "id": "1-kgs-2-37",
+    "reference": "1 Kings 2:37",
+    "web": "For on the day you go out and pass over the brook Kidron, know for certain that you will surely die. Your blood will be on your own head.”",
+    "kjv": "For it shall be, that on the day thou goest out, and passest over the brook Kidron, thou shalt know for certain that thou shalt surely die: thy blood shall be upon thine own head."
+  },
+  "1-kgs-2-38": {
+    "id": "1-kgs-2-38",
+    "reference": "1 Kings 2:38",
+    "web": "Shimei said to the king, “What you say is good. As my lord the king has said, so will your servant do.” Shimei lived in Jerusalem many days.",
+    "kjv": "And Shimei said unto the king, The saying is good: as my lord the king hath said, so will thy servant do. And Shimei dwelt in Jerusalem many days."
+  },
+  "1-kgs-2-39": {
+    "id": "1-kgs-2-39",
+    "reference": "1 Kings 2:39",
+    "web": "At the end of three years, two of Shimei’s slaves ran away to Achish, son of Maacah, king of Gath. They told Shimei, saying, “Behold, your slaves are in Gath.”",
+    "kjv": "And it came to pass at the end of three years, that two of the servants of Shimei ran away unto Achish son of Maachah king of Gath. And they told Shimei, saying, Behold, thy servants be in Gath."
+  },
+  "1-kgs-2-40": {
+    "id": "1-kgs-2-40",
+    "reference": "1 Kings 2:40",
+    "web": "Shimei arose, saddled his donkey, and went to Gath to Achish to seek his slaves; and Shimei went and brought his slaves from Gath.",
+    "kjv": "And Shimei arose, and saddled his ass, and went to Gath to Achish to seek his servants: and Shimei went, and brought his servants from Gath."
+  },
+  "1-kgs-2-41": {
+    "id": "1-kgs-2-41",
+    "reference": "1 Kings 2:41",
+    "web": "Solomon was told that Shimei had gone from Jerusalem to Gath, and had come again.",
+    "kjv": "And it was told Solomon that Shimei had gone from Jerusalem to Gath, and was come again."
+  },
+  "1-kgs-2-42": {
+    "id": "1-kgs-2-42",
+    "reference": "1 Kings 2:42",
+    "web": "The king sent and called for Shimei, and said to him, “Didn’t I adjure you by the LORD and warn you, saying, ‘Know for certain that on the day you go out and walk anywhere else, you shall surely die’? You said to me, ‘The saying that I have heard is good.’",
+    "kjv": "And the king sent and called for Shimei, and said unto him, Did I not make thee to swear by the LORD, and protested unto thee, saying, Know for a certain, on the day thou goest out, and walkest abroad any whither, that thou shalt surely die? and thou saidst unto me, The word that I have heard is good."
+  },
+  "1-kgs-2-43": {
+    "id": "1-kgs-2-43",
+    "reference": "1 Kings 2:43",
+    "web": "Why then have you not kept the oath of the LORD and the commandment that I have instructed you with?”",
+    "kjv": "Why then hast thou not kept the oath of the LORD, and the commandment that I have charged thee with?"
+  },
+  "1-kgs-2-44": {
+    "id": "1-kgs-2-44",
+    "reference": "1 Kings 2:44",
+    "web": "The king said moreover to Shimei, “You know in your heart all the wickedness that you did to David my father. Therefore the LORD will return your wickedness on your own head.",
+    "kjv": "The king said moreover to Shimei, Thou knowest all the wickedness which thine heart is privy to, that thou didst to David my father: therefore the LORD shall return thy wickedness upon thine own head;"
+  },
+  "1-kgs-2-45": {
+    "id": "1-kgs-2-45",
+    "reference": "1 Kings 2:45",
+    "web": "But King Solomon will be blessed, and David’s throne will be established before the LORD forever.”",
+    "kjv": "And king Solomon shall be blessed, and the throne of David shall be established before the LORD for ever."
+  },
+  "1-kgs-2-46": {
+    "id": "1-kgs-2-46",
+    "reference": "1 Kings 2:46",
+    "web": "So the king commanded Benaiah the son of Jehoiada; and he went out, and fell on him, so that he died. The kingdom was established in the hand of Solomon.",
+    "kjv": "So the king commanded Benaiah the son of Jehoiada; which went out, and fell upon him, that he died. And the kingdom was established in the hand of Solomon."
+  },
   "1-kgs-3-1": {
     "id": "1-kgs-3-1",
     "reference": "1 Kings 3:1",
@@ -10016,6 +12134,336 @@ export const scripture: Record<string, Verse> = {
     "reference": "1 Kings 3:28",
     "web": "All Israel heard of the judgment which the king had judged; and they feared the king, for they saw that the wisdom of God was in him to do justice.",
     "kjv": "And all Israel heard of the judgment which the king had judged; and they feared the king: for they saw that the wisdom of God was in him, to do judgment."
+  },
+  "1-chr-2-1": {
+    "id": "1-chr-2-1",
+    "reference": "1 Chronicles 2:1",
+    "web": "These are the sons of Israel: Reuben, Simeon, Levi, Judah, Issachar, Zebulun,",
+    "kjv": "These are the sons of Israel; Reuben, Simeon, Levi, and Judah, Issachar, and Zebulun,"
+  },
+  "1-chr-2-2": {
+    "id": "1-chr-2-2",
+    "reference": "1 Chronicles 2:2",
+    "web": "Dan, Joseph, Benjamin, Naphtali, Gad, and Asher.",
+    "kjv": "Dan, Joseph, and Benjamin, Naphtali, Gad, and Asher."
+  },
+  "1-chr-2-3": {
+    "id": "1-chr-2-3",
+    "reference": "1 Chronicles 2:3",
+    "web": "The sons of Judah: Er, Onan, and Shelah, which three were born to him of Shua’s daughter the Canaanitess. Er, Judah’s firstborn, was wicked in the LORD’s sight; and he killed him.",
+    "kjv": "The sons of Judah; Er, and Onan, and Shelah: which three were born unto him of the daughter of Shua the Canaanitess. And Er, the firstborn of Judah, was evil in the sight of the LORD; and he slew him."
+  },
+  "1-chr-2-4": {
+    "id": "1-chr-2-4",
+    "reference": "1 Chronicles 2:4",
+    "web": "Tamar his daughter-in-law bore him Perez and Zerah. All the sons of Judah were five.",
+    "kjv": "And Tamar his daughter in law bare him Pharez and Zerah. All the sons of Judah were five."
+  },
+  "1-chr-2-5": {
+    "id": "1-chr-2-5",
+    "reference": "1 Chronicles 2:5",
+    "web": "The sons of Perez: Hezron and Hamul.",
+    "kjv": "The sons of Pharez; Hezron, and Hamul."
+  },
+  "1-chr-2-6": {
+    "id": "1-chr-2-6",
+    "reference": "1 Chronicles 2:6",
+    "web": "The sons of Zerah: Zimri, Ethan, Heman, Calcol, and Dara—five of them in all.",
+    "kjv": "And the sons of Zerah; Zimri, and Ethan, and Heman, and Calcol, and Dara: five of them in all."
+  },
+  "1-chr-2-7": {
+    "id": "1-chr-2-7",
+    "reference": "1 Chronicles 2:7",
+    "web": "The son of Carmi: Achar, the troubler of Israel, who committed a trespass in the devoted thing.",
+    "kjv": "And the sons of Carmi; Achar, the troubler of Israel, who transgressed in the thing accursed."
+  },
+  "1-chr-2-8": {
+    "id": "1-chr-2-8",
+    "reference": "1 Chronicles 2:8",
+    "web": "The son of Ethan: Azariah.",
+    "kjv": "And the sons of Ethan; Azariah."
+  },
+  "1-chr-2-9": {
+    "id": "1-chr-2-9",
+    "reference": "1 Chronicles 2:9",
+    "web": "The sons also of Hezron, who were born to him: Jerahmeel, Ram, and Chelubai.",
+    "kjv": "The sons also of Hezron, that were born unto him; Jerahmeel, and Ram, and Chelubai."
+  },
+  "1-chr-2-10": {
+    "id": "1-chr-2-10",
+    "reference": "1 Chronicles 2:10",
+    "web": "Ram became the father of Amminadab, and Amminadab became the father of Nahshon, prince of the children of Judah;",
+    "kjv": "And Ram begat Amminadab; and Amminadab begat Nahshon, prince of the children of Judah;"
+  },
+  "1-chr-2-11": {
+    "id": "1-chr-2-11",
+    "reference": "1 Chronicles 2:11",
+    "web": "and Nahshon became the father of Salma, and Salma became the father of Boaz,",
+    "kjv": "And Nahshon begat Salma, and Salma begat Boaz,"
+  },
+  "1-chr-2-12": {
+    "id": "1-chr-2-12",
+    "reference": "1 Chronicles 2:12",
+    "web": "and Boaz became the father of Obed, and Obed became the father of Jesse;",
+    "kjv": "And Boaz begat Obed, and Obed begat Jesse,"
+  },
+  "1-chr-2-13": {
+    "id": "1-chr-2-13",
+    "reference": "1 Chronicles 2:13",
+    "web": "and Jesse became the father of his firstborn Eliab, Abinadab the second, Shimea the third,",
+    "kjv": "And Jesse begat his firstborn Eliab, and Abinadab the second, and Shimma the third,"
+  },
+  "1-chr-2-14": {
+    "id": "1-chr-2-14",
+    "reference": "1 Chronicles 2:14",
+    "web": "Nethanel the fourth, Raddai the fifth,",
+    "kjv": "Nethaneel the fourth, Raddai the fifth,"
+  },
+  "1-chr-2-15": {
+    "id": "1-chr-2-15",
+    "reference": "1 Chronicles 2:15",
+    "web": "Ozem the sixth, and David the seventh;",
+    "kjv": "Ozem the sixth, David the seventh:"
+  },
+  "1-chr-2-16": {
+    "id": "1-chr-2-16",
+    "reference": "1 Chronicles 2:16",
+    "web": "and their sisters were Zeruiah and Abigail. The sons of Zeruiah: Abishai, Joab, and Asahel, three.",
+    "kjv": "Whose sisters were Zeruiah, and Abigail. And the sons of Zeruiah; Abishai, and Joab, and Asahel, three."
+  },
+  "1-chr-2-17": {
+    "id": "1-chr-2-17",
+    "reference": "1 Chronicles 2:17",
+    "web": "Abigail bore Amasa; and the father of Amasa was Jether the Ishmaelite.",
+    "kjv": "And Abigail bare Amasa: and the father of Amasa was Jether the Ishmeelite."
+  },
+  "1-chr-2-18": {
+    "id": "1-chr-2-18",
+    "reference": "1 Chronicles 2:18",
+    "web": "Caleb the son of Hezron became the father of children by Azubah his wife, and by Jerioth; and these were her sons: Jesher, Shobab, and Ardon.",
+    "kjv": "And Caleb the son of Hezron begat children of Azubah his wife, and of Jerioth: her sons are these; Jesher, and Shobab, and Ardon."
+  },
+  "1-chr-2-19": {
+    "id": "1-chr-2-19",
+    "reference": "1 Chronicles 2:19",
+    "web": "Azubah died, and Caleb married Ephrath, who bore him Hur.",
+    "kjv": "And when Azubah was dead, Caleb took unto him Ephrath, which bare him Hur."
+  },
+  "1-chr-2-20": {
+    "id": "1-chr-2-20",
+    "reference": "1 Chronicles 2:20",
+    "web": "Hur became the father of Uri, and Uri became the father of Bezalel.",
+    "kjv": "And Hur begat Uri, and Uri begat Bezaleel."
+  },
+  "1-chr-2-21": {
+    "id": "1-chr-2-21",
+    "reference": "1 Chronicles 2:21",
+    "web": "Afterward Hezron went in to the daughter of Machir the father of Gilead, whom he took as wife when he was sixty years old; and she bore him Segub.",
+    "kjv": "And afterward Hezron went in to the daughter of Machir the father of Gilead, whom he married when he was threescore years old; and she bare him Segub."
+  },
+  "1-chr-2-22": {
+    "id": "1-chr-2-22",
+    "reference": "1 Chronicles 2:22",
+    "web": "Segub became the father of Jair, who had twenty-three cities in the land of Gilead.",
+    "kjv": "And Segub begat Jair, who had three and twenty cities in the land of Gilead."
+  },
+  "1-chr-2-23": {
+    "id": "1-chr-2-23",
+    "reference": "1 Chronicles 2:23",
+    "web": "Geshur and Aram took the towns of Jair from them, with Kenath, and its villages, even sixty cities. All these were the sons of Machir the father of Gilead.",
+    "kjv": "And he took Geshur, and Aram, with the towns of Jair, from them, with Kenath, and the towns thereof, even threescore cities. All these belonged to the sons of Machir the father of Gilead."
+  },
+  "1-chr-2-24": {
+    "id": "1-chr-2-24",
+    "reference": "1 Chronicles 2:24",
+    "web": "After Hezron died in Caleb Ephrathah, Abijah, Hezron’s wife, bore him Ashhur the father of Tekoa.",
+    "kjv": "And after that Hezron was dead in Caleb-ephratah, then Abiah Hezron’s wife bare him Ashur the father of Tekoa."
+  },
+  "1-chr-2-25": {
+    "id": "1-chr-2-25",
+    "reference": "1 Chronicles 2:25",
+    "web": "The sons of Jerahmeel the firstborn of Hezron were Ram the firstborn, Bunah, Oren, Ozem, and Ahijah.",
+    "kjv": "And the sons of Jerahmeel the firstborn of Hezron were, Ram the firstborn, and Bunah, and Oren, and Ozem, and Ahijah."
+  },
+  "1-chr-2-26": {
+    "id": "1-chr-2-26",
+    "reference": "1 Chronicles 2:26",
+    "web": "Jerahmeel had another wife, whose name was Atarah. She was the mother of Onam.",
+    "kjv": "Jerahmeel had also another wife, whose name was Atarah; she was the mother of Onam."
+  },
+  "1-chr-2-27": {
+    "id": "1-chr-2-27",
+    "reference": "1 Chronicles 2:27",
+    "web": "The sons of Ram the firstborn of Jerahmeel were Maaz, Jamin, and Eker.",
+    "kjv": "And the sons of Ram the firstborn of Jerahmeel were, Maaz, and Jamin, and Eker."
+  },
+  "1-chr-2-28": {
+    "id": "1-chr-2-28",
+    "reference": "1 Chronicles 2:28",
+    "web": "The sons of Onam were Shammai and Jada. The sons of Shammai: Nadab and Abishur.",
+    "kjv": "And the sons of Onam were, Shammai, and Jada. And the sons of Shammai; Nadab, and Abishur."
+  },
+  "1-chr-2-29": {
+    "id": "1-chr-2-29",
+    "reference": "1 Chronicles 2:29",
+    "web": "The name of the wife of Abishur was Abihail; and she bore him Ahban and Molid.",
+    "kjv": "And the name of the wife of Abishur was Abihail, and she bare him Ahban, and Molid."
+  },
+  "1-chr-2-30": {
+    "id": "1-chr-2-30",
+    "reference": "1 Chronicles 2:30",
+    "web": "The sons of Nadab: Seled and Appaim; but Seled died without children.",
+    "kjv": "And the sons of Nadab; Seled, and Appaim: but Seled died without children."
+  },
+  "1-chr-2-31": {
+    "id": "1-chr-2-31",
+    "reference": "1 Chronicles 2:31",
+    "web": "The son of Appaim: Ishi. The son of Ishi: Sheshan. The son of Sheshan: Ahlai.",
+    "kjv": "And the sons of Appaim; Ishi. And the sons of Ishi; Sheshan. And the children of Sheshan; Ahlai."
+  },
+  "1-chr-2-32": {
+    "id": "1-chr-2-32",
+    "reference": "1 Chronicles 2:32",
+    "web": "The sons of Jada the brother of Shammai: Jether and Jonathan; and Jether died without children.",
+    "kjv": "And the sons of Jada the brother of Shammai; Jether, and Jonathan: and Jether died without children."
+  },
+  "1-chr-2-33": {
+    "id": "1-chr-2-33",
+    "reference": "1 Chronicles 2:33",
+    "web": "The sons of Jonathan: Peleth and Zaza. These were the sons of Jerahmeel.",
+    "kjv": "And the sons of Jonathan; Peleth, and Zaza. These were the sons of Jerahmeel."
+  },
+  "1-chr-2-34": {
+    "id": "1-chr-2-34",
+    "reference": "1 Chronicles 2:34",
+    "web": "Now Sheshan had no sons, but only daughters. Sheshan had a servant, an Egyptian, whose name was Jarha.",
+    "kjv": "Now Sheshan had no sons, but daughters. And Sheshan had a servant, an Egyptian, whose name was Jarha."
+  },
+  "1-chr-2-35": {
+    "id": "1-chr-2-35",
+    "reference": "1 Chronicles 2:35",
+    "web": "Sheshan gave his daughter to Jarha his servant as wife; and she bore him Attai.",
+    "kjv": "And Sheshan gave his daughter to Jarha his servant to wife; and she bare him Attai."
+  },
+  "1-chr-2-36": {
+    "id": "1-chr-2-36",
+    "reference": "1 Chronicles 2:36",
+    "web": "Attai became the father of Nathan, and Nathan became the father of Zabad,",
+    "kjv": "And Attai begat Nathan, and Nathan begat Zabad,"
+  },
+  "1-chr-2-37": {
+    "id": "1-chr-2-37",
+    "reference": "1 Chronicles 2:37",
+    "web": "and Zabad became the father of Ephlal, and Ephlal became the father of Obed,",
+    "kjv": "And Zabad begat Ephlal, and Ephlal begat Obed,"
+  },
+  "1-chr-2-38": {
+    "id": "1-chr-2-38",
+    "reference": "1 Chronicles 2:38",
+    "web": "and Obed became the father of Jehu, and Jehu became the father of Azariah,",
+    "kjv": "And Obed begat Jehu, and Jehu begat Azariah,"
+  },
+  "1-chr-2-39": {
+    "id": "1-chr-2-39",
+    "reference": "1 Chronicles 2:39",
+    "web": "and Azariah became the father of Helez, and Helez became the father of Eleasah,",
+    "kjv": "And Azariah begat Helez, and Helez begat Eleasah,"
+  },
+  "1-chr-2-40": {
+    "id": "1-chr-2-40",
+    "reference": "1 Chronicles 2:40",
+    "web": "and Eleasah became the father of Sismai, and Sismai became the father of Shallum,",
+    "kjv": "And Eleasah begat Sisamai, and Sisamai begat Shallum,"
+  },
+  "1-chr-2-41": {
+    "id": "1-chr-2-41",
+    "reference": "1 Chronicles 2:41",
+    "web": "and Shallum became the father of Jekamiah, and Jekamiah became the father of Elishama.",
+    "kjv": "And Shallum begat Jekamiah, and Jekamiah begat Elishama."
+  },
+  "1-chr-2-42": {
+    "id": "1-chr-2-42",
+    "reference": "1 Chronicles 2:42",
+    "web": "The sons of Caleb the brother of Jerahmeel were Mesha his firstborn, who was the father of Ziph, and the sons of Mareshah the father of Hebron.",
+    "kjv": "Now the sons of Caleb the brother of Jerahmeel were, Mesha his firstborn, which was the father of Ziph; and the sons of Mareshah the father of Hebron."
+  },
+  "1-chr-2-43": {
+    "id": "1-chr-2-43",
+    "reference": "1 Chronicles 2:43",
+    "web": "The sons of Hebron: Korah, Tappuah, Rekem, and Shema.",
+    "kjv": "And the sons of Hebron; Korah, and Tappuah, and Rekem, and Shema."
+  },
+  "1-chr-2-44": {
+    "id": "1-chr-2-44",
+    "reference": "1 Chronicles 2:44",
+    "web": "Shema became the father of Raham, the father of Jorkeam; and Rekem became the father of Shammai.",
+    "kjv": "And Shema begat Raham, the father of Jorkoam: and Rekem begat Shammai."
+  },
+  "1-chr-2-45": {
+    "id": "1-chr-2-45",
+    "reference": "1 Chronicles 2:45",
+    "web": "The son of Shammai was Maon; and Maon was the father of Beth Zur.",
+    "kjv": "And the son of Shammai was Maon: and Maon was the father of Beth-zur."
+  },
+  "1-chr-2-46": {
+    "id": "1-chr-2-46",
+    "reference": "1 Chronicles 2:46",
+    "web": "Ephah, Caleb’s concubine, bore Haran, Moza, and Gazez; and Haran became the father of Gazez.",
+    "kjv": "And Ephah, Caleb’s concubine, bare Haran, and Moza, and Gazez: and Haran begat Gazez."
+  },
+  "1-chr-2-47": {
+    "id": "1-chr-2-47",
+    "reference": "1 Chronicles 2:47",
+    "web": "The sons of Jahdai: Regem, Jothan, Geshan, Pelet, Ephah, and Shaaph.",
+    "kjv": "And the sons of Jahdai; Regem, and Jotham, and Geshan, and Pelet, and Ephah, and Shaaph."
+  },
+  "1-chr-2-48": {
+    "id": "1-chr-2-48",
+    "reference": "1 Chronicles 2:48",
+    "web": "Maacah, Caleb’s concubine, bore Sheber and Tirhanah.",
+    "kjv": "Maachah, Caleb’s concubine, bare Sheber, and Tirhanah."
+  },
+  "1-chr-2-49": {
+    "id": "1-chr-2-49",
+    "reference": "1 Chronicles 2:49",
+    "web": "She bore also Shaaph the father of Madmannah, Sheva the father of Machbena and the father of Gibea; and the daughter of Caleb was Achsah.",
+    "kjv": "She bare also Shaaph the father of Madmannah, Sheva the father of Machbenah, and the father of Gibea: and the daughter of Caleb was Achsah."
+  },
+  "1-chr-2-50": {
+    "id": "1-chr-2-50",
+    "reference": "1 Chronicles 2:50",
+    "web": "These were the sons of Caleb, the son of Hur, the firstborn of Ephrathah: Shobal the father of Kiriath Jearim,",
+    "kjv": "These were the sons of Caleb the son of Hur, the firstborn of Ephratah; Shobal the father of Kirjath-jearim,"
+  },
+  "1-chr-2-51": {
+    "id": "1-chr-2-51",
+    "reference": "1 Chronicles 2:51",
+    "web": "Salma the father of Bethlehem, and Hareph the father of Beth Gader.",
+    "kjv": "Salma the father of Beth-lehem, Hareph the father of Beth-gader."
+  },
+  "1-chr-2-52": {
+    "id": "1-chr-2-52",
+    "reference": "1 Chronicles 2:52",
+    "web": "Shobal the father of Kiriath Jearim had sons: Haroeh, half of the Menuhoth.",
+    "kjv": "And Shobal the father of Kirjath-jearim had sons; Haroeh, and half of the Manahethites."
+  },
+  "1-chr-2-53": {
+    "id": "1-chr-2-53",
+    "reference": "1 Chronicles 2:53",
+    "web": "The families of Kiriath Jearim: the Ithrites, the Puthites, the Shumathites, and the Mishraites; from them came the Zorathites and the Eshtaolites.",
+    "kjv": "And the families of Kirjath-jearim; the Ithrites, and the Puhites, and the Shumathites, and the Mishraites; of them came the Zareathites, and the Eshtaulites."
+  },
+  "1-chr-2-54": {
+    "id": "1-chr-2-54",
+    "reference": "1 Chronicles 2:54",
+    "web": "The sons of Salma: Bethlehem, the Netophathites, Atroth Beth Joab, and half of the Manahathites, the Zorites.",
+    "kjv": "The sons of Salma; Beth-lehem, and the Netophathites, Ataroth, the house of Joab, and half of the Manahethites, the Zorites."
+  },
+  "1-chr-2-55": {
+    "id": "1-chr-2-55",
+    "reference": "1 Chronicles 2:55",
+    "web": "The families of scribes who lived at Jabez: the Tirathites, the Shimeathites, and the Sucathites. These are the Kenites who came from Hammath, the father of the house of Rechab.",
+    "kjv": "And the families of the scribes which dwelt at Jabez; the Tirathites, the Shimeathites, and Suchathites. These are the Kenites that came of Hemath, the father of the house of Rechab."
   },
   "matt-1-1": {
     "id": "matt-1-1",
@@ -13584,6 +16032,120 @@ export const chapters: Record<string, import("./types").BibleChapter> = {
       "1-sam-17-58"
     ]
   },
+  "1-sam-26": {
+    "id": "1-sam-26",
+    "reference": "1 Samuel 26",
+    "verseIds": [
+      "1-sam-26-1",
+      "1-sam-26-2",
+      "1-sam-26-3",
+      "1-sam-26-4",
+      "1-sam-26-5",
+      "1-sam-26-6",
+      "1-sam-26-7",
+      "1-sam-26-8",
+      "1-sam-26-9",
+      "1-sam-26-10",
+      "1-sam-26-11",
+      "1-sam-26-12",
+      "1-sam-26-13",
+      "1-sam-26-14",
+      "1-sam-26-15",
+      "1-sam-26-16",
+      "1-sam-26-17",
+      "1-sam-26-18",
+      "1-sam-26-19",
+      "1-sam-26-20",
+      "1-sam-26-21",
+      "1-sam-26-22",
+      "1-sam-26-23",
+      "1-sam-26-24",
+      "1-sam-26-25"
+    ]
+  },
+  "2-sam-2": {
+    "id": "2-sam-2",
+    "reference": "2 Samuel 2",
+    "verseIds": [
+      "2-sam-2-1",
+      "2-sam-2-2",
+      "2-sam-2-3",
+      "2-sam-2-4",
+      "2-sam-2-5",
+      "2-sam-2-6",
+      "2-sam-2-7",
+      "2-sam-2-8",
+      "2-sam-2-9",
+      "2-sam-2-10",
+      "2-sam-2-11",
+      "2-sam-2-12",
+      "2-sam-2-13",
+      "2-sam-2-14",
+      "2-sam-2-15",
+      "2-sam-2-16",
+      "2-sam-2-17",
+      "2-sam-2-18",
+      "2-sam-2-19",
+      "2-sam-2-20",
+      "2-sam-2-21",
+      "2-sam-2-22",
+      "2-sam-2-23",
+      "2-sam-2-24",
+      "2-sam-2-25",
+      "2-sam-2-26",
+      "2-sam-2-27",
+      "2-sam-2-28",
+      "2-sam-2-29",
+      "2-sam-2-30",
+      "2-sam-2-31",
+      "2-sam-2-32"
+    ]
+  },
+  "2-sam-3": {
+    "id": "2-sam-3",
+    "reference": "2 Samuel 3",
+    "verseIds": [
+      "2-sam-3-1",
+      "2-sam-3-2",
+      "2-sam-3-3",
+      "2-sam-3-4",
+      "2-sam-3-5",
+      "2-sam-3-6",
+      "2-sam-3-7",
+      "2-sam-3-8",
+      "2-sam-3-9",
+      "2-sam-3-10",
+      "2-sam-3-11",
+      "2-sam-3-12",
+      "2-sam-3-13",
+      "2-sam-3-14",
+      "2-sam-3-15",
+      "2-sam-3-16",
+      "2-sam-3-17",
+      "2-sam-3-18",
+      "2-sam-3-19",
+      "2-sam-3-20",
+      "2-sam-3-21",
+      "2-sam-3-22",
+      "2-sam-3-23",
+      "2-sam-3-24",
+      "2-sam-3-25",
+      "2-sam-3-26",
+      "2-sam-3-27",
+      "2-sam-3-28",
+      "2-sam-3-29",
+      "2-sam-3-30",
+      "2-sam-3-31",
+      "2-sam-3-32",
+      "2-sam-3-33",
+      "2-sam-3-34",
+      "2-sam-3-35",
+      "2-sam-3-36",
+      "2-sam-3-37",
+      "2-sam-3-38",
+      "2-sam-3-39"
+    ]
+  },
   "2-sam-7": {
     "id": "2-sam-7",
     "reference": "2 Samuel 7",
@@ -13617,6 +16179,31 @@ export const chapters: Record<string, import("./types").BibleChapter> = {
       "2-sam-7-27",
       "2-sam-7-28",
       "2-sam-7-29"
+    ]
+  },
+  "2-sam-10": {
+    "id": "2-sam-10",
+    "reference": "2 Samuel 10",
+    "verseIds": [
+      "2-sam-10-1",
+      "2-sam-10-2",
+      "2-sam-10-3",
+      "2-sam-10-4",
+      "2-sam-10-5",
+      "2-sam-10-6",
+      "2-sam-10-7",
+      "2-sam-10-8",
+      "2-sam-10-9",
+      "2-sam-10-10",
+      "2-sam-10-11",
+      "2-sam-10-12",
+      "2-sam-10-13",
+      "2-sam-10-14",
+      "2-sam-10-15",
+      "2-sam-10-16",
+      "2-sam-10-17",
+      "2-sam-10-18",
+      "2-sam-10-19"
     ]
   },
   "2-sam-11": {
@@ -13689,6 +16276,286 @@ export const chapters: Record<string, import("./types").BibleChapter> = {
       "2-sam-12-31"
     ]
   },
+  "2-sam-17": {
+    "id": "2-sam-17",
+    "reference": "2 Samuel 17",
+    "verseIds": [
+      "2-sam-17-1",
+      "2-sam-17-2",
+      "2-sam-17-3",
+      "2-sam-17-4",
+      "2-sam-17-5",
+      "2-sam-17-6",
+      "2-sam-17-7",
+      "2-sam-17-8",
+      "2-sam-17-9",
+      "2-sam-17-10",
+      "2-sam-17-11",
+      "2-sam-17-12",
+      "2-sam-17-13",
+      "2-sam-17-14",
+      "2-sam-17-15",
+      "2-sam-17-16",
+      "2-sam-17-17",
+      "2-sam-17-18",
+      "2-sam-17-19",
+      "2-sam-17-20",
+      "2-sam-17-21",
+      "2-sam-17-22",
+      "2-sam-17-23",
+      "2-sam-17-24",
+      "2-sam-17-25",
+      "2-sam-17-26",
+      "2-sam-17-27",
+      "2-sam-17-28",
+      "2-sam-17-29"
+    ]
+  },
+  "2-sam-18": {
+    "id": "2-sam-18",
+    "reference": "2 Samuel 18",
+    "verseIds": [
+      "2-sam-18-1",
+      "2-sam-18-2",
+      "2-sam-18-3",
+      "2-sam-18-4",
+      "2-sam-18-5",
+      "2-sam-18-6",
+      "2-sam-18-7",
+      "2-sam-18-8",
+      "2-sam-18-9",
+      "2-sam-18-10",
+      "2-sam-18-11",
+      "2-sam-18-12",
+      "2-sam-18-13",
+      "2-sam-18-14",
+      "2-sam-18-15",
+      "2-sam-18-16",
+      "2-sam-18-17",
+      "2-sam-18-18",
+      "2-sam-18-19",
+      "2-sam-18-20",
+      "2-sam-18-21",
+      "2-sam-18-22",
+      "2-sam-18-23",
+      "2-sam-18-24",
+      "2-sam-18-25",
+      "2-sam-18-26",
+      "2-sam-18-27",
+      "2-sam-18-28",
+      "2-sam-18-29",
+      "2-sam-18-30",
+      "2-sam-18-31",
+      "2-sam-18-32",
+      "2-sam-18-33"
+    ]
+  },
+  "2-sam-19": {
+    "id": "2-sam-19",
+    "reference": "2 Samuel 19",
+    "verseIds": [
+      "2-sam-19-1",
+      "2-sam-19-2",
+      "2-sam-19-3",
+      "2-sam-19-4",
+      "2-sam-19-5",
+      "2-sam-19-6",
+      "2-sam-19-7",
+      "2-sam-19-8",
+      "2-sam-19-9",
+      "2-sam-19-10",
+      "2-sam-19-11",
+      "2-sam-19-12",
+      "2-sam-19-13",
+      "2-sam-19-14",
+      "2-sam-19-15",
+      "2-sam-19-16",
+      "2-sam-19-17",
+      "2-sam-19-18",
+      "2-sam-19-19",
+      "2-sam-19-20",
+      "2-sam-19-21",
+      "2-sam-19-22",
+      "2-sam-19-23",
+      "2-sam-19-24",
+      "2-sam-19-25",
+      "2-sam-19-26",
+      "2-sam-19-27",
+      "2-sam-19-28",
+      "2-sam-19-29",
+      "2-sam-19-30",
+      "2-sam-19-31",
+      "2-sam-19-32",
+      "2-sam-19-33",
+      "2-sam-19-34",
+      "2-sam-19-35",
+      "2-sam-19-36",
+      "2-sam-19-37",
+      "2-sam-19-38",
+      "2-sam-19-39",
+      "2-sam-19-40",
+      "2-sam-19-41",
+      "2-sam-19-42",
+      "2-sam-19-43"
+    ]
+  },
+  "2-sam-20": {
+    "id": "2-sam-20",
+    "reference": "2 Samuel 20",
+    "verseIds": [
+      "2-sam-20-1",
+      "2-sam-20-2",
+      "2-sam-20-3",
+      "2-sam-20-4",
+      "2-sam-20-5",
+      "2-sam-20-6",
+      "2-sam-20-7",
+      "2-sam-20-8",
+      "2-sam-20-9",
+      "2-sam-20-10",
+      "2-sam-20-11",
+      "2-sam-20-12",
+      "2-sam-20-13",
+      "2-sam-20-14",
+      "2-sam-20-15",
+      "2-sam-20-16",
+      "2-sam-20-17",
+      "2-sam-20-18",
+      "2-sam-20-19",
+      "2-sam-20-20",
+      "2-sam-20-21",
+      "2-sam-20-22",
+      "2-sam-20-23",
+      "2-sam-20-24",
+      "2-sam-20-25",
+      "2-sam-20-26"
+    ]
+  },
+  "2-sam-21": {
+    "id": "2-sam-21",
+    "reference": "2 Samuel 21",
+    "verseIds": [
+      "2-sam-21-1",
+      "2-sam-21-2",
+      "2-sam-21-3",
+      "2-sam-21-4",
+      "2-sam-21-5",
+      "2-sam-21-6",
+      "2-sam-21-7",
+      "2-sam-21-8",
+      "2-sam-21-9",
+      "2-sam-21-10",
+      "2-sam-21-11",
+      "2-sam-21-12",
+      "2-sam-21-13",
+      "2-sam-21-14",
+      "2-sam-21-15",
+      "2-sam-21-16",
+      "2-sam-21-17",
+      "2-sam-21-18",
+      "2-sam-21-19",
+      "2-sam-21-20",
+      "2-sam-21-21",
+      "2-sam-21-22"
+    ]
+  },
+  "2-sam-23": {
+    "id": "2-sam-23",
+    "reference": "2 Samuel 23",
+    "verseIds": [
+      "2-sam-23-1",
+      "2-sam-23-2",
+      "2-sam-23-3",
+      "2-sam-23-4",
+      "2-sam-23-5",
+      "2-sam-23-6",
+      "2-sam-23-7",
+      "2-sam-23-8",
+      "2-sam-23-9",
+      "2-sam-23-10",
+      "2-sam-23-11",
+      "2-sam-23-12",
+      "2-sam-23-13",
+      "2-sam-23-14",
+      "2-sam-23-15",
+      "2-sam-23-16",
+      "2-sam-23-17",
+      "2-sam-23-18",
+      "2-sam-23-19",
+      "2-sam-23-20",
+      "2-sam-23-21",
+      "2-sam-23-22",
+      "2-sam-23-23",
+      "2-sam-23-24",
+      "2-sam-23-25",
+      "2-sam-23-26",
+      "2-sam-23-27",
+      "2-sam-23-28",
+      "2-sam-23-29",
+      "2-sam-23-30",
+      "2-sam-23-31",
+      "2-sam-23-32",
+      "2-sam-23-33",
+      "2-sam-23-34",
+      "2-sam-23-35",
+      "2-sam-23-36",
+      "2-sam-23-37",
+      "2-sam-23-38",
+      "2-sam-23-39"
+    ]
+  },
+  "1-kgs-2": {
+    "id": "1-kgs-2",
+    "reference": "1 Kings 2",
+    "verseIds": [
+      "1-kgs-2-1",
+      "1-kgs-2-2",
+      "1-kgs-2-3",
+      "1-kgs-2-4",
+      "1-kgs-2-5",
+      "1-kgs-2-6",
+      "1-kgs-2-7",
+      "1-kgs-2-8",
+      "1-kgs-2-9",
+      "1-kgs-2-10",
+      "1-kgs-2-11",
+      "1-kgs-2-12",
+      "1-kgs-2-13",
+      "1-kgs-2-14",
+      "1-kgs-2-15",
+      "1-kgs-2-16",
+      "1-kgs-2-17",
+      "1-kgs-2-18",
+      "1-kgs-2-19",
+      "1-kgs-2-20",
+      "1-kgs-2-21",
+      "1-kgs-2-22",
+      "1-kgs-2-23",
+      "1-kgs-2-24",
+      "1-kgs-2-25",
+      "1-kgs-2-26",
+      "1-kgs-2-27",
+      "1-kgs-2-28",
+      "1-kgs-2-29",
+      "1-kgs-2-30",
+      "1-kgs-2-31",
+      "1-kgs-2-32",
+      "1-kgs-2-33",
+      "1-kgs-2-34",
+      "1-kgs-2-35",
+      "1-kgs-2-36",
+      "1-kgs-2-37",
+      "1-kgs-2-38",
+      "1-kgs-2-39",
+      "1-kgs-2-40",
+      "1-kgs-2-41",
+      "1-kgs-2-42",
+      "1-kgs-2-43",
+      "1-kgs-2-44",
+      "1-kgs-2-45",
+      "1-kgs-2-46"
+    ]
+  },
   "1-kgs-3": {
     "id": "1-kgs-3",
     "reference": "1 Kings 3",
@@ -13721,6 +16588,67 @@ export const chapters: Record<string, import("./types").BibleChapter> = {
       "1-kgs-3-26",
       "1-kgs-3-27",
       "1-kgs-3-28"
+    ]
+  },
+  "1-chr-2": {
+    "id": "1-chr-2",
+    "reference": "1 Chronicles 2",
+    "verseIds": [
+      "1-chr-2-1",
+      "1-chr-2-2",
+      "1-chr-2-3",
+      "1-chr-2-4",
+      "1-chr-2-5",
+      "1-chr-2-6",
+      "1-chr-2-7",
+      "1-chr-2-8",
+      "1-chr-2-9",
+      "1-chr-2-10",
+      "1-chr-2-11",
+      "1-chr-2-12",
+      "1-chr-2-13",
+      "1-chr-2-14",
+      "1-chr-2-15",
+      "1-chr-2-16",
+      "1-chr-2-17",
+      "1-chr-2-18",
+      "1-chr-2-19",
+      "1-chr-2-20",
+      "1-chr-2-21",
+      "1-chr-2-22",
+      "1-chr-2-23",
+      "1-chr-2-24",
+      "1-chr-2-25",
+      "1-chr-2-26",
+      "1-chr-2-27",
+      "1-chr-2-28",
+      "1-chr-2-29",
+      "1-chr-2-30",
+      "1-chr-2-31",
+      "1-chr-2-32",
+      "1-chr-2-33",
+      "1-chr-2-34",
+      "1-chr-2-35",
+      "1-chr-2-36",
+      "1-chr-2-37",
+      "1-chr-2-38",
+      "1-chr-2-39",
+      "1-chr-2-40",
+      "1-chr-2-41",
+      "1-chr-2-42",
+      "1-chr-2-43",
+      "1-chr-2-44",
+      "1-chr-2-45",
+      "1-chr-2-46",
+      "1-chr-2-47",
+      "1-chr-2-48",
+      "1-chr-2-49",
+      "1-chr-2-50",
+      "1-chr-2-51",
+      "1-chr-2-52",
+      "1-chr-2-53",
+      "1-chr-2-54",
+      "1-chr-2-55"
     ]
   },
   "matt-1": {
