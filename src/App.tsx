@@ -153,7 +153,7 @@ export function App() {
       <header className="site-header">
         <a className="brand" href="/" onClick={(event) => { event.preventDefault(); chooseView(views[0]); }}>
           <span className="brand-mark" aria-hidden="true"><i /><i /><i /></span>
-          <span><strong>Toldot</strong><small>Biblical data, made visible</small></span>
+          <span><strong>Toldot</strong><small>A visualization of biblical data</small></span>
         </a>
 
         <div className="global-search">
