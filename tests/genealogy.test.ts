@@ -7,6 +7,7 @@ import {
   originTimelineMilestones,
   patriarchSonsInBirthOrder,
   relationships,
+  viewNavigationGroups,
   views,
   visiblePersonIdsForView,
 } from "../src/data/genealogy";
@@ -202,8 +203,20 @@ describe("Toldot genealogy dataset", () => {
 
     const timeline = views.find((view) => view.id === "origins-timeline")!;
     expect(timeline.presentation).toBe("timeline");
-    expect(timeline.navMeta).toBe("Years 0–2158");
+    expect(timeline.tabLabel).toBe("Timeline");
     expect(timeline.personIds).toEqual(expect.arrayContaining(["adam", "noah", "shem", "ham", "japheth"]));
+
+    expect(viewNavigationGroups.map((group) => group.id)).toEqual([
+      "origins",
+      "noah-to-abraham",
+      "patriarchs",
+      "davidic",
+      "jesus-genealogy",
+    ]);
+    expect(viewNavigationGroups.find((group) => group.id === "origins")?.viewIds)
+      .toEqual(["origins", "origins-timeline"]);
+    expect(viewNavigationGroups.find((group) => group.id === "jesus-genealogy")?.viewIds)
+      .toEqual(["matthew", "luke", "promise"]);
   });
 
   it("uses the Davidic view to bridge Judah's family to David", () => {

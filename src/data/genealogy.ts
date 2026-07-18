@@ -1,5 +1,6 @@
 import type {
   AgeFact,
+  GenealogyNavigationGroup,
   GenealogyView,
   PassageSelection,
   Person,
@@ -967,6 +968,7 @@ export const views: GenealogyView[] = [
   {
     id: "origins",
     title: "Origins Family Tree",
+    tabLabel: "Family Tree",
     eyebrow: "Adam to Noah",
     description: "The lines of Cain and Seth from Genesis 4–5, meeting in the generation of Noah and his sons.",
     personIds: [...origins],
@@ -982,10 +984,10 @@ export const views: GenealogyView[] = [
   {
     id: "origins-timeline",
     title: "Origins Timeline",
+    tabLabel: "Timeline",
     eyebrow: "Years from Adam",
     description: "Births, deaths, overlapping lifespans, and the Flood in the chronology derived from Genesis 5, 7, 9, and 11.",
     presentation: "timeline",
-    navMeta: "Years 0–2158",
     personIds: [...new Set([...originTimelineEntries.map((entry) => entry.personId), "ham", "japheth"])],
     rootIds: ["adam"],
     sourceLayers: ["Genesis"],
@@ -1030,6 +1032,7 @@ export const views: GenealogyView[] = [
   {
     id: "matthew",
     title: "Matthew 1",
+    tabLabel: "Matthew 1",
     eyebrow: "Abraham to Christ",
     description: "Matthew’s royal genealogy, with the women named or alluded to in the text.",
     personIds: [...matthew],
@@ -1040,6 +1043,7 @@ export const views: GenealogyView[] = [
   {
     id: "luke",
     title: "Luke 3",
+    tabLabel: "Luke 3",
     eyebrow: "Jesus to Adam",
     description: "Luke’s genealogy shown in ancestor-to-descendant order for comparison.",
     personIds: [...luke],
@@ -1050,6 +1054,7 @@ export const views: GenealogyView[] = [
   {
     id: "promise",
     title: "Combined Matthew 1 and Luke 3",
+    tabLabel: "Combined",
     eyebrow: "The connected line",
     description: "Trace the shared backbone and see where Matthew and Luke preserve distinct lines.",
     personIds: [...promise],
@@ -1060,6 +1065,49 @@ export const views: GenealogyView[] = [
 ];
 
 export const viewById = new Map(views.map((view) => [view.id, view]));
+
+export const viewNavigationGroups: GenealogyNavigationGroup[] = [
+  {
+    id: "origins",
+    title: "Origins",
+    eyebrow: "Adam to Noah",
+    meta: "Family tree · Timeline",
+    defaultViewId: "origins",
+    viewIds: ["origins", "origins-timeline"],
+  },
+  {
+    id: "noah-to-abraham",
+    title: "Noah to Abraham",
+    eyebrow: "After the flood",
+    meta: `${noahToAbraham.size} people`,
+    defaultViewId: "noah-to-abraham",
+    viewIds: ["noah-to-abraham"],
+  },
+  {
+    id: "patriarchs",
+    title: "The Patriarchs",
+    eyebrow: "Abraham to Israel’s sons",
+    meta: `${patriarchs.size} people`,
+    defaultViewId: "patriarchs",
+    viewIds: ["patriarchs"],
+  },
+  {
+    id: "davidic",
+    title: "The Davidic Line",
+    eyebrow: "Judah to David",
+    meta: `${davidic.size} people`,
+    defaultViewId: "davidic",
+    viewIds: ["davidic"],
+  },
+  {
+    id: "jesus-genealogy",
+    title: "The Genealogy of Jesus",
+    eyebrow: "Gospel genealogies",
+    meta: "Matthew · Luke · Combined",
+    defaultViewId: "matthew",
+    viewIds: ["matthew", "luke", "promise"],
+  },
+];
 
 export function relationshipsForPerson(personId: string) {
   return relationships.filter((relationship) => relationship.from === personId || relationship.to === personId);

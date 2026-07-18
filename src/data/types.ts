@@ -69,14 +69,23 @@ export interface GenealogyBranch {
 export interface GenealogyView {
   id: string;
   title: string;
+  tabLabel?: string;
   eyebrow: string;
   description: string;
   presentation?: "graph" | "timeline";
-  navMeta?: string;
   personIds: string[];
   rootIds: string[];
   sourceLayers: SourceLayer[];
   accent: "shared" | "matthew" | "luke" | "family";
   branches?: GenealogyBranch[];
   defaultExpandedBranchIds?: string[];
+}
+
+export interface GenealogyNavigationGroup {
+  id: string;
+  title: string;
+  eyebrow: string;
+  meta: string;
+  defaultViewId: string;
+  viewIds: string[];
 }

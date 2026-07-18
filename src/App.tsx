@@ -2,7 +2,15 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { GenealogyGraph } from "./components/GenealogyGraph";
 import { OriginsTimeline } from "./components/OriginsTimeline";
 import { PersonPanel } from "./components/PersonPanel";
-import { firstViewForPerson, people, peopleById, relationships, viewById, views } from "./data/genealogy";
+import {
+  firstViewForPerson,
+  people,
+  peopleById,
+  relationships,
+  viewById,
+  viewNavigationGroups,
+  views,
+} from "./data/genealogy";
 import { scripture } from "./data/scripture.generated";
 import type { GenealogyView, Person, Translation } from "./data/types";
 
@@ -33,11 +41,12 @@ export function App() {
   const searchRef = useRef<HTMLInputElement>(null);
   const activeView = viewById.get(activeViewId) ?? views[0];
   const selected = selectedId ? peopleById.get(selectedId) ?? null : null;
-  const relatedOriginsView = activeView.id === "origins"
-    ? viewById.get("origins-timeline")
-    : activeView.id === "origins-timeline"
-      ? viewById.get("origins")
-      : null;
+  const activeNavigationGroup = viewNavigationGroups.find((group) => group.viewIds.includes(activeView.id))
+    ?? viewNavigationGroups[0];
+  const tabViews = activeNavigationGroup.viewIds
+    .map((viewId) => viewById.get(viewId))
+    .filter((view): view is GenealogyView => Boolean(view));
+  const hasViewTabs = tabViews.length > 1;
   const graphLegend = useMemo(() => {
     const personIds = new Set(activeView.personIds);
     const visibleRelationships = relationships.filter((relationship) =>
@@ -111,6 +120,14 @@ export function App() {
     updateLocation(null, view.id);
   };
 
+  const chooseNavigationGroup = (groupId: string) => {
+    const group = viewNavigationGroups.find((candidate) => candidate.id === groupId);
+    if (!group) return;
+    const viewId = group.viewIds.includes(activeView.id) ? activeView.id : group.defaultViewId;
+    const view = viewById.get(viewId);
+    if (view) chooseView(view);
+  };
+
   const openPerson = (personId: string) => {
     const visibleHere = activeView.personIds.includes(personId);
     const nextView = visibleHere ? activeView : firstViewForPerson(personId) ?? activeView;
@@ -179,16 +196,16 @@ export function App() {
           <p>Choose a source line, then select any name.</p>
         </div>
         <div className="view-buttons">
-          {views.map((view) => (
+          {viewNavigationGroups.map((group) => (
             <button
               type="button"
-              key={view.id}
-              className={view.id === activeView.id ? "active" : ""}
-              onClick={() => chooseView(view)}
+              key={group.id}
+              className={group.id === activeNavigationGroup.id ? "active" : ""}
+              onClick={() => chooseNavigationGroup(group.id)}
             >
-              <small>{view.eyebrow}</small>
-              <strong>{view.title}</strong>
-              <span>{view.navMeta ?? `${view.personIds.length} people`}</span>
+              <small>{group.eyebrow}</small>
+              <strong>{group.title}</strong>
+              <span>{group.meta}</span>
             </button>
           ))}
         </div>
@@ -198,17 +215,27 @@ export function App() {
         </div>
       </nav>
 
-      <main className="workspace">
+      <main className={`workspace ${activeView.presentation === "timeline" ? "timeline-workspace" : ""}`}>
         <section className="view-heading">
           <div className="view-heading-copy">
-            <span className={`view-accent ${activeView.accent}`}>{activeView.eyebrow}</span>
-            <h1>{activeView.title}</h1>
+            <span className={`view-accent ${activeView.accent}`}>{hasViewTabs ? activeNavigationGroup.eyebrow : activeView.eyebrow}</span>
+            <h1>{hasViewTabs ? activeNavigationGroup.title : activeView.title}</h1>
             <p>{activeView.description}</p>
-            {relatedOriginsView && (
-              <button type="button" className="related-view-link" onClick={() => chooseView(relatedOriginsView)}>
-                {relatedOriginsView.id === "origins-timeline" ? "View the timeline" : "View the family tree"}
-                <span aria-hidden="true">→</span>
-              </button>
+            {hasViewTabs && (
+              <div className="view-tabs" role="tablist" aria-label={`${activeNavigationGroup.title} views`}>
+                {tabViews.map((view) => (
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={view.id === activeView.id}
+                    key={view.id}
+                    className={`${view.accent} ${view.id === activeView.id ? "active" : ""}`}
+                    onClick={() => chooseView(view)}
+                  >
+                    {view.tabLabel ?? view.title}
+                  </button>
+                ))}
+              </div>
             )}
           </div>
           <div className="legend" aria-label={activeView.presentation === "timeline" ? "Timeline legend" : "Graph legend"}>

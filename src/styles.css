@@ -256,6 +256,8 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
   padding: 24px 26px 20px;
   overflow: hidden;
 }
+.workspace.timeline-workspace { grid-template-rows: auto auto auto; overflow-y: auto; scrollbar-gutter: stable; }
+.timeline-workspace .origins-chronology { min-height: 430px; overflow: visible; }
 .view-heading { display: flex; align-items: end; justify-content: space-between; gap: 25px; padding: 0 2px 18px; }
 .view-heading-copy { min-width: 0; }
 .view-heading h1 { margin: 5px 0 4px; color: #19362f; font: 600 clamp(28px, 3vw, 42px)/1 Georgia, "Times New Roman", serif; }
@@ -263,10 +265,13 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
 .view-accent { color: var(--gold); font-size: 10px; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
 .view-accent.luke { color: var(--luke); }
 .view-accent.family { color: var(--green-soft); }
-.related-view-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 9px; padding: 0; border: 0; color: #8b612d; font-size: 10px; font-weight: 750; background: transparent; cursor: pointer; }
-.related-view-link:hover { color: var(--green); }
-.related-view-link span { font-size: 13px; transition: transform 140ms ease; }
-.related-view-link:hover span { transform: translateX(2px); }
+.view-tabs { display: inline-flex; max-width: 100%; gap: 4px; margin-top: 14px; padding: 4px; border: 1px solid #cabda5; border-radius: 11px; background: #e9e0d1; box-shadow: 0 4px 13px rgb(42 55 49 / 9%); }
+.view-tabs button { --tab-color: var(--green-soft); min-height: 34px; padding: 7px 15px; border: 1px solid transparent; border-radius: 7px; color: #596660; font-size: 10px; font-weight: 800; background: transparent; cursor: pointer; transition: color 140ms ease, background 140ms ease, box-shadow 140ms ease; }
+.view-tabs button:hover { color: var(--tab-color); background: rgb(255 253 248 / 62%); }
+.view-tabs button.active { border-color: color-mix(in srgb, var(--tab-color) 72%, #fff); color: #fffdf8; background: var(--tab-color); box-shadow: 0 3px 9px color-mix(in srgb, var(--tab-color) 30%, transparent); }
+.view-tabs button.matthew { --tab-color: #a66d28; }
+.view-tabs button.luke { --tab-color: var(--luke); }
+.view-tabs button.shared { --tab-color: #6d5f82; }
 .legend { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 13px; padding-bottom: 3px; color: #737b77; font-size: 10px; white-space: nowrap; }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
 .legend-line { display: inline-block; width: 20px; height: 2px; background: #999; }
@@ -589,9 +594,12 @@ button.origin-event-card:hover, button.origin-event-card:focus-visible, .origin-
   .view-buttons button { flex: 0 0 auto; width: 142px; padding: 9px 11px; }
   .view-buttons button:hover { transform: none; }
   .workspace { display: block; padding: 17px 12px 24px; overflow: visible; }
+  .workspace.timeline-workspace { overflow: visible; }
   .view-heading { display: block; padding: 0 3px 14px; }
   .view-heading h1 { font-size: 30px; }
   .view-heading p { font-size: 12px; }
+  .view-tabs { display: flex; width: 100%; }
+  .view-tabs button { flex: 1 1 0; padding-inline: 9px; }
   .legend { justify-content: flex-start; margin-top: 11px; }
   .graph-shell, .graph-canvas { min-height: 56dvh; height: 56dvh; }
   .origins-chronology { min-height: 0; overflow: visible; border-radius: 14px; }
