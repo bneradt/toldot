@@ -193,7 +193,7 @@ export function App() {
       <nav className="view-nav" aria-label="Genealogy views">
         <div className="view-nav-intro">
           <span>Explore</span>
-          <p>Choose a source line, then select any name.</p>
+          <p>Choose a source line, then select any card for details.</p>
         </div>
         <div className="view-buttons">
           {viewNavigationGroups.map((group) => (
