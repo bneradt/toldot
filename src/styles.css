@@ -218,7 +218,7 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
   background: #f5f0e6;
 }
 .view-nav-intro { padding: 0 9px 17px; }
-.view-nav-intro > span, .edition-note > span {
+.view-nav-intro > span {
   color: var(--gold);
   font-size: 10px;
   font-weight: 800;
@@ -244,8 +244,6 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
 .view-buttons strong { display: block; margin: 3px 0 5px; color: #223a35; font: 600 16px/1.15 Georgia, serif; }
 .view-buttons button.active strong { color: var(--green); }
 .view-buttons span { color: #8a8f8b; font-size: 10px; }
-.edition-note { margin-top: auto; padding: 16px 10px 0; border-top: 1px solid #ddd3c0; }
-.edition-note p { margin: 5px 0 0; color: #737a76; font-size: 10px; line-height: 1.5; }
 
 .workspace {
   position: relative;
@@ -327,7 +325,7 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
 .origins-chronology-summary dd { margin: 4px 0 0; color: #31574e; font: 600 14px/1.2 Georgia, serif; white-space: nowrap; }
 .origins-chronology-note { display: flex; align-items: baseline; gap: 10px; margin: 15px auto 6px; padding: 0 24px; max-width: 980px; color: #6d746f; font-size: 9px; line-height: 1.5; }
 .origins-chronology-note strong { flex: 0 0 auto; color: #8c642f; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
-.origins-chronology-stage { --origin-event-row: 78px; --origin-year-width: 88px; --origin-rail-width: 108px; position: relative; max-width: 980px; margin: 0 auto; padding: 10px 22px 28px; }
+.origins-chronology-stage { --origin-event-row: 116px; --origin-year-width: 88px; --origin-rail-width: 108px; position: relative; max-width: 980px; margin: 0 auto; padding: 10px 22px 28px; }
 .origin-life-rails { position: absolute; z-index: 0; top: 10px; bottom: 28px; left: calc(22px + var(--origin-year-width)); width: var(--origin-rail-width); }
 .origin-life-rails i { position: absolute; top: var(--life-start); left: var(--life-lane); width: 3px; height: var(--life-length); border-radius: 999px; background: color-mix(in srgb, var(--timeline-color) 72%, #fff); opacity: .56; transition: width 140ms ease, opacity 140ms ease, transform 140ms ease; }
 .origin-life-rails i::before, .origin-life-rails i::after { position: absolute; left: -2px; width: 7px; height: 7px; border: 2px solid #fbf8f1; border-radius: 50%; background: var(--timeline-color); content: ""; }
@@ -588,7 +586,7 @@ button.origin-event-card:hover, button.origin-event-card:focus-visible, .origin-
   .search-box { height: 42px; }
   .header-toggle { grid-column: 2; grid-row: 1; }
   .view-nav { display: block; padding: 10px 11px; border-right: 0; border-bottom: 1px solid var(--line); }
-  .view-nav-intro, .edition-note { display: none; }
+  .view-nav-intro { display: none; }
   .view-buttons { flex-direction: row; overflow-x: auto; scrollbar-width: none; }
   .view-buttons::-webkit-scrollbar { display: none; }
   .view-buttons button { flex: 0 0 auto; width: 142px; padding: 9px 11px; }

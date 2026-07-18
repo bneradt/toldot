@@ -209,10 +209,6 @@ export function App() {
             </button>
           ))}
         </div>
-        <div className="edition-note">
-          <span>First edition</span>
-          <p>From Genesis’s earliest families through the Gospel genealogies. More biblical lines will follow.</p>
-        </div>
       </nav>
 
       <main className={`workspace ${activeView.presentation === "timeline" ? "timeline-workspace" : ""}`}>

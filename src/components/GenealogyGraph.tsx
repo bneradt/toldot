@@ -83,7 +83,7 @@ function arrangeDavidicHousehold(graph: Core) {
 
   const anchorX = jesse.position("x");
   const householdY = david.position("y");
-  const offsets = [-900, -750, -600, -450, -300, -150, 0, 210, 690];
+  const offsets = [-900, -750, -600, -450, -300, -150, 0, 210, 500];
   davidicJesseHouseholdOrder.forEach((personId, index) => {
     const node = graph.getElementById(personId);
     if (node.length) node.position({ x: anchorX + offsets[index], y: householdY });
@@ -94,7 +94,7 @@ function arrangeDavidicHousehold(graph: Core) {
     joab: 90,
     abishai: 210,
     asahel: 330,
-    amasa: 690,
+    amasa: 500,
   };
   Object.entries(nephewOffsets).forEach(([personId, offset]) => {
     const node = graph.getElementById(personId);

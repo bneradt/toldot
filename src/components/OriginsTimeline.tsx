@@ -22,6 +22,8 @@ interface ChronologyEvent {
   lane: number;
 }
 
+const timelineRowHeight = 116;
+
 const chronologyEvents: ChronologyEvent[] = [
   ...originTimelineEntries.flatMap((entry, lane): ChronologyEvent[] => {
     const person = peopleById.get(entry.personId);
@@ -125,7 +127,10 @@ export function OriginsTimeline({ selectedId, onSelect, onHover }: OriginsTimeli
         <span>Years are counted from Adam using the ages in Genesis 5. Shem’s dates are calculated with Genesis 11:10. Cain’s line, Ham, and Japheth lack enough age information to place fully on this timeline.</span>
       </aside>
 
-      <div className="origins-chronology-stage">
+      <div
+        className="origins-chronology-stage"
+        style={{ "--origin-event-row": `${timelineRowHeight}px` } as CSSProperties}
+      >
         <div className="origin-life-rails" aria-hidden="true">
           {lifeSpans.map((life) => (
             <i
@@ -134,8 +139,8 @@ export function OriginsTimeline({ selectedId, onSelect, onHover }: OriginsTimeli
               style={{
                 "--timeline-color": life.color,
                 "--life-lane": `${8 + life.lane * 8}px`,
-                "--life-start": `${(life.start + 0.5) * 78}px`,
-                "--life-length": `${life.length * 78}px`,
+                "--life-start": `${(life.start + 0.5) * timelineRowHeight}px`,
+                "--life-length": `${life.length * timelineRowHeight}px`,
               } as CSSProperties}
             />
           ))}
