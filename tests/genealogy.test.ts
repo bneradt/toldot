@@ -12,6 +12,7 @@ import {
   visiblePersonIdsForView,
 } from "../src/data/genealogy";
 import { chapters, scripture } from "../src/data/scripture.generated";
+import { allKingReigns, israelKingReigns, judahKingReigns } from "../src/data/kings";
 
 describe("Toldot genealogy dataset", () => {
   it("ships a substantial first edition", () => {
@@ -195,6 +196,7 @@ describe("Toldot genealogy dataset", () => {
       "noah-to-abraham",
       "patriarchs",
       "davidic",
+      "kings",
       "matthew",
       "luke",
       "promise",
@@ -211,12 +213,41 @@ describe("Toldot genealogy dataset", () => {
       "noah-to-abraham",
       "patriarchs",
       "davidic",
+      "kings",
       "jesus-genealogy",
     ]);
     expect(viewNavigationGroups.find((group) => group.id === "origins")?.viewIds)
       .toEqual(["origins", "origins-timeline"]);
     expect(viewNavigationGroups.find((group) => group.id === "jesus-genealogy")?.viewIds)
       .toEqual(["matthew", "luke", "promise"]);
+  });
+
+  it("aligns Judah and Israel while marking northern dynastic breaks", () => {
+    const kingsView = views.find((view) => view.id === "kings")!;
+    expect(kingsView.presentation).toBe("kings");
+    expect(kingsView.rootIds).toEqual(["saul"]);
+    expect(kingsView.personIds).toHaveLength(allKingReigns.length);
+    allKingReigns.forEach((reign) => {
+      expect(kingsView.personIds).toContain(reign.personId);
+      expect(peopleById.get(reign.personId)?.passages.some((passage) => passage.title === "Accession and reign"), reign.personId).toBe(true);
+      expect(reign.reignLabel).toContain("BCE");
+    });
+
+    expect(judahKingReigns[0].personId).toBe("rehoboam");
+    expect(israelKingReigns[0].personId).toBe("jeroboam-i");
+    expect(israelKingReigns.filter((reign) => reign.dynastyBreak).map((reign) => reign.personId)).toEqual([
+      "jeroboam-i",
+      "baasha",
+      "zimri",
+      "omri",
+      "jehu",
+      "shallum-israel",
+      "menahem",
+      "pekah",
+      "hoshea",
+    ]);
+    expect(viewNavigationGroups.find((group) => group.id === "jesus-genealogy")?.title)
+      .toBe("The Genealogy of the Christ");
   });
 
   it("uses the Davidic view to bridge Judah's family to David", () => {

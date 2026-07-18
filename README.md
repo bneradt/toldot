@@ -1,10 +1,10 @@
 # Toldot
 
-Toldot is an interactive, source-linked explorer of biblical genealogies. The
-first edition connects Adam to Jesus, preserves Matthew and Luke as distinct
-source layers, includes the lines of Cain and Noah's three sons, adds the
-immediate families of the patriarchs, and includes curated story passages for
-notable people.
+Toldot is an interactive, source-linked home for visualizing biblical data. It
+currently connects genealogies from Adam to Christ, places the early Genesis
+chronology on a timeline, identifies the peoples named after the Flood, and
+aligns the kings of Judah and Israel in a parallel royal chronology. Every
+person card opens the relevant biblical text and fuller chapter context.
 
 The site is a static React SPA. All graph data and WEB/KJV excerpts are bundled
 at build time; once the initial application has loaded, navigation and person
@@ -35,7 +35,7 @@ Override the default SQLite path with `BIBLE_SQLITE=/path/to/bible.sqlite`.
 - World English Bible: public domain; WEB is a trademark of eBible.org.
 - King James Version: public domain outside UK Crown rights.
 
-The generated file contains the complete chapters surrounding this edition's
+The generated file contains the complete chapters surrounding the site's
 references in both translations, not either complete Bible. This keeps chapter
 context available instantly without runtime API requests.
 

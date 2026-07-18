@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { GenealogyGraph } from "./components/GenealogyGraph";
+import { KingsTimeline } from "./components/KingsTimeline";
 import { OriginsTimeline } from "./components/OriginsTimeline";
 import { PersonPanel } from "./components/PersonPanel";
 import {
@@ -152,7 +153,7 @@ export function App() {
       <header className="site-header">
         <a className="brand" href="/" onClick={(event) => { event.preventDefault(); chooseView(views[0]); }}>
           <span className="brand-mark" aria-hidden="true"><i /><i /><i /></span>
-          <span><strong>Toldot</strong><small>The Bible’s family lines, connected</small></span>
+          <span><strong>Toldot</strong><small>Biblical data, made visible</small></span>
         </a>
 
         <div className="global-search">
@@ -167,7 +168,7 @@ export function App() {
               onKeyDown={(event) => {
                 if (event.key === "Enter" && results[0]) openPerson(results[0].id);
               }}
-              placeholder="Rahab, Boaz, David…"
+              placeholder="Rahab, David, Ahab…"
               autoComplete="off"
             />
             <kbd>/</kbd>
@@ -190,10 +191,10 @@ export function App() {
         </div>
       </header>
 
-      <nav className="view-nav" aria-label="Genealogy views">
+      <nav className="view-nav" aria-label="Biblical data views">
         <div className="view-nav-intro">
           <span>Explore</span>
-          <p>Choose a source line, then select any card for details.</p>
+          <p>Choose a biblical view, then select any card for details.</p>
         </div>
         <div className="view-buttons">
           {viewNavigationGroups.map((group) => (
@@ -211,7 +212,7 @@ export function App() {
         </div>
       </nav>
 
-      <main className={`workspace ${activeView.presentation === "timeline" ? "timeline-workspace" : ""}`}>
+      <main className={`workspace ${activeView.presentation === "timeline" ? "timeline-workspace" : ""} ${activeView.presentation === "kings" ? "kings-workspace" : ""}`}>
         <section className="view-heading">
           <div className="view-heading-copy">
             <span className={`view-accent ${activeView.accent}`}>{hasViewTabs ? activeNavigationGroup.eyebrow : activeView.eyebrow}</span>
@@ -234,11 +235,17 @@ export function App() {
               </div>
             )}
           </div>
-          <div className="legend" aria-label={activeView.presentation === "timeline" ? "Timeline legend" : "Graph legend"}>
+          <div className="legend" aria-label={activeView.presentation === "timeline" ? "Timeline legend" : activeView.presentation === "kings" ? "Kings chronology legend" : "Graph legend"}>
             {activeView.presentation === "timeline" ? (
               <>
                 <span><i className="legend-life" />Matching color = one life</span>
                 <span><i className="legend-flood" />Flood</span>
+              </>
+            ) : activeView.presentation === "kings" ? (
+              <>
+                <span><i className="legend-node kingdom-judah" />Judah</span>
+                <span><i className="legend-node kingdom-israel" />Israel</span>
+                <span><i className="legend-dynasty" />New Israel dynasty</span>
               </>
             ) : (
               <>
@@ -256,6 +263,8 @@ export function App() {
 
         {activeView.presentation === "timeline" ? (
           <OriginsTimeline selectedId={selectedId} onSelect={openPerson} onHover={setHovered} />
+        ) : activeView.presentation === "kings" ? (
+          <KingsTimeline selectedId={selectedId} onSelect={openPerson} onHover={setHovered} />
         ) : (
           <GenealogyGraph view={activeView} selectedId={selectedId} onSelect={openPerson} onHover={setHovered} />
         )}
@@ -265,7 +274,7 @@ export function App() {
         </div>
 
         <details className="name-index">
-          <summary>Browse all {activeView.personIds.length} names in this view</summary>
+          <summary>Browse all {activeView.personIds.length} {activeView.presentation === "kings" ? "rulers" : "names"} in this view</summary>
           <div>
             {activeView.personIds
               .map((id) => peopleById.get(id))

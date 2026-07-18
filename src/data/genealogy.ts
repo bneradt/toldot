@@ -8,6 +8,7 @@ import type {
   RelationshipKind,
   SourceLayer,
 } from "./types";
+import { allKingReigns } from "./kings";
 
 type ChainEntry = Omit<Person, "passages"> & {
   sourceVerseIds?: string[];
@@ -138,6 +139,7 @@ const promise = new Set<string>();
 const matthew = new Set<string>();
 const luke = new Set<string>();
 const davidic = new Set<string>();
+const kings = new Set<string>();
 const originsSethBranch = new Set<string>();
 const originsCainBranch = new Set<string>();
 const shemBranch = new Set<string>();
@@ -960,6 +962,30 @@ Object.entries(tableOfNationsLabels).forEach(([personId, [peopleGroup, peopleGro
   person.peopleGroupCertainty = peopleGroupCertainty;
 });
 
+allKingReigns.forEach((reign) => {
+  const person = ensurePerson({
+    id: reign.personId,
+    name: reign.name,
+    aliases: reign.aliases,
+    descriptor: reign.descriptor,
+    sex: reign.sex,
+    primaryVerseId: reign.verseIds[0],
+    sourceVerseIds: reign.verseIds,
+    note: reign.note,
+  }, "Narrative");
+  const reignPassage = person.passages.find((passage) =>
+    passage.title === "Narrative genealogy"
+    && passage.verseIds.join(",") === reign.verseIds.join(","),
+  );
+  if (reignPassage) {
+    reignPassage.title = "Accession and reign";
+    reignPassage.category = "story";
+  }
+  if (!person.descriptor && reign.descriptor) person.descriptor = reign.descriptor;
+  if (!person.recommendedReading?.length) person.recommendedReading = reign.recommendedReading;
+  kings.add(reign.personId);
+});
+
 export const people = [...personMap.values()];
 export const peopleById = new Map(people.map((person) => [person.id, person]));
 export const relationships = [...relationshipMap.values()];
@@ -1027,6 +1053,17 @@ export const views: GenealogyView[] = [
     personIds: [...davidic],
     rootIds: ["judah", "tamar"],
     sourceLayers: ["Genesis", "Ruth", "Matthew", "Narrative"],
+    accent: "family",
+  },
+  {
+    id: "kings",
+    title: "The Kings",
+    eyebrow: "United and divided kingdoms",
+    description: "Follow the monarchy from Saul through the parallel kingdoms of Judah and Israel, with Israel’s repeated dynastic breaks clearly marked.",
+    presentation: "kings",
+    personIds: [...kings],
+    rootIds: ["saul"],
+    sourceLayers: ["Narrative"],
     accent: "family",
   },
   {
@@ -1100,8 +1137,16 @@ export const viewNavigationGroups: GenealogyNavigationGroup[] = [
     viewIds: ["davidic"],
   },
   {
+    id: "kings",
+    title: "The Kings",
+    eyebrow: "United and divided kingdoms",
+    meta: "Judah · Israel · c. 1050–586 BCE",
+    defaultViewId: "kings",
+    viewIds: ["kings"],
+  },
+  {
     id: "jesus-genealogy",
-    title: "The Genealogy of Jesus",
+    title: "The Genealogy of the Christ",
     eyebrow: "Gospel genealogies",
     meta: "Matthew · Luke · Combined",
     defaultViewId: "matthew",

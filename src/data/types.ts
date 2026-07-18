@@ -72,7 +72,7 @@ export interface GenealogyView {
   tabLabel?: string;
   eyebrow: string;
   description: string;
-  presentation?: "graph" | "timeline";
+  presentation?: "graph" | "timeline" | "kings";
   personIds: string[];
   rootIds: string[];
   sourceLayers: SourceLayer[];

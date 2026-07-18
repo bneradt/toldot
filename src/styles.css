@@ -255,6 +255,7 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
   overflow: hidden;
 }
 .workspace.timeline-workspace { grid-template-rows: auto auto auto; overflow-y: auto; scrollbar-gutter: stable; }
+.workspace.kings-workspace { grid-template-rows: auto auto auto; overflow-y: auto; scrollbar-gutter: stable; }
 .timeline-workspace .origins-chronology { min-height: 430px; overflow: visible; }
 .view-heading { display: flex; align-items: end; justify-content: space-between; gap: 25px; padding: 0 2px 18px; }
 .view-heading-copy { min-width: 0; }
@@ -282,6 +283,9 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
 .legend-node { display: inline-block; width: 15px; height: 11px; border: 2px solid var(--gold); border-radius: 3px; background: #f8efd8; }
 .legend-node.woman { border-color: #a96851; background: #f6ece5; }
 .legend-node.nation { border-color: #68877e; background: #eef4ee; }
+.legend-node.kingdom-judah { border-color: #a66d28; background: #f7ead6; }
+.legend-node.kingdom-israel { border-color: #557a8f; background: #e6eff3; }
+.legend-dynasty { display: inline-block; width: 20px; height: 10px; border-top: 3px double #7c607a; border-bottom: 1px solid #7c607a; }
 .legend-life { display: inline-block; width: 18px; height: 11px; border-left: 3px solid #536f9d; border-right: 3px solid #934f43; }
 .legend-flood { display: inline-block; width: 20px; height: 8px; border-top: 3px solid #356c8b; }
 
@@ -301,6 +305,87 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
 }
 .graph-canvas { width: 100%; height: 100%; min-height: 430px; cursor: grab; touch-action: none; }
 .graph-canvas:active { cursor: grabbing; }
+
+.kings-chronology {
+  --judah-color: #9a6427;
+  --israel-color: #4f7589;
+  min-height: 430px;
+  overflow: hidden;
+  border: 1px solid #d4c9b7;
+  border-radius: 18px;
+  background:
+    linear-gradient(rgb(60 84 76 / 3.5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(60 84 76 / 3.5%) 1px, transparent 1px),
+    #fbf8f1;
+  background-size: 26px 26px;
+  box-shadow: inset 0 0 70px rgb(56 70 62 / 4%);
+}
+.kings-chronology-summary { display: grid; grid-template-columns: minmax(300px, 1fr) auto; gap: 28px; padding: 22px 25px; border-bottom: 1px solid #d9cfbd; background: rgb(247 242 232 / 94%); }
+.kings-chronology-summary > div > span, .kings-era-label span { color: #9a6a2b; font-size: 9px; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+.kings-chronology-summary > div > strong { display: block; margin-top: 4px; color: #23463e; font: 600 21px/1.2 Georgia, serif; }
+.kings-chronology-summary p { max-width: 650px; margin: 6px 0 0; color: #69736f; font-size: 11px; line-height: 1.5; }
+.kings-chronology-summary dl { display: grid; min-width: 360px; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0; }
+.kings-chronology-summary dl div { padding: 10px 12px; border: 1px solid #d9cfbd; border-radius: 9px; background: #fffdf8; }
+.kings-chronology-summary dt { color: #7b827e; font-size: 7px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.kings-chronology-summary dd { margin: 4px 0 0; color: #31574e; font: 600 13px/1.2 Georgia, serif; white-space: nowrap; }
+.united-monarchy { max-width: 1040px; margin: 0 auto; padding: 26px 26px 10px; }
+.kings-era-label { text-align: center; }
+.kings-era-label strong { display: block; margin-top: 3px; color: #26463f; font: 600 19px/1.2 Georgia, serif; }
+.united-king-list { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 17px; }
+.united-king-list::before { position: absolute; top: 50%; right: 12%; left: 12%; z-index: 0; border-top: 2px solid #c5b79d; content: ""; }
+.kingdom-division { position: relative; z-index: 1; max-width: 560px; margin: 23px auto 25px; padding: 14px 20px; border: 1px solid #c9b68f; border-radius: 13px; text-align: center; background: #f1e4ca; box-shadow: 0 5px 16px rgb(53 62 56 / 8%); }
+.kingdom-division span { display: block; color: #9c6828; font-size: 9px; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.kingdom-division strong { display: block; margin-top: 3px; color: #28453e; font: 600 20px/1.2 Georgia, serif; }
+.kingdom-division small { display: block; margin-top: 4px; color: #66726d; font-size: 10px; line-height: 1.4; }
+.kingdom-column-headings { display: grid; max-width: 1080px; grid-template-columns: minmax(0, 1fr) 76px minmax(0, 1fr); align-items: stretch; margin: 0 auto; padding: 0 28px 11px; }
+.kingdom-column-headings > div { padding: 12px 16px; border-radius: 11px; text-align: center; }
+.kingdom-column-headings > div:first-child { border: 1px solid color-mix(in srgb, var(--judah-color) 35%, #d7cebd); background: color-mix(in srgb, var(--judah-color) 8%, #fffdf8); }
+.kingdom-column-headings > div:last-child { border: 1px solid color-mix(in srgb, var(--israel-color) 35%, #d7cebd); background: color-mix(in srgb, var(--israel-color) 8%, #fffdf8); }
+.kingdom-column-headings span { display: block; color: #7b817d; font-size: 7px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.kingdom-column-headings strong { display: block; margin-top: 2px; color: #28453e; font: 600 21px/1 Georgia, serif; }
+.kingdom-column-headings small { display: block; margin-top: 4px; color: #747d79; font-size: 8px; line-height: 1.35; }
+.divided-kings-list { position: relative; max-width: 1080px; margin: 0 auto; padding: 0 28px 35px; list-style: none; }
+.divided-kings-list::before { position: absolute; top: 0; bottom: 35px; left: 50%; width: 1px; background: #c7c0b3; content: ""; }
+.king-accession-row { position: relative; display: grid; min-height: 92px; grid-template-columns: minmax(0, 1fr) 76px minmax(0, 1fr); align-items: start; padding: 8px 0; }
+.king-accession-row > time { z-index: 2; grid-column: 2; grid-row: 1; align-self: start; justify-self: center; min-width: 62px; margin-top: 16px; padding: 5px 7px; border: 1px solid #cec4b2; border-radius: 999px; color: #6d7772; font-size: 8px; font-weight: 800; text-align: center; background: #fbf8f1; }
+.chronology-axis { position: relative; z-index: 1; grid-column: 2; grid-row: 1; justify-self: center; width: 9px; height: 100%; min-height: 76px; }
+.chronology-axis::before { position: absolute; top: 27px; left: 2px; width: 7px; height: 7px; border: 2px solid #fbf8f1; border-radius: 50%; background: #8a948f; content: ""; box-shadow: 0 0 0 1px #b7afa1; }
+.kingdom-cell { display: flex; min-width: 0; flex-direction: column; gap: 8px; }
+.judah-cell { grid-column: 1; grid-row: 1; align-items: flex-end; }
+.israel-cell { grid-column: 3; grid-row: 1; align-items: flex-start; }
+.king-entry { --house-color: #7b786f; position: relative; z-index: 1; width: min(100%, 410px); }
+.house-saul { --house-color: #7d6948; }
+.house-david { --house-color: var(--judah-color); }
+.house-athaliah { --house-color: #a45f56; }
+.house-jeroboam { --house-color: #53788b; }
+.house-baasha { --house-color: #736591; }
+.house-zimri { --house-color: #9b624b; }
+.house-omri { --house-color: #3f766c; }
+.house-jehu { --house-color: #93652a; }
+.house-shallum { --house-color: #a35169; }
+.house-menahem { --house-color: #5a6e9b; }
+.house-pekah { --house-color: #8a5d78; }
+.house-hoshea { --house-color: #536a72; }
+.dynasty-break { margin: 0 0 5px; padding: 6px 9px 7px; border-top: 3px double var(--house-color); border-bottom: 1px solid color-mix(in srgb, var(--house-color) 42%, transparent); color: #5e6964; background: color-mix(in srgb, var(--house-color) 7%, #fbf8f1); }
+.dynasty-break span { display: block; color: var(--house-color); font-size: 7px; font-weight: 850; letter-spacing: .11em; text-transform: uppercase; }
+.dynasty-break strong { display: block; margin-top: 2px; font-size: 9px; line-height: 1.35; }
+.king-card { position: relative; z-index: 1; display: block; width: 100%; min-height: 70px; padding: 10px 12px 9px; border: 1px solid color-mix(in srgb, var(--house-color) 43%, #d7cebd); border-radius: 10px; text-align: left; background: rgb(255 253 248 / 97%); box-shadow: 0 3px 12px rgb(35 55 49 / 6%); cursor: pointer; transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease; }
+.judah-cell .king-card { border-right: 4px solid var(--house-color); }
+.israel-cell .king-card { border-left: 4px solid var(--house-color); }
+.united-king-list .king-card { border-top: 4px solid var(--house-color); }
+.king-card:hover, .king-card:focus-visible, .king-card.active { border-color: var(--house-color); box-shadow: 0 7px 20px rgb(35 55 49 / 14%); transform: translateY(-2px); }
+.king-card-role { display: block; color: var(--house-color); font-size: 7px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+.king-card-main { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-top: 3px; }
+.king-card-main strong { color: #25443d; font: 600 17px/1.2 Georgia, serif; }
+.king-card-main time { flex: 0 0 auto; color: #5f6e69; font-size: 9px; font-weight: 750; }
+.king-card-meta { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 5px; color: #78807c; font-size: 8px; }
+.king-card-meta small + small::before { margin-right: 6px; color: #b7afa1; content: "·"; }
+.kingdom-fall { width: min(100%, 410px); padding: 12px 14px; border: 1px solid; border-radius: 11px; background: #f2e8db; box-shadow: 0 4px 14px rgb(35 55 49 / 7%); }
+.kingdom-fall span { display: block; font-size: 7px; font-weight: 850; letter-spacing: .11em; text-transform: uppercase; }
+.kingdom-fall strong { display: block; margin-top: 2px; color: #28453e; font: 600 17px/1.2 Georgia, serif; }
+.kingdom-fall p { margin: 4px 0 0; color: #67716d; font-size: 9px; line-height: 1.4; }
+.judah-fall { border-color: color-mix(in srgb, var(--judah-color) 52%, #d7cebd); color: var(--judah-color); }
+.israel-fall { border-color: color-mix(in srgb, var(--israel-color) 52%, #d7cebd); color: var(--israel-color); }
 
 .origins-chronology {
   min-height: 430px;
@@ -408,6 +493,14 @@ button.origin-event-card:hover, button.origin-event-card:focus-visible, .origin-
   background: rgb(255 253 248 / 82%);
   pointer-events: none;
   backdrop-filter: blur(6px);
+}
+.touch-graph-hint { display: none; }
+
+@media (pointer: coarse) {
+  .graph-controls .zoom-button { display: none; }
+  .graph-controls .fit-button { border-right: 0; }
+  .pointer-graph-hint { display: none; }
+  .touch-graph-hint { display: inline; }
 }
 
 .hover-preview {
@@ -567,6 +660,8 @@ button.origin-event-card:hover, button.origin-event-card:focus-visible, .origin-
 @media (max-width: 1350px) {
   .origins-chronology-summary { display: block; }
   .origins-chronology-summary dl { min-width: 0; margin-top: 14px; }
+  .kings-chronology-summary { display: block; }
+  .kings-chronology-summary dl { min-width: 0; margin-top: 14px; }
 }
 
 @media (max-width: 1180px) {
@@ -593,6 +688,7 @@ button.origin-event-card:hover, button.origin-event-card:focus-visible, .origin-
   .view-buttons button:hover { transform: none; }
   .workspace { display: block; padding: 17px 12px 24px; overflow: visible; }
   .workspace.timeline-workspace { overflow: visible; }
+  .workspace.kings-workspace { overflow: visible; }
   .view-heading { display: block; padding: 0 3px 14px; }
   .view-heading h1 { font-size: 30px; }
   .view-heading p { font-size: 12px; }
@@ -600,6 +696,29 @@ button.origin-event-card:hover, button.origin-event-card:focus-visible, .origin-
   .view-tabs button { flex: 1 1 0; padding-inline: 9px; }
   .legend { justify-content: flex-start; margin-top: 11px; }
   .graph-shell, .graph-canvas { min-height: 56dvh; height: 56dvh; }
+  .kings-chronology { border-radius: 14px; }
+  .kings-chronology-summary { display: block; padding: 17px 16px; }
+  .kings-chronology-summary > div > strong { font-size: 18px; }
+  .kings-chronology-summary dl { min-width: 0; margin-top: 14px; }
+  .kings-chronology-summary dl div { padding: 8px 9px; }
+  .kings-chronology-summary dd { font-size: 12px; }
+  .united-monarchy { padding: 22px 14px 8px; }
+  .united-king-list { grid-template-columns: 1fr; gap: 9px; }
+  .united-king-list::before { top: 10%; bottom: 10%; left: 22px; width: 2px; height: auto; border-top: 0; background: #c5b79d; }
+  .united-king-list .king-entry { width: 100%; }
+  .kingdom-division { margin-inline: 14px; }
+  .kingdom-column-headings { display: none; }
+  .divided-kings-list { padding: 11px 12px 28px; }
+  .divided-kings-list::before { bottom: 28px; left: 43px; }
+  .king-accession-row { min-height: 88px; grid-template-columns: 63px minmax(0, 1fr); padding-block: 7px; }
+  .king-accession-row > time { grid-column: 1; grid-row: 1; justify-self: start; min-width: 58px; margin-top: 17px; padding-inline: 4px; font-size: 7px; }
+  .chronology-axis { grid-column: 1; grid-row: 1; justify-self: start; margin-left: 27px; }
+  .kingdom-cell { grid-column: 2; grid-row: auto; align-items: stretch; }
+  .judah-cell { grid-row: 1; }
+  .israel-cell { grid-row: 2; margin-top: 7px; }
+  .king-entry, .kingdom-fall { width: 100%; }
+  .judah-cell .king-card { border-right-width: 1px; border-left: 4px solid var(--house-color); }
+  .king-card:hover, .king-card:focus-visible, .king-card.active { transform: none; }
   .origins-chronology { min-height: 0; overflow: visible; border-radius: 14px; }
   .origins-chronology-summary { display: block; padding: 17px 16px; }
   .origins-chronology-summary > div > strong { font-size: 18px; }
@@ -616,7 +735,7 @@ button.origin-event-card:hover, button.origin-event-card:focus-visible, .origin-
   .origin-event-stem i { left: 7px; }
   .origin-event-card { min-height: 64px; padding: 9px 10px; }
   button.origin-event-card:hover, button.origin-event-card:focus-visible, .origin-event-list > li.active .origin-event-card { transform: none; }
-  .graph-scroll-hint { display: none; }
+  .graph-scroll-hint { right: 10px; bottom: 9px; }
   .hover-preview { display: none; }
   .person-panel { top: auto; right: 0; bottom: 0; left: 0; width: auto; max-height: 84dvh; border-top: 1px solid #cfc4b1; border-left: 0; border-radius: 18px 18px 0 0; box-shadow: 0 -20px 50px rgb(26 44 39 / 18%); }
   .panel-backdrop { top: 0; right: 0; background: rgb(21 42 36 / 30%); }
@@ -630,6 +749,11 @@ button.origin-event-card:hover, button.origin-event-card:focus-visible, .origin-
   .origins-chronology-summary dl div { display: flex; align-items: baseline; justify-content: space-between; }
   .origins-chronology-summary dd { margin-top: 0; }
   .origin-event-card > strong { font-size: 14px; }
+  .kings-chronology-summary dl { grid-template-columns: 1fr; }
+  .kings-chronology-summary dl div { display: flex; align-items: baseline; justify-content: space-between; }
+  .kings-chronology-summary dd { margin-top: 0; }
+  .king-card-main { display: block; }
+  .king-card-main time { display: block; margin-top: 2px; }
   .connection-list { grid-template-columns: 1fr; }
   .passage-card blockquote { font-size: 15px; }
   .chapter-actions { display: block; }

@@ -140,6 +140,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
+    const touchZoomEnabled = window.matchMedia("(pointer: coarse)").matches;
 
     const visible = new Set(visiblePersonIds);
     const nodes: ElementDefinition[] = visiblePersonIds.flatMap((id, layoutOrder) => {
@@ -209,7 +210,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
       wheelSensitivity: 0.22,
       boxSelectionEnabled: false,
       selectionType: "single",
-      userZoomingEnabled: false,
+      userZoomingEnabled: touchZoomEnabled,
       autoungrabify: true,
       style: [
         {
@@ -481,11 +482,14 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
         </div>
       )}
       <div className="graph-controls" aria-label="Graph controls">
-        <button type="button" onClick={() => zoom(1.24)} aria-label="Zoom in">+</button>
-        <button type="button" onClick={() => zoom(0.8)} aria-label="Zoom out">−</button>
+        <button type="button" className="zoom-button" onClick={() => zoom(1.24)} aria-label="Zoom in">+</button>
+        <button type="button" className="zoom-button" onClick={() => zoom(0.8)} aria-label="Zoom out">−</button>
         <button type="button" className="fit-button" onClick={fit}>Fit all</button>
       </div>
-      <div className="graph-scroll-hint">Scroll or drag to move</div>
+      <div className="graph-scroll-hint">
+        <span className="pointer-graph-hint">Scroll or drag to move</span>
+        <span className="touch-graph-hint">Pinch to zoom · drag to move</span>
+      </div>
     </div>
   );
 }
