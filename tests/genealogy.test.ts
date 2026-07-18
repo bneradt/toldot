@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  davidicJesseHouseholdOrder,
   people,
   peopleById,
   originTimelineEntries,
@@ -189,6 +190,7 @@ describe("Toldot genealogy dataset", () => {
   it("orders the genealogy views chronologically", () => {
     expect(views.map((view) => view.id)).toEqual([
       "origins",
+      "origins-timeline",
       "noah-to-abraham",
       "patriarchs",
       "davidic",
@@ -197,6 +199,11 @@ describe("Toldot genealogy dataset", () => {
       "promise",
     ]);
     expect(views.find((view) => view.id === "patriarchs")?.personIds).not.toContain("david");
+
+    const timeline = views.find((view) => view.id === "origins-timeline")!;
+    expect(timeline.presentation).toBe("timeline");
+    expect(timeline.navMeta).toBe("Years 0–2158");
+    expect(timeline.personIds).toEqual(expect.arrayContaining(["adam", "noah", "shem", "ham", "japheth"]));
   });
 
   it("uses the Davidic view to bridge Judah's family to David", () => {
@@ -240,6 +247,11 @@ describe("Toldot genealogy dataset", () => {
     )).toBe(true);
     expect(peopleById.get("amasa")?.passages.some((passage) => passage.category === "story")).toBe(true);
     expect(chapters["1-chr-2"].verseIds).toHaveLength(55);
+
+    const davidIndex = davidicJesseHouseholdOrder.indexOf("david");
+    expect(davidicJesseHouseholdOrder.slice(davidIndex + 1)).toEqual(["zeruiah", "abigail-david-sister"]);
+    expect(peopleById.get("zeruiah")?.birthOrder).toBeUndefined();
+    expect(peopleById.get("abigail-david-sister")?.birthOrder).toBeUndefined();
   });
 
   it("records partners accurately and numbers Jacob's sons in birth order", () => {

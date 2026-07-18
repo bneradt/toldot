@@ -71,6 +71,8 @@ export interface GenealogyView {
   title: string;
   eyebrow: string;
   description: string;
+  presentation?: "graph" | "timeline";
+  navMeta?: string;
   personIds: string[];
   rootIds: string[];
   sourceLayers: SourceLayer[];

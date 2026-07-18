@@ -855,6 +855,18 @@ export const originTimelineMilestones: OriginTimelineMilestone[] = [
   },
 ];
 
+export const davidicJesseHouseholdOrder = [
+  "eliab-jesse",
+  "abinadab-jesse",
+  "shimea-jesse",
+  "nethanel-jesse",
+  "raddai",
+  "ozem",
+  "david",
+  "zeruiah",
+  "abigail-david-sister",
+] as const;
+
 const tableOfNationsLabels: Record<string, [string, Person["peopleGroupCertainty"]?]> = {
   noah: ["Post-Flood nations", "text"],
   shem: ["West Asian peoples", "text"],
@@ -954,9 +966,9 @@ export const relationships = [...relationshipMap.values()];
 export const views: GenealogyView[] = [
   {
     id: "origins",
-    title: "Origins",
+    title: "Origins Family Tree",
     eyebrow: "Adam to Noah",
-    description: "The lines of Cain and Seth from Genesis 4–5, with their recorded ages and Noah’s flood timeline.",
+    description: "The lines of Cain and Seth from Genesis 4–5, meeting in the generation of Noah and his sons.",
     personIds: [...origins],
     rootIds: ["adam", "eve"],
     sourceLayers: ["Genesis"],
@@ -966,6 +978,18 @@ export const views: GenealogyView[] = [
       { id: "cain", title: "Cain’s family", rootPersonId: "cain", personIds: [...originsCainBranch] },
     ],
     defaultExpandedBranchIds: ["seth"],
+  },
+  {
+    id: "origins-timeline",
+    title: "Origins Timeline",
+    eyebrow: "Years from Adam",
+    description: "Births, deaths, overlapping lifespans, and the Flood in the chronology derived from Genesis 5, 7, 9, and 11.",
+    presentation: "timeline",
+    navMeta: "Years 0–2158",
+    personIds: [...new Set([...originTimelineEntries.map((entry) => entry.personId), "ham", "japheth"])],
+    rootIds: ["adam"],
+    sourceLayers: ["Genesis"],
+    accent: "family",
   },
   {
     id: "noah-to-abraham",

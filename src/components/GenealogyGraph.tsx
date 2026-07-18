@@ -1,9 +1,8 @@
 import cytoscape, { type Core, type ElementDefinition } from "cytoscape";
 import dagre from "cytoscape-dagre";
-import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
-  originTimelineEntries,
-  originTimelineMilestones,
+  davidicJesseHouseholdOrder,
   patriarchSonsInBirthOrder,
   peopleById,
   relationships,
@@ -77,16 +76,38 @@ function arrangePatriarchs(graph: Core) {
   position("zerah", judahX + 25, 980);
 }
 
+function arrangeDavidicHousehold(graph: Core) {
+  const jesse = graph.getElementById("jesse");
+  const david = graph.getElementById("david");
+  if (!jesse.length || !david.length) return;
+
+  const anchorX = jesse.position("x");
+  const householdY = david.position("y");
+  const offsets = [-900, -750, -600, -450, -300, -150, 0, 210, 690];
+  davidicJesseHouseholdOrder.forEach((personId, index) => {
+    const node = graph.getElementById(personId);
+    if (node.length) node.position({ x: anchorX + offsets[index], y: householdY });
+  });
+
+  const nephewsY = householdY + 155;
+  const nephewOffsets: Record<string, number> = {
+    joab: 90,
+    abishai: 210,
+    asahel: 330,
+    amasa: 690,
+  };
+  Object.entries(nephewOffsets).forEach(([personId, offset]) => {
+    const node = graph.getElementById(personId);
+    if (node.length) node.position({ x: anchorX + offset, y: nephewsY });
+  });
+}
+
 export function GenealogyGraph({ view, selectedId, onSelect, onHover }: GenealogyGraphProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const graphRef = useRef<Core | null>(null);
   const onSelectRef = useRef(onSelect);
   const onHoverRef = useRef(onHover);
   const branchButtonRefs = useRef(new Map<string, HTMLButtonElement>());
-  const timelineEntryRefs = useRef(new Map<string, HTMLDivElement>());
-  const timelineDeathRefs = useRef(new Map<string, HTMLDivElement>());
-  const timelineMilestoneRefs = useRef(new Map<string, HTMLDivElement>());
-  const timelineLineRef = useRef<HTMLDivElement>(null);
   const [expandedByView, setExpandedByView] = useState<Record<string, string[]>>({});
 
   const expandedBranchIds = useMemo(
@@ -328,92 +349,6 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
         button.style.visibility = "visible";
       });
 
-      if (view.id === "origins") {
-        const visibleY: number[] = [];
-        const birthAnchors: Array<{ year: number; y: number; id: string }> = [];
-        originTimelineEntries.forEach((entry) => {
-          const element = timelineEntryRefs.current.get(entry.id);
-          const node = graph.getElementById(entry.personId);
-          if (!element || !node.length) {
-            if (element) element.style.visibility = "hidden";
-            return;
-          }
-          const y = container.offsetTop + node.renderedPosition().y;
-          element.style.transform = `translate3d(0, ${y}px, 0) translateY(-50%)`;
-          element.style.visibility = "visible";
-          visibleY.push(y);
-          birthAnchors.push({ year: entry.birthYear, y, id: entry.id });
-        });
-
-        birthAnchors.sort((a, b) => a.year - b.year);
-        const yForYear = (year: number) => {
-          if (birthAnchors.length < 2) return birthAnchors[0]?.y ?? 0;
-          let lower = birthAnchors[0];
-          let upper = birthAnchors[1];
-          if (year >= birthAnchors.at(-1)!.year) {
-            lower = birthAnchors.at(-2)!;
-            upper = birthAnchors.at(-1)!;
-          } else {
-            for (let index = 1; index < birthAnchors.length; index += 1) {
-              if (year <= birthAnchors[index].year) {
-                lower = birthAnchors[index - 1];
-                upper = birthAnchors[index];
-                break;
-              }
-            }
-          }
-          const yearSpan = upper.year - lower.year;
-          return lower.y + ((year - lower.year) / yearSpan) * (upper.y - lower.y);
-        };
-
-        let previousDeathY = Number.NEGATIVE_INFINITY;
-        const deathDisplayY = new Map<string, number>();
-        originTimelineEntries
-          .filter((entry) => birthAnchors.some((anchor) => anchor.id === entry.id) && entry.endYear)
-          .sort((a, b) => a.endYear! - b.endYear!)
-          .forEach((entry) => {
-            const element = timelineDeathRefs.current.get(entry.id);
-            if (!element || !entry.endYear) return;
-            const chronologicalY = yForYear(entry.endYear);
-            const displayY = Math.max(chronologicalY, previousDeathY + 22);
-            previousDeathY = displayY;
-            deathDisplayY.set(entry.id, displayY);
-            element.style.transform = `translate3d(0, ${displayY}px, 0) translateY(-50%)`;
-            element.style.visibility = "visible";
-            visibleY.push(displayY);
-          });
-
-        timelineDeathRefs.current.forEach((element, id) => {
-          if (!birthAnchors.some((anchor) => anchor.id === id)) element.style.visibility = "hidden";
-        });
-
-        originTimelineMilestones.forEach((milestone) => {
-          const element = timelineMilestoneRefs.current.get(milestone.id);
-          const anchorNode = graph.getElementById(milestone.anchorPersonId);
-          if (!element || !anchorNode.length) {
-            if (element) element.style.visibility = "hidden";
-            return;
-          }
-          const displayY = milestone.alignWithEndId
-            ? deathDisplayY.get(milestone.alignWithEndId)
-            : yForYear(milestone.year);
-          if (displayY === undefined) {
-            element.style.visibility = "hidden";
-            return;
-          }
-          element.style.transform = `translate3d(0, ${displayY}px, 0) translateY(-50%)`;
-          element.style.visibility = "visible";
-          visibleY.push(displayY);
-        });
-
-        if (timelineLineRef.current && visibleY.length) {
-          const first = Math.min(...visibleY);
-          const last = Math.max(...visibleY);
-          timelineLineRef.current.style.top = `${first}px`;
-          timelineLineRef.current.style.height = `${Math.max(0, last - first)}px`;
-          timelineLineRef.current.style.visibility = "visible";
-        }
-      }
     };
     graph.on("render", positionOverlayControls);
 
@@ -436,6 +371,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
     layout.one("layoutstop", () => {
       graph.startBatch();
       if (view.id === "patriarchs") arrangePatriarchs(graph);
+      if (view.id === "davidic") arrangeDavidicHousehold(graph);
       partnerRelationships.forEach((relationship) => {
         const partner = graph.getElementById(relationship.to);
         const anchor = graph.getElementById(relationship.from);
@@ -477,10 +413,6 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
         const button = branchButtonRefs.current.get(branch.id);
         if (button) button.style.visibility = "hidden";
       });
-      timelineEntryRefs.current.forEach((entry) => { entry.style.visibility = "hidden"; });
-      timelineDeathRefs.current.forEach((entry) => { entry.style.visibility = "hidden"; });
-      timelineMilestoneRefs.current.forEach((entry) => { entry.style.visibility = "hidden"; });
-      if (timelineLineRef.current) timelineLineRef.current.style.visibility = "hidden";
       graph.destroy();
       graphRef.current = null;
     };
@@ -516,57 +448,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
   const fit = () => graphRef.current?.animate({ fit: { eles: graphRef.current.elements(), padding: 44 }, duration: 240 });
 
   return (
-    <div className={`graph-shell ${view.id === "origins" ? "has-origin-timeline" : ""}`}>
-      {view.id === "origins" && (
-        <aside className="origin-timeline" aria-label="Calculated chronology from Adam through Noah’s sons">
-          <header>
-            <strong>Years from Adam</strong>
-            <span>Births align with the tree · deaths and the flood follow chronologically · spacing is not to scale</span>
-          </header>
-          <div className="origin-timeline-line" ref={timelineLineRef} aria-hidden="true" />
-          {originTimelineEntries.map((entry) => (
-            <div
-              className={`origin-timeline-entry ${entry.id === "noah-sons" ? "sons-entry" : ""}`}
-              key={entry.id}
-              style={{ "--timeline-color": entry.color } as CSSProperties}
-              ref={(element) => {
-                if (element) timelineEntryRefs.current.set(entry.id, element);
-                else timelineEntryRefs.current.delete(entry.id);
-              }}
-            >
-              <span>{entry.yearLabel}</span>
-              <strong>{entry.title}</strong>
-              <small>{entry.lifeLabel}</small>
-            </div>
-          ))}
-          {originTimelineEntries.filter((entry) => entry.endYear && entry.endTitle && entry.endAge).map((entry) => (
-            <div
-              className="origin-timeline-death"
-              key={`${entry.id}-death`}
-              style={{ "--timeline-color": entry.color } as CSSProperties}
-              ref={(element) => {
-                if (element) timelineDeathRefs.current.set(entry.id, element);
-                else timelineDeathRefs.current.delete(entry.id);
-              }}
-            >
-              <span>{entry.endYear}: {entry.endTitle} ({entry.endAge})</span>
-            </div>
-          ))}
-          {originTimelineMilestones.map((milestone) => (
-            <div
-              className="origin-timeline-milestone"
-              key={milestone.id}
-              style={{ "--timeline-color": milestone.color } as CSSProperties}
-              ref={(element) => {
-                if (element) timelineMilestoneRefs.current.set(milestone.id, element);
-                else timelineMilestoneRefs.current.delete(milestone.id);
-              }}
-            >
-              <span>Year {milestone.year}: {milestone.title}</span>
-            </div>
-          ))}
-        </aside>
-      )}
+    <div className="graph-shell">
       <div
         ref={containerRef}
         className="graph-canvas"

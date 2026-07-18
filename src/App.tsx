@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { GenealogyGraph } from "./components/GenealogyGraph";
+import { OriginsTimeline } from "./components/OriginsTimeline";
 import { PersonPanel } from "./components/PersonPanel";
 import { firstViewForPerson, people, peopleById, relationships, viewById, views } from "./data/genealogy";
 import { scripture } from "./data/scripture.generated";
@@ -32,6 +33,11 @@ export function App() {
   const searchRef = useRef<HTMLInputElement>(null);
   const activeView = viewById.get(activeViewId) ?? views[0];
   const selected = selectedId ? peopleById.get(selectedId) ?? null : null;
+  const relatedOriginsView = activeView.id === "origins"
+    ? viewById.get("origins-timeline")
+    : activeView.id === "origins-timeline"
+      ? viewById.get("origins")
+      : null;
   const graphLegend = useMemo(() => {
     const personIds = new Set(activeView.personIds);
     const visibleRelationships = relationships.filter((relationship) =>
@@ -182,7 +188,7 @@ export function App() {
             >
               <small>{view.eyebrow}</small>
               <strong>{view.title}</strong>
-              <span>{view.personIds.length} people</span>
+              <span>{view.navMeta ?? `${view.personIds.length} people`}</span>
             </button>
           ))}
         </div>
@@ -194,23 +200,42 @@ export function App() {
 
       <main className="workspace">
         <section className="view-heading">
-          <div>
+          <div className="view-heading-copy">
             <span className={`view-accent ${activeView.accent}`}>{activeView.eyebrow}</span>
             <h1>{activeView.title}</h1>
             <p>{activeView.description}</p>
+            {relatedOriginsView && (
+              <button type="button" className="related-view-link" onClick={() => chooseView(relatedOriginsView)}>
+                {relatedOriginsView.id === "origins-timeline" ? "View the timeline" : "View the family tree"}
+                <span aria-hidden="true">→</span>
+              </button>
+            )}
           </div>
-          <div className="legend" aria-label="Graph legend">
-            {graphLegend.sources.map((source) => (
-              <span key={source.id}><i className={`legend-line ${source.id}`} />{source.label}</span>
-            ))}
-            {graphLegend.hasWomen && <span><i className="legend-node woman" />Women</span>}
-            {graphLegend.hasPartners && <span><i className="legend-line partner" />Marriage / concubinage</span>}
-            {graphLegend.hasNotable && <span><i className="legend-node notable" />Richer story</span>}
-            {graphLegend.hasPeopleGroups && <span><i className="legend-node nation" />People / ancient region · ? uncertain</span>}
+          <div className="legend" aria-label={activeView.presentation === "timeline" ? "Timeline legend" : "Graph legend"}>
+            {activeView.presentation === "timeline" ? (
+              <>
+                <span><i className="legend-life" />Matching color = one life</span>
+                <span><i className="legend-flood" />Flood</span>
+              </>
+            ) : (
+              <>
+                {graphLegend.sources.map((source) => (
+                  <span key={source.id}><i className={`legend-line ${source.id}`} />{source.label}</span>
+                ))}
+                {graphLegend.hasWomen && <span><i className="legend-node woman" />Women</span>}
+                {graphLegend.hasPartners && <span><i className="legend-line partner" />Marriage / concubinage</span>}
+                {graphLegend.hasNotable && <span><i className="legend-node notable" />Richer story</span>}
+                {graphLegend.hasPeopleGroups && <span><i className="legend-node nation" />People / ancient region · ? uncertain</span>}
+              </>
+            )}
           </div>
         </section>
 
-        <GenealogyGraph view={activeView} selectedId={selectedId} onSelect={openPerson} onHover={setHovered} />
+        {activeView.presentation === "timeline" ? (
+          <OriginsTimeline selectedId={selectedId} onSelect={openPerson} onHover={setHovered} />
+        ) : (
+          <GenealogyGraph view={activeView} selectedId={selectedId} onSelect={openPerson} onHover={setHovered} />
+        )}
 
         <div className={`hover-preview ${hovered ? "visible" : ""}`} aria-hidden="true">
           {hovered && <><span>Open person</span><strong>{hovered.name}</strong><small>{hovered.descriptor ?? hovered.peopleGroup ?? scripture[hovered.primaryVerseId]?.reference}</small></>}
