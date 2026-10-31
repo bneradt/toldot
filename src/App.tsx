@@ -246,6 +246,9 @@ export function App() {
                 <span><i className="legend-node kingdom-judah" />Judah</span>
                 <span><i className="legend-node kingdom-israel" />Israel</span>
                 <span><i className="legend-dynasty" />New Israel dynasty</span>
+                <span><i className="legend-relative" />Relative · did not reign</span>
+                <span><i className="legend-line narrative" />Parent</span>
+                <span><i className="legend-line partner" />Marriage</span>
               </>
             ) : (
               <>
@@ -274,7 +277,7 @@ export function App() {
         </div>
 
         <details className="name-index">
-          <summary>Browse all {activeView.personIds.length} {activeView.presentation === "kings" ? "rulers" : "names"} in this view</summary>
+          <summary>Browse all {activeView.personIds.length} {activeView.presentation === "kings" ? "rulers and relatives" : "names"} in this view</summary>
           <div>
             {activeView.personIds
               .map((id) => peopleById.get(id))

@@ -8,7 +8,7 @@ import type {
   RelationshipKind,
   SourceLayer,
 } from "./types";
-import { allKingReigns } from "./kings";
+import { allKingReigns, kingRelatives } from "./kings";
 
 type ChainEntry = Omit<Person, "passages"> & {
   sourceVerseIds?: string[];
@@ -143,7 +143,6 @@ const matthew = new Set<string>();
 const luke = new Set<string>();
 const davidic = new Set<string>();
 const kings = new Set<string>();
-const athaliahFamily = new Set<string>();
 const originsSethBranch = new Set<string>();
 const originsCainBranch = new Set<string>();
 const shemBranch = new Set<string>();
@@ -1001,7 +1000,7 @@ addPerson({
   descriptor: "daughter of Ethbaal king of the Sidonians; wife of Ahab",
   sex: "female",
   primaryVerseId: "1-kgs-16-31",
-}, "Narrative", [athaliahFamily]);
+}, "Narrative");
 addPerson({
   id: "jehosheba",
   name: "Jehosheba",
@@ -1010,24 +1009,21 @@ addPerson({
   sex: "female",
   primaryVerseId: "2-kgs-11-2",
   note: "2 Kings 11:2 calls her the daughter of King Joram (Jehoram) and sister of Ahaziah but never names her mother. She may have been Athaliah’s daughter or a half-sister of Ahaziah by another wife, so Toldot draws no maternal link. Per 2 Chr 22:11 she was the wife of Jehoiada the priest; Chronicles spells her name Jehoshabeath.",
-}, "Narrative", [athaliahFamily]);
+}, "Narrative");
 addPerson({
   id: "jehoiada",
   name: "Jehoiada",
   descriptor: "priest; protector and guardian of Joash",
   primaryVerseId: "2-kgs-11-4",
   note: "Per 2 Chr 22:11 Jehoiada was the husband of Jehosheba, Joash’s aunt, which is why the hidden prince could be kept in the LORD’s house.",
-}, "Narrative", [athaliahFamily]);
+}, "Narrative");
 addPerson({
   id: "zibiah",
   name: "Zibiah",
   descriptor: "of Beersheba; mother of Joash",
   sex: "female",
   primaryVerseId: "2-kgs-12-1",
-}, "Narrative", [athaliahFamily]);
-
-["omri", "ahab", "jehoshaphat", "joram", "athaliah", "ahaziah-judah", "joash-judah"]
-  .forEach((personId) => athaliahFamily.add(personId));
+}, "Narrative");
 
 const setDescriptor = (personId: string, descriptor: string, note?: string) => {
   const person = personMap.get(personId);
@@ -1074,6 +1070,12 @@ addReadingGuide("jehosheba", ["2 Kings 11:1–3"]);
 addReadingGuide("jehoiada", ["2 Kings 11–12"]);
 addReadingGuide("zibiah", ["2 Kings 12:1–3"]);
 addReadingGuide("athaliah", ["2 Kings 8:16–27", "2 Kings 11"]);
+
+// Relatives who never reigned sit on the Kings chronology beside their family.
+kingRelatives.forEach((relative) => {
+  if (!personMap.has(relative.personId)) throw new Error(`Unknown king relative ${relative.personId}`);
+  kings.add(relative.personId);
+});
 
 export const people = [...personMap.values()];
 export const peopleById = new Map(people.map((person) => [person.id, person]));
@@ -1148,22 +1150,10 @@ export const views: GenealogyView[] = [
     id: "kings",
     title: "The Kings",
     eyebrow: "United and divided kingdoms",
-    description: "Follow the monarchy from Saul through the parallel kingdoms of Judah and Israel, with Israel’s repeated dynastic breaks clearly marked.",
-    tabLabel: "Chronology",
+    description: "Follow the monarchy from Saul through the parallel kingdoms of Judah and Israel, with Israel’s repeated dynastic breaks clearly marked and Athaliah’s family drawn between the houses of Omri and David.",
     presentation: "kings",
     personIds: [...kings],
     rootIds: ["saul"],
-    sourceLayers: ["Narrative"],
-    accent: "family",
-  },
-  {
-    id: "athaliah-joash",
-    title: "Athaliah and Joash",
-    tabLabel: "Athaliah and Joash",
-    eyebrow: "The houses of Omri and David",
-    description: "How Ahab’s daughter Athaliah married into David’s line, seized Judah’s throne, and tried to destroy her own grandson Joash, whom his aunt Jehosheba hid.",
-    personIds: [...athaliahFamily],
-    rootIds: ["omri", "jehoshaphat"],
     sourceLayers: ["Narrative"],
     accent: "family",
   },
@@ -1243,7 +1233,7 @@ export const viewNavigationGroups: GenealogyNavigationGroup[] = [
     eyebrow: "United and divided kingdoms",
     meta: "Judah · Israel · c. 1050–586 BCE",
     defaultViewId: "kings",
-    viewIds: ["kings", "athaliah-joash"],
+    viewIds: ["kings"],
   },
   {
     id: "jesus-genealogy",
@@ -1257,6 +1247,16 @@ export const viewNavigationGroups: GenealogyNavigationGroup[] = [
 
 export function relationshipsForPerson(personId: string) {
   return relationships.filter((relationship) => relationship.from === personId || relationship.to === personId);
+}
+
+/** Narrative parent and spouse links between people shown on the Kings chronology. */
+export function kingsFamilyLinks() {
+  const onTimeline = new Set(viewById.get("kings")?.personIds ?? []);
+  return relationships.filter((relationship) =>
+    (relationship.kind === "parent" || relationship.kind === "spouse")
+    && relationship.sourceLayers.includes("Narrative")
+    && onTimeline.has(relationship.from)
+    && onTimeline.has(relationship.to));
 }
 
 export function firstViewForPerson(personId: string) {

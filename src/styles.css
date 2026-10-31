@@ -320,6 +320,22 @@ button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visibl
   background-size: 26px 26px;
   box-shadow: inset 0 0 70px rgb(56 70 62 / 4%);
 }
+.kings-chronology { position: relative; }
+.kings-family-links { position: absolute; top: 0; left: 0; z-index: 0; overflow: visible; pointer-events: none; }
+.kings-family-links marker path { fill: #8a9a95; }
+.family-link { fill: none; stroke: #8a9a95; stroke-width: 2; opacity: .78; transition: opacity 140ms ease, stroke 140ms ease, stroke-width 140ms ease; }
+.family-link.spouse { stroke-width: 1.5; stroke-dasharray: 5 4; }
+.family-link.highlight { stroke: #31574e; stroke-width: 2.6; opacity: 1; }
+.family-link.spouse.highlight { stroke-width: 2; }
+.family-link.faded { opacity: .22; }
+.king-relative { --house-color: #8f8a7f; }
+.king-card.relative-card { min-height: 54px; padding-block: 8px 7px; border-style: dashed; border-color: #c9bfae; background: rgb(246 241 231 / 92%); box-shadow: none; }
+.judah-cell .king-card.relative-card, .israel-cell .king-card.relative-card { border-left-width: 1px; border-right-width: 1px; }
+.king-card.relative-card .king-card-role { color: #8a837a; }
+.king-card.relative-card .king-card-main strong { color: #4a5753; font-size: 15px; font-style: italic; }
+.king-card.relative-card:hover, .king-card.relative-card:focus-visible, .king-card.relative-card.active { border-color: #8f8a7f; background: #fffdf8; }
+.king-card.kin { border-color: #31574e; box-shadow: 0 0 0 2px rgb(49 87 78 / 18%), 0 5px 16px rgb(35 55 49 / 10%); }
+.legend-relative { display: inline-block; width: 15px; height: 11px; border: 1px dashed #a69d8f; border-radius: 3px; background: #f3eee4; }
 .kings-chronology-summary { display: grid; grid-template-columns: minmax(300px, 1fr) auto; gap: 28px; padding: 22px 25px; border-bottom: 1px solid #d9cfbd; background: rgb(247 242 232 / 94%); }
 .kings-chronology-summary > div > span, .kings-era-label span { color: #9a6a2b; font-size: 9px; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
 .kings-chronology-summary > div > strong { display: block; margin-top: 4px; color: #23463e; font: 600 21px/1.2 Georgia, serif; }
@@ -708,7 +724,9 @@ button.origin-event-card:hover, button.origin-event-card:focus-visible, .origin-
   .united-king-list .king-entry { width: 100%; }
   .kingdom-division { margin-inline: 14px; }
   .kingdom-column-headings { display: none; }
-  .divided-kings-list { padding: 11px 12px 28px; }
+  .divided-kings-list { padding: 11px 30px 28px 12px; }
+  /* Too narrow for the whole family web: draw only the focused person's links. */
+  .family-link:not(.highlight) { display: none; }
   .divided-kings-list::before { bottom: 28px; left: 43px; }
   .king-accession-row { min-height: 88px; grid-template-columns: 63px minmax(0, 1fr); padding-block: 7px; }
   .king-accession-row > time { grid-column: 1; grid-row: 1; justify-self: start; min-width: 58px; margin-top: 17px; padding-inline: 4px; font-size: 7px; }
@@ -718,6 +736,7 @@ button.origin-event-card:hover, button.origin-event-card:focus-visible, .origin-
   .israel-cell { grid-row: 2; margin-top: 7px; }
   .king-entry, .kingdom-fall { width: 100%; }
   .judah-cell .king-card { border-right-width: 1px; border-left: 4px solid var(--house-color); }
+  .judah-cell .king-card.relative-card { border-left: 1px dashed #c9bfae; }
   .king-card:hover, .king-card:focus-visible, .king-card.active { transform: none; }
   .origins-chronology { min-height: 0; overflow: visible; border-radius: 14px; }
   .origins-chronology-summary { display: block; padding: 17px 16px; }

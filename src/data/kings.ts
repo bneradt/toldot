@@ -603,3 +603,25 @@ export const dividedKingReigns = [...judahKingReigns, ...israelKingReigns]
   .sort((a, b) => b.startBce - a.startBce);
 
 export const allKingReigns = [...unitedKingReigns, ...dividedKingReigns];
+
+/**
+ * Relatives who never reigned but appear on the Kings chronology beside the
+ * rulers they are tied to, so family lines can be drawn there.
+ */
+export interface KingRelative {
+  personId: string;
+  name: string;
+  kingdom: Exclude<Kingdom, "united">;
+  /** Accession row (BCE) where the card sits; matches the anchor ruler’s start. */
+  rowBce: number;
+  /** The ruler the card sits beside. */
+  anchorPersonId: string;
+  role: string;
+}
+
+export const kingRelatives: KingRelative[] = [
+  { personId: "jezebel", name: "Jezebel", kingdom: "israel", rowBce: 874, anchorPersonId: "ahab", role: "Wife of Ahab" },
+  { personId: "jehosheba", name: "Jehosheba", kingdom: "judah", rowBce: 841, anchorPersonId: "athaliah", role: "Daughter of Jehoram · hid Joash" },
+  { personId: "zibiah", name: "Zibiah", kingdom: "judah", rowBce: 835, anchorPersonId: "joash-judah", role: "Mother of Joash" },
+  { personId: "jehoiada", name: "Jehoiada", kingdom: "judah", rowBce: 835, anchorPersonId: "joash-judah", role: "Priest · guardian of Joash" },
+];

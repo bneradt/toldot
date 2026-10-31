@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   davidicJesseHouseholdOrder,
+  kingsFamilyLinks,
   people,
   peopleById,
   originTimelineEntries,
@@ -12,7 +13,7 @@ import {
   visiblePersonIdsForView,
 } from "../src/data/genealogy";
 import { chapters, scripture } from "../src/data/scripture.generated";
-import { allKingReigns, israelKingReigns, judahKingReigns } from "../src/data/kings";
+import { allKingReigns, israelKingReigns, judahKingReigns, kingRelatives } from "../src/data/kings";
 
 describe("Toldot genealogy dataset", () => {
   it("ships a substantial first edition", () => {
@@ -197,7 +198,6 @@ describe("Toldot genealogy dataset", () => {
       "patriarchs",
       "davidic",
       "kings",
-      "athaliah-joash",
       "matthew",
       "luke",
       "promise",
@@ -227,7 +227,12 @@ describe("Toldot genealogy dataset", () => {
     const kingsView = views.find((view) => view.id === "kings")!;
     expect(kingsView.presentation).toBe("kings");
     expect(kingsView.rootIds).toEqual(["saul"]);
-    expect(kingsView.personIds).toHaveLength(allKingReigns.length);
+    // Reigning rulers are exactly the kings.ts set; non-reigning relatives are
+    // allowed only when marked as such in kingRelatives.
+    const relativeIds = new Set(kingRelatives.map((relative) => relative.personId));
+    const reigningIds = kingsView.personIds.filter((personId) => !relativeIds.has(personId));
+    expect([...reigningIds].sort()).toEqual(allKingReigns.map((reign) => reign.personId).sort());
+    expect(kingsView.personIds).toHaveLength(allKingReigns.length + kingRelatives.length);
     allKingReigns.forEach((reign) => {
       expect(kingsView.personIds).toContain(reign.personId);
       expect(peopleById.get(reign.personId)?.passages.some((passage) => passage.title === "Accession and reign"), reign.personId).toBe(true);
@@ -478,14 +483,35 @@ describe("Toldot genealogy dataset", () => {
     expect(peopleById.get("uzziah")?.note).toContain("Ahaziah, Joash, and Amaziah");
   });
 
-  it("adds the Athaliah and Joash family tree to the Kings group", () => {
-    const view = views.find((candidate) => candidate.id === "athaliah-joash")!;
-    expect(view.title).toBe("Athaliah and Joash");
-    expect(view.presentation).toBeUndefined();
-    expect(view.personIds).toEqual(expect.arrayContaining([
-      "omri", "ahab", "jezebel", "jehoshaphat", "joram", "athaliah",
-      "ahaziah-judah", "jehosheba", "jehoiada", "zibiah", "joash-judah",
-    ]));
-    expect(viewNavigationGroups.find((group) => group.id === "kings")?.viewIds).toEqual(["kings", "athaliah-joash"]);
+  it("draws Athaliah's family on the Kings chronology", () => {
+    expect(views.some((view) => view.id === "athaliah-joash")).toBe(false);
+    expect(viewNavigationGroups.find((group) => group.id === "kings")?.viewIds).toEqual(["kings"]);
+    const kingsView = views.find((view) => view.id === "kings")!;
+    expect(kingsView.tabLabel).toBeUndefined();
+
+    const reignsById = new Map(allKingReigns.map((reign) => [reign.personId, reign]));
+    expect(kingRelatives.map((relative) => relative.personId).sort())
+      .toEqual(["jehoiada", "jehosheba", "jezebel", "zibiah"]);
+    for (const relative of kingRelatives) {
+      expect(reignsById.has(relative.personId), `${relative.personId} must not be a ruler`).toBe(false);
+      expect(kingsView.personIds).toContain(relative.personId);
+      const anchor = reignsById.get(relative.anchorPersonId);
+      expect(anchor, `${relative.personId} anchor`).toBeDefined();
+      expect(anchor?.kingdom).toBe(relative.kingdom);
+      expect(anchor?.startBce, `${relative.personId} sits in its anchor's row`).toBe(relative.rowBce);
+    }
+
+    const links = kingsFamilyLinks();
+    expect(links).toHaveLength(10);
+    links.forEach((link) => {
+      expect(["parent", "spouse"]).toContain(link.kind);
+      expect(kingsView.personIds).toContain(link.from);
+      expect(kingsView.personIds).toContain(link.to);
+    });
+    // Every relative on the timeline is tied to the family by a drawn link,
+    // except Jehoiada, whose marriage is only in 2 Chronicles for now.
+    for (const relative of kingRelatives.filter((candidate) => candidate.personId !== "jehoiada")) {
+      expect(links.some((link) => link.from === relative.personId || link.to === relative.personId), relative.personId).toBe(true);
+    }
   });
 });
