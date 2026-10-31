@@ -197,6 +197,7 @@ describe("Toldot genealogy dataset", () => {
       "patriarchs",
       "davidic",
       "kings",
+      "athaliah-joash",
       "matthew",
       "luke",
       "promise",
@@ -416,5 +417,75 @@ describe("Toldot genealogy dataset", () => {
     expect(originTimelineEntries.find((entry) => entry.id === "methuselah")?.endYear).toBe(
       originTimelineMilestones[0].year,
     );
+  });
+
+  it("connects Athaliah to the houses of Omri and David and to her grandson Joash", () => {
+    const hasLink = (from: string, to: string, kind: string) => relationships.some((relationship) =>
+      relationship.from === from
+      && relationship.to === to
+      && relationship.kind === kind
+      && relationship.sourceLayers.includes("Narrative"));
+
+    for (const [from, to, kind] of [
+      ["omri", "ahab", "parent"],
+      ["ahab", "jezebel", "spouse"],
+      ["ahab", "athaliah", "parent"],
+      ["jehoshaphat", "joram", "parent"],
+      ["joram", "athaliah", "spouse"],
+      ["joram", "ahaziah-judah", "parent"],
+      ["athaliah", "ahaziah-judah", "parent"],
+      ["joram", "jehosheba", "parent"],
+      ["ahaziah-judah", "joash-judah", "parent"],
+      ["zibiah", "joash-judah", "parent"],
+    ]) {
+      expect(hasLink(from, to, kind), `${from} ${kind} ${to}`).toBe(true);
+    }
+
+    // Links Scripture does not state are deliberately absent.
+    const linked = (a: string, b: string) => relationships.some((relationship) =>
+      (relationship.from === a && relationship.to === b) || (relationship.from === b && relationship.to === a));
+    expect(linked("jezebel", "athaliah")).toBe(false);
+    expect(linked("athaliah", "jehosheba")).toBe(false);
+    expect(linked("omri", "athaliah")).toBe(false);
+    expect(linked("jehoiada", "jehosheba")).toBe(false);
+    expect(linked("ahaziah-judah", "zibiah")).toBe(false);
+
+    // Only Kings citations are bundled for these links for now.
+    relationships
+      .filter((relationship) => ["athaliah", "jezebel", "jehosheba", "jehoiada", "zibiah", "joash-judah", "ahaziah-judah"]
+        .some((id) => relationship.from === id || relationship.to === id))
+      .forEach((relationship) => relationship.verseIds.forEach((verseId) =>
+        expect(verseId, relationship.id).toMatch(/^[12]-kgs-/)));
+  });
+
+  it("records the uncertainties around Athaliah and Jehosheba", () => {
+    const athaliah = peopleById.get("athaliah")!;
+    expect(athaliah.descriptor).toContain("paternal grandmother of Joash");
+    expect(athaliah.note).toContain("daughter of Omri");
+    expect(athaliah.note).toContain("granddaughter");
+    expect(athaliah.note).toContain("Jezebel");
+    expect(athaliah.passages.some((passage) => passage.title === "Athaliah destroys the royal offspring")).toBe(true);
+
+    const jehosheba = peopleById.get("jehosheba")!;
+    expect(jehosheba.note).toContain("never names her mother");
+    expect(jehosheba.note).toContain("2 Chr 22:11");
+    expect(peopleById.get("jehoiada")?.note).toContain("2 Chr 22:11");
+    expect(peopleById.get("zibiah")?.primaryVerseId).toBe("2-kgs-12-1");
+
+    const joram = peopleById.get("joram")!;
+    expect(joram.aliases).toContain("Jehoram");
+    expect(joram.aliases).not.toContain(joram.name);
+    expect(peopleById.get("uzziah")?.note).toContain("Ahaziah, Joash, and Amaziah");
+  });
+
+  it("adds the Athaliah and Joash family tree to the Kings group", () => {
+    const view = views.find((candidate) => candidate.id === "athaliah-joash")!;
+    expect(view.title).toBe("Athaliah and Joash");
+    expect(view.presentation).toBeUndefined();
+    expect(view.personIds).toEqual(expect.arrayContaining([
+      "omri", "ahab", "jezebel", "jehoshaphat", "joram", "athaliah",
+      "ahaziah-judah", "jehosheba", "jehoiada", "zibiah", "joash-judah",
+    ]));
+    expect(viewNavigationGroups.find((group) => group.id === "kings")?.viewIds).toEqual(["kings", "athaliah-joash"]);
   });
 });

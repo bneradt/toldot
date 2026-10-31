@@ -33,7 +33,10 @@ function ensurePerson(entry: ChainEntry, source: SourceLayer): Person {
     );
     if (!alreadyPresent) existing.passages.push(genealogyPassage(verseIds, source));
     if (entry.note && !existing.note) existing.note = entry.note;
-    if (entry.aliases) existing.aliases = [...new Set([...(existing.aliases ?? []), ...entry.aliases])];
+    if (entry.aliases) {
+      existing.aliases = [...new Set([...(existing.aliases ?? []), ...entry.aliases])]
+        .filter((alias) => alias !== existing.name);
+    }
     if (entry.birthOrder) existing.birthOrder = entry.birthOrder;
     return existing;
   }
@@ -140,6 +143,7 @@ const matthew = new Set<string>();
 const luke = new Set<string>();
 const davidic = new Set<string>();
 const kings = new Set<string>();
+const athaliahFamily = new Set<string>();
 const originsSethBranch = new Set<string>();
 const originsCainBranch = new Set<string>();
 const shemBranch = new Set<string>();
@@ -211,13 +215,13 @@ const matthewLine: ChainEntry[] = [
   { id: "abijah", name: "Abijah", aliases: ["Abia"], primaryVerseId: "matt-1-7" },
   { id: "asa", name: "Asa", primaryVerseId: "matt-1-7" },
   { id: "jehoshaphat", name: "Jehoshaphat", aliases: ["Josaphat"], primaryVerseId: "matt-1-8" },
-  { id: "joram", name: "Joram", primaryVerseId: "matt-1-8" },
+  { id: "joram", name: "Joram", aliases: ["Jehoram"], primaryVerseId: "matt-1-8" },
   {
     id: "uzziah",
     name: "Uzziah",
     aliases: ["Ozias"],
     primaryVerseId: "matt-1-8",
-    note: "Matthew’s genealogy moves from Joram to Uzziah without naming several intervening kings recorded elsewhere in Scripture.",
+    note: "Matthew’s genealogy moves from Joram to Uzziah without naming the intervening kings of Judah recorded in 2 Kings 8:24–14:21: Ahaziah, Joash, and Amaziah. Athaliah, who seized the throne between Ahaziah and Joash, is likewise not named.",
   },
   { id: "jotham", name: "Jotham", aliases: ["Joatham"], primaryVerseId: "matt-1-9" },
   { id: "ahaz", name: "Ahaz", aliases: ["Achaz"], primaryVerseId: "matt-1-9" },
@@ -986,6 +990,91 @@ allKingReigns.forEach((reign) => {
   kings.add(reign.personId);
 });
 
+// Athaliah, the houses of Omri and David, and the rescue of Joash (2 Kings 8–12).
+// Only Kings citations are bundled so far; 2 Chronicles details are noted without verse ids.
+const verseRange = (prefix: string, first: number, last: number) =>
+  Array.from({ length: last - first + 1 }, (_, index) => `${prefix}-${first + index}`);
+
+addPerson({
+  id: "jezebel",
+  name: "Jezebel",
+  descriptor: "daughter of Ethbaal king of the Sidonians; wife of Ahab",
+  sex: "female",
+  primaryVerseId: "1-kgs-16-31",
+}, "Narrative", [athaliahFamily]);
+addPerson({
+  id: "jehosheba",
+  name: "Jehosheba",
+  aliases: ["Jehoshabeath"],
+  descriptor: "daughter of King Jehoram; sister of Ahaziah; aunt who hid Joash",
+  sex: "female",
+  primaryVerseId: "2-kgs-11-2",
+  note: "2 Kings 11:2 calls her the daughter of King Joram (Jehoram) and sister of Ahaziah but never names her mother. She may have been Athaliah’s daughter or a half-sister of Ahaziah by another wife, so Toldot draws no maternal link. Per 2 Chr 22:11 she was the wife of Jehoiada the priest; Chronicles spells her name Jehoshabeath.",
+}, "Narrative", [athaliahFamily]);
+addPerson({
+  id: "jehoiada",
+  name: "Jehoiada",
+  descriptor: "priest; protector and guardian of Joash",
+  primaryVerseId: "2-kgs-11-4",
+  note: "Per 2 Chr 22:11 Jehoiada was the husband of Jehosheba, Joash’s aunt, which is why the hidden prince could be kept in the LORD’s house.",
+}, "Narrative", [athaliahFamily]);
+addPerson({
+  id: "zibiah",
+  name: "Zibiah",
+  descriptor: "of Beersheba; mother of Joash",
+  sex: "female",
+  primaryVerseId: "2-kgs-12-1",
+}, "Narrative", [athaliahFamily]);
+
+["omri", "ahab", "jehoshaphat", "joram", "athaliah", "ahaziah-judah", "joash-judah"]
+  .forEach((personId) => athaliahFamily.add(personId));
+
+const setDescriptor = (personId: string, descriptor: string, note?: string) => {
+  const person = personMap.get(personId);
+  if (!person) throw new Error(`Cannot describe unknown person ${personId}`);
+  person.descriptor = descriptor;
+  if (note) person.note = person.note ? `${person.note} ${note}` : note;
+};
+
+setDescriptor("ahab", "king of Israel; son of Omri; husband of Jezebel; father of Athaliah");
+setDescriptor("jehoshaphat", "king of Judah; father of Jehoram");
+setDescriptor("joram", "king of Judah; son of Jehoshaphat; husband of Athaliah");
+setDescriptor(
+  "athaliah",
+  "daughter of Ahab; wife of Jehoram of Judah; mother of Ahaziah; paternal grandmother of Joash",
+  "2 Kings 8:18 calls Athaliah Ahab’s daughter, while 2 Kings 8:26 calls her “the daughter of Omri.” Hebrew “daughter” can mean granddaughter or descendant, so she is most likely Omri’s granddaughter through Ahab; a minority reading makes her Omri’s daughter and Ahab’s sister. Scripture never names her mother: Jezebel is possible, but Ahab may have had other wives, so Toldot draws no link between Jezebel and Athaliah. When her son Ahaziah died she destroyed the royal offspring, her own grandsons among them; only Joash escaped, and she ruled six years until she was killed.",
+);
+setDescriptor("ahaziah-judah", "king of Judah; son of Jehoram and Athaliah; father of Joash", "Jehu’s men struck him down while he was visiting Joram of Israel.");
+setDescriptor(
+  "joash-judah",
+  "king of Judah; son of Ahaziah and Zibiah; grandson of Athaliah",
+  "His aunt Jehosheba hid him from his grandmother Athaliah for six years in the LORD’s house, and Jehoiada the priest crowned him at seven.",
+);
+
+connect("omri", "ahab", "parent", "Narrative", ["1-kgs-16-28", "1-kgs-16-30"]);
+connect("ahab", "jezebel", "spouse", "Narrative", ["1-kgs-16-31"]);
+connect("ahab", "athaliah", "parent", "Narrative", ["2-kgs-8-18"], "2 Kings 8:26 also calls her “the daughter of Omri,” most likely meaning his granddaughter.");
+connect("jehoshaphat", "joram", "parent", "Narrative", ["1-kgs-22-50", "2-kgs-8-16"]);
+connect("joram", "athaliah", "spouse", "Narrative", ["2-kgs-8-18"]);
+connect("joram", "ahaziah-judah", "parent", "Narrative", ["2-kgs-8-24", "2-kgs-8-25"]);
+connect("athaliah", "ahaziah-judah", "parent", "Narrative", ["2-kgs-8-26", "2-kgs-11-1"]);
+connect("joram", "jehosheba", "parent", "Narrative", ["2-kgs-11-2"]);
+connect("ahaziah-judah", "joash-judah", "parent", "Narrative", ["2-kgs-11-2"]);
+connect("zibiah", "joash-judah", "parent", "Narrative", ["2-kgs-12-1"]);
+
+addStory("athaliah", "Athaliah destroys the royal offspring", [...verseRange("2-kgs-11", 1, 3), ...verseRange("2-kgs-11", 13, 16)]);
+addStory("jezebel", "Jezebel and Naboth’s vineyard", verseRange("1-kgs-21", 5, 16));
+addStory("jezebel", "Jezebel’s death", verseRange("2-kgs-9", 30, 37));
+addStory("jehosheba", "Jehosheba hides Joash", verseRange("2-kgs-11", 2, 3));
+addStory("jehoiada", "Jehoiada crowns Joash", [...verseRange("2-kgs-11", 4, 12), ...verseRange("2-kgs-11", 17, 21), "2-kgs-12-2"]);
+addStory("ahaziah-judah", "Ahaziah’s reign and death", ["2-kgs-8-26", "2-kgs-8-27", ...verseRange("2-kgs-9", 27, 29)]);
+addStory("joash-judah", "Joash preserved and crowned", [...verseRange("2-kgs-11", 2, 3), "2-kgs-11-12", "2-kgs-11-21", "2-kgs-12-1", "2-kgs-12-2"]);
+addReadingGuide("jezebel", ["1 Kings 16:29–33", "1 Kings 18–19", "1 Kings 21", "2 Kings 9:30–37"]);
+addReadingGuide("jehosheba", ["2 Kings 11:1–3"]);
+addReadingGuide("jehoiada", ["2 Kings 11–12"]);
+addReadingGuide("zibiah", ["2 Kings 12:1–3"]);
+addReadingGuide("athaliah", ["2 Kings 8:16–27", "2 Kings 11"]);
+
 export const people = [...personMap.values()];
 export const peopleById = new Map(people.map((person) => [person.id, person]));
 export const relationships = [...relationshipMap.values()];
@@ -1060,9 +1149,21 @@ export const views: GenealogyView[] = [
     title: "The Kings",
     eyebrow: "United and divided kingdoms",
     description: "Follow the monarchy from Saul through the parallel kingdoms of Judah and Israel, with Israel’s repeated dynastic breaks clearly marked.",
+    tabLabel: "Chronology",
     presentation: "kings",
     personIds: [...kings],
     rootIds: ["saul"],
+    sourceLayers: ["Narrative"],
+    accent: "family",
+  },
+  {
+    id: "athaliah-joash",
+    title: "Athaliah and Joash",
+    tabLabel: "Athaliah and Joash",
+    eyebrow: "The houses of Omri and David",
+    description: "How Ahab’s daughter Athaliah married into David’s line, seized Judah’s throne, and tried to destroy her own grandson Joash, whom his aunt Jehosheba hid.",
+    personIds: [...athaliahFamily],
+    rootIds: ["omri", "jehoshaphat"],
     sourceLayers: ["Narrative"],
     accent: "family",
   },
@@ -1142,7 +1243,7 @@ export const viewNavigationGroups: GenealogyNavigationGroup[] = [
     eyebrow: "United and divided kingdoms",
     meta: "Judah · Israel · c. 1050–586 BCE",
     defaultViewId: "kings",
-    viewIds: ["kings"],
+    viewIds: ["kings", "athaliah-joash"],
   },
   {
     id: "jesus-genealogy",
