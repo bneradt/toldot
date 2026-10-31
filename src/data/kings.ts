@@ -605,23 +605,53 @@ export const dividedKingReigns = [...judahKingReigns, ...israelKingReigns]
 export const allKingReigns = [...unitedKingReigns, ...dividedKingReigns];
 
 /**
- * Relatives who never reigned but appear on the Kings chronology beside the
- * rulers they are tied to, so family lines can be drawn there.
+ * Relatives who never reigned but belong to the Kings view, where they appear
+ * in the family tree embedded in the chronology beside the rulers they are tied to.
  */
 export interface KingRelative {
   personId: string;
   name: string;
-  kingdom: Exclude<Kingdom, "united">;
-  /** Accession row (BCE) where the card sits; matches the anchor ruler’s start. */
-  rowBce: number;
-  /** The ruler the card sits beside. */
+  /** The ruler this relative is most closely tied to. */
   anchorPersonId: string;
   role: string;
 }
 
 export const kingRelatives: KingRelative[] = [
-  { personId: "jezebel", name: "Jezebel", kingdom: "israel", rowBce: 874, anchorPersonId: "ahab", role: "Wife of Ahab" },
-  { personId: "jehosheba", name: "Jehosheba", kingdom: "judah", rowBce: 841, anchorPersonId: "athaliah", role: "Daughter of Jehoram · hid Joash" },
-  { personId: "zibiah", name: "Zibiah", kingdom: "judah", rowBce: 835, anchorPersonId: "joash-judah", role: "Mother of Joash" },
-  { personId: "jehoiada", name: "Jehoiada", kingdom: "judah", rowBce: 835, anchorPersonId: "joash-judah", role: "Priest · guardian of Joash" },
+  { personId: "jezebel", name: "Jezebel", anchorPersonId: "ahab", role: "Wife of Ahab" },
+  { personId: "jehosheba", name: "Jehosheba", anchorPersonId: "athaliah", role: "Daughter of Jehoram · hid Joash" },
+  { personId: "zibiah", name: "Zibiah", anchorPersonId: "joash-judah", role: "Mother of Joash" },
+  { personId: "jehoiada", name: "Jehoiada", anchorPersonId: "joash-judah", role: "Priest · guardian of Joash" },
+];
+
+/**
+ * A family tree embedded in the Kings chronology. It uses the regular family
+ * graph layout but is not a separate tab.
+ */
+export interface KingsFamilyCluster {
+  id: string;
+  title: string;
+  eyebrow: string;
+  description: string;
+  /** The tree is shown after the accession row for this year (BCE). */
+  afterRowBce: number;
+  rootIds: string[];
+  personIds: string[];
+  /** People without a Kings-cited link, set level with the person they served. */
+  placeBeside?: { personId: string; besideId: string }[];
+}
+
+export const kingsFamilyClusters: KingsFamilyCluster[] = [
+  {
+    id: "athaliah-family",
+    title: "Athaliah and Joash",
+    eyebrow: "The houses of Omri and David",
+    description: "How Ahab’s daughter Athaliah married into David’s line, seized Judah’s throne, and tried to destroy her own grandson Joash, whom his aunt Jehosheba hid.",
+    afterRowBce: 841,
+    rootIds: ["omri", "jehoshaphat"],
+    personIds: [
+      "omri", "ahab", "jezebel", "jehoshaphat", "joram", "athaliah",
+      "ahaziah-judah", "jehosheba", "zibiah", "jehoiada", "joash-judah",
+    ],
+    placeBeside: [{ personId: "jehoiada", besideId: "joash-judah" }],
+  },
 ];

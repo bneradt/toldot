@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   davidicJesseHouseholdOrder,
   kingsFamilyLinks,
+  kingsFamilyTreeViews,
   people,
   peopleById,
   originTimelineEntries,
@@ -13,7 +14,7 @@ import {
   visiblePersonIdsForView,
 } from "../src/data/genealogy";
 import { chapters, scripture } from "../src/data/scripture.generated";
-import { allKingReigns, israelKingReigns, judahKingReigns, kingRelatives } from "../src/data/kings";
+import { allKingReigns, israelKingReigns, judahKingReigns, kingRelatives, kingsFamilyClusters } from "../src/data/kings";
 
 describe("Toldot genealogy dataset", () => {
   it("ships a substantial first edition", () => {
@@ -497,8 +498,24 @@ describe("Toldot genealogy dataset", () => {
       expect(kingsView.personIds).toContain(relative.personId);
       const anchor = reignsById.get(relative.anchorPersonId);
       expect(anchor, `${relative.personId} anchor`).toBeDefined();
-      expect(anchor?.kingdom).toBe(relative.kingdom);
-      expect(anchor?.startBce, `${relative.personId} sits in its anchor's row`).toBe(relative.rowBce);
+    }
+
+    // The family is drawn as an embedded tree inside the chronology (not a tab):
+    // a graph view that is not listed in views, placed right after the year
+    // Athaliah seized the throne, holding every relative and its anchor.
+    const cluster = kingsFamilyClusters.find((candidate) => candidate.id === "athaliah-family")!;
+    expect(cluster).toBeDefined();
+    expect(cluster.afterRowBce).toBe(reignsById.get("athaliah")?.startBce);
+    const treeView = kingsFamilyTreeViews.find((view) => view.id === cluster.id)!;
+    expect(treeView.presentation ?? "graph").toBe("graph");
+    expect(views.some((view) => view.id === treeView.id)).toBe(false);
+    expect(treeView.rootIds).toEqual(["omri", "jehoshaphat"]);
+    // Jehoiada has no Kings-cited family link, so he stands beside Joash, whom he guarded.
+    expect(treeView.placeBeside).toEqual([{ personId: "jehoiada", besideId: "joash-judah" }]);
+    treeView.personIds.forEach((personId) => expect(kingsView.personIds).toContain(personId));
+    for (const relative of kingRelatives) {
+      expect(treeView.personIds).toContain(relative.personId);
+      expect(treeView.personIds).toContain(relative.anchorPersonId);
     }
 
     const links = kingsFamilyLinks();
@@ -507,8 +524,10 @@ describe("Toldot genealogy dataset", () => {
       expect(["parent", "spouse"]).toContain(link.kind);
       expect(kingsView.personIds).toContain(link.from);
       expect(kingsView.personIds).toContain(link.to);
+      expect(treeView.personIds).toContain(link.from);
+      expect(treeView.personIds).toContain(link.to);
     });
-    // Every relative on the timeline is tied to the family by a drawn link,
+    // Every relative in the tree is tied to the family by a drawn link,
     // except Jehoiada, whose marriage is only in 2 Chronicles for now.
     for (const relative of kingRelatives.filter((candidate) => candidate.personId !== "jehoiada")) {
       expect(links.some((link) => link.from === relative.personId || link.to === relative.personId), relative.personId).toBe(true);

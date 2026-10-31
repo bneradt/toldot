@@ -79,6 +79,8 @@ export interface GenealogyView {
   accent: "shared" | "matthew" | "luke" | "family";
   branches?: GenealogyBranch[];
   defaultExpandedBranchIds?: string[];
+  /** People to set level with, and just right of, another person after layout. */
+  placeBeside?: { personId: string; besideId: string }[];
 }
 
 export interface GenealogyNavigationGroup {

@@ -246,9 +246,6 @@ export function App() {
                 <span><i className="legend-node kingdom-judah" />Judah</span>
                 <span><i className="legend-node kingdom-israel" />Israel</span>
                 <span><i className="legend-dynasty" />New Israel dynasty</span>
-                <span><i className="legend-relative" />Relative · did not reign</span>
-                <span><i className="legend-line narrative" />Parent</span>
-                <span><i className="legend-line partner" />Marriage</span>
               </>
             ) : (
               <>

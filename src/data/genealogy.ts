@@ -8,7 +8,7 @@ import type {
   RelationshipKind,
   SourceLayer,
 } from "./types";
-import { allKingReigns, kingRelatives } from "./kings";
+import { allKingReigns, kingRelatives, kingsFamilyClusters } from "./kings";
 
 type ChainEntry = Omit<Person, "passages"> & {
   sourceVerseIds?: string[];
@@ -1071,7 +1071,7 @@ addReadingGuide("jehoiada", ["2 Kings 11–12"]);
 addReadingGuide("zibiah", ["2 Kings 12:1–3"]);
 addReadingGuide("athaliah", ["2 Kings 8:16–27", "2 Kings 11"]);
 
-// Relatives who never reigned sit on the Kings chronology beside their family.
+// Relatives who never reigned belong to the Kings view through its embedded family tree.
 kingRelatives.forEach((relative) => {
   if (!personMap.has(relative.personId)) throw new Error(`Unknown king relative ${relative.personId}`);
   kings.add(relative.personId);
@@ -1150,7 +1150,7 @@ export const views: GenealogyView[] = [
     id: "kings",
     title: "The Kings",
     eyebrow: "United and divided kingdoms",
-    description: "Follow the monarchy from Saul through the parallel kingdoms of Judah and Israel, with Israel’s repeated dynastic breaks clearly marked and Athaliah’s family drawn between the houses of Omri and David.",
+    description: "Follow the monarchy from Saul through the parallel kingdoms of Judah and Israel, with Israel’s repeated dynastic breaks clearly marked and Athaliah’s family tree set within the chronology.",
     presentation: "kings",
     personIds: [...kings],
     rootIds: ["saul"],
@@ -1249,14 +1249,30 @@ export function relationshipsForPerson(personId: string) {
   return relationships.filter((relationship) => relationship.from === personId || relationship.to === personId);
 }
 
-/** Narrative parent and spouse links between people shown on the Kings chronology. */
-export function kingsFamilyLinks() {
-  const onTimeline = new Set(viewById.get("kings")?.personIds ?? []);
+/**
+ * Family trees embedded in the Kings chronology, as graph views that are not
+ * listed as tabs. They reuse the regular family-tree layout and styling.
+ */
+export const kingsFamilyTreeViews: GenealogyView[] = kingsFamilyClusters.map((cluster) => ({
+  id: cluster.id,
+  title: cluster.title,
+  eyebrow: cluster.eyebrow,
+  description: cluster.description,
+  personIds: cluster.personIds,
+  rootIds: cluster.rootIds,
+  sourceLayers: ["Narrative"],
+  accent: "family",
+  placeBeside: cluster.placeBeside,
+}));
+
+/** Narrative parent and spouse links drawn in a Kings family tree. */
+export function kingsFamilyLinks(clusterId = "athaliah-family") {
+  const members = new Set(kingsFamilyClusters.find((cluster) => cluster.id === clusterId)?.personIds ?? []);
   return relationships.filter((relationship) =>
     (relationship.kind === "parent" || relationship.kind === "spouse")
     && relationship.sourceLayers.includes("Narrative")
-    && onTimeline.has(relationship.from)
-    && onTimeline.has(relationship.to));
+    && members.has(relationship.from)
+    && members.has(relationship.to));
 }
 
 export function firstViewForPerson(personId: string) {

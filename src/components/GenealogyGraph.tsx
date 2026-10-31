@@ -17,6 +17,11 @@ interface GenealogyGraphProps {
   selectedId: string | null;
   onSelect: (personId: string) => void;
   onHover: (person: Person | null) => void;
+  /**
+   * Embedded in another page (the Kings chronology): show the whole tree,
+   * leave page scrolling alone, and keep the selection highlighted in place.
+   */
+  embedded?: boolean;
 }
 
 function edgeClass(sourceLayers: string[], kind: string, activeLayers: string[]) {
@@ -102,7 +107,7 @@ function arrangeDavidicHousehold(graph: Core) {
   });
 }
 
-export function GenealogyGraph({ view, selectedId, onSelect, onHover }: GenealogyGraphProps) {
+export function GenealogyGraph({ view, selectedId, onSelect, onHover, embedded = false }: GenealogyGraphProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const graphRef = useRef<Core | null>(null);
   const onSelectRef = useRef(onSelect);
@@ -373,6 +378,11 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
       graph.startBatch();
       if (view.id === "patriarchs") arrangePatriarchs(graph);
       if (view.id === "davidic") arrangeDavidicHousehold(graph);
+      view.placeBeside?.forEach(({ personId, besideId }) => {
+        const node = graph.getElementById(personId);
+        const beside = graph.getElementById(besideId);
+        if (node.length && beside.length) node.position({ x: beside.position("x") + 170, y: beside.position("y") });
+      });
       partnerRelationships.forEach((relationship) => {
         const partner = graph.getElementById(relationship.to);
         const anchor = graph.getElementById(relationship.from);
@@ -381,7 +391,21 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
       graph.add(partnerEdges);
       graph.endBatch();
 
-      if (view.id === "patriarchs") {
+      if (embedded) {
+        graph.fit(graph.elements(), 40);
+        if (graph.zoom() > 0.95) {
+          graph.zoom(0.95);
+          graph.center(graph.elements());
+        }
+        // Keep labels legible on narrow screens; the tree can be dragged sideways.
+        const minimumZoom = 0.62;
+        if (graph.zoom() < minimumZoom) {
+          graph.zoom(minimumZoom);
+          graph.center(graph.elements());
+          const top = graph.elements().renderedBoundingBox().y1;
+          graph.panBy({ x: 0, y: 24 - top });
+        }
+      } else if (view.id === "patriarchs") {
         graph.fit(graph.elements(), 54);
       } else {
         const ordered = [...graph.nodes()].sort((a, b) => a.position("y") - b.position("y"));
@@ -404,7 +428,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
       event.stopImmediatePropagation();
       graph.panBy({ x: -event.deltaX, y: -event.deltaY });
     };
-    container.addEventListener("wheel", panWithWheel, { capture: true, passive: false });
+    if (!embedded) container.addEventListener("wheel", panWithWheel, { capture: true, passive: false });
 
     return () => {
       container.removeEventListener("wheel", panWithWheel, { capture: true });
@@ -417,7 +441,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
       graph.destroy();
       graphRef.current = null;
     };
-  }, [view, visiblePersonIds]);
+  }, [embedded, view, visiblePersonIds]);
 
   useEffect(() => {
     const graph = graphRef.current;
@@ -428,8 +452,8 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
     if (!selected.length) return;
     selected.addClass("selected");
     selected.neighborhood().addClass("neighbor");
-    graph.animate({ center: { eles: selected }, duration: 220 });
-  }, [selectedId, visiblePersonIds]);
+    if (!embedded) graph.animate({ center: { eles: selected }, duration: 220 });
+  }, [embedded, selectedId, visiblePersonIds]);
 
   const toggleBranch = (branchId: string) => {
     setExpandedByView((current) => {
@@ -449,7 +473,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
   const fit = () => graphRef.current?.animate({ fit: { eles: graphRef.current.elements(), padding: 44 }, duration: 240 });
 
   return (
-    <div className="graph-shell">
+    <div className={`graph-shell ${embedded ? "embedded-graph" : ""}`}>
       <div
         ref={containerRef}
         className="graph-canvas"
@@ -487,6 +511,7 @@ export function GenealogyGraph({ view, selectedId, onSelect, onHover }: Genealog
         <button type="button" className="fit-button" onClick={fit}>Fit all</button>
       </div>
       <div className="graph-scroll-hint">
+        {embedded && <span className="embedded-graph-hint">Drag to move · select a name for details</span>}
         <span className="pointer-graph-hint">Scroll or drag to move</span>
         <span className="touch-graph-hint">Pinch to zoom · drag to move</span>
       </div>
