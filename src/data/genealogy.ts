@@ -4,6 +4,7 @@ import type {
   GenealogyView,
   PassageSelection,
   Person,
+  PersonLineage,
   Relationship,
   RelationshipKind,
   SourceLayer,
@@ -113,6 +114,12 @@ function addReadingGuide(personId: string, references: string[]) {
   const person = personMap.get(personId);
   if (!person) throw new Error(`Cannot add a reading guide to unknown person ${personId}`);
   person.recommendedReading = references;
+}
+
+function addLineage(personId: string, lineage: PersonLineage) {
+  const person = personMap.get(personId);
+  if (!person) throw new Error(`Cannot add a family line to unknown person ${personId}`);
+  person.lineage = lineage;
 }
 
 function addAgeFacts(personId: string, facts: AgeFact[]) {
@@ -1070,6 +1077,10 @@ addReadingGuide("jehosheba", ["2 Kings 11:1–3"]);
 addReadingGuide("jehoiada", ["2 Kings 11–12"]);
 addReadingGuide("zibiah", ["2 Kings 12:1–3"]);
 addReadingGuide("athaliah", ["2 Kings 8:16–27", "2 Kings 11"]);
+addLineage("athaliah", {
+  text: "Daughter of Ahab, king of Israel (2 Kings 8:18), and granddaughter of Omri (2 Kings 8:26). In Hebrew, ‘daughter’ can mean any female descendant, which is why 8:26 ties her to Omri. Her mother isn’t named; Jezebel is likely but never stated.",
+  verseIds: ["2-kgs-8-18", "2-kgs-8-26"],
+});
 
 // Relatives who never reigned belong to the Kings view through its embedded family tree.
 kingRelatives.forEach((relative) => {

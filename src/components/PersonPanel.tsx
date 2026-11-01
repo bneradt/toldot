@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { relationshipsForPerson, peopleById } from "../data/genealogy";
 import { chapters, scripture } from "../data/scripture.generated";
-import type { AgeFact, Person, Relationship, Translation } from "../data/types";
+import type { AgeFact, Person, PersonLineage, Relationship, Translation } from "../data/types";
 
 interface PersonPanelProps {
   person: Person;
@@ -46,6 +46,40 @@ function AgeRecord({ facts, translation }: { facts: AgeFact[]; translation: Tran
           );
         })}
       </div>
+    </section>
+  );
+}
+
+function FamilyLine({ lineage, translation }: { lineage: PersonLineage; translation: Translation }) {
+  const [openVerseId, setOpenVerseId] = useState<string | null>(null);
+  const verses = lineage.verseIds.map((verseId) => scripture[verseId]).filter(Boolean);
+  const openVerse = openVerseId ? scripture[openVerseId] : null;
+  return (
+    <section className="family-line" aria-label="Family line">
+      <strong>Family line</strong>
+      <p>{lineage.text}</p>
+      <div className="family-line-references">
+        {verses.map((verse) => {
+          const isOpen = openVerseId === verse.id;
+          return (
+            <button
+              type="button"
+              key={verse.id}
+              className={isOpen ? "active" : ""}
+              aria-expanded={isOpen}
+              aria-controls={`family-line-${verse.id}`}
+              onClick={() => setOpenVerseId(isOpen ? null : verse.id)}
+            >
+              <cite>{verse.reference}</cite>
+            </button>
+          );
+        })}
+      </div>
+      {openVerse && (
+        <blockquote id={`family-line-${openVerse.id}`}>
+          <sup>{openVerse.reference}</sup>{openVerse[translation]}
+        </blockquote>
+      )}
     </section>
   );
 }
@@ -155,6 +189,8 @@ export function PersonPanel({
         )}
         {person.aliases?.length ? <div className="aliases">Also: {person.aliases.join(", ")}</div> : null}
       </header>
+
+      {person.lineage && <FamilyLine key={person.id} lineage={person.lineage} translation={translation} />}
 
       {person.note && <div className="textual-note"><strong>Source note</strong>{person.note}</div>}
 

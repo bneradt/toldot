@@ -29,6 +29,13 @@ export interface AgeFact {
   note?: string;
 }
 
+/** A short, cited summary of how a person fits into their family. */
+export interface PersonLineage {
+  text: string;
+  /** Verses the summary cites, shown as references the reader can open. */
+  verseIds: string[];
+}
+
 export interface Person {
   id: string;
   name: string;
@@ -43,6 +50,7 @@ export interface Person {
   birthOrder?: number;
   recommendedReading?: string[];
   ageFacts?: AgeFact[];
+  lineage?: PersonLineage;
   passages: PassageSelection[];
 }
 

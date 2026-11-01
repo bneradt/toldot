@@ -564,6 +564,15 @@ button.origin-event-card:hover, button.origin-event-card:focus-visible, .origin-
 .aliases { margin-top: 10px; color: #7e837f; font-size: 10px; }
 .textual-note { margin: 17px 20px 2px; padding: 13px 14px; border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; color: #56615d; font: 12px/1.55 Georgia, serif; background: #f7f0e2; }
 .textual-note strong { display: block; margin-bottom: 3px; color: #84591f; font-family: Inter, sans-serif; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+.family-line { margin: 17px 20px 2px; padding: 13px 14px; border: 1px solid #ded3c0; border-radius: 9px; background: #fffefa; }
+.family-line > strong { display: block; margin-bottom: 5px; color: #31544c; font-size: 9px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+.family-line > p { margin: 0; color: #3d4a46; font: 13px/1.55 Georgia, serif; }
+.family-line-references { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 9px; }
+.family-line-references button { padding: 5px 8px; border: 1px solid #e0d2b8; border-radius: 6px; color: #84591f; font-size: 10px; font-weight: 700; background: #f7f0e2; cursor: pointer; }
+.family-line-references button cite { font-style: normal; }
+.family-line-references button:hover, .family-line-references button.active { border-color: #b98038; color: #fffdf7; background: #9a6a2a; }
+.family-line blockquote { margin: 9px 0 0; padding: 9px 11px; border-left: 3px solid var(--gold); border-radius: 0 7px 7px 0; color: #3d4a46; font: 12.5px/1.6 Georgia, serif; background: #f9f5ec; }
+.family-line blockquote sup { margin-right: 5px; color: #84591f; font-family: Inter, sans-serif; font-size: 9px; font-weight: 750; }
 .reading-guide { margin: 16px 20px 0; padding: 13px 14px; border: 1px solid #ded3c0; border-radius: 9px; background: #f9f5ec; }
 .reading-guide > strong { display: block; margin-bottom: 8px; color: #31544c; font-size: 9px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
 .reading-guide > div { display: flex; flex-wrap: wrap; gap: 5px; }

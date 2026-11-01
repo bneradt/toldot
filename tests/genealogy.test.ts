@@ -484,6 +484,21 @@ describe("Toldot genealogy dataset", () => {
     expect(peopleById.get("uzziah")?.note).toContain("Ahaziah, Joash, and Amaziah");
   });
 
+  it("cites Athaliah's family line from Kings only", () => {
+    const athaliah = peopleById.get("athaliah")!;
+    expect(athaliah.lineage?.text).toContain("Daughter of Ahab, king of Israel (2 Kings 8:18), and granddaughter of Omri (2 Kings 8:26).");
+    expect(athaliah.lineage?.text).toContain("Jezebel is likely but never stated.");
+    expect(athaliah.lineage?.verseIds).toEqual(["2-kgs-8-18", "2-kgs-8-26"]);
+    athaliah.lineage!.verseIds.forEach((verseId) => {
+      expect(scripture[verseId]?.web.length, verseId).toBeGreaterThan(0);
+      expect(scripture[verseId]?.kjv.length, verseId).toBeGreaterThan(0);
+    });
+    const ahabLink = relationships.find((relationship) =>
+      relationship.from === "ahab" && relationship.to === "athaliah" && relationship.kind === "parent");
+    expect(ahabLink?.verseIds).toContain("2-kgs-8-18");
+    for (const verseId of [...athaliah.lineage!.verseIds, ...ahabLink!.verseIds]) expect(verseId).not.toMatch(/chr/);
+  });
+
   it("draws Athaliah's family on the Kings chronology", () => {
     expect(views.some((view) => view.id === "athaliah-joash")).toBe(false);
     expect(viewNavigationGroups.find((group) => group.id === "kings")?.viewIds).toEqual(["kings"]);
